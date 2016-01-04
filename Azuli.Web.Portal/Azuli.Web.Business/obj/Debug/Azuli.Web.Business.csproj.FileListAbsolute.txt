@@ -1,0 +1,54 @@
+C:\Users\edmilson.santos\documents\visual studio 2010\Projects\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.Business.dll
+C:\Users\edmilson.santos\documents\visual studio 2010\Projects\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.Business.pdb
+C:\Users\edmilson.santos\documents\visual studio 2010\Projects\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.DAO.dll
+C:\Users\edmilson.santos\documents\visual studio 2010\Projects\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.Model.dll
+C:\Users\edmilson.santos\documents\visual studio 2010\Projects\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.DAO.pdb
+C:\Users\edmilson.santos\documents\visual studio 2010\Projects\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.Model.pdb
+C:\Users\edmilson.santos\documents\visual studio 2010\Projects\Azuli.Web.Portal\Azuli.Web.Business\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\edmilson.santos\documents\visual studio 2010\Projects\Azuli.Web.Portal\Azuli.Web.Business\obj\Debug\Azuli.Web.Business.dll
+C:\Users\edmilson.santos\documents\visual studio 2010\Projects\Azuli.Web.Portal\Azuli.Web.Business\obj\Debug\Azuli.Web.Business.pdb
+C:\Users\Leandro\Documents\Azuli.Web.Portal\Google_code\Azuli\edm-azuli-condominio\Azuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.Business.dll
+C:\Users\Leandro\Documents\Azuli.Web.Portal\Google_code\Azuli\edm-azuli-condominio\Azuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.Business.pdb
+C:\Users\Leandro\Documents\Azuli.Web.Portal\Google_code\Azuli\edm-azuli-condominio\Azuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.DAO.dll
+C:\Users\Leandro\Documents\Azuli.Web.Portal\Google_code\Azuli\edm-azuli-condominio\Azuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.Model.dll
+C:\Users\Leandro\Documents\Azuli.Web.Portal\Google_code\Azuli\edm-azuli-condominio\Azuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.DAO.pdb
+C:\Users\Leandro\Documents\Azuli.Web.Portal\Google_code\Azuli\edm-azuli-condominio\Azuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.Model.pdb
+C:\Users\Leandro\Documents\Azuli.Web.Portal\Google_code\Azuli\edm-azuli-condominio\Azuli\Azuli.Web.Portal\Azuli.Web.Business\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Leandro\Documents\Azuli.Web.Portal\Google_code\Azuli\edm-azuli-condominio\Azuli\Azuli.Web.Portal\Azuli.Web.Business\obj\Debug\Azuli.Web.Business.dll
+C:\Users\Leandro\Documents\Azuli.Web.Portal\Google_code\Azuli\edm-azuli-condominio\Azuli\Azuli.Web.Portal\Azuli.Web.Business\obj\Debug\Azuli.Web.Business.pdb
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Business\bin\Debug\Azuli.Web.Business.dll
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Business\bin\Debug\Azuli.Web.Business.pdb
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Business\bin\Debug\Azuli.Web.DAO.dll
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Business\bin\Debug\Azuli.Web.Model.dll
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Business\bin\Debug\Azuli.Web.DAO.pdb
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Business\bin\Debug\Azuli.Web.Model.pdb
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Business\obj\Debug\ResolveAssemblyReference.cache
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Business\obj\Debug\Azuli.Web.Business.dll
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Business\obj\Debug\Azuli.Web.Business.pdb
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.Business.dll
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.Business.pdb
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.DAO.dll
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.Model.dll
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.DAO.pdb
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.Model.pdb
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli\Azuli.Web.Portal\Azuli.Web.Business\obj\Debug\Azuli.Web.Business.csprojResolveAssemblyReference.cache
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli\Azuli.Web.Portal\Azuli.Web.Business\obj\Debug\Azuli.Web.Business.dll
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli\Azuli.Web.Portal\Azuli.Web.Business\obj\Debug\Azuli.Web.Business.pdb
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Business\bin\Debug\Azuli.Web.Business.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Business\bin\Debug\Azuli.Web.Business.pdb
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Business\bin\Debug\Azuli.Web.DAO.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Business\bin\Debug\Azuli.Web.Model.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Business\bin\Debug\Azuli.Web.DAO.pdb
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Business\bin\Debug\Azuli.Web.Model.pdb
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Business\obj\Debug\ResolveAssemblyReference.cache
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Business\obj\Debug\Azuli.Web.Business.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Business\obj\Debug\Azuli.Web.Business.pdb
+C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.Business.dll
+C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.Business.pdb
+C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.DAO.dll
+C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.Model.dll
+C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.DAO.pdb
+C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.Model.pdb
+C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Business\obj\Debug\Azuli.Web.Business.csprojResolveAssemblyReference.cache
+C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Business\obj\Debug\Azuli.Web.Business.dll
+C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Business\obj\Debug\Azuli.Web.Business.pdb

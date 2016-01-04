@@ -1,0 +1,1101 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body   
+{
+    background: #b6b7bc;
+   
+    font-size: .80em;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+}
+
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #666666;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    width: 738px;
+    height: 47px;
+    margin-left: 0px;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.pageAdmin
+{
+    width: 960px;
+    background-color: #fff;
+    margin: 5px auto 0px auto;
+    border: 1px solid #496077;
+}
+
+
+
+.page
+{
+    
+    width: 960px;
+    background-color: #fff;
+    margin: 5px auto 0px auto;
+    border: 1px solid #4884CD;
+}
+
+.pageLogin
+{
+    
+    width: 960px;
+    background-color: #fff;
+    margin: 5px auto 0px auto;
+    border: 1px solid #4884CD;
+}
+
+.header
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    background: #4b6c9e;
+    width: 960px;
+    top: 0px;
+    left: 0px;
+    height: 54px;
+}
+
+.header h1
+{
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    color: #f9f9f9;
+    line-height: 2em;
+    font-size: 2em;
+    height: 55px;
+}
+
+
+.headerAdmin
+{
+     position: relative;
+    margin: 0px;
+    padding: 0px;
+    background: #4b6c9e;
+    width: 960px;
+    top: 0px;
+    left: 0px;
+    height: 54px;
+}
+
+.headerAdmin h1
+{
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px 0px 0px 40px;
+    color: #f9f9f9;
+    line-height: 2em;
+    font-size: 2em;
+    height: 63px;
+    width: 919px;
+}
+
+.mainAdmin
+{
+    padding: 0px 12px;
+    margin: 12px 8px 8px 8px;
+    min-height:420px;
+    height: 82px;
+    width: 930px;
+}
+
+.main
+{
+    padding: 0px 12px;
+    margin: 12px 8px 8px 8px;
+    min-height: 420px;
+}
+
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+.footerAdmin
+{
+    color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+    height: auto;
+}
+.footer
+{
+    color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+   
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink
+{
+    background-color:#0092D2;
+    width:925px;
+    height: 0;
+    position:relative;
+    top: -24px;
+    vertical-align:middle;
+    right:-40px;
+}
+
+div.hideSkiplinkAdmin
+{
+    background-color:#0092D2;
+    width:918px;
+    height: 0;
+    position:relative;
+    top: -4px;
+    vertical-align:middle;
+    right:-40px;
+    left: 40px;
+}
+
+
+div.menu
+{
+    padding: 4px 0px 4px 8px;
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
+
+div.menu a, div.menu a:visited
+{
+    background-color: #3BA4CB;
+    border: 1px #0093D4 solid;
+    color: #FFFFFF;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.menu a:hover
+{
+    background-color: #bfcbd6;
+    color: #465c71;
+    text-decoration: none;
+}
+
+div.menu ul li a:active
+{
+    background-color: #465c71;
+    color: #cfdbe6;
+    text-decoration: none;
+}
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+    width: auto;
+    height: auto;
+    
+}
+
+fieldsetReservas
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+    width: auto;
+    height: auto;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline 
+{
+    display: inline;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+    width: 459px;
+}
+
+input.textEntry 
+{
+    width: 40px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry 
+{
+    width: 110px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+    width: 87%;
+    height: 299px;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+    height: 105px;
+    width: 981px;
+}
+
+.title
+{
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+.titleAdmin
+{
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+.loginDisplay
+{
+    
+     display: inherit;
+    text-align: left;
+    padding: 1px;
+    color: #006AB2;
+    height: auto;
+    width: 501px;
+    top: 11px;
+    }
+    
+.siteMap
+{
+    
+     display: inherit;
+    text-align:left;
+    
+    color:black;
+    height: 28%;
+    width: 40%;
+    top: 211%;
+   
+    
+    }
+    
+        
+
+    
+
+.loginDisplayLegend
+{
+    
+     display: block;
+    text-align: left;
+    padding: 29px;
+    height: auto;
+    width: 860px;
+    top: 2px;
+    }
+
+.loginDisplay a:link
+{
+    color: white;
+}
+
+.loginDisplay a:visited
+{
+    color: white;
+}
+
+.loginDisplay a:hover
+{
+    color: white;
+}
+
+
+.loginDisplayAdmin
+{
+    display: inherit;
+    text-align: left;
+    padding: 1px;
+    color: #006AB2;
+    height: auto;
+    width: 501px;
+    top: 11px;
+}
+
+.loginDisplayAdmin a:link
+{
+    color: white;
+}
+
+.loginDisplayAdmin a:visited
+{
+    color: white;
+}
+
+.loginDisplayAdmin a:hover
+{
+    color: white;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold
+{
+    font-weight: bold;
+    width: 896px;
+}
+
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+}
+
+input.botao, .btGeral {
+	font-family: Verdana;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #4B6C9E;
+	text-align: center;
+	border: 1px solid #4B6C9E;
+	cursor: pointer;
+    margin-top: 9px;
+    }
+
+.MasterMenu
+{
+	background-color: #ADD8E6;
+	border-top: Solid 3px #F5F5F5;
+	padding: 3px;
+	font-family: Verdana;
+	font-size: 12px;
+	color: Black;
+}
+
+.MasterMenuHover
+{
+	color: White;
+}
+
+/* Data Web Control Styles */
+
+.DataWebControlStyle
+{
+    font-size: 100%;
+}
+
+.HeaderStyle
+{
+    background-color:#ADD8E6;
+    color: white;
+    font-weight: bold;
+}
+
+.HeaderStyle a, .HeaderStyle a:visited
+{
+    color: white;
+}
+
+.FooterStyle
+{
+    background-color: #ADD8E6;
+    color: blue;
+    text-align: center;
+}
+
+.AlternatingRowStyle
+{
+    background-color: #ADD8E6;
+}
+
+.RowStyle
+{
+}
+
+.SelectedRowStyle
+{
+    background-color: #FFFFFF;
+}
+
+.PagerRowStyle
+{
+    background-color: #ddd;
+    text-align: right;
+}
+
+.SortHeaderRowStyle
+{
+    background-color: #c00;
+    text-align: left;
+    font-weight: bold;
+    color: White;
+}
+
+.Border
+{
+    border:none;
+}
+
+.GridView
+{
+	border-style: outset;
+    border-color: inherit;
+    border-width: 2px;
+    background-color: White;
+	font-family: Verdana;
+	font-size: 12px;
+	color: Black;
+    margin-top: 0px;
+}
+.GridView td
+{
+	padding: 3px;
+	color: Black;
+}
+.GridView td a
+{
+	color: Black;
+}
+.GridView th
+{
+	background-color: #4884CD;
+	padding: 3px;
+}
+.GridView th a
+{
+	font-weight: bold;
+	color: Black;
+}
+.GridViewEdit
+{
+	background-color: #999999;
+}
+.GridViewPager td
+{
+	font-family: Verdana;
+	font-size: 12px;
+	color: Black;
+}
+
+/*/////////////////////////*/
+
+
+
+
+.bodyHome
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	background-color: #FFFFFF;
+	background-image: url("../images/superpag-fundo.gif");
+	background-position: top center;
+	background-repeat: no-repeat;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	overflow: hidden !important;
+}
+
+
+
+input, textarea {
+	border: 1px solid #999999;
+	background-color: #f0f0f0;
+	color: #666666;
+	font-family: Verdana;
+	font-size: 8pt;
+	font-weight: normal;
+	text-align: left;
+	padding: 0px 2px 0px 2px;
+	margin-left: 3px;
+    margin-right: 0px;
+    margin-top: 0px;
+}
+
+select {
+	background-color: #f0f0f0;
+	color: #666666;
+	font-family: Verdana;
+	font-size: 8pt;
+	font-weight: normal;
+	text-align: left;
+	margin: 0px 15px 0px 3px;
+}
+
+.check input {
+	border: 0px;
+	margin: 0px 3px 0px 3px;
+	vertical-align: middle;	
+	background-color: transparent;
+}
+
+.radio input {
+	border: 0px;
+	margin: 0px 3px 0px 3px;
+	vertical-align: middle;	
+	background-color: transparent;
+}
+input.btLogin {
+	font-family: Verdana;
+	font-size: 7pt;
+	font-weight: bold;
+	color: #990000;
+	text-align: left;
+	padding: 3px 1px 0px 10px;
+	text-transform: lowercase;
+	background-color: transparent;
+	background-image: url(../images/btLogin.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	width: 75px;
+	height: 22px;
+	border: 0px;
+	cursor: pointer;
+}
+
+
+
+.conteudo {
+	width: 1000px;
+	border: 0px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+.topSuperpag {
+	width: 1000px;
+	height: 100px;
+	border: 0px;
+	background-image: url(../images/superpag-header.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-color: #FFFFFF;
+	margin: 0px 0px 10px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+.dadosLogin {
+	margin: -34px 0px 0px -180px;
+	padding: 0px 0px 0px 0px;
+	text-align: left;
+	float: left;
+}
+
+.dadosLogin ul {
+	display: inline;
+	list-style-type: none;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+.dadosLogin ul li {
+	display: inline;
+	list-style-type: none;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-family: Verdana;
+	font-size: 8pt;
+	font-weight: normal;
+	text-align: left;
+	color: #000000;
+}
+
+.dadosLogin ul li.user {
+	background-image: url(../images/icUser.gif);
+	background-position: 0px 3px;
+	-ms-background-position-x: 0px;
+	-ms-background-position-y: 4px;
+	background-repeat: no-repeat;
+	background-color: Transparent;
+	display: inline;
+	list-style-type: none;
+	margin: 0px 0px 0px 0px;
+	padding: 10px 10px 10px 35px;
+	font-family: Verdana;
+	font-size: 8pt;
+	font-weight: normal;
+	text-align: left;
+	color: #000000;
+	height: 24px;
+}
+
+
+
+.conteudoPagina {
+	width: 810px;
+	float: right;
+	font-family: Verdana;
+	font-size: 9pt;
+	color: #000000;
+	text-align: left;
+	line-height: 25px;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+.conteudoPagina tt {
+	font-family: Verdana;
+	font-size: 9pt;
+	color: #000000;
+	line-height: 25px;
+	font-weight: bold;
+}
+
+.saudacao {
+	text-align: left;
+	width: 500px;	
+	border: 0px;	
+	height: 470px;
+	font-family: Verdana;
+	font-size: 9pt;
+	color: #000000;
+	line-height: 25px;
+}
+
+.dadosConteudo {
+	text-align: left;
+	width: 100%;	
+	border: 1px solid #999999;
+	min-height: 437px;	
+	
+}
+
+
+
+.ajax__tab_default .ajax__tab_header {
+	font-family: verdana,tahoma,helvetica;
+	font-size: 8pt;
+	font-weight: normal;
+}
+
+.ajax__tab_default .ajax__tab_outer {
+	padding: 0px 9px 0px 0px;
+	background:url("../images/abaRight.gif") no-repeat top right;
+	height: 25px;
+}
+
+.ajax__tab_default .ajax__tab_inner {
+	padding: 0px 0px 0px 12px;
+	background:url("../images/abaLeft.gif") no-repeat;
+	height: 25px;
+}
+
+.ajax__tab_default .ajax__tab_tab  {
+	height: 25px;
+	padding: 4px 0px 0px 0px;
+	
+	margin: 0px 0px 0px 0px;
+	
+	background:url("../images/bgAbas.gif") repeat-x;
+	color: #666666;
+}
+
+.ajax__tab_default .ajax__tab_hover .ajax__tab_outer {
+	background:url("../images/abaRight_on.gif") no-repeat top right;
+}
+
+.ajax__tab_default .ajax__tab_hover .ajax__tab_inner {
+	background:url("../images/abaLeft_on.gif") no-repeat;
+}
+
+.ajax__tab_default .ajax__tab_hover .ajax__tab_tab {
+	background: url("../images/bgAbas_on.gif") repeat-x;
+	color: #FFFFFF;
+}
+
+.ajax__tab_default .ajax__tab_active .ajax__tab_outer {
+	background:url("../images/abaRight_on.gif") no-repeat top right;
+}
+
+.ajax__tab_default .ajax__tab_active .ajax__tab_inner {
+	background:url("../images/abaLeft_on.gif") no-repeat;
+}
+
+.ajax__tab_default .ajax__tab_active .ajax__tab_tab {
+	 background:url("../images/bgAbas_on.gif") repeat-x;
+	 color: #FFFFFF;
+}
+
+.ajax__tab_default .ajax__tab_body {
+	font-family: verdana,tahoma,helvetica;
+	font-size: 8pt;
+	border-top: 2px solid #990000;
+	color: #666666;
+	background-color: transparent;
+	padding: 4px 0px 0px 10px;
+}
+
+.form {
+	margin: 10px 0px 0px 10px;
+	border: 0px;
+}
+
+.form td {
+	font-family: Verdana;
+	font-size: 8pt;
+	padding: 0px 0px 0px 0px;
+	text-align: left;
+	color: #333333;
+}
+
+.form td.btForm {
+	text-align: right;
+	padding: 5px 5px 10px 0px;
+}
+
+.gridl {
+	margin: 10px 10px 10px 10px;
+	padding: 0px 0px 0px 0px;
+	background-color: #f0f0f0;
+	border: 0px;
+	width: 98%;
+}
+
+.gridl tr {
+	height: 12px;
+}
+.gridl th {
+	background-color: #CCCCCC;
+	border-bottom: 1px solid #990000;
+	font-family: Verdana;
+	font-size: 8pt;
+	font-weight: normal;
+	text-align: center;
+	padding: 1px 0px 1px 0px;
+	line-height: 14px;
+}
+
+.gridl td {
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #999999;
+	font-family: Verdana;
+	font-size: 8pt;
+	font-weight: normal;
+	text-align: left;
+	padding: 1px 2px 1px 5px;
+	line-height: 18px;
+}
+
+.watermarked
+{
+	border: 1px solid #999999;
+	height: 15px;
+	background-color: #f0f0f0;
+	color: #666666;
+	font-family: Verdana;
+	font-size: 8pt;
+	font-weight: normal;
+	text-align: left;
+	padding: 0px 2px 0px 2px;
+	margin: 0px 15px 0px 3px;
+}
+
+.ContextMenuPanel 
+{
+	z-index: 1000;
+	cursor: pointer;
+	border: 1px solid #999999;
+	background-color: #f0f0f0;
+	color: #666666;
+	font-family: Verdana;
+	font-size: 8pt;
+	font-weight: normal;
+	text-align: left;
+	padding: 0px 2px 0px 2px;
+	margin: 0px 15px 0px 3px;
+}
+
+.ContextMenuBreak
+{
+	margin:1px 1px 1px 32px;
+	padding:0;
+	height:1px;
+	overflow:hidden;
+	display:block;
+	border-top: 1px solid #999999;	
+}
+
+a.ContextMenuItem
+{
+	margin: 1px 0 1px 0;
+	display: block;
+	color: #666666;
+}	
+
+a.ContextMenuItem
+{
+	margin: 1px 0 1px 0;
+	display: block;
+	color: #666666;
+	font-family: Verdana;
+	font-size: 8pt;
+	font-weight: normal;
+	text-decoration: none;
+	cursor: pointer;	
+	padding: 0px 2px 0px 2px;
+	white-space: nowrap;
+}
+
+
+
+.controleCalendario {
+	background-image: url(../images/superpag-header.gif);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-color: Transparent;
+	border: 0px;
+	margin: 0px 0px 0px 2px;	
+}
+
+.modalPopup {
+	background-color:#f0f0f0;
+	border: 1px solid #999999;
+	padding: 2px 2px 2px 2px;
+	width: 250px;
+}
+
+.modalHeader {
+	background-color: #990000;
+	padding: 2px 2px 2px 2px;
+	text-align: left;
+	font-family: Verdana;
+	font-size: 8pt;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+
+.sampleStyleA {
+	background-color:#FFFFFF;
+	padding: 2px 2px 2px 2px;
+	font-family: Verdana;
+	font-size: 8pt;
+	color: #333333;
+	font-weight: normal;
+}
+
+.sampleStyleB {
+	background-color:#FFFFFF;
+	padding: 2px 2px 2px 2px;
+	font-family: verdana;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #666666;
+}
+
+.sampleStyleC {
+	background-color:#f0f0f0;
+	padding: 2px 2px 2px 2px;
+	font-family: verdana;
+	font-size: 8pt;
+	font-style: italic;
+	color: #333333;
+}
+
+.sampleStyleD {
+	background-color: #f0f0f0;
+	color: #333333;
+	font-family: Verdana;
+	font-size: 8pt;
+	border: 1px dotted #990000;
+}
+
+.accordionHeader
+{
+    border: 1px solid #999999;
+    color: #FFFFFF;
+    background-color: #990000;
+	font-family: Verdana;
+	font-size: 8pt;
+	font-weight: bold;
+    padding: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#master_content .accordionHeader a
+{
+	color: #FFFFFF;
+	background: none;
+	text-decoration: none;
+}
+
+#master_content .accordionHeader a:hover
+{
+	background: none;
+	text-decoration: underline;
+}
+
+.accordionHeaderSelected
+{
+    border: 1px solid #999999;
+    color: #FFFFFF;
+    background-color: #CC0000;
+	font-family: Verdana;
+	font-size: 8pt;
+	font-weight: bold;
+    padding: 5px ;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#master_content .accordionHeaderSelected a
+{
+	color: #FFFFFF;
+	background: none;
+	text-decoration: none;
+}
+
+#master_content .accordionHeaderSelected a:hover
+{
+	background: none;
+	text-decoration: underline;
+}
+
+.accordionContent
+{
+    background-color: #BFCBD6;
+    border-left: 1px dotted #999999;
+    border-right: 1px dotted #999999;
+    border-bottom: 1px dotted #999999;
+    padding: 5px 5px 5px 5px;
+    font-family: Verdana;
+    font-size: 8pt;
+    color: #666666;
+    border-radius: 1em;
+}
+
+.accordionContent a:link, .accordionContent a:active, .accordionContent a:visited
+{
+    font-family: Verdana;
+    font-size: 8pt;
+    color: #990000;
+    text-decoration: underline;
+}
+
+.accordionContent a:hover
+{
+    font-family: Verdana;
+    font-size: 8pt;
+    color: #990000;
+    text-decoration: none;
+}

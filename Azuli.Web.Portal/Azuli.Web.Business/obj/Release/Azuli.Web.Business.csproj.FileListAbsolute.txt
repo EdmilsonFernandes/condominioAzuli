@@ -1,0 +1,47 @@
+C:\Users\edmilson.santos\documents\visual studio 2010\Projects\Azuli.Web.Portal\Azuli.Web.Business\bin\Release\Azuli.Web.Business.dll
+C:\Users\edmilson.santos\documents\visual studio 2010\Projects\Azuli.Web.Portal\Azuli.Web.Business\bin\Release\Azuli.Web.Business.pdb
+C:\Users\edmilson.santos\documents\visual studio 2010\Projects\Azuli.Web.Portal\Azuli.Web.Business\bin\Release\Azuli.Web.DAO.dll
+C:\Users\edmilson.santos\documents\visual studio 2010\Projects\Azuli.Web.Portal\Azuli.Web.Business\bin\Release\Azuli.Web.Model.dll
+C:\Users\edmilson.santos\documents\visual studio 2010\Projects\Azuli.Web.Portal\Azuli.Web.Business\bin\Release\Azuli.Web.DAO.pdb
+C:\Users\edmilson.santos\documents\visual studio 2010\Projects\Azuli.Web.Portal\Azuli.Web.Business\bin\Release\Azuli.Web.Model.pdb
+C:\Users\edmilson.santos\documents\visual studio 2010\Projects\Azuli.Web.Portal\Azuli.Web.Business\obj\Release\ResolveAssemblyReference.cache
+C:\Users\edmilson.santos\documents\visual studio 2010\Projects\Azuli.Web.Portal\Azuli.Web.Business\obj\Release\Azuli.Web.Business.dll
+C:\Users\edmilson.santos\documents\visual studio 2010\Projects\Azuli.Web.Portal\Azuli.Web.Business\obj\Release\Azuli.Web.Business.pdb
+C:\Desenvolvimento\AzuliPortal\Azuli.Web.Business\bin\Release\Azuli.Web.Business.dll
+C:\Desenvolvimento\AzuliPortal\Azuli.Web.Business\bin\Release\Azuli.Web.Business.pdb
+C:\Desenvolvimento\AzuliPortal\Azuli.Web.Business\bin\Release\Azuli.Web.DAO.dll
+C:\Desenvolvimento\AzuliPortal\Azuli.Web.Business\bin\Release\Azuli.Web.Model.dll
+C:\Desenvolvimento\AzuliPortal\Azuli.Web.Business\bin\Release\Azuli.Web.DAO.pdb
+C:\Desenvolvimento\AzuliPortal\Azuli.Web.Business\bin\Release\Azuli.Web.Model.pdb
+C:\Desenvolvimento\AzuliPortal\Azuli.Web.Business\obj\Release\Azuli.Web.Business.csprojResolveAssemblyReference.cache
+C:\Desenvolvimento\AzuliPortal\Azuli.Web.Business\obj\Release\Azuli.Web.Business.dll
+C:\Desenvolvimento\AzuliPortal\Azuli.Web.Business\obj\Release\Azuli.Web.Business.pdb
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli.Web.Portal\Azuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Release\Azuli.Web.Business.dll
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli.Web.Portal\Azuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Release\Azuli.Web.Business.pdb
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli.Web.Portal\Azuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Release\Azuli.Web.DAO.dll
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli.Web.Portal\Azuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Release\Azuli.Web.Model.dll
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli.Web.Portal\Azuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Release\Azuli.Web.DAO.pdb
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli.Web.Portal\Azuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Release\Azuli.Web.Model.pdb
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli.Web.Portal\Azuli\Azuli.Web.Portal\Azuli.Web.Business\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli.Web.Portal\Azuli\Azuli.Web.Portal\Azuli.Web.Business\obj\Release\Azuli.Web.Business.dll
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli.Web.Portal\Azuli\Azuli.Web.Portal\Azuli.Web.Business\obj\Release\Azuli.Web.Business.pdb
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Business\obj\Release\ResolveAssemblyReference.cache
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Business\obj\Release\Azuli.Web.Business.dll
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Business\bin\Release\Azuli.Web.Business.dll
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Business\bin\Release\Azuli.Web.Business.pdb
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Business\bin\Release\AjaxControlToolkit.DLL
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Business\bin\Release\Azuli.Web.DAO.dll
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Business\bin\Release\Azuli.Web.Model.dll
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Business\bin\Release\Azuli.Web.DAO.pdb
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Business\bin\Release\Azuli.Web.Model.pdb
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Business\obj\Release\Azuli.Web.Business.pdb
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Business\bin\Release\Azuli.Web.Business.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Business\bin\Release\Azuli.Web.Business.pdb
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Business\bin\Release\AjaxControlToolkit.DLL
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Business\bin\Release\Azuli.Web.DAO.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Business\bin\Release\Azuli.Web.Model.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Business\bin\Release\Azuli.Web.DAO.pdb
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Business\bin\Release\Azuli.Web.Model.pdb
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Business\obj\Release\ResolveAssemblyReference.cache
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Business\obj\Release\Azuli.Web.Business.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Business\obj\Release\Azuli.Web.Business.pdb

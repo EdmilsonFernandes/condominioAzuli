@@ -1,0 +1,25 @@
+C:\Users\edmilson.santos\documents\visual studio 2010\Projects\Azuli.Web.Portal\Azuli.Web.Model\bin\Release\Azuli.Web.Model.dll
+C:\Users\edmilson.santos\documents\visual studio 2010\Projects\Azuli.Web.Portal\Azuli.Web.Model\bin\Release\Azuli.Web.Model.pdb
+C:\Users\edmilson.santos\documents\visual studio 2010\Projects\Azuli.Web.Portal\Azuli.Web.Model\obj\Release\ResolveAssemblyReference.cache
+C:\Users\edmilson.santos\documents\visual studio 2010\Projects\Azuli.Web.Portal\Azuli.Web.Model\obj\Release\Azuli.Web.Model.dll
+C:\Users\edmilson.santos\documents\visual studio 2010\Projects\Azuli.Web.Portal\Azuli.Web.Model\obj\Release\Azuli.Web.Model.pdb
+C:\Desenvolvimento\AzuliPortal\Azuli.Web.Model\bin\Release\Azuli.Web.Model.dll
+C:\Desenvolvimento\AzuliPortal\Azuli.Web.Model\bin\Release\Azuli.Web.Model.pdb
+C:\Desenvolvimento\AzuliPortal\Azuli.Web.Model\obj\Release\Azuli.Web.Model.dll
+C:\Desenvolvimento\AzuliPortal\Azuli.Web.Model\obj\Release\Azuli.Web.Model.pdb
+C:\Desenvolvimento\AzuliPortal\Azuli.Web.Model\obj\Release\Azuli.Web.Model.csprojResolveAssemblyReference.cache
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli.Web.Portal\Azuli\Azuli.Web.Portal\Azuli.Web.Model\bin\Release\Azuli.Web.Model.dll
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli.Web.Portal\Azuli\Azuli.Web.Portal\Azuli.Web.Model\bin\Release\Azuli.Web.Model.pdb
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli.Web.Portal\Azuli\Azuli.Web.Portal\Azuli.Web.Model\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli.Web.Portal\Azuli\Azuli.Web.Portal\Azuli.Web.Model\obj\Release\Azuli.Web.Model.dll
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli.Web.Portal\Azuli\Azuli.Web.Portal\Azuli.Web.Model\obj\Release\Azuli.Web.Model.pdb
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Model\bin\Release\Azuli.Web.Model.dll
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Model\bin\Release\Azuli.Web.Model.pdb
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Model\obj\Release\ResolveAssemblyReference.cache
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Model\obj\Release\Azuli.Web.Model.dll
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Model\obj\Release\Azuli.Web.Model.pdb
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Model\bin\Release\Azuli.Web.Model.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Model\bin\Release\Azuli.Web.Model.pdb
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Model\obj\Release\ResolveAssemblyReference.cache
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Model\obj\Release\Azuli.Web.Model.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Model\obj\Release\Azuli.Web.Model.pdb

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{59EE8FF9-A5F7-471E-9503-D468720BC57A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Azuli.Web.DAO</RootNamespace>
+    <AssemblyName>Azuli.Web.DAO</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\Users\edmilson.santos\Desktop\log4net-1.2.11\bin\net\4.0\release\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcessoDAO.cs" />
+    <Compile Include="Agenda.cs" />
+    <Compile Include="ClassificadoVistoDAO.cs" />
+    <Compile Include="ConfiguracaoReservaDAO.cs" />
+    <Compile Include="ContaAguaDAO.cs" />
+    <Compile Include="EnqueteDAO.cs" />
+    <Compile Include="FileDAO.cs" />
+    <Compile Include="ClassificadoDAO.cs" />
+    <Compile Include="FotoDAO.cs" />
+    <Compile Include="GrupoClassificadosDAO.cs" />
+    <Compile Include="Interfaces\IConfiguracaoReserva.cs" />
+    <Compile Include="Interfaces\IContaAguaDAO.cs" />
+    <Compile Include="Interfaces\IAgenda.cs" />
+    <Compile Include="Interfaces\IClassificado.cs" />
+    <Compile Include="Interfaces\IClassificadoVisto.cs" />
+    <Compile Include="Interfaces\IEnquete.cs" />
+    <Compile Include="Interfaces\IFile.cs" />
+    <Compile Include="Interfaces\IFotoDao.cs" />
+    <Compile Include="Interfaces\IGrupoClassificados.cs" />
+    <Compile Include="Interfaces\ILancamentoOcorrencia.cs" />
+    <Compile Include="Interfaces\IMensagemMorador.cs" />
+    <Compile Include="Interfaces\IPendenciaAdmin.cs" />
+    <Compile Include="Interfaces\IProprietario.cs" />
+    <Compile Include="Interfaces\IReciboAgua.cs" />
+    <Compile Include="Interfaces\IVisitante.cs" />
+    <Compile Include="Interfaces\IVisitas.cs" />
+    <Compile Include="LancamentoOcorrencia.cs" />
+    <Compile Include="MensagemMoradorDAO.cs" />
+    <Compile Include="PendenciaAdminDAO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProprietarioDAO.cs" />
+    <Compile Include="ReciboAguaDAO.cs" />
+    <Compile Include="VisitanteDAO.cs" />
+    <Compile Include="VisitasDAO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Azuli.Web.Model\Azuli.Web.Model.csproj">
+      <Project>{386FAF34-9F13-405D-99E8-7B1BD91E6F65}</Project>
+      <Name>Azuli.Web.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

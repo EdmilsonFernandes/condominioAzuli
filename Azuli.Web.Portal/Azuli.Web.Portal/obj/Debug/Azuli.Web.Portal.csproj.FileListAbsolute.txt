@@ -1,0 +1,63 @@
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Portal.dll
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Portal.pdb
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Business.dll
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Model.dll
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.DAO.dll
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Business.pdb
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Model.pdb
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.DAO.pdb
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.csprojResolveAssemblyReference.cache
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.dll
+C:\Users\Leandro\Documents\Visual Studio 2010\Projects\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.pdb
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Portal\bin\Azuli.Web.Portal.dll
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Portal\bin\Azuli.Web.Portal.pdb
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Portal\bin\Azuli.Web.Business.dll
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Portal\bin\Azuli.Web.Model.dll
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Portal\bin\Azuli.Web.DAO.dll
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Portal\bin\Azuli.Web.Business.pdb
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Portal\bin\Azuli.Web.Model.pdb
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Portal\bin\Azuli.Web.DAO.pdb
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Portal\obj\Debug\ResolveAssemblyReference.cache
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.dll
+C:\Meu Desenvolvimento\Azuli\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.pdb
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\bin\Azuli.Web.Portal.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\bin\Azuli.Web.Portal.pdb
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\bin\Azuli.Web.Business.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\bin\Azuli.Web.Model.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\bin\Azuli.Web.DAO.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\bin\Azuli.Web.Business.pdb
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\bin\Azuli.Web.Model.pdb
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\bin\Azuli.Web.DAO.pdb
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\obj\Debug\ResolveAssemblyReference.cache
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.pdb
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\bin\AjaxControlToolkit.pdb
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\bin\ar\AjaxControlToolkit.resources.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\bin\cs\AjaxControlToolkit.resources.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\bin\de\AjaxControlToolkit.resources.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\bin\es\AjaxControlToolkit.resources.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\bin\fr\AjaxControlToolkit.resources.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\bin\he\AjaxControlToolkit.resources.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\bin\hi\AjaxControlToolkit.resources.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\bin\it\AjaxControlToolkit.resources.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\bin\ja\AjaxControlToolkit.resources.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\bin\ko\AjaxControlToolkit.resources.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\bin\nl\AjaxControlToolkit.resources.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\bin\pt\AjaxControlToolkit.resources.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\bin\ru\AjaxControlToolkit.resources.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\bin\tr-TR\AjaxControlToolkit.resources.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\bin\zh-CHS\AjaxControlToolkit.resources.dll
+C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Portal\bin\zh-CHT\AjaxControlToolkit.resources.dll
+C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Portal.dll
+C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Portal.pdb
+C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Crystal.Relatorios.dll
+C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Business.dll
+C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Model.dll
+C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.DAO.dll
+C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Crystal.Relatorios.pdb
+C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Business.pdb
+C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Model.pdb
+C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.DAO.pdb
+C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.csprojResolveAssemblyReference.cache
+C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.dll
+C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.pdb

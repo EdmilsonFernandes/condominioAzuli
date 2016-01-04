@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatalogProperties xmlns="urn:Microsoft.VisualStudio.Data.Schema.Package.CatalogProperties">
+  <Version>1.0</Version>
+  <Properties>
+    <CompatibilityMode>90</CompatibilityMode>
+  </Properties>
+</CatalogProperties>

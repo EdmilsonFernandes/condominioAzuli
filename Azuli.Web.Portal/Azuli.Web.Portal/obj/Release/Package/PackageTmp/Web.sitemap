@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+
+
+
+  <siteMapNode url="" title="Página Principal"  description="Principal" imageurl="images/home.png">
+
+    <siteMapNode url="paginaInicialMoradores.aspx" title="Home" description="Home Page" >
+    </siteMapNode>
+    
+    <siteMapNode url="" title="Reservas" description="Reservas">
+      <siteMapNode url="~/telaAgendamento.aspx" title="Fazer Reservas" description="morador" />
+      <siteMapNode url="~/minhaReservas.aspx" title="Pesquisar minhas Reservas" description="morador" />
+      <siteMapNode url="ReservaDetalhadaMoradores.aspx" title="Reservas do Mês detalhada" description="morador" />
+
+    </siteMapNode>
+
+    <siteMapNode url="" title="Livro de Ocorrência" description="Ocorrência">
+
+      <siteMapNode url="~/OcorrenciaMorador.aspx" title="Abrir Ocorrência" description="Open Ocorrencia" />
+      <siteMapNode url="~/detalheOcorrencia.aspx" title="Minhas Ocorrências" description="Minhas Ocorrencia" />
+
+    </siteMapNode>
+
+    <siteMapNode url="" title="Mensagens" description="Consultas" roles="">
+      <siteMapNode url="~/detalheMensagemMorador.aspx" title="Caixa de Entrada" description="Consultar mensagem" />
+
+    </siteMapNode>
+
+    <siteMapNode  url=""  title="Circulares" description="Circular" roles="">
+      <siteMapNode url="~/consultaCircular.aspx" title="Consulta Circular" description="Circular" />
+    <!--  <siteMapNode url="~/consultaBalancete.aspx" title="Balancete" description="Balancetes" /> -->
+
+    </siteMapNode>
+
+    <siteMapNode url="resetSenha.aspx" title="Alterar Senha" description="Senha" roles="">
+
+    </siteMapNode>
+
+
+    <siteMapNode url="contato.aspx" title="Contato" description="Contato" />
+
+    <siteMapNode url="~/videoajuda.aspx" title="Ajuda" description="Videos" roles="" />
+      
+    
+    
+
+    <siteMapNode url="LoginAzulli.aspx" title="Sair" description="Login">
+
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

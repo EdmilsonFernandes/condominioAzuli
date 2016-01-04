@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="" title="Página Principal"  description="" imageurl="images/home.png">
+
+    <siteMapNode url="" title="Gestão de Consumo de Água" description="" roles="" >
+      <siteMapNode url="~/SegundaViaContaAguaAzuli.aspx" title="2ª Via Água" description=""  />
+      <siteMapNode url="~/ConsumoIndividual.aspx" title="Consumo M³ individual" description=""  />
+
+    </siteMapNode>
+
+    <siteMapNode url="LoginAzulli.aspx" title="Sair" description="">
+    </siteMapNode>
+
+  </siteMapNode>
+</siteMap>
