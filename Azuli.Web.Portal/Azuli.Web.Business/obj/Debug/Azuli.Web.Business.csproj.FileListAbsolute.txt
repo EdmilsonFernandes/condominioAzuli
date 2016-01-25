@@ -52,3 +52,12 @@ C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Business\bin
 C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Business\obj\Debug\Azuli.Web.Business.csprojResolveAssemblyReference.cache
 C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Business\obj\Debug\Azuli.Web.Business.dll
 C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Business\obj\Debug\Azuli.Web.Business.pdb
+C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.Business.dll
+C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.Business.pdb
+C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.DAO.dll
+C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.Model.dll
+C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.DAO.pdb
+C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.Model.pdb
+C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Business\obj\Debug\Azuli.Web.Business.csprojResolveAssemblyReference.cache
+C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Business\obj\Debug\Azuli.Web.Business.dll
+C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Business\obj\Debug\Azuli.Web.Business.pdb

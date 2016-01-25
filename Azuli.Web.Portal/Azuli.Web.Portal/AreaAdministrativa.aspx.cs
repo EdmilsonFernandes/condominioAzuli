@@ -380,7 +380,16 @@ namespace Azuli.Web.Portal
             oProprietarioModel.ap.apartamento = Convert.ToInt32(txtApartamento.Text);
             oProprietarioModel.proprietario1 = txtMorador1.Text;
             oProprietarioModel.proprietario2 = ""; //txtMorador2.Text - Para facilitar para o sindico;
-            oProprietarioModel.email = txtEmail.Text;
+            if (txtEmail.Text != string.Empty)
+            {
+                oProprietarioModel.email = txtEmail.Text;
+
+            }
+            else
+            {
+                oProprietarioModel.email = "";
+            }
+         
             oProprietarioModel.senha = oUtil.GeraSenha();
             
 
@@ -405,7 +414,7 @@ namespace Azuli.Web.Portal
                    lblMsgCadastro.Visible = true;
                    imgCalendar.Visible = true;
                    hplnkWelcomeAdmin.Visible = true;
-                   lblMsgCadastro.Text = "Cadastro efetuado com sucesso para Morador: <br> <b> " + oProprietarioModel.proprietario1 + " <b> <br>" + "Bloco: " + oProprietarioModel.ap.bloco + " / Apartamento:  " + oProprietarioModel.ap.apartamento + "<br> Sua Senha é: " + oProprietarioModel.senha + "<br><br><hr>";
+                   lblMsgCadastro.Text = "Cadastro efetuado com sucesso para Morador: <br> <b> " + oProprietarioModel.proprietario1 + " <b> <br>" + "Bloco: " + oProprietarioModel.ap.bloco + " / Apartamento:  " + oProprietarioModel.ap.apartamento + "<br> Sua Senha é: " + oProprietarioModel.senha + "<br><b>Acesse: www.condominioazuli.somee.com<b><br><hr>";
                 
                    dvCadastro.Visible = false;
                    dvPesquisaMorador.Visible = false;
@@ -485,10 +494,7 @@ namespace Azuli.Web.Portal
             txtAp.Text = "";
         }
 
-        protected void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-            txtEmail.Text = "";
-        }
+        
 
         protected void lnkBack_Click(object sender, EventArgs e)
         {

@@ -244,7 +244,7 @@
                                 &nbsp;</td>
                             <td class="style13" align="left">
                                 <asp:Button ID="btnOk" runat="server" CssClass="botao" Text="Pesquisar" 
-                                    Width="75px" onclick="btnOk_Click" ValidationGroup="pesquisaAP" />
+                                    Width="103px" onclick="btnOk_Click" ValidationGroup="pesquisaAP" />
 &nbsp;<asp:Button ID="btnOk0" runat="server" CssClass="botao" Text="voltar" 
                                     Width="75px" onclick="btnOk0_Click" />
                             </td>
@@ -640,7 +640,7 @@
                             </td>
                             <td class="">
                             <asp:TextBox ID="txtEmail" runat="server" Width="165px" CssClass="style5" 
-                                    AutoPostBack="True" ontextchanged="txtEmail_TextChanged">Não tem no momento</asp:TextBox>
+                                    AutoPostBack="True" >Não tem no momento</asp:TextBox>
                             </td>
                         </tr>
                         <tr>

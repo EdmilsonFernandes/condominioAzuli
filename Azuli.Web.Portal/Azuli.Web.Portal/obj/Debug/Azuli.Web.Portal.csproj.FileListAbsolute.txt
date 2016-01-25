@@ -61,3 +61,16 @@ C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\A
 C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.csprojResolveAssemblyReference.cache
 C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.dll
 C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.pdb
+C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Portal.dll
+C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Portal.pdb
+C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Crystal.Relatorios.dll
+C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Business.dll
+C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Model.dll
+C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.DAO.dll
+C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Crystal.Relatorios.pdb
+C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Business.pdb
+C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Model.pdb
+C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.DAO.pdb
+C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.csprojResolveAssemblyReference.cache
+C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.dll
+C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.pdb

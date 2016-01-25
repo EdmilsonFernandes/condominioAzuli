@@ -45,7 +45,9 @@ namespace Azuli.Web.Portal
       
         protected void Calendar1_DayRender(object sender, DayRenderEventArgs e)
         {
-            
+
+
+            int diasAgendamento = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["diasParaAgendamento"]);
             Literal litAlugado = new Literal();
             List<AgendaModel> listaAgenda = oAgenda.listaEventos();
 
@@ -62,7 +64,7 @@ namespace Azuli.Web.Portal
                
             }
 
-            if (e.Day.Date > (System.DateTime.Now.AddDays(90)))
+            if (e.Day.Date > (System.DateTime.Now.AddDays(diasAgendamento)))
             {
 
                 Label t1 = new Label();

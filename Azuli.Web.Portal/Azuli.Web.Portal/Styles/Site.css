@@ -301,7 +301,7 @@ div.menu a, div.menu a:visited
 {
     background-color: #3BA4CB;
     border: 1px #0093D4 solid;
-    color: #FFFFFF;
+    color:white;
     display: block;
     line-height: 1.45em;
     padding: 3px 17px;
@@ -309,6 +309,7 @@ div.menu a, div.menu a:visited
     white-space: inherit;
     display:block;
     behavior:url(border-radius.htc);border-radius: 1em;
+    font-size:14px;
 }
 
 div.menu a:hover

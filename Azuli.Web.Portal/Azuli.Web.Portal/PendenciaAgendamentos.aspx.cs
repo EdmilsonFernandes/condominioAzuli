@@ -88,7 +88,7 @@ namespace Azuli.Web.Portal
             oAgendaModel.dataAgendamento = Convert.ToDateTime(dataPen);
             double valorChurras = 0.0;
             double valorFesta = 0.0;
-            double desconto = 0.0;
+            //double desconto = 0.0;
 
      
 
@@ -122,7 +122,7 @@ namespace Azuli.Web.Portal
                             valorChurras = item.valorReserva;
                         }
 
-                        desconto = 20.00;
+                        //desconto = 20.00;
                         //lblDesconto.Text = "R$ 20,00";
 
 
@@ -272,7 +272,7 @@ namespace Azuli.Web.Portal
 
             lblStatus.Text = "Confirmação será feita para área: Churrasqueira";
             lblStatus.ForeColor = System.Drawing.Color.Green;
-            lblMsg.Text = "Confirme os dados para reserva da Churrasqueira: ";
+            //lblMsg.Text = "Confirme os dados para reserva da Churrasqueira: ";
             actionStatus =  ((Int32)Enum.Parse(typeof(opcaoCancelamento), opcaoCancelamento.confirmaChurrasqueira.ToString()));
             Session["status"] = actionStatus;
               
@@ -289,7 +289,7 @@ namespace Azuli.Web.Portal
             lblStatus.Text = "Cancelamento será feito para área: Churrasqueira";
             lblStatus.ForeColor = System.Drawing.Color.Red;
 
-            lblMsg.Text = "Confirme os dados para cancelamento da Churrasqueira?";
+           // lblMsg.Text = "Confirme os dados para cancelamento da Churrasqueira?";
             actionStatus = ((Int32)Enum.Parse(typeof(opcaoCancelamento), opcaoCancelamento.cancelaChurrasco.ToString()));
             Session["status"] = actionStatus;
         }
@@ -302,7 +302,7 @@ namespace Azuli.Web.Portal
             lblStatus.Text = "Cancelamento será feito para área: Salão de Festa";
             lblStatus.ForeColor = System.Drawing.Color.Red;
 
-            lblMsg.Text = "Confirma os dados para cancelamento do Salão de Festa?";
+           // lblMsg.Text = "Confirma os dados para cancelamento do Salão de Festa?";
             actionStatus = ((Int32)Enum.Parse(typeof(opcaoCancelamento), opcaoCancelamento.cancelaSLFesta.ToString()));
             Session["status"] = actionStatus;
 
@@ -316,7 +316,7 @@ namespace Azuli.Web.Portal
             lblStatus.Text = "Confirmação será feita para área: Salão de Festa / Churrasqueira";
             lblStatus.ForeColor = System.Drawing.Color.Green;
 
-            lblMsg.Text = "Confirme os dados para reservas do Salão de Festa e Churrasqueira";
+           // lblMsg.Text = "Confirme os dados para reservas do Salão de Festa e Churrasqueira";
             actionStatus = ((Int32)Enum.Parse(typeof(opcaoCancelamento), opcaoCancelamento.confimaTudo.ToString()));
             Session["status"] = actionStatus;
 
@@ -331,7 +331,7 @@ namespace Azuli.Web.Portal
 
             lblStatus.ForeColor = System.Drawing.Color.Red;
 
-            lblMsg.Text = "Confirme os dados para cancelamento das áreas: Salão de Festa e Churrasqueira?";
+            //lblMsg.Text = "Confirme os dados para cancelamento das áreas: Salão de Festa e Churrasqueira?";
             actionStatus = ((Int32)Enum.Parse(typeof(opcaoCancelamento), opcaoCancelamento.cancelaTudo.ToString()));
             Session["status"] = actionStatus;
 
@@ -346,7 +346,7 @@ namespace Azuli.Web.Portal
             lblStatus.Text = "Confirmação será feita para área: Salão de Festa";
             lblStatus.ForeColor = System.Drawing.Color.Green;
 
-            lblMsg.Text = "Confirme os dados para reserva do Salão de Festa:";
+            //lblMsg.Text = "Confirme os dados para reserva do Salão de Festa:";
             actionStatus = ((Int32)Enum.Parse(typeof(opcaoCancelamento), opcaoCancelamento.confirmaFesta.ToString()));
             Session["status"] = actionStatus;
 
@@ -354,8 +354,7 @@ namespace Azuli.Web.Portal
 
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
-            dvPesquisaMorador.Visible = true;
-            DvConfirma.Visible = false;
+            Response.Redirect("WelcomeAdmin.aspx");
         }
 
         public enum opcaoCancelamento

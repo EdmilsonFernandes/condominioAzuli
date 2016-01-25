@@ -9,8 +9,8 @@ namespace Azuli.Web.Model
     {
         public int id_email { get; set; }
         public ApartamentoModel apBloco { get; set; }
-        public int MyProperty { get; set; }
-        public int MyProperty { get; set; }
+       // public int MyProperty { get; set; }
+        //public int MyProperty { get; set; }
 
 
     }

@@ -6,18 +6,18 @@
         .gridl
         {
         }
-        .style2
-        {
-            color: #CC3300;
-            font-size: 12pt;
-        }
         .style3
         {
             font-size: 11pt;
         }
-        .style4
+        .style5
         {
-            font-size: 10pt;
+            font-size: small;
+            font-weight: bold;
+        }
+        .style6
+        {
+            font-size: medium;
             font-weight: bold;
         }
     </style>
@@ -33,23 +33,17 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
       <center><div id="dvPesquisaMorador" align="center" runat="server">
-        <fieldset class="loginDisplayLegend">
-            <legend align="left" class="accordionContent"><span class="style2">Aguardando Pagamento .....</span>&nbsp;
-                <span class="style33">
-                <asp:Image ID="Image3" runat="server" Height="16px" 
-                    ImageUrl="~/images/real.jpg" Width="29px" />
-                </span> </legend>
+      
        
               <center> <div id="dvAgendamentosFuturos" runat="server">
 
                     <fieldset>
                         <legend id="lgFesta" class="accordionContent" runat="server" onclick="return lgFesta_onclick()">
-                            <span class="style3">Áreas Reservadas</span>&nbsp; 
+                            <span class="style3">Áreas Reservadas Bloco e Apartamento :</span> <asp:Label ID="lblBlocoApto" runat="server" Font-Size="12pt" style="color: #0000FF"></asp:Label>
                            
                         </legend>
                         
-                 <legend class="accordionContent"><font size="2">Bloco e Apartamento :</font> 
-              <asp:Label ID="lblBlocoApto" runat="server" Font-Size="12pt" style="color: #0000FF"></asp:Label></legend>
+             
                         <br />
                         <table class="accordionContent" 
                             style="border-style: groove; border-width: thin">
@@ -60,7 +54,7 @@
                             <asp:Image ID="Image4" runat="server" Height="16px" 
                                 ImageUrl="~/images/festa.jpg" Width="21px" />
                        
-                                &nbsp;</span><span class="style4">Salão de Festa</span>&nbsp; 
+                                &nbsp;</span><span class="style6">Salão de Festa</span>&nbsp; 
                                                    
                                 </td>
                                 <td style="border-color: #3BA4CB; border-bottom-style: groove; border-width: thin" 
@@ -81,7 +75,7 @@
             %>'></asp:Label>
                                     </ItemTemplate>
                                     <HeaderStyle Width="120px" />
-                                    <ItemStyle HorizontalAlign="Left" ForeColor="#006600" Font-Size="9pt" />
+                                    <ItemStyle HorizontalAlign="Left" ForeColor="#006600" Font-Size="12pt" />
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Data
             solicitação da Reserva">
@@ -92,18 +86,7 @@
                                         <asp:Label ID="Label1" runat="server" Text='<%# Eval("dataInclusao", "{0:ddd}")
             + "-" + Eval("dataInclusao","{0:dd/MM/yy}") %>'></asp:Label>
                                     </ItemTemplate>
-                                    <ItemStyle Font-Size="9pt" ForeColor="Red" />
-                                </asp:TemplateField>
-                                <asp:TemplateField HeaderText="Dias
-            em Atraso">
-                                    <EditItemTemplate>
-                                        <asp:TextBox ID="TextBox2" runat="server" Text='<%#
-            Eval("qtdDiasPagamentoFesta") %>'></asp:TextBox>
-                                    </EditItemTemplate>
-                                    <ItemTemplate>
-                                        <asp:Label ID="Label2" runat="server" Text='<%#Eval("qtdDiasPagamentoChurras") %> '></asp:Label>
-                                    </ItemTemplate>
-                                    <ItemStyle HorizontalAlign="Left" Font-Size="9pt" />
+                                    <ItemStyle Font-Size="12pt" ForeColor="Red" />
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Obs.:">
                                     <EditItemTemplate>
@@ -127,7 +110,7 @@
                             <span class="style33"><span class="style3">
                             <asp:Image ID="Image5" runat="server" Height="17px" 
                                 ImageUrl="~/images/churrasco.jpg" Width="26px" />
-                            &nbsp;</span><span class="style4">Churrasqueira</span>
+                            &nbsp;</span><span class="style6">Churrasqueira</span>
                             </span>
                                 </td>
                                 <td align="center">
@@ -148,7 +131,8 @@
             Eval("dataAgendamento", "{0:ddd}") + "-" + Eval("dataAgendamento","{0:dd/MM/yy}")
             %>'></asp:Label>
                                     </ItemTemplate>
-                                    <ItemStyle HorizontalAlign="Center" ForeColor="#006600" Width="120px" />
+                                    <ItemStyle HorizontalAlign="Center" ForeColor="#006600" Width="120px" 
+                                        Font-Size="12pt" />
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Data solicitação da Reserva">
                                     <EditItemTemplate>
@@ -159,17 +143,8 @@
                                         <asp:Label ID="Label1" runat="server" Text='<%# Eval("dataInclusao", "{0:ddd}") + " / " + Eval("dataInclusao","{0:dd/MM/yy}")
             %>'></asp:Label>
                                     </ItemTemplate>
-                                    <ItemStyle HorizontalAlign="Center" ForeColor="#FF3300" Width="200px" />
-                                </asp:TemplateField>
-                                <asp:TemplateField HeaderText="Dias em Atraso">
-                                    <EditItemTemplate>
-                                        <asp:TextBox ID="TextBox2" runat="server" Text='<%# Eval("qtdDiasPagamentoChurras")
-            %>'></asp:TextBox>
-                                    </EditItemTemplate>
-                                    <ItemTemplate>
-                                        <asp:Label ID="Label2" runat="server" Text='<%#Eval("qtdDiasPagamentoChurras")%> '>&gt;</asp:Label>
-                                    </ItemTemplate>
-                                    <ItemStyle HorizontalAlign="Center" Width="140px" />
+                                    <ItemStyle HorizontalAlign="Center" ForeColor="#FF3300" Width="200px" 
+                                        Font-Size="12pt" />
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Obs.:">
                                     <EditItemTemplate>
@@ -201,7 +176,7 @@
                         </td>
                     </tr>
                 </table></center>
-         </div></center>  </fieldset> </div>
+         </div> </fieldset> </center>   </div>
   
     </center>
 </asp:Content>

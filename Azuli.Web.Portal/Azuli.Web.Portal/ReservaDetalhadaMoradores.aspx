@@ -47,9 +47,8 @@
                 </td>
 
                  <td>
-                     <asp:Label CssClass="watermarked"  
-                         Text="" ID="lblTotalAreas" runat="server" 
-                         Font-Bold="True" Font-Size="Small" />
+                     <asp:Label CssClass="watermarked" ID="lblTotalAreas" runat="server" 
+                         Font-Bold="True" Font-Size="Medium" ForeColor="#006600" />
                 </td>
             </tr>
         </table></div>
