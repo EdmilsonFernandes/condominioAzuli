@@ -47,7 +47,9 @@
                     <asp:Label ID="lblApDesc"  runat="server" Font-Size="Small" Font-Bold="True"></asp:Label>
             </div>
                 <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" 
-                    EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal" >
+                    EnableViewState="false" IncludeStyleBlock="false" 
+                   Orientation="Horizontal" Font-Bold="True" Font-Size="Small" 
+                   ForeColor="#CCFFFF" >
                     
                     <Items>
                         <asp:MenuItem NavigateUrl="~/WelcomeAdmin.aspx" Text="Home" Value="Home">

@@ -29,6 +29,8 @@ namespace Azuli.Web.Portal
         AgendaModel oAgendaModel = new AgendaModel();
         Util.Util oUtil = new Util.Util();
         ConfiguracaoReservaBLL oConfigValor = new ConfiguracaoReservaBLL();
+
+        // TODO: implementar o envio da água por e-mail, criar uma página aspx, que faz a gestão e envia o e-mail...
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -36,14 +38,19 @@ namespace Azuli.Web.Portal
             {
                 if (oUtil.validateSession())
                 {
-                    enviaReciboMoradorPorEmail();
+                    crystalReport();
+                  
                 }
             }
+
+           //TODO: Esse metodo e sessão é responsável por mandar e-mail, quando for implementado deverá ser usado. 
             else if (Convert.ToBoolean(Session["EnviaEmailAgua"]) == true)
             {
                 if (oUtil.validateSession())
                 {
-                    crystalReport();
+                      
+                    enviaReciboMoradorPorEmail();
+                    
                 }
             }
 
