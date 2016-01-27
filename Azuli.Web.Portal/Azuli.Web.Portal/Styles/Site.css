@@ -1211,7 +1211,7 @@ background-image: url('../images/superpag-header.gif');
     background-color: #F0F0F0;
     padding: 5px 5px 5px 5px;
     font-family: Verdana;
-    font-size: 8pt;
+    font-size: 12pt;
     color: #666666;
     behavior:url(border-radius.htc);border-radius: 1em;
     height: 15px;
@@ -1693,4 +1693,83 @@ hr {
     
     
     .gvHeader th:first-child{display:none;} .gvRow td:first-child{display:none;} .gvAltRow td:first-child{display:none;} 
-/*;
+.calendarWrapper{
+    background-color:#4CCAEF;
+    padding:10px;
+    display:inline-block;
+}
+
+.myCalendar {  
+    background-color: #f2f2f2;  
+    width: 156px;  
+    border:none !important;
+}  
+    .myCalendar a {  
+    text-decoration: none;  }  
+.myCalendar .myCalendarTitle {  
+    font-weight: bold;  
+    height:40px;line-height:40px;
+    background-color:#4CCAEF;
+    color:#ffffff;
+    border:none !important;
+}  
+.myCalendar th.myCalendarDayHeader  
+{
+    height:25px;
+
+}
+.myCalendar tr{  
+    border-bottom: solid 1px #ddd;
+} 
+
+.myCalendar table tr {
+    border-bottom: none !important;    
+}
+.myCalendar tr:last-child td{  
+    border-bottom: none;
+}
+.myCalendar tr td.myCalendarDay, .myCalendar tr th.myCalendarDayHeader{  
+    border-right: solid 1px #ddd;
+}
+.myCalendar tr td:last-child.myCalendarDay, .myCalendar tr th:last-child.myCalendarDayHeader {  
+    border-right: none;
+}
+
+  .myCalendar td.myCalendarDay:nth-child(7) a{color:#c52e2e !important;}
+.myCalendar .myCalendarNextPrev {  
+    text-align: center;  
+}  
+
+.myCalendar .myCalendarNextPrev a  {font-size:1px;}
+.myCalendar .myCalendarNextPrev:nth-child(1) a{color:#4CCAEF!important;background:url("prevMonth.png") no-repeat center center;}
+.myCalendar .myCalendarNextPrev:nth-child(1) a:hover,.myCalendar .myCalendarNextPrev:nth-child(3) a:hover{background-color:transparent;}
+.myCalendar .myCalendarNextPrev:nth-child(3) a{color:#4CCAEF!important;background:url("nextMonth.png") no-repeat center center;}
+.myCalendar td.myCalendarSelector a {  
+    background-color: #25bae5;  
+}  
+
+.myCalendar .myCalendarDayHeader a,
+.myCalendar .myCalendarDay a,   
+.myCalendar .myCalendarSelector a,  
+.myCalendar .myCalendarNextPrev a {  
+    display: block;  
+    line-height: 20px;  
+}  
+.myCalendar .myCalendarToday {  
+    background-color: #f2f2f2; 
+   -webkit-box-shadow: 1px 1px 8px 1px #8f8f8f;
+        box-shadow: 1px 1px 8px 1px #8f8f8f;
+        display:inline-block;
+    width:22px !important;
+    height:19px !important;
+border:2px solid #f2f2f2;
+margin-left:-1px;
+margin-top:-1px;
+position:relative;}
+.myCalendar .myCalendarToday a{color:#25bae5 !important; font-weight:bold;}
+.myCalendar .myCalendarToday a:after{content:"TODAY"; color:#000; font-size:0.5em;display:inline-block;pointer-events:none; 
+width:100%; float:left;}
+.myCalendar .myCalendarDay a:hover,   
+.myCalendar .myCalendarSelector a:hover {  
+    background-color: #25bae5;  
+}

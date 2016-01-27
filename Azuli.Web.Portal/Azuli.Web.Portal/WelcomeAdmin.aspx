@@ -117,8 +117,10 @@
                                         Text="(*) - Não Confirmado (Falta de Pagamento)" CssClass="style32"></asp:Label>
                                 </td>--%>
                            <%-- </tr>--%>--%>
-                        </table>
+                       
                     </td>
+
+                     </table>
                     
                   <!-- Módulo desativado no momento - Para aceitação Inicial 
                     <td valign="top" class="watermarked">

@@ -26,37 +26,19 @@
             font-weight: bold;
             width: 896px;
             font-size: 13pt;
+            color: #000099;
         }
         .style9
         {
             width: 743px;
         }
                  
-        .style10
-        {
-            background-color: #F0F0F0;
-            border-left: 2px solid #999999;
-            border-right: 2px solid #999999;
-            border-botom: 2px solid #999999;
-            padding: 5px 5px 5px 5px;
-            font-family: Verdana;
-            font-size: 12pt;
-            color: #006600;
-            border-radius: 1em;
-            height: 15px;
-            font-weight: bold;
-        }
         .style11
         {
             font-size: 12pt;
             color: #000000;
         }
                  
-        .style12
-        {
-            height: 68px;
-            width: 634px;
-        }
         .style13
         {
             background-color: #F0F0F0;
@@ -75,6 +57,17 @@
         .style14
         {
             width: 100%;
+        }
+                 
+        .style16
+        {
+            font-size: medium;
+            color: #006600;
+        }
+                 
+        .style17
+        {
+            font-size: medium;
         }
                  
     </style>
@@ -102,19 +95,18 @@
         ImageUrl="~/images/calendario.png" onclick="ImageButton1_Click2" Width="29px" />
     <div id="dvProprietario" align="center" runat="server" class="GridViewPager">
         <fieldset class="loginDisplayLegend">
-           <legend class="accordionContent"> RESERVANDO PARA:</legend>
-                   
+         
              <table style="font-size: small" class="accordionContent">
             <tr>
             <td class="style4">
-                 Morador:</td>
+                 Reservando para o Morador:</td>
                  <td class="style4">
                 <asp:Label ID="lblProprietarioDesc" runat="server" CssClass="style8"></asp:Label><br /></td>
-             <td>
+             <td class="style17">
                 Bloco:</td>
                <td><asp:Label ID="lblBlocoDesc" runat="server" CssClass="style8"></asp:Label></td> 
                 
-              <td>  Apartamento:</td>
+              <td class="style17">  Apartamento:</td>
                <td> <asp:Label ID="lblApartDesc" runat="server" CssClass="style8"></asp:Label></td>
                 </tr>
                 
@@ -171,7 +163,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <br />
                             <asp:Label ID="lblDesconto" runat="server" CssClass="accordionContent" 
-                                Font-Bold="True" ForeColor="Blue" Text="Label"></asp:Label>
+                                Font-Bold="True" ForeColor="Blue" Text="Label" Font-Size="Medium"></asp:Label>
                             </td>
                     </tr>
                     <tr>
@@ -205,12 +197,13 @@
  
     <div id="DivConfirma" runat="server" class="">
         <fieldset class="login">
-            <legend class="style10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reserva Efetuada com Sucesso!</legend>
+            <legend class="accordionContent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                <span class="style16">Reserva Efetuada com Sucesso!</span></legend>
             <br />
     <center>     <table id="tbConfirma" runat="server" 
                 class="style13">
                 <tr>
-                    <td align="center" class="style12">
+                    <td align="center" class="accordionContent">
                         &nbsp;&nbsp;
                         <asp:Label ID="lblBocoTitle" runat="server" Font-Bold="False" Text="Bloco:" 
                             Font-Italic="False" style="font-size: 11pt; color: #000000"></asp:Label>

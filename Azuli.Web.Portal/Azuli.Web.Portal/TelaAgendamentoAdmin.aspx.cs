@@ -398,6 +398,8 @@ namespace Azuli.Web.Portal
 
                 chkSalaoFesta.Visible = true;
                 chkChurrascaria.Visible = true;
+                lblVlrChurras.Visible = true;
+                lblVlFesta.Visible = true;
 
                 foreach (var item in olistAgenda)
                 {
@@ -406,12 +408,17 @@ namespace Azuli.Web.Portal
                     {
                         chkSalaoFesta.Visible = true;
                         chkChurrascaria.Visible = true;
+                        lblVlFesta.Visible = true;
+                        lblVlrChurras.Visible = true;
                     }
                     else
                     {
 
                         chkChurrascaria.Visible = item.salaoFesta;
+                        lblVlrChurras.Visible = item.salaoFesta;
+
                         chkSalaoFesta.Visible = item.salaoChurrasco;
+                        lblVlFesta.Visible = item.salaoChurrasco;
                     }
                    
                 }  
@@ -492,8 +499,10 @@ namespace Azuli.Web.Portal
                      {
                          oAgenda.cadastrarAgenda(Convert.ToDateTime(Session["dataReservaAdministrador"]), oApModel, oAgendaModel);
 
-                         Util.SendMail oEnviaEmailCadastro = new Util.SendMail();
+                        
 
+                         Util.SendMail oEnviaEmailCadastro = new Util.SendMail();
+                        
 
                          string emailReserva = "";
 	                       
@@ -501,11 +510,14 @@ namespace Azuli.Web.Portal
                          {
                              emailReserva = item.email;
                          }
-
+                         if (emailReserva == "Não tem no momento")
+                         {
+                             emailReserva = string.Empty;
+                         }
 
                          if (emailReserva != string.Empty || emailReserva != "")
                          {
-                             oEnviaEmailCadastro.enviaSenha("Reserva realizada com sucesso para: Apto:" +oApModel.apartamento+ " Bloco: "+oApModel.bloco +"<br> Para o dia: " + Session["dataReservaAdministrador"].ToString(),"", emailReserva, 0);
+                             oEnviaEmailCadastro.enviaSenha("<b> Reserva realizada com sucesso para:<br> Apto:" +oApModel.apartamento+ " e Bloco: "+oApModel.bloco +"<br>, Para o dia: " + Session["dataReservaAdministrador"].ToString()+"<br> Para consultar seus agendamentos consulte o site abaixo: <br> http://www.condominioazuli.somee.com ","", emailReserva, 0);
                          }
 
                         
