@@ -8,6 +8,7 @@ using Azuli.Web.Business;
 using Azuli.Web.Model;
 using Azuli.Web.Portal.Util;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Azuli.Web.Portal
 {
@@ -41,6 +42,8 @@ namespace Azuli.Web.Portal
         protected void ibtAddSave_Click(object sender, ImageClickEventArgs e)
         {
 
+          
+            SendMail enviaEmail = new SendMail();
             oProprietarioModel.ap = new ApartamentoModel();
 
             oAPmodel.apartamento = Convert.ToInt32(txtAP.Text);
@@ -53,7 +56,17 @@ namespace Azuli.Web.Portal
 
                 oProprietarioModel.proprietario1 = txtCond01.Text;
                 //oProprietarioModel.proprietario2 = txtCond02.Text;
-                oProprietarioModel.email = txtEmail.Text;
+                bool isEmail = Regex.IsMatch(txtEmail.Text, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z", RegexOptions.IgnoreCase);
+                if (!isEmail)
+                {
+                    oProprietarioModel.email = "";
+                }
+                else
+                {
+                    oProprietarioModel.email = txtEmail.Text;
+                   
+                }
+
                 oProprietarioModel.senha = oUtil.GeraSenha();
 
                 try
@@ -74,13 +87,8 @@ namespace Azuli.Web.Portal
                         string msgCredencial = "";
                         msgCredencial = "Cadastro efetuado com sucesso para Morador: <br> <b> " + oProprietarioModel.proprietario1 + " <b> <br>" + " Bloco:  " + oProprietarioModel.ap.bloco + " / Apartamento:  " + oProprietarioModel.ap.apartamento + "<br> Sua Senha é: " + oProprietarioModel.senha + "<br><hr> acesse: http://www.condominioazuli.somee.com/";
 
-                        SendMail enviaEmail = new SendMail();
-                        if (oProprietarioModel.email != "Não tem no momento")
-                        {
-                           
-                            enviaEmail.enviaSenha(msgCredencial, oProprietarioModel.proprietario1, oProprietarioModel.email, status);
-                        }
-                        if (oProprietarioModel.email == "")
+
+                        if (isEmail)
                         {
                             enviaEmail.enviaSenha(msgCredencial, oProprietarioModel.proprietario1, oProprietarioModel.email, status);
                         }

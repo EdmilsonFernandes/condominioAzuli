@@ -9,6 +9,7 @@ using Azuli.Web.Model;
 using Azuli.Web.Portal.Util;
 using System.Text;
 using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace Azuli.Web.Portal
 {
@@ -20,6 +21,7 @@ namespace Azuli.Web.Portal
         AgendaModel oAgendaModel = new AgendaModel();
         AgendaBLL oAgendaBLL = new AgendaBLL();
         Util.Util oUtil = new Util.Util();
+        bool invalid = false;
       
        
 
@@ -373,28 +375,32 @@ namespace Azuli.Web.Portal
         protected void btnCadastroMorador_Click(object sender, EventArgs e)
         {
 
-           
+            SendMail enviaEmail = new SendMail();
+            
             oProprietarioModel.ap = new ApartamentoModel();
 
             oProprietarioModel.ap.bloco = Convert.ToInt32(txtBlocos.Text);
             oProprietarioModel.ap.apartamento = Convert.ToInt32(txtApartamento.Text);
             oProprietarioModel.proprietario1 = txtMorador1.Text;
             oProprietarioModel.proprietario2 = ""; //txtMorador2.Text - Para facilitar para o sindico;
-            if (txtEmail.Text != string.Empty)
-            {
-                oProprietarioModel.email = txtEmail.Text;
 
-            }
-            else
+            bool isEmail = Regex.IsMatch(txtEmail.Text, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z", RegexOptions.IgnoreCase);
+
+
+            if (!isEmail)
             {
                 oProprietarioModel.email = "";
             }
-         
+            else
+            {
+                oProprietarioModel.email = txtEmail.Text;
+               
+            }
+
+           
             oProprietarioModel.senha = oUtil.GeraSenha();
             
-
-        
-
+            
             try
             {
                int count =  oProprietario.CadastrarApartamentoMorador(oProprietarioModel);
@@ -419,14 +425,19 @@ namespace Azuli.Web.Portal
                    dvCadastro.Visible = false;
                    dvPesquisaMorador.Visible = false;
                    
-                   SendMail enviaEmail = new SendMail();
+                  
 
                    try
                    {
-                       int status = 0; 
+                       if (isEmail)
+                       {
+                           int status = 0;
 
-                       enviaEmail.enviaSenha(lblMsgCadastro.Text, oProprietarioModel.proprietario1, oProprietarioModel.email, status);
+                           enviaEmail.enviaSenha(lblMsgCadastro.Text, oProprietarioModel.proprietario1, oProprietarioModel.email, status);
+                       }
+
                        clearControl();
+                     
 
                    }
                    catch (Exception)
@@ -435,7 +446,7 @@ namespace Azuli.Web.Portal
                        lblMsgCadastro.Visible = true;
                        imgCalendar.Visible = true;
                        hplnkWelcomeAdmin.Visible = true;
-                       lblMsgCadastro.Text = "<br><br>Cadastro efetuado com sucesso para Morador: <br> <b> " + oProprietarioModel.proprietario1 + " <b> <br>" + "Bloco: " + oProprietarioModel.ap.bloco + " / Apartamento:  " + oProprietarioModel.ap.apartamento + "<br> Sua Senha é: " + oProprietarioModel.senha + "<br><hr>";
+                       lblMsgCadastro.Text = "<br><br>Cadastro efetuado com sucesso para Morador: <br> <b> " + oProprietarioModel.proprietario1 + " <b> <br>" + "Bloco: " + oProprietarioModel.ap.bloco + " / Apartamento:  " + oProprietarioModel.ap.apartamento + "<br> a Senha é: " + oProprietarioModel.senha + "<br><hr>";
 
                        dvCadastro.Visible = false;
                        dvPesquisaMorador.Visible = false;
@@ -515,5 +526,7 @@ namespace Azuli.Web.Portal
         {
             Response.Redirect("WelcomeAdmin.aspx");
         }
+
+       
     }
 }

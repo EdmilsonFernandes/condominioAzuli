@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using Azuli.Web.Business;
 using Azuli.Web.Model;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Azuli.Web.Portal
 {
@@ -70,8 +71,14 @@ namespace Azuli.Web.Portal
                msgMorador.Append("<br> Senha: " + oProprietarioModel.senha);
                msgMorador.Append("<br> Acesse Agora: http://www.condominioazuli.somee.com/");
 
+               bool isEmail = Regex.IsMatch(oProprietarioModel.email, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z", RegexOptions.IgnoreCase);
 
-               oEnviaEmail.enviaSenha(msgMorador.ToString(),oProprietarioModel.proprietario1, oProprietarioModel.email, 0);
+               if (isEmail)
+               {
+                   oEnviaEmail.enviaSenha(msgMorador.ToString(), oProprietarioModel.proprietario1, oProprietarioModel.email, 0);
+                   
+               }
+               
                lblMsg.Text = "Acesso liberado com sucesso! Bloco: " + oProprietarioModel.ap.bloco + " Apartamento: " + oProprietarioModel.ap.apartamento;
                grdGerenciamentoMoradores.DataBind();
             }

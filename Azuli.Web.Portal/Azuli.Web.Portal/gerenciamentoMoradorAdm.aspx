@@ -82,7 +82,8 @@
        <asp:GridView ID="grdGerenciamentoMoradores" runat="server" AllowPaging="True" 
            AllowSorting="True" AutoGenerateColumns="False" CssClass="gridl" 
            DataKeyNames="PROPRIETARIO_BLOCO,PROPRIETARIO_AP" 
-           DataSourceID="SqlDataSourceGerenciamentoUser" Height="86px" Width="852px">
+           DataSourceID="SqlDataSourceGerenciamentoUser" Height="86px" Width="852px" 
+                   PageSize="20">
            <Columns>
                <asp:BoundField DataField="NOME_PROPRIETARIO1" HeaderText="Condomino 01" 
                    SortExpression="NOME_PROPRIETARIO1" />
