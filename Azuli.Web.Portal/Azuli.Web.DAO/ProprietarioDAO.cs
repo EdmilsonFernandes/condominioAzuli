@@ -78,7 +78,32 @@ namespace Azuli.Web.DAO
                 throw;
             }
         }
+        public string BuscaEmailMorador(ApartamentoModel ap)
+        {
+            string clausulaSQL = "SP_BUSCA_EMAIL";
 
+            try
+            {
+
+                SqlCommand comandoSQL = new SqlCommand(clausulaSQL);
+                comandoSQL.Parameters.AddWithValue("@VALOR_APTO", ap.apartamento);
+                comandoSQL.Parameters.AddWithValue("@VALOR_BLOCO", ap.bloco);
+
+                DataTable tbProprietario = new DataTable();
+
+                tbProprietario = ExecutaQuery(comandoSQL);
+
+                return GetEmail(tbProprietario);
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        
+        }
 
 
 
@@ -196,6 +221,7 @@ namespace Azuli.Web.DAO
                     oPropri.proprietario2 = dr["NOME_PROPRIETARIO2"].ToString();
 
                 oPropri.ap.bloco = int.Parse(dr["PROPRIETARIO_BLOCO"].ToString());
+                
                 oPropri.ap.apartamento = int.Parse(dr["PROPRIETARIO_AP"].ToString());
 
                 if (dr.Table.Columns.Contains("email"))
@@ -318,7 +344,33 @@ namespace Azuli.Web.DAO
             }
         }
 
+        public listProprietario PesquisaMorador(string tipo_busca, string pesquisa_nome, ApartamentoModel ap)
+        {
+            string clausulaSQL = "SP_BUSCA_MORADOR";
 
+            try
+            {
+
+                SqlCommand comandoSQL = new SqlCommand(clausulaSQL);
+                comandoSQL.Parameters.AddWithValue("@TIPO_BUSCA", tipo_busca);
+                comandoSQL.Parameters.AddWithValue("@BUSCA_NOME", pesquisa_nome);
+                comandoSQL.Parameters.AddWithValue("@VALOR_APTO", ap.apartamento);
+                comandoSQL.Parameters.AddWithValue("@VALOR_BLOCO", ap.bloco);
+
+                DataTable tbProprietario = new DataTable();
+
+                tbProprietario = ExecutaQuery(comandoSQL);
+
+                return listaAp(tbProprietario);
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
         public listProprietario listaProprietarioSendEmail()
         {
 
@@ -372,6 +424,27 @@ namespace Azuli.Web.DAO
 
             return oListProprietario;
         }
+
+
+        public string GetEmail(DataTable dt)
+        {
+            string email = "";
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                
+
+                if (dr.Table.Columns.Contains("email"))
+                    email = dr["email"].ToString();
+
+
+
+
+            }
+
+            return email;
+        }
+       
 
 
 #endregion

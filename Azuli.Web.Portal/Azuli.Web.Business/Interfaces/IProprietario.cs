@@ -15,11 +15,14 @@ namespace Azuli.Web.Business.Interfaces
         listProprietario BuscaMoradorAdmin(ApartamentoModel ap);
         int CadastrarApartamentoMorador(Model.ProprietarioModel ap);
         void alteraSenha(ProprietarioModel oProprietario);
-        void cadastraOcorrencia(LancamentoOcorrenciaModel olacamento); 
+        void cadastraOcorrencia(LancamentoOcorrenciaModel olacamento);
         listProprietario recuperaSenhaMorador(ProprietarioModel ap);
         void liberaAcesso(ApartamentoModel ap);
         listProprietario enviaCrendencialAcesso(ApartamentoModel oPropri);
-        listProprietario listaProprietarioSendEmail();
+        listProprietario PesquisaMorador(string tipo_busca, string pesquisa_nome, ApartamentoModel ap);
+        string BuscaEmailMorador(ApartamentoModel ap);
+
+
     }
 
 }

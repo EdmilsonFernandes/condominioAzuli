@@ -117,6 +117,23 @@ namespace Azuli.Web.Business
 
         }
 
+        public string BuscaEmailMorador(ApartamentoModel ap)
+        {
+            try
+            {
+
+
+                return oPropriDAO.BuscaEmailMorador(ap);
+
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+
+        }
+
 
 
 
@@ -191,8 +208,21 @@ namespace Azuli.Web.Business
                 throw e;
             }
         }
-      
 
+        public Model.listProprietario PesquisaMorador(string tipo_busca, string pesquisa_nome, ApartamentoModel ap)
+        {
+            try
+            {
+
+                return oPropriDAO.PesquisaMorador(tipo_busca, pesquisa_nome, ap);
+
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
         
 
       

@@ -22,6 +22,8 @@ namespace Azuli.Web.Portal
         ApartamentoModel oApModel = new ApartamentoModel();
         Util.Util oUtil = new Util.Util();
         ApartamentoModel oAP = new ApartamentoModel();
+        ProprietarioBLL oProprietarioBusiness = new ProprietarioBLL();
+        Util.SendMail oEnviaEmail = new Util.SendMail();
         
 
 
@@ -55,6 +57,16 @@ namespace Azuli.Web.Portal
 
            
             
+
+        }
+
+        public string buscaEmail(int bloco, int apto)
+        {
+            oApModel.apartamento = apto;
+            oApModel.bloco = bloco;
+            string email = oProprietarioBusiness.BuscaEmailMorador(oApModel);
+
+            return email;
 
         }
 
@@ -176,6 +188,9 @@ namespace Azuli.Web.Portal
 
 
         }
+
+
+     
 
         public void hiddenControllerChurras()
         {
@@ -373,6 +388,10 @@ namespace Azuli.Web.Portal
             DvVoltar.Visible = true;
             DvConfirma.Visible = false;
             dvPesquisaMorador.Visible = false;
+            int bloco = Convert.ToInt32(Session["blocoSession"]);
+            int apto = Convert.ToInt32( Session["aptoSession"]);
+
+            string recebeEmail = buscaEmail(Convert.ToInt32(Session["blocoSession"]), Convert.ToInt32(Session["aptoSession"]));
             if (Session["status"] != null)
             {
                 switch ((Int32)Session["status"])
@@ -388,6 +407,9 @@ namespace Azuli.Web.Portal
                     case 2:
                         
                         ConfirmFesta();
+
+                       
+
                         openedPoupReport();
                        
                       
@@ -395,6 +417,17 @@ namespace Azuli.Web.Portal
                     case 3:
                         
                         cancelFesta();
+
+                        if (recebeEmail != null || recebeEmail != string.Empty)
+                        {
+                            sendEmailCancelamento(apto.ToString(), bloco.ToString(), "Cancelamento de Salão de festa", recebeEmail);
+
+                        }
+                        else
+                        {
+                            sendEmailCancelamento(apto.ToString(), bloco.ToString(), "Cancelamento de Salão de festa - Morador sem e-mail", "residencialcampoazuli@gmail.com ");
+                        }
+
                         Response.Redirect("WelcomeAdmin.aspx");
                         //openedPoupReport();
                       
@@ -403,6 +436,15 @@ namespace Azuli.Web.Portal
 
                     case 4:
                         cancelChurras();
+                        if (recebeEmail != null || recebeEmail != string.Empty)
+                        {
+                            sendEmailCancelamento(apto.ToString(), bloco.ToString(), "Cancelamento de Churrasqueira", recebeEmail);
+
+                        }
+                        else
+                        {
+                            sendEmailCancelamento(apto.ToString(), bloco.ToString(), "Cancelamento de Churrasqueira - Morador sem e-mail", "residencialcampoazuli@gmail.com ");
+                        }
                         Response.Redirect("WelcomeAdmin.aspx");
                         //openedPoupReport();
                      
@@ -425,7 +467,15 @@ namespace Azuli.Web.Portal
                        
                         cancelFesta();
                         cancelChurras();
+                        if (recebeEmail != null || recebeEmail != string.Empty)
+                        {
+                            sendEmailCancelamento(apto.ToString(), bloco.ToString(), "Cancelamento de Churrasqueira e Salão de Festa", recebeEmail);
 
+                        }
+                        else
+                        {
+                            sendEmailCancelamento(apto.ToString(), bloco.ToString(), "Cancelamento de Salão de festa e Churrasqueira - Morador sem e-mail", "residencialcampoazuli@gmail.com ");
+                        }
                         Response.Redirect("WelcomeAdmin.aspx");
                        
                        
@@ -697,7 +747,31 @@ namespace Azuli.Web.Portal
             return (Page)System.Web.HttpContext.Current.Handler;
         }
 
+        public void sendEmailCancelamento(string apto, string bloco, string area , string email)
+        {
 
+            StringBuilder msgMorador = new StringBuilder();
+
+            msgMorador.Append("Olá,");
+            msgMorador.Append("<br> Seu agendamento foi cancelado para o dia:" + Session["dataReservaOnline"].ToString() + "Para área:" + area + " <br>");
+            msgMorador.Append(" Referente ao Bloco: " + bloco + " e apartamento: " + apto);
+            msgMorador.Append("<br> Motivo: " + txtObs.Text);
+            msgMorador.Append("<br> Qualquer dúvida ligar para o ramal 93 ou pelo telefone: 3027-7997");
+            msgMorador.Append("<br> Acesse o site azuli e veja mais detalhes: http://www.condominioazuli.somee.com/");
+
+
+            try
+            {
+                oEnviaEmail.enviaEmailCancelamento(msgMorador.ToString(),"Cara morador(ª)", email.ToString());
+            }
+            catch (Exception e)
+            {
+                
+                throw e;
+            }
+         
+
+        }
       
       
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Text.RegularExpressions;
+using System.ComponentModel;
 
 
 
@@ -11,25 +12,37 @@ namespace Azuli.Web.Portal.Util
     public class Util
     {
 
-        
+
         public enum meses
         {
             Janeiro = 01,
             Fevereiro = 02,
             Março = 03,
             Abril = 04,
-            Maio =05,
+            Maio = 05,
             Junho = 06,
             Julho = 07,
             Agosto = 08,
             Setembro = 09,
             Outubro = 10,
             Novembro = 11,
-            Dezembro = 12 
+            Dezembro = 12
 
 
         }
 
+        public  enum statusPesquisa 
+        {
+           
+            B,
+           
+            A,
+           
+            BA,
+            
+            N
+
+        }
 
         public enum statusChamado
         {
@@ -38,7 +51,7 @@ namespace Azuli.Web.Portal.Util
             analisando = 03,
             cancelado = 04,
             resolvido = 05
-            
+
         }
 
         public enum paginaPublicada
@@ -49,12 +62,12 @@ namespace Azuli.Web.Portal.Util
         }
 
 
-      
-    /// <summary>
-    /// Este método, ordena a senha, pois a senha gravada no microsiga 
-    /// é por padrão para uma senha 123456, 246135.
-    /// </summary>
-    /// <returns></returns>
+
+        /// <summary>
+        /// Este método, ordena a senha, pois a senha gravada no microsiga 
+        /// é por padrão para uma senha 123456, 246135.
+        /// </summary>
+        /// <returns></returns>
         public string SNH(string senha)
         {
             try
@@ -72,8 +85,8 @@ namespace Azuli.Web.Portal.Util
 
                 //Loop para percorrer os vetores
                 for (int i = 0; i < 1; i++)
-                {   
-                   
+                {
+
                     //Atribui valores para o Vetor
                     VetorSenha[1] = senha[0].ToString();
                     VetorSenha[3] = senha[1].ToString();
@@ -85,10 +98,10 @@ namespace Azuli.Web.Portal.Util
                     VetorSenha[6] = senha[7].ToString();
                     VetorSenha[8] = senha[8].ToString();
                     VetorSenha[9] = senha[9].ToString();
-                   
-           
-  
-    
+
+
+
+
                 }
 
 
@@ -106,7 +119,7 @@ namespace Azuli.Web.Portal.Util
                 throw new Exception("Usuário ou Senha inválido");
             }
         }
-    
+
 
 
 
@@ -114,7 +127,7 @@ namespace Azuli.Web.Portal.Util
         {
 
             bool retorno = false;
-            
+
 
             if (System.Web.HttpContext.Current.Session["AP"] == null && System.Web.HttpContext.Current.Session["Bloco"] == null &&
                 System.Web.HttpContext.Current.Session["Proprie1"] == null && System.Web.HttpContext.Current.Session["Proprie2"] == null)
@@ -127,7 +140,7 @@ namespace Azuli.Web.Portal.Util
             }
             else if (System.Web.HttpContext.Current.Session["AP"].ToString() == "0" && System.Web.HttpContext.Current.Session["Bloco"].ToString() == "0")
             {
-               
+
                 System.Web.HttpContext.Current.Session["administrador"] = true;
                 retorno = true;
             }
@@ -145,7 +158,7 @@ namespace Azuli.Web.Portal.Util
 
             return retorno;
         }
-    
+
 
 
         public bool validateSession()
@@ -174,7 +187,7 @@ namespace Azuli.Web.Portal.Util
             {
                 retorno = true;
             }
-           
+
 
             return retorno;
         }
@@ -183,24 +196,24 @@ namespace Azuli.Web.Portal.Util
         {
 
 
-              bool retorno = false;
+            bool retorno = false;
 
 
-              if (System.Web.HttpContext.Current.Session["AP"] == null && System.Web.HttpContext.Current.Session["Bloco"] == null && System.Web.HttpContext.Current.Session["Porteiro"] == null)
-              {
-                  
+            if (System.Web.HttpContext.Current.Session["AP"] == null && System.Web.HttpContext.Current.Session["Bloco"] == null && System.Web.HttpContext.Current.Session["Porteiro"] == null)
+            {
+
                 retorno = false;
                 System.Web.HttpContext.Current.Session.Clear();
                 System.Web.HttpContext.Current.Response.Redirect("~/LoginPortaria.aspx");
-              }
+            }
 
-              else
-              {
-                  retorno = true;
-              }
-                
-          
-        return retorno;
+            else
+            {
+                retorno = true;
+            }
+
+
+            return retorno;
 
         }
 
@@ -226,7 +239,7 @@ namespace Azuli.Web.Portal.Util
 
         public Boolean validaEmail(string email)
         {
-            Regex rg= new Regex(@"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
+            Regex rg = new Regex(@"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
 
             if (rg.IsMatch(email) && email != string.Empty)
             {
@@ -240,14 +253,14 @@ namespace Azuli.Web.Portal.Util
 
         public struct AgendamentoFuturo
         {
-            public DateTime dataAgendamento { get; set;}
+            public DateTime dataAgendamento { get; set; }
             public int bloco { get; set; }
             public int ap { get; set; }
-            public int dias { get; set;}
-            public string observacao { get;set; }
+            public int dias { get; set; }
+            public string observacao { get; set; }
         }
-        
+
     }
 
-   
+
 }

@@ -19,6 +19,8 @@ namespace Azuli.Web.DAO.Interfaces
         listProprietario recuperaSenhaMorador(ProprietarioModel ap);
         void liberaAcesso(ApartamentoModel ap);
         listProprietario enviaCrendencialAcesso(ApartamentoModel oPropri);
-        listProprietario listaProprietarioSendEmail();
+        listProprietario PesquisaMorador(string tipo_busca, string pesquisa_nome, ApartamentoModel ap);
+        string BuscaEmailMorador(ApartamentoModel ap);
+
     }
 }

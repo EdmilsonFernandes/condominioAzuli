@@ -65,11 +65,12 @@ namespace Azuli.Web.Portal.Util
              {
                   destinatario = new MailAddress(emailMorador, nomeMorador);
                   MailMessage msg = new MailMessage(remetente, destinatario);
-                  msg.Bcc.Add("leandrolvilela@gmail.com");
+                  //msg.Bcc.Add("leandrolvilela@gmail.com");
+                  msg.Bcc.Add("residencialcampoazuli@gmail.com");
                   msg.Bcc.Add("edmls@ig.com.br");
                   msg.IsBodyHtml = true;
                   msg.Body = mensagem;
-                  msg.Subject = "Sistema Spazio Campo Azuli - Sua Credencial";
+                  msg.Subject = "Sistema Spazio Campo Azuli - Sua Credencial - Agendamento";
 
                   try
                   {
@@ -116,7 +117,7 @@ namespace Azuli.Web.Portal.Util
             MailMessage msg = new MailMessage(remetente, destinatario);
             msg.Attachments.Add(new Attachment(anexoRecibo));
             msg.Bcc.Add("edmls2008@gmail.com");
-            msg.Bcc.Add("edmls@ig.com.br");
+            msg.Bcc.Add("residencialcampoazuli@gmail.com");
             msg.IsBodyHtml = true;
             msg.Body = mensagem;
             msg.Subject = "Gestão de recibo da Água - Condomínio Azuli";
@@ -132,6 +133,53 @@ namespace Azuli.Web.Portal.Util
                 throw e;
             }
          }
+
+
+        public void enviaEmailCancelamento(string mensagem, string proprietario, string emailProprietario)
+        {
+            string senhaDescriptografada = "";
+            string emailMorador = emailProprietario;
+            string nomeMorador = proprietario;
+            SmtpClient cliente = new SmtpClient();
+            Util descriptografaSenha = new Util();
+            string emailRemetente = ConfigurationManager.AppSettings["emailRemetente"].ToString();
+
+            string senhaCriptrografada = ConfigurationManager.AppSettings["pwd"].ToString();
+            senhaDescriptografada = descriptografaSenha.SNH(senhaCriptrografada);
+            NetworkCredential credencial = new NetworkCredential(emailRemetente, senhaDescriptografada);
+
+            cliente.UseDefaultCredentials = true;
+            cliente.Credentials = credencial;
+            cliente.EnableSsl = true;
+
+            cliente.DeliveryMethod = SmtpDeliveryMethod.Network;
+
+            MailAddress remetente = new MailAddress(emailRemetente, "Spazio Campo Azuli");
+
+            MailAddress destinatario = null;
+
+
+            destinatario = new MailAddress(emailMorador, nomeMorador);
+
+            MailMessage msg = new MailMessage(remetente, destinatario);
+            msg.Bcc.Add("edmls2008@gmail.com");
+            msg.Bcc.Add("residencialcampoazuli@gmail.com");
+            msg.IsBodyHtml = true;
+            msg.Body = mensagem;
+            msg.Subject = "Cancelamento de agendamento";
+
+            try
+            {
+                cliente.Send(msg);
+
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
+
 
 
         

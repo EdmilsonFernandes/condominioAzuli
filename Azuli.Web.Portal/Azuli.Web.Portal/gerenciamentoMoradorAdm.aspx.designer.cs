@@ -58,13 +58,13 @@ namespace Azuli.Web.Portal {
         protected global::System.Web.UI.WebControls.Label lblBloco;
         
         /// <summary>
-        /// txtBloco control.
+        /// drpBloco control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBloco;
+        protected global::System.Web.UI.WebControls.DropDownList drpBloco;
         
         /// <summary>
         /// rfvName0 control.
@@ -166,13 +166,13 @@ namespace Azuli.Web.Portal {
         protected global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
-        /// dvManager control.
+        /// dvGridAll control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dvManager;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dvGridAll;
         
         /// <summary>
         /// grdGerenciamentoMoradores control.
@@ -191,5 +191,41 @@ namespace Azuli.Web.Portal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceGerenciamentoUser;
+        
+        /// <summary>
+        /// dvPesquisa control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dvPesquisa;
+        
+        /// <summary>
+        /// lblPesquisa control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPesquisa;
+        
+        /// <summary>
+        /// grdPesquisa control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grdPesquisa;
+        
+        /// <summary>
+        /// btnFechar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnFechar;
     }
 }
