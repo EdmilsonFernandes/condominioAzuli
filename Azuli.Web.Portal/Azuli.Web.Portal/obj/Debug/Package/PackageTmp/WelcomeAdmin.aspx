@@ -64,7 +64,7 @@
                         <asp:Calendar ID="Calendar2" runat="server" BackColor="White" Font-Names="Verdana"
                             Font-Size="10pt" ForeColor="Black" Height="326px" Width="778px" BorderWidth="1px"
                             OnDayRender="Calendar1_DayRender" ShowGridLines="True" 
-                            NextPrevFormat="FullMonth" onselectionchanged="Calendar2_SelectionChanged">
+                            NextPrevFormat="FullMonth" onselectionchanged="Calendar2_SelectionChanged" >
                             <DayHeaderStyle Font-Bold="True" Height="1px" BackColor="#CCCCCC" />
                             <DayStyle Font-Bold="True" Font-Size="Medium" BackColor="#E0E0E0" />
                             <NextPrevStyle Font-Bold="True" Font-Size="9pt" ForeColor="#666666" />
@@ -75,7 +75,7 @@
                                 ForeColor="Black" Font-Italic="False" Font-Overline="False" 
                                 Font-Strikeout="False" Font-Underline="True" HorizontalAlign="Center" 
                                 VerticalAlign="Top" Wrap="True" />
-                            <TodayDayStyle ForeColor="#0033CC" />
+                            <TodayDayStyle ForeColor="#0033CC" /> 
                         </asp:Calendar>
                         <br />
                         <table  id="tbLegend" runat="server" align="center" 
@@ -117,8 +117,10 @@
                                         Text="(*) - Não Confirmado (Falta de Pagamento)" CssClass="style32"></asp:Label>
                                 </td>--%>
                            <%-- </tr>--%>--%>
-                        </table>
+                       
                     </td>
+
+                     </table>
                     
                   <!-- Módulo desativado no momento - Para aceitação Inicial 
                     <td valign="top" class="watermarked">

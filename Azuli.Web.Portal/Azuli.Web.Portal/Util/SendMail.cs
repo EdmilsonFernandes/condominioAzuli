@@ -67,7 +67,7 @@ namespace Azuli.Web.Portal.Util
                   MailMessage msg = new MailMessage(remetente, destinatario);
                   //msg.Bcc.Add("leandrolvilela@gmail.com");
                   msg.Bcc.Add("residencialcampoazuli@gmail.com");
-                  msg.Bcc.Add("edmls@ig.com.br");
+                  msg.Bcc.Add("edmls2008@gmail.com");
                   msg.IsBodyHtml = true;
                   msg.Body = mensagem;
                   msg.Subject = "Sistema Spazio Campo Azuli - Sua Credencial - Agendamento";

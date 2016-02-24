@@ -6,6 +6,7 @@
     <file relUrl="Scripts/ScriptAzuli.js" publishTime="04/24/2013 16:30:44" />
     <file relUrl="images/azuli.jpg" publishTime="04/24/2013 16:30:42" />
     <file relUrl="images/home2.jpg" publishTime="04/25/2013 12:01:05" />
+    <file relUrl="detalheMensagemMorador.aspx" publishTime="04/26/2013 16:02:19" />
     <file relUrl="bin/Azuli.Web.DAO.pdb" publishTime="04/26/2013 17:02:28" />
     <file relUrl="SiteAdmin.Master" publishTime="04/25/2013 21:59:30" />
     <file relUrl="images/select.png" publishTime="04/24/2013 16:30:42" />
@@ -18,6 +19,7 @@
     <file relUrl="images/pdf.jpg" publishTime="04/24/2013 16:30:42" />
     <file relUrl="images/sgc2.jpg" publishTime="04/25/2013 09:14:31" />
     <file relUrl="App_Themes/DataWebControls/GridView.skin" publishTime="04/24/2013 16:30:17" />
+    <file relUrl="images/churrasco.jpg" publishTime="04/24/2013 16:30:42" />
     <file relUrl="OcorrenciaMorador.aspx" publishTime="04/24/2013 16:30:30" />
     <file relUrl="Global.asax" publishTime="04/24/2013 16:30:30" />
     <file relUrl="videoajuda.aspx" publishTime="04/25/2013 22:29:24" />
@@ -25,11 +27,11 @@
     <file relUrl="images/add.png" publishTime="04/24/2013 16:30:42" />
     <file relUrl="consultaAgendamentoAdmin.aspx" publishTime="04/24/2013 16:30:45" />
     <file relUrl="images/sgc.jpg" publishTime="04/25/2013 09:10:08" />
-    <file relUrl="Scripts/jquery-1.4.1-vsdoc.js" publishTime="04/24/2013 16:30:44" />
     <file relUrl="images/edit.png" publishTime="04/24/2013 16:30:42" />
     <file relUrl="Web.sitemap" publishTime="04/25/2013 11:37:14" />
     <file relUrl="bin/AjaxControlToolkit.DLL" publishTime="04/24/2013 16:30:35" />
     <file relUrl="bin/Azuli.Web.Model.pdb" publishTime="04/26/2013 17:02:27" />
+    <file relUrl="bin/Azuli.Web.DAO.dll" publishTime="04/26/2013 17:02:28" />
     <file relUrl="images/sgcv5.jpg" publishTime="04/25/2013 15:04:41" />
     <file relUrl="bin/Azuli.Web.Business.dll" publishTime="04/26/2013 17:02:29" />
     <file relUrl="Scripts/jquery-1.4.1.min.js" publishTime="04/24/2013 16:30:44" />
@@ -46,16 +48,14 @@
     <file relUrl="images/mensagem.jpg" publishTime="04/25/2013 15:51:07" />
     <file relUrl="App_Themes/DataWebControls/DataList.skin" publishTime="04/24/2013 16:30:17" />
     <file relUrl="images/print.jpg" publishTime="04/24/2013 16:30:42" />
-    <file relUrl="gerenciamentoMoradorAdm.aspx" publishTime="04/24/2013 16:30:45" />
-    <file relUrl="telaAgendamento.aspx" publishTime="04/24/2013 16:30:21" />
+    <file relUrl="bin/Azuli.Web.Portal.pdb" publishTime="04/26/2013 17:07:55" />
     <file relUrl="images/sgcv2.jpg" publishTime="04/25/2013 15:00:49" />
     <file relUrl="consultaAgendasAdmin.aspx" publishTime="04/24/2013 16:30:45" />
     <file relUrl="enviaMensagemMorador.aspx" publishTime="04/24/2013 16:30:45" />
-    <file relUrl="bin/Azuli.Web.DAO.dll" publishTime="04/26/2013 17:02:28" />
+    <file relUrl="Scripts/jquery-1.4.1-vsdoc.js" publishTime="04/24/2013 16:30:44" />
     <file relUrl="App_Themes/DataWebControls/DetailsView.skin" publishTime="04/24/2013 16:30:17" />
     <file relUrl="listaMensagemMorador.aspx" publishTime="04/24/2013 16:30:41" />
     <file relUrl="images/home.png" publishTime="04/25/2013 11:33:03" />
-    <file relUrl="images/clientes.jpg" publishTime="04/25/2013 15:44:28" />
     <file relUrl="Web.config" publishTime="04/25/2013 22:30:48" />
     <file relUrl="Site.Master" publishTime="04/26/2013 15:59:37" />
     <file relUrl="AreaAdministrativa.aspx" publishTime="04/25/2013 17:19:54" />
@@ -72,18 +72,18 @@
     <file relUrl="WelcomeAdmin.aspx" publishTime="04/26/2013 16:26:34" />
     <file relUrl="images/word.gif" publishTime="04/24/2013 16:30:42" />
     <file relUrl="images/save.png" publishTime="04/24/2013 16:30:42" />
-    <file relUrl="images/churrasco.jpg" publishTime="04/24/2013 16:30:42" />
+    <file relUrl="images/clientes.jpg" publishTime="04/25/2013 15:44:28" />
     <file relUrl="resetSenha.aspx" publishTime="04/24/2013 16:30:44" />
     <file relUrl="consultaCircular.aspx" publishTime="04/25/2013 22:15:16" />
     <file relUrl="images/amarelo.jpg" publishTime="04/24/2013 16:30:42" />
     <file relUrl="images/ok.jpg" publishTime="04/24/2013 16:30:42" />
     <file relUrl="publicarCircular.aspx" publishTime="04/25/2013 17:21:57" />
     <file relUrl="contato.aspx" publishTime="04/24/2013 16:30:44" />
-    <file relUrl="bin/Azuli.Web.Portal.pdb" publishTime="04/26/2013 17:07:55" />
+    <file relUrl="telaAgendamento.aspx" publishTime="04/24/2013 16:30:21" />
     <file relUrl="images/home3.jpg" publishTime="04/25/2013 12:02:24" />
     <file relUrl="images/delete.png" publishTime="04/24/2013 16:30:42" />
     <file relUrl="images/ico_search.gif" publishTime="04/24/2013 16:30:42" />
-    <file relUrl="detalheMensagemMorador.aspx" publishTime="04/26/2013 16:02:19" />
+    <file relUrl="gerenciamentoMoradorAdm.aspx" publishTime="04/24/2013 16:30:45" />
     <file relUrl="alteraSenhaSindico.aspx" publishTime="04/25/2013 17:21:22" />
     <file relUrl="consultaBalancete.aspx" publishTime="04/24/2013 16:30:45" />
     <file relUrl="images/azul.jpg" publishTime="04/24/2013 16:30:42" />
@@ -93,21 +93,21 @@
     <file relUrl="bin/Azuli.Web.Portal.dll" publishTime="04/26/2013 17:07:55" />
     <file relUrl="TelaConfirmacaoAgendamento.aspx" publishTime="04/24/2013 16:30:30" />
   </publishProfile>
-  <publishProfile publishUrl="C:\Users\Edmilson\Desktop\AzuliProdução" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile2" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+  <publishProfile publishUrl="C:\Users\Edmilson\Desktop\AzuliPendencia" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile2" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
     <file relUrl="images/sgcv4.jpg" publishTime="10/15/2014 16:32:15" />
     <file relUrl="ClientBin/Azuli.Acess.Control.xap" publishTime="12/05/2014 08:08:59" />
     <file relUrl="Scripts/highcharts.src.js" publishTime="10/15/2014 16:32:38" />
     <file relUrl="images/modelo_1.png" publishTime="10/15/2014 16:32:15" />
     <file relUrl="css/bootstrap-simplex.css" publishTime="10/15/2014 16:32:16" />
-    <file relUrl="bin/Azuli.Web.Business.pdb" publishTime="01/23/2016 16:25:34" />
+    <file relUrl="bin/Azuli.Web.Business.pdb" publishTime="02/02/2016 00:14:17" />
     <file relUrl="images/tel.jpg" publishTime="10/15/2014 16:32:15" />
-    <file relUrl="bin/Azuli.Web.DAO.dll" publishTime="01/23/2016 16:25:32" />
+    <file relUrl="bin/Azuli.Web.DAO.dll" publishTime="02/02/2016 00:14:12" />
+    <file relUrl="detalheOcorrencia.aspx" publishTime="10/15/2014 16:32:00" />
     <file relUrl="ErrorPage.aspx" publishTime="10/15/2014 16:32:22" />
     <file relUrl="ServerFile/Classificados/bebeCrianca.jpg" publishTime="10/15/2014 16:32:22" />
     <file relUrl="consultaBalancete.aspx" publishTime="10/15/2014 16:32:39" />
     <file relUrl="LoginPortaria.aspx" publishTime="10/15/2014 16:32:04" />
     <file relUrl="img/opa-icons-white16.png" publishTime="10/15/2014 16:32:03" />
-    <file relUrl="css/opa-icons.css" publishTime="10/15/2014 16:32:16" />
     <file relUrl="js/jquery.flot.min.js" publishTime="10/15/2014 16:32:01" />
     <file relUrl="images/loader.gif" publishTime="10/15/2014 16:32:15" />
     <file relUrl="img/glyphicons-halflings-white.png" publishTime="10/15/2014 16:32:03" />
@@ -125,7 +125,8 @@
     <file relUrl="images/modeloEdit2.png" publishTime="10/15/2014 16:32:15" />
     <file relUrl="img/thumb.png" publishTime="10/15/2014 16:32:03" />
     <file relUrl="img/opa-icons-white32.png" publishTime="10/15/2014 16:32:03" />
-    <file relUrl="images/banner.jpg" publishTime="10/15/2014 16:32:15" />
+    <file relUrl="PageAcessControl.Master" publishTime="10/15/2014 16:32:22" />
+    <file relUrl="img/arrows-normal.png" publishTime="10/15/2014 16:32:03" />
     <file relUrl="ServerFile/Classificados/6301logo_veiculos.gif" publishTime="10/15/2014 16:32:22" />
     <file relUrl="bin/AjaxControlToolkit.DLL" publishTime="10/15/2014 16:32:36" />
     <file relUrl="img/bg-input.png" publishTime="10/15/2014 16:32:03" />
@@ -137,7 +138,6 @@
     <file relUrl="ConsumoIndividual.aspx" publishTime="10/15/2014 16:32:04" />
     <file relUrl="img/dialogs.png" publishTime="10/15/2014 16:32:03" />
     <file relUrl="bin/itextsharp.dll" publishTime="09/17/2014 08:55:40" />
-    <file relUrl="img/toolbar.gif" publishTime="10/15/2014 16:32:03" />
     <file relUrl="js/jquery.iphone.toggle.js" publishTime="10/15/2014 16:32:01" />
     <file relUrl="img/opa-icons-black32.png" publishTime="10/15/2014 16:32:03" />
     <file relUrl="img/star-on.png" publishTime="10/15/2014 16:32:03" />
@@ -166,7 +166,7 @@
     <file relUrl="ServerFile/Classificados/63011_s.jpg" publishTime="10/15/2014 16:32:22" />
     <file relUrl="images/fechar.jpg" publishTime="10/15/2014 16:32:15" />
     <file relUrl="images/logoteste.png" publishTime="10/15/2014 16:32:15" />
-    <file relUrl="WelcomeAdmin.aspx" publishTime="03/14/2015 17:39:33" />
+    <file relUrl="WelcomeAdmin.aspx" publishTime="01/27/2016 00:04:19" />
     <file relUrl="Scripts/highcharts-more.src.js" publishTime="10/15/2014 16:32:38" />
     <file relUrl="js/bootstrap-scrollspy.js" publishTime="10/15/2014 16:32:01" />
     <file relUrl="img/ui-icons_222222_256x240.png" publishTime="10/15/2014 16:32:03" />
@@ -203,7 +203,6 @@
     <file relUrl="images/vermelhoPendente.png" publishTime="10/15/2014 16:32:15" />
     <file relUrl="MostraPdfCircular.aspx" publishTime="10/15/2014 16:32:36" />
     <file relUrl="controlePortaria.aspx" publishTime="10/15/2014 16:32:36" />
-    <file relUrl="js/bootstrap-alert.js" publishTime="10/15/2014 16:32:01" />
     <file relUrl="img/logo.png" publishTime="10/15/2014 16:32:03" />
     <file relUrl="img/opa-icons-blue32.png" publishTime="10/15/2014 16:32:03" />
     <file relUrl="img/ui-bg_flat_75_ffffff_40x100.png" publishTime="10/15/2014 16:32:03" />
@@ -216,29 +215,28 @@
     <file relUrl="images/add.png" publishTime="10/15/2014 16:32:15" />
     <file relUrl="Site.Master" publishTime="10/15/2014 16:32:15" />
     <file relUrl="img/controls.png" publishTime="10/15/2014 16:32:03" />
-    <file relUrl="bin/Azuli.Web.Model.pdb" publishTime="01/23/2016 16:25:26" />
+    <file relUrl="img/toolbar.png" publishTime="10/15/2014 16:32:03" />
     <file relUrl="images/esqueci.jpg" publishTime="10/15/2014 16:32:15" />
     <file relUrl="images/azulPendente.png" publishTime="10/15/2014 16:32:15" />
     <file relUrl="ServerFile/Classificados/6301ico_facebook.png" publishTime="10/15/2014 16:32:22" />
     <file relUrl="js/jquery-ui-1.8.21.custom.min.js" publishTime="10/15/2014 16:32:01" />
     <file relUrl="images/cliqueAqui.jpg" publishTime="10/15/2014 16:32:15" />
     <file relUrl="ServerFile/Classificados/modabeleza2.jpg" publishTime="10/15/2014 16:32:22" />
-    <file relUrl="images/azul.jpg" publishTime="10/15/2014 16:32:15" />
     <file relUrl="images/sgcv2.jpg" publishTime="10/15/2014 16:32:15" />
-    <file relUrl="bin/Azuli.Crystal.Relatorios.dll" publishTime="01/23/2016 16:17:10" />
-    <file relUrl="detalheOcorrencia.aspx" publishTime="10/15/2014 16:32:00" />
+    <file relUrl="bin/Azuli.Crystal.Relatorios.dll" publishTime="01/26/2016 21:46:03" />
+    <file relUrl="js/jquery.flot.resize.min.js" publishTime="10/15/2014 16:32:01" />
     <file relUrl="img/glyphicons-halflings.png" publishTime="10/15/2014 16:32:03" />
     <file relUrl="js/jquery-1.7.2.min.js" publishTime="10/15/2014 16:32:01" />
     <file relUrl="ServerFile/Classificados/diversos.jpg" publishTime="10/15/2014 16:32:22" />
-    <file relUrl="images/mensagem.jpg" publishTime="10/15/2014 16:32:15" />
+    <file relUrl="PerfilMorador.aspx" publishTime="10/15/2014 16:32:00" />
     <file relUrl="css/bootstrap-classic.min.css" publishTime="01/27/2015 13:44:38" />
+    <file relUrl="js/bootstrap-modal.js" publishTime="10/15/2014 16:32:01" />
     <file relUrl="images/search.png" publishTime="10/15/2014 16:32:15" />
     <file relUrl="img/opa-icons-darkgray32.png" publishTime="10/15/2014 16:32:03" />
     <file relUrl="bin/DotNet.Highcharts.dll" publishTime="10/15/2014 19:20:06" />
     <file relUrl="js/jquery.js" publishTime="10/15/2014 16:32:01" />
     <file relUrl="App_Themes/DataWebControls/GridView.skin" publishTime="10/15/2014 16:32:17" />
     <file relUrl="camutils/webcam.swf" publishTime="10/15/2014 16:32:20" />
-    <file relUrl="videoajuda.aspx" publishTime="10/15/2014 16:32:00" />
     <file relUrl="ListaReclamacaoAbertaAdmin.aspx" publishTime="10/15/2014 16:32:20" />
     <file relUrl="App_Themes/DataWebControls/DetailsView.skin" publishTime="10/15/2014 16:32:17" />
     <file relUrl="css/colorbox.css" publishTime="10/15/2014 16:32:17" />
@@ -246,7 +244,7 @@
     <file relUrl="js/bootstrap-carousel.js" publishTime="10/15/2014 16:32:01" />
     <file relUrl="images/reserva.jpg" publishTime="10/15/2014 16:32:15" />
     <file relUrl="ReportViewer.aspx" publishTime="10/15/2014 16:32:39" />
-    <file relUrl="images/excel2.png" publishTime="10/16/2014 17:38:30" />
+    <file relUrl="images/correio.jpg" publishTime="10/15/2014 16:32:15" />
     <file relUrl="images/class.jpg" publishTime="10/15/2014 16:32:15" />
     <file relUrl="Scripts/exporting.src.js" publishTime="10/15/2014 16:32:38" />
     <file relUrl="ServerFile/Classificados/6301logo_pet.gif" publishTime="10/15/2014 16:32:22" />
@@ -257,6 +255,7 @@
     <file relUrl="img/ui-icons_2e83ff_256x240.png" publishTime="10/15/2014 16:32:03" />
     <file relUrl="css/bootstrap-classic.css" publishTime="03/19/2015 12:02:01" />
     <file relUrl="js/jquery.dataTables.min.js" publishTime="10/15/2014 16:32:01" />
+    <file relUrl="images/excel2.png" publishTime="10/16/2014 17:38:30" />
     <file relUrl="cadastrarClassificado.aspx" publishTime="10/15/2014 16:32:04" />
     <file relUrl="images/0ae1500.jpg" publishTime="10/15/2014 16:32:15" />
     <file relUrl="RelatorioEmailRecibo.aspx" publishTime="01/03/2016 19:41:48" />
@@ -264,8 +263,9 @@
     <file relUrl="WebServiceAzuli.asmx" publishTime="10/15/2014 16:32:16" />
     <file relUrl="img/favicon.ico" publishTime="10/15/2014 16:32:03" />
     <file relUrl="images/enquete.jpg" publishTime="10/15/2014 16:32:15" />
-    <file relUrl="Styles/Site.css" publishTime="01/24/2016 23:07:58" />
-    <file relUrl="TelaAgendamentoAdmin.aspx" publishTime="03/14/2015 18:05:01" />
+    <file relUrl="Styles/Site.css" publishTime="01/26/2016 23:14:48" />
+    <file relUrl="img/qrcode136.png" publishTime="10/15/2014 16:32:03" />
+    <file relUrl="TelaAgendamentoAdmin.aspx" publishTime="01/26/2016 22:39:42" />
     <file relUrl="js/bootstrap-collapse.js" publishTime="10/15/2014 16:32:01" />
     <file relUrl="css/jquery.noty.css" publishTime="10/15/2014 16:32:16" />
     <file relUrl="integracaoWeb.aspx" publishTime="10/15/2014 16:32:16" />
@@ -280,13 +280,13 @@
     <file relUrl="css/chosen.css" publishTime="10/15/2014 16:32:16" />
     <file relUrl="img/opa-icons-orange32.png" publishTime="10/15/2014 16:32:03" />
     <file relUrl="img/logo20.png" publishTime="10/15/2014 16:32:03" />
-    <file relUrl="images/correio.jpg" publishTime="10/15/2014 16:32:15" />
     <file relUrl="images/home3.jpg" publishTime="10/15/2014 16:32:15" />
     <file relUrl="css/bootstrap-journal.css" publishTime="10/15/2014 16:32:16" />
     <file relUrl="Default.aspx" publishTime="10/15/2014 16:32:04" />
     <file relUrl="js/fullcalendar.min.js" publishTime="10/15/2014 16:32:01" />
     <file relUrl="img/opa-icons-gray16.png" publishTime="10/15/2014 16:32:03" />
     <file relUrl="images/salaoFesta.jpg" publishTime="10/15/2014 16:32:15" />
+    <file relUrl="images/ico_search.gif" publishTime="10/15/2014 16:32:15" />
     <file relUrl="images/Senha-icone.jpeg" publishTime="10/15/2014 16:32:16" />
     <file relUrl="ServerFile/Classificados/63015_m.jpg" publishTime="10/15/2014 16:32:22" />
     <file relUrl="Scripts/Silverlight.js" publishTime="10/15/2014 16:32:38" />
@@ -296,6 +296,7 @@
     <file relUrl="js/bootstrap-transition.js" publishTime="10/15/2014 16:32:01" />
     <file relUrl="Silverlight.js" publishTime="10/15/2014 16:32:17" />
     <file relUrl="Azuli.Acess.ControlTestPage.html" publishTime="10/15/2014 16:32:15" />
+    <file relUrl="images/banner.jpg" publishTime="10/15/2014 16:32:15" />
     <file relUrl="consultaAgendasAdmin.aspx" publishTime="10/15/2014 16:32:17" />
     <file relUrl="js/jquery.history.js" publishTime="10/15/2014 16:32:01" />
     <file relUrl="css/bootstrap-responsive.min.css" publishTime="10/15/2014 16:32:16" />
@@ -309,10 +310,11 @@
     <file relUrl="img/opa-icons-gray32.png" publishTime="10/15/2014 16:32:03" />
     <file relUrl="images/indisponivel.gif" publishTime="10/15/2014 16:32:15" />
     <file relUrl="js/jquery.raty.min.js" publishTime="10/15/2014 16:32:01" />
+    <file relUrl="Scripts/highcharts-more.js" publishTime="10/15/2014 16:32:38" />
     <file relUrl="img/error_bg.png" publishTime="10/15/2014 16:32:03" />
     <file relUrl="images/online.gif" publishTime="10/15/2014 16:32:15" />
     <file relUrl="img/qrcode.png" publishTime="10/15/2014 16:32:03" />
-    <file relUrl="LoginAzulli.aspx" publishTime="03/14/2015 18:00:23" />
+    <file relUrl="LoginAzulli.aspx" publishTime="02/23/2016 22:40:28" />
     <file relUrl="ServerFile/Classificados/neogico2.jpg" publishTime="10/15/2014 16:32:22" />
     <file relUrl="js/jquery.chosen.min.js" publishTime="10/15/2014 16:32:01" />
     <file relUrl="ServerFile/Classificados/6301fachadazoom.jpg" publishTime="10/15/2014 16:32:22" />
@@ -328,8 +330,8 @@
     <file relUrl="images/print.jpg" publishTime="10/15/2014 16:32:15" />
     <file relUrl="images/senha2.jpg" publishTime="10/15/2014 16:32:15" />
     <file relUrl="images/tela-manutencao1.jpg" publishTime="10/15/2014 16:32:15" />
-    <file relUrl="PerfilMorador.aspx" publishTime="10/15/2014 16:32:00" />
-    <file relUrl="PageAcessControl.Master" publishTime="10/15/2014 16:32:22" />
+    <file relUrl="img/toolbar.gif" publishTime="10/15/2014 16:32:03" />
+    <file relUrl="images/mensagem.jpg" publishTime="10/15/2014 16:32:15" />
     <file relUrl="images/sgc2.jpg" publishTime="10/15/2014 16:32:15" />
     <file relUrl="HistoricoCancelamento.aspx" publishTime="03/19/2015 23:16:22" />
     <file relUrl="ServerFile/Classificados/63019_s.jpg" publishTime="10/15/2014 16:32:22" />
@@ -337,16 +339,15 @@
     <file relUrl="img/opa-icons-color16.png" publishTime="10/15/2014 16:32:03" />
     <file relUrl="images/home.png" publishTime="10/15/2014 16:32:16" />
     <file relUrl="images/votar.jpg" publishTime="10/15/2014 16:32:15" />
-    <file relUrl="bin/Azuli.Web.Portal.pdb" publishTime="01/24/2016 23:02:07" />
+    <file relUrl="bin/Azuli.Web.Portal.pdb" publishTime="02/23/2016 22:25:27" />
     <file relUrl="css/bootstrap-cerulean.css" publishTime="10/15/2014 16:32:16" />
-    <file relUrl="js/jquery.flot.resize.min.js" publishTime="10/15/2014 16:32:01" />
     <file relUrl="js/jquery.cookie.js" publishTime="10/15/2014 16:32:01" />
     <file relUrl="images/contato.jpg" publishTime="10/15/2014 16:32:15" />
-    <file relUrl="bin/Azuli.Crystal.Relatorios.pdb" publishTime="01/23/2016 16:17:08" />
+    <file relUrl="bin/Azuli.Crystal.Relatorios.pdb" publishTime="01/26/2016 21:46:00" />
     <file relUrl="css/bootstrap-responsive.css" publishTime="10/15/2014 16:32:16" />
     <file relUrl="images/edit.png" publishTime="10/15/2014 16:32:15" />
-    <file relUrl="gerenciamentoMoradorAdm.aspx" publishTime="10/15/2014 16:32:17" />
-    <file relUrl="bin/Azuli.Web.DAO.pdb" publishTime="01/23/2016 16:25:31" />
+    <file relUrl="gerenciamentoMoradorAdm.aspx" publishTime="02/01/2016 23:12:11" />
+    <file relUrl="bin/Azuli.Web.DAO.pdb" publishTime="02/02/2016 00:14:11" />
     <file relUrl="ServerFile/Classificados/sport.jpg" publishTime="10/15/2014 16:32:22" />
     <file relUrl="ServerFile/Classificados/63017_m.jpg" publishTime="10/15/2014 16:32:22" />
     <file relUrl="img/ui-bg_glass_55_fbf9ee_1x400.png" publishTime="10/15/2014 16:32:03" />
@@ -373,9 +374,8 @@
     <file relUrl="img/ui-bg_flat_0_aaaaaa_40x100.png" publishTime="10/15/2014 16:32:03" />
     <file relUrl="js/bootstrap-typeahead.js" publishTime="10/15/2014 16:32:01" />
     <file relUrl="SiteAdmin.Master" publishTime="01/24/2016 23:05:10" />
-    <file relUrl="bin/Azuli.Web.Business.dll" publishTime="01/23/2016 16:25:35" />
+    <file relUrl="bin/Azuli.Web.Business.dll" publishTime="02/02/2016 00:14:18" />
     <file relUrl="contato.aspx" publishTime="10/15/2014 16:32:38" />
-    <file relUrl="img/arrows-normal.png" publishTime="10/15/2014 16:32:03" />
     <file relUrl="shutter.mp3" publishTime="10/15/2014 16:32:04" />
     <file relUrl="css/bootstrap-united.css" publishTime="10/15/2014 16:32:16" />
     <file relUrl="Scripts/exporting.js" publishTime="10/15/2014 16:32:39" />
@@ -390,8 +390,8 @@
     <file relUrl="img/ui-bg_glass_75_e6e6e6_1x400.png" publishTime="10/15/2014 16:32:03" />
     <file relUrl="images/calendario.png" publishTime="10/15/2014 16:32:15" />
     <file relUrl="Scripts/highcharts-all.js" publishTime="10/15/2014 16:32:38" />
+    <file relUrl="images/cancel.png" publishTime="10/15/2014 16:32:15" />
     <file relUrl="img/spinner-mini.gif" publishTime="10/15/2014 16:32:03" />
-    <file relUrl="ServerFile/Classificados/animais.jpg" publishTime="10/15/2014 16:32:22" />
     <file relUrl="js/jquery.flot.stack.js" publishTime="10/15/2014 16:32:01" />
     <file relUrl="images/cadastro.jpg" publishTime="10/15/2014 16:32:15" />
     <file relUrl="css/jquery-ui-1.8.21.custom.css" publishTime="10/15/2014 16:32:16" />
@@ -416,27 +416,27 @@
     <file relUrl="img/arrows-active.png" publishTime="10/15/2014 16:32:03" />
     <file relUrl="js/bootstrap-tab.js" publishTime="10/15/2014 16:32:01" />
     <file relUrl="css/charisma-app.css" publishTime="10/15/2014 16:32:16" />
-    <file relUrl="images/ico_search.gif" publishTime="10/15/2014 16:32:15" />
+    <file relUrl="css/opa-icons.css" publishTime="10/15/2014 16:32:16" />
     <file relUrl="DetalheClassificado.aspx" publishTime="10/15/2014 16:32:34" />
     <file relUrl="meuClassificados.aspx" publishTime="10/15/2014 16:32:20" />
-    <file relUrl="js/bootstrap-modal.js" publishTime="10/15/2014 16:32:01" />
+    <file relUrl="js/bootstrap-alert.js" publishTime="10/15/2014 16:32:01" />
     <file relUrl="LoginAsman.aspx" publishTime="10/15/2014 16:32:22" />
     <file relUrl="bin/Highchart.dll" publishTime="10/15/2014 19:19:55" />
     <file relUrl="js/jquery.noty.js" publishTime="10/15/2014 16:32:01" />
     <file relUrl="minhaReservas.aspx" publishTime="03/19/2015 18:18:13" />
-    <file relUrl="Web.config" publishTime="01/25/2016 22:27:12" />
+    <file relUrl="Web.config" publishTime="02/23/2016 22:41:46" />
     <file relUrl="paginaInicialMoradores.aspx" publishTime="01/24/2016 22:55:31" />
     <file relUrl="images/delete.png" publishTime="10/15/2014 16:32:15" />
     <file relUrl="ServerFile/Classificados/imoveis.jpg" publishTime="10/15/2014 16:32:22" />
     <file relUrl="Styles/border-radius.htc" publishTime="10/15/2014 16:32:16" />
-    <file relUrl="img/qrcode136.png" publishTime="10/15/2014 16:32:03" />
+    <file relUrl="ServerFile/Classificados/animais.jpg" publishTime="10/15/2014 16:32:22" />
     <file relUrl="ServerFile/Classificados/63013_s.jpg" publishTime="10/15/2014 16:32:22" />
     <file relUrl="img/ui-icons_cd0a0a_256x240.png" publishTime="10/15/2014 16:32:03" />
-    <file relUrl="images/cancel.png" publishTime="10/15/2014 16:32:15" />
+    <file relUrl="videoajuda.aspx" publishTime="10/15/2014 16:32:00" />
     <file relUrl="bin/NPOI.dll" publishTime="06/25/2014 19:40:20" />
     <file relUrl="images/clientes.jpg" publishTime="10/15/2014 16:32:15" />
     <file relUrl="images/select.png" publishTime="10/15/2014 16:32:15" />
-    <file relUrl="img/toolbar.png" publishTime="10/15/2014 16:32:03" />
+    <file relUrl="bin/Azuli.Web.Model.pdb" publishTime="01/23/2016 16:25:26" />
     <file relUrl="js/relatorioGeral/relatorioGeral.aspx" publishTime="10/15/2014 16:32:20" />
     <file relUrl="js/bootstrap-tooltip.js" publishTime="10/15/2014 16:32:01" />
     <file relUrl="js/bootstrap-popover.js" publishTime="10/15/2014 16:32:01" />
@@ -447,10 +447,10 @@
     <file relUrl="Scripts/jquery-1.4.1-vsdoc.js" publishTime="10/15/2014 16:32:38" />
     <file relUrl="ReservaDetalhadaMoradores.aspx" publishTime="01/24/2016 13:03:31" />
     <file relUrl="js/bootstrap-toggle.js" publishTime="10/15/2014 16:32:01" />
-    <file relUrl="Scripts/highcharts-more.js" publishTime="10/15/2014 16:32:38" />
+    <file relUrl="images/azul.jpg" publishTime="10/15/2014 16:32:15" />
     <file relUrl="ServerFile/Classificados/6301azuli.JPG" publishTime="10/15/2014 16:32:22" />
     <file relUrl="img/ui-icons_888888_256x240.png" publishTime="10/15/2014 16:32:03" />
-    <file relUrl="bin/Azuli.Web.Portal.dll" publishTime="01/24/2016 23:02:08" />
+    <file relUrl="bin/Azuli.Web.Portal.dll" publishTime="02/23/2016 22:25:29" />
     <file relUrl="img/progress.gif" publishTime="10/15/2014 16:32:03" />
     <file relUrl="GerenciarClassificadoMorador.aspx" publishTime="10/15/2014 16:32:36" />
     <file relUrl="img/buttons.gif" publishTime="10/15/2014 16:32:03" />

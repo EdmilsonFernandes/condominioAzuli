@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#"  Title="Portal do Condiminio" AutoEventWireup="true" CodeBehind="LoginAzulli.aspx.cs" Inherits="Azuli.Web.Portal.Account.LoginAzulli" %>
+﻿    <%@ Page Language="C#"  Title="Portal do Condiminio" AutoEventWireup="true" CodeBehind="LoginAzulli.aspx.cs" Inherits="Azuli.Web.Portal.Account.LoginAzulli" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
@@ -197,7 +197,7 @@
                                                 <asp:Label ID="Label2" runat="server" Font-Bold="True" Text="Apartamento: "></asp:Label>
                                             </td>
                                             <td class="style6">
-                                                <asp:TextBox ID="txtSolicitaAP" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtSolicitaAP" runat="server" Width="32px"></asp:TextBox>
                                             </td>
                                             <td class="style9">
                                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtSolicitaAP"

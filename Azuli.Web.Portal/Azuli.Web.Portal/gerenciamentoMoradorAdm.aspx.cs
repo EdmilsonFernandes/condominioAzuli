@@ -8,6 +8,7 @@ using Azuli.Web.Business;
 using Azuli.Web.Model;
 using Azuli.Web.Portal.Util;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Azuli.Web.Portal
 {
@@ -85,14 +86,16 @@ namespace Azuli.Web.Portal
                         msgCredencial = "Cadastro efetuado com sucesso para Morador: <br> <b> " + oProprietarioModel.proprietario1 + " <b> <br>" + " Bloco:  " + oProprietarioModel.ap.bloco + " / Apartamento:  " + oProprietarioModel.ap.apartamento + "<br> Sua Senha é: " + oProprietarioModel.senha + "<br><hr> acesse: http://www.condominioazuli.somee.com/";
 
                         SendMail enviaEmail = new SendMail();
-                        if (oProprietarioModel.email != "Não tem no momento")
+
+                        bool isEmail = Regex.IsMatch(oProprietarioModel.email, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z", RegexOptions.IgnoreCase);
+                        if (isEmail)
                         {
 
                             enviaEmail.enviaSenha(msgCredencial, oProprietarioModel.proprietario1, oProprietarioModel.email, status);
                         }
-                        if (oProprietarioModel.email == "")
+                        else
                         {
-                            enviaEmail.enviaSenha(msgCredencial, oProprietarioModel.proprietario1, oProprietarioModel.email, status);
+                            enviaEmail.enviaSenha(msgCredencial, oProprietarioModel.proprietario1,"residencialcampoazuli@gmail.com", status);
                         }
 
                         lblMsg.Text = "Cadastro efetuado com sucesso!! <br> <b> ";

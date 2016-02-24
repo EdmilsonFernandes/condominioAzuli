@@ -10,6 +10,7 @@ using System.Globalization;
 using System.Drawing;
 using System.Data;
 using System.Text;
+using System.Text.RegularExpressions;
 
 
 namespace Azuli.Web.Portal
@@ -510,16 +511,17 @@ namespace Azuli.Web.Portal
                          {
                              emailReserva = item.email;
                          }
-                         if (emailReserva == "Não tem no momento")
-                         {
-                             emailReserva = string.Empty;
-                         }
 
-                         if (emailReserva != string.Empty || emailReserva != "")
+                         bool isEmailAll = Regex.IsMatch(emailReserva, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z", RegexOptions.IgnoreCase);
+                         if (isEmailAll)
                          {
-                             oEnviaEmailCadastro.enviaSenha("<b> Reserva realizada com sucesso para:<br> Apto:" +oApModel.apartamento+ " e Bloco: "+oApModel.bloco +"<br>, Para o dia: " + Session["dataReservaAdministrador"].ToString()+"<br> Para consultar seus agendamentos consulte o site abaixo: <br> http://www.condominioazuli.somee.com ","", emailReserva, 0);
-                         }
 
+                             oEnviaEmailCadastro.enviaSenha("<b> Reserva realizada com sucesso para:<br> Apto:" + oApModel.apartamento + " e Bloco: " + oApModel.bloco + "<br>, Para o dia: " + Session["dataReservaAdministrador"].ToString() + "<br> Para consultar seus agendamentos consulte o site abaixo: <br> http://www.condominioazuli.somee.com ", "", emailReserva, 0);
+                         }
+                         else
+                         {
+                             oEnviaEmailCadastro.enviaSenha("<b> Reserva realizada com sucesso para:<br> Apto:" + oApModel.apartamento + " e Bloco: " + oApModel.bloco + "<br>, Para o dia: " + Session["dataReservaAdministrador"].ToString() + "<br> Para consultar seus agendamentos consulte o site abaixo: <br> http://www.condominioazuli.somee.com ", "", "residencialcampoazuli@gmail.com", 0);
+                         }
                         
 
                          //dvAlugar.Visible = false;

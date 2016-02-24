@@ -8,6 +8,7 @@ using Azuli.Web.Business;
 using Azuli.Web.Model;
 using System.Globalization;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Azuli.Web.Portal
 {
@@ -392,6 +393,8 @@ namespace Azuli.Web.Portal
             int apto = Convert.ToInt32( Session["aptoSession"]);
 
             string recebeEmail = buscaEmail(Convert.ToInt32(Session["blocoSession"]), Convert.ToInt32(Session["aptoSession"]));
+
+            bool isEmailAll = Regex.IsMatch(recebeEmail, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z", RegexOptions.IgnoreCase);
             if (Session["status"] != null)
             {
                 switch ((Int32)Session["status"])
@@ -418,14 +421,16 @@ namespace Azuli.Web.Portal
                         
                         cancelFesta();
 
-                        if (recebeEmail != null || recebeEmail != string.Empty)
+                      
+
+                        if (isEmailAll)
                         {
                             sendEmailCancelamento(apto.ToString(), bloco.ToString(), "Cancelamento de Salão de festa", recebeEmail);
 
                         }
                         else
                         {
-                            sendEmailCancelamento(apto.ToString(), bloco.ToString(), "Cancelamento de Salão de festa - Morador sem e-mail", "residencialcampoazuli@gmail.com ");
+                            sendEmailCancelamento(apto.ToString(), bloco.ToString(), "Cancelamento de Salão de festa - Morador sem e-mail", "residencialcampoazuli@gmail.com");
                         }
 
                         Response.Redirect("WelcomeAdmin.aspx");
@@ -436,7 +441,9 @@ namespace Azuli.Web.Portal
 
                     case 4:
                         cancelChurras();
-                        if (recebeEmail != null || recebeEmail != string.Empty)
+
+                      
+                        if (isEmailAll)
                         {
                             sendEmailCancelamento(apto.ToString(), bloco.ToString(), "Cancelamento de Churrasqueira", recebeEmail);
 
@@ -467,7 +474,7 @@ namespace Azuli.Web.Portal
                        
                         cancelFesta();
                         cancelChurras();
-                        if (recebeEmail != null || recebeEmail != string.Empty)
+                        if (isEmailAll)
                         {
                             sendEmailCancelamento(apto.ToString(), bloco.ToString(), "Cancelamento de Churrasqueira e Salão de Festa", recebeEmail);
 
