@@ -1,20 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteAdmin.Master" AutoEventWireup="true" CodeBehind="enviaMensagemMorador.aspx.cs" Inherits="Azuli.Web.Portal.enviaMensagemMorador" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <style type="text/css">
-        .style1
-    {
-        width: 908px;
-            height: 193px;
-        }
-    .style2
-    {
-        width: 621px;
-    }
-    .style4
-    {
-        width: 631px;
-    }
-    .style5
+        .style5
     {
         width: 634px;
     }
@@ -22,18 +9,36 @@
     {
         width: 636px;
     }
-    .style7
-    {
-        width: 647px;
-    }
-        .style8
-        {
-            width: 664px;
-        }
         .style9
         {
             width: 780px;
         }
+        .style10
+        {
+            height: 28px;
+        width: 44px;
+    }
+        .style11
+        {
+            border-style: outset;
+            border-color: inherit;
+            border-width: 2px;
+            background-color: White;
+            font-family: Verdana;
+            font-size: 12px;
+            color: Black;
+            margin-top: 0px;
+            margin-right: 0px;
+            width: 1049px;
+        }
+    .style12
+    {
+        width: 44px;
+    }
+    .style13
+    {
+        width: 75px;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -55,14 +60,14 @@
           <table>
           
             <tr>
-                <td class="GridView">
+                <td class="style11">
                     <table border='0'>
                         <tr>
-                            <td class="style7">
+                            <td class="style13">
                                 <asp:Label ID="lblPara" runat="server" style="font-weight: 700" 
                                     Text="Para:"></asp:Label>
                             </td>
-                            <td class="style9" align="left" colspan="2">
+                            <td align="left">
                                 <asp:Label ID="lblBloco" runat="server" CssClass="style5" Text="Bloco:"></asp:Label>
 &nbsp;<asp:DropDownList ID="drpBloco" runat="server" DataSourceID="SqlDataSourceBloco" 
                                     DataTextField="BLOCO" DataValueField="BLOCO" Height="25px" 
@@ -79,24 +84,39 @@
                                     AutoPostBack="True" onselectedindexchanged="drpMsg_SelectedIndexChanged">
                                       <asp:ListItem Value="T">Todos</asp:ListItem>
                                 </asp:DropDownList>
-                                <asp:Label ID="lblMorador" runat="server"></asp:Label>
+                                &nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;
+                                &nbsp;
+                                </td>
+                            
+                        </tr>
+                        <tr>
+                        <td>
+                                <asp:Label ID="lblAssunto0" runat="server" Font-Bold="True" 
+                                Text="Dados do Morador:"></asp:Label>
+                        </td>
+                            <td align="left">
+                                <asp:Label ID="lblMorador" runat="server" style="font-weight: 700"></asp:Label>
+                            &nbsp;&nbsp;&nbsp;
+                                <asp:Label ID="lblEmailResult" runat="server" style="font-weight: 700"></asp:Label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="style7">
+                            <td class="style13">
                                 <asp:Label ID="lblAssunto" runat="server" Font-Bold="True" Text="Assunto:"></asp:Label>
                             </td>
                             <td class="style9">
                                 <asp:TextBox ID="txtAssunto" runat="server" Height="16px" Width="593px"></asp:TextBox>
                             </td>
-                            <td class="style2">
+                            <td class="style10">
                                  <asp:RequiredFieldValidator ID="rfvDescription0" runat="server" 
                                      ControlToValidate="txtAssunto" ErrorMessage="*" 
                                      Font-Bold="True" ForeColor="Red" ValidationGroup="validaDescricao"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
                         <tr>
-                            <td class="style7">
+                            <td class="style13">
                                 <asp:Label ID="lblMensagem" runat="server" Font-Bold="True" 
                                     Text="Mensagem"></asp:Label>
                             </td><br />
@@ -104,18 +124,18 @@
                                  <asp:TextBox ID="txtDescription" runat="server" Height="95px" TextMode="MultiLine" 
                                      Width="593px"></asp:TextBox>
                             </td>
-                            <td class="style4">
+                            <td class="style12">
                                  <asp:RequiredFieldValidator ID="rfvDescription" runat="server" 
                                      ControlToValidate="txtDescription" ErrorMessage="*" 
                                      Font-Bold="True" ForeColor="Red" ValidationGroup="validaDescricao"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
                         <tr>
-                            <td class="style7">
+                            <td class="style13">
                                 &nbsp;</td>
                             <td class="style9">
                                 &nbsp;</td>
-                            <td class="style8">
+                            <td class="style12">
                                 &nbsp;</td>
                         </tr>
                         </table>

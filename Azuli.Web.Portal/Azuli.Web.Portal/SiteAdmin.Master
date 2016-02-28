@@ -64,7 +64,8 @@
                             <asp:MenuItem Text="Publicar Circular " 
                                 Value="Enviar Mensagem" NavigateUrl="~/publicarCircular.aspx">
                             </asp:MenuItem>
-                            <asp:MenuItem Text="Consultar Circular" Value="Consultar Circular">
+                            <asp:MenuItem Text="Consultar Circular" Value="Consultar Circular" 
+                                NavigateUrl="~/consultaCircularAdministrador.aspx">
                             </asp:MenuItem>
                         </asp:MenuItem>
                         <asp:MenuItem Text="Moradores" Value="Publicações">
@@ -72,6 +73,8 @@
                                 Value="Cadastrar / Alterar" NavigateUrl="~/gerenciamentoMoradorAdm.aspx"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/liberaAcessoAdmin.aspx" Text="Liberar  Acesso" 
                                 Value="Liberar Acessos"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/enviaMensagemMorador.aspx" Text="Enviar Mensagem" 
+                                Value="Enviar Mensagem"></asp:MenuItem>
                         </asp:MenuItem>
                         <asp:MenuItem Text="Configurar" Value="Mensagens">
                             <asp:MenuItem Text="Valor Reserva" Value="Visualizar Circular" 

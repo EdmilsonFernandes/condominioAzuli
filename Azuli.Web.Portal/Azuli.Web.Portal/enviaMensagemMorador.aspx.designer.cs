@@ -67,6 +67,15 @@ namespace Azuli.Web.Portal {
         protected global::System.Web.UI.WebControls.DropDownList drpMsg;
         
         /// <summary>
+        /// lblAssunto0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAssunto0;
+        
+        /// <summary>
         /// lblMorador control.
         /// </summary>
         /// <remarks>
@@ -74,6 +83,15 @@ namespace Azuli.Web.Portal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMorador;
+        
+        /// <summary>
+        /// lblEmailResult control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEmailResult;
         
         /// <summary>
         /// lblAssunto control.

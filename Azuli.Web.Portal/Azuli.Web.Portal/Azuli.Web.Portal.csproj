@@ -114,6 +114,7 @@
     <Content Include="consultaAgendamentoAdmin.aspx" />
     <Content Include="consultaBalancete.aspx" />
     <Content Include="consultaCircular.aspx" />
+    <Content Include="consultaCircularAdministrador.aspx" />
     <Content Include="consultaClassificados.aspx" />
     <Content Include="ConsumoIndividual.aspx" />
     <Content Include="contato.aspx" />
@@ -540,6 +541,13 @@
     </Compile>
     <Compile Include="consultaCircular.aspx.designer.cs">
       <DependentUpon>consultaCircular.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="consultaCircularAdministrador.aspx.cs">
+      <DependentUpon>consultaCircularAdministrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="consultaCircularAdministrador.aspx.designer.cs">
+      <DependentUpon>consultaCircularAdministrador.aspx</DependentUpon>
     </Compile>
     <Compile Include="consultaClassificados.aspx.cs">
       <DependentUpon>consultaClassificados.aspx</DependentUpon>

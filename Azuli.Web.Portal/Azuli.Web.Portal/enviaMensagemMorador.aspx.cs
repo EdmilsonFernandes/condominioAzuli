@@ -77,8 +77,9 @@ namespace Azuli.Web.Portal
                     foreach (var item in oProprietario.BuscaMoradorAdmin(oAPmodel))
                     {
 
-                        lblMorador.Text = item.proprietario1.ToString();
+                        lblMorador.Text = "Nome: " + item.proprietario1.ToString();
                         nomeMorador = item.proprietario1.ToString();
+                        lblEmailResult.Text = "E-mail: " + item.email;
 
 
                     }
@@ -130,6 +131,7 @@ namespace Azuli.Web.Portal
                         txtAssunto.Text = "";
                         txtDescription.Text = "";
                         lblMorador.Text = "";
+                        lblEmailResult.Text = "";
                     }
                     catch (Exception)
                     {
@@ -168,6 +170,7 @@ namespace Azuli.Web.Portal
                         txtAssunto.Text = "";
                         txtDescription.Text = "";
                         lblMorador.Text = "";
+                        lblEmailResult.Text = "";
                     }
                     catch (Exception)
                     {
