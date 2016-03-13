@@ -26,6 +26,8 @@ namespace Azuli.Web.Portal
            double churrasqueira =0;
            double festa = 0;
            double desconto = 0;
+           const string areaChurrasco = "Churrasqueira";
+           const string areaSalao = "Salão de festa";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -515,15 +517,41 @@ namespace Azuli.Web.Portal
                          bool isEmailAll = Regex.IsMatch(emailReserva, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z", RegexOptions.IgnoreCase);
                          if (isEmailAll)
                          {
+                             if (chkChurrascaria.Checked && !chkSalaoFesta.Checked)
+                             {
 
-                             oEnviaEmailCadastro.enviaSenha("<b> Reserva realizada com sucesso para:<br> Apto:" + oApModel.apartamento + " e Bloco: " + oApModel.bloco + "<br>, Para o dia: " + Session["dataReservaAdministrador"].ToString() + "<br> Para consultar seus agendamentos consulte o site abaixo: <br> http://www.condominioazuli.somee.com ", "", emailReserva, 0);
+                                 oEnviaEmailCadastro.enviaSenha("<b> Reserva realizada com sucesso para:<br> Apto:" + oApModel.apartamento + " e Bloco: " + oApModel.bloco + "<br> Para o dia: " + Session["dataReservaAdministrador"].ToString() + "<br> Área reservada: " + areaChurrasco + "<br> Para consultar seus agendamentos consulte o site abaixo: <br> http://www.condominioazuli.somee.com ", "", emailReserva, 0);
+
+                             }
+                             else if (chkSalaoFesta.Checked && !chkChurrascaria.Checked)
+                             {
+                                 oEnviaEmailCadastro.enviaSenha("<b> Reserva realizada com sucesso para:<br> Apto:" + oApModel.apartamento + " e Bloco: " + oApModel.bloco + "<br> Para o dia: " + Session["dataReservaAdministrador"].ToString() + "<br> Área reservada: " + areaSalao + "<br> Para consultar seus agendamentos consulte o site abaixo: <br> http://www.condominioazuli.somee.com ", "", emailReserva, 0);
+                             }
+                             else
+                             {
+                                 oEnviaEmailCadastro.enviaSenha("<b> Reserva realizada com sucesso para:<br> Apto:" + oApModel.apartamento + " e Bloco: " + oApModel.bloco + "<br> Para o dia: " + Session["dataReservaAdministrador"].ToString() + "<br> Área reservada: " + areaSalao + " e " + areaChurrasco + "<br> Para consultar seus agendamentos consulte o site abaixo: <br> http://www.condominioazuli.somee.com ", "", emailReserva, 0);
+
+                             }
+
                          }
                          else
                          {
-                             oEnviaEmailCadastro.enviaSenha("<b> Reserva realizada com sucesso para:<br> Apto:" + oApModel.apartamento + " e Bloco: " + oApModel.bloco + "<br>, Para o dia: " + Session["dataReservaAdministrador"].ToString() + "<br> Para consultar seus agendamentos consulte o site abaixo: <br> http://www.condominioazuli.somee.com ", "", "residencialcampoazuli@gmail.com", 0);
-                         }
-                        
+                             if (chkChurrascaria.Checked && !chkSalaoFesta.Checked)
+                             {
+                                 oEnviaEmailCadastro.enviaSenha("<b> Reserva realizada com sucesso para:<br> Apto:" + oApModel.apartamento + " e Bloco: " + oApModel.bloco + "<br>, Para o dia: " + Session["dataReservaAdministrador"].ToString() + "<br> Área reservada: " + areaChurrasco + "<br> Para consultar seus agendamentos consulte o site abaixo: <br> http://www.condominioazuli.somee.com ", "", "residencialcampoazuli@gmail.com", 0);
 
+                             }
+                             else if (chkSalaoFesta.Checked && !chkChurrascaria.Checked)
+                             {
+                                 oEnviaEmailCadastro.enviaSenha("<b> Reserva realizada com sucesso para:<br> Apto:" + oApModel.apartamento + " e Bloco: " + oApModel.bloco + "<br>, Para o dia: " + Session["dataReservaAdministrador"].ToString() + "<br> Área reservada: " + areaSalao + "<br> Para consultar seus agendamentos consulte o site abaixo: <br> http://www.condominioazuli.somee.com ", "", "residencialcampoazuli@gmail.com", 0);
+
+                             }
+                             else
+                             {
+                                 oEnviaEmailCadastro.enviaSenha("<b> Reserva realizada com sucesso para:<br> Apto:" + oApModel.apartamento + " e Bloco: " + oApModel.bloco + "<br>, Para o dia: " + Session["dataReservaAdministrador"].ToString() + "<br> Área reservada: " + areaSalao + " e " + areaChurrasco + "<br> Para consultar seus agendamentos consulte o site abaixo: <br> http://www.condominioazuli.somee.com ", "", "residencialcampoazuli@gmail.com", 0);
+                             }
+
+                         }
                          //dvAlugar.Visible = false;
                          if (chkPG.Checked)
                          {

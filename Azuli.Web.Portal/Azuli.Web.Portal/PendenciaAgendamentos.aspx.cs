@@ -759,10 +759,20 @@ namespace Azuli.Web.Portal
 
             StringBuilder msgMorador = new StringBuilder();
 
+            string dataFormated = Session["dataReservaOnline"].ToString();
+            dataFormated.Replace("00:00:00", "");
+
             msgMorador.Append("Olá,");
-            msgMorador.Append("<br> Seu agendamento foi cancelado para o dia:" + Session["dataReservaOnline"].ToString() + "Para área:" + area + " <br>");
+            msgMorador.Append("<br> Seu agendamento foi cancelado para o dia:" + string.Format("{0:dd/MM/yy}",  dataFormated.Replace("00:00:00", "") + "<br> Área:" + area + " <br>"));
             msgMorador.Append(" Referente ao Bloco: " + bloco + " e apartamento: " + apto);
-            msgMorador.Append("<br> Motivo: " + txtObs.Text);
+            if (txtObs.Text == string.Empty || txtObs.Text=="")
+            {
+                msgMorador.Append("<br> Motivo: Não informado.");
+            }
+            else
+            {
+                msgMorador.Append("<br> Motivo: " + txtObs.Text);
+            }
             msgMorador.Append("<br> Qualquer dúvida ligar para o ramal 93 ou pelo telefone: 3027-7997");
             msgMorador.Append("<br> Acesse o site azuli e veja mais detalhes: http://www.condominioazuli.somee.com/");
 
