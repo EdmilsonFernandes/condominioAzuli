@@ -345,7 +345,14 @@ namespace Azuli.Web.Portal
                              
                                 drSegundaVia["ExcedentePagoPeloCondominio"] = item.excedenteM3PagoCondominio;
                                 drSegundaVia["ExcedenteValorRateio "] = item.excedenteValorRateio;
-                                drSegundaVia["a pagar"] = item.valorPagarValorDevido.ToString().Remove(item.valorPagarValorDevido.ToString().Length-1);
+
+
+
+
+
+                                drSegundaVia["a pagar"] = Math.Truncate(item.valorPagarValorDevido * 100) / 100;  //Math.Round(item.valorPagarValorDevido, 2);
+                            
+                                
 
 
 
@@ -368,11 +375,11 @@ namespace Azuli.Web.Portal
                             drSegundaVia["ExcedenteM3Rateio"] = totalExdenteAreaComumMorador;
                             drSegundaVia["Geral"] = item.avisoGeralAviso;
                             drSegundaVia["Anormal"] = item.AnormalAviso;
-                            drSegundaVia["Invididual"] = "-> De acordo com ajuste do sistema realizado, haverá desconto na conta de junho/2016, para aqueles que pagaram por excedente em maio/2016."; //item.individualAviso;
+                            drSegundaVia["Invididual"] = "-> O ajuste no sistema foi realizado, haverá desconto na conta de junho/2016, para aqueles que excederam à 10 M³ na conta de maio/2016."; //item.individualAviso;
                             drSegundaVia["ANORMALIDADE"] = item.anormalidadeAviso;
                             drSegundaVia["Imagem"] = item.imagem;
-                            
-                            drSegundaVia["excedenteM3Diario"] = item.excedenteM3diaria;
+
+                            drSegundaVia["excedenteM3Diario"] = Convert.ToDouble(consumoIndividualMensal) / Convert.ToDouble(diasLeituraSabesp);//item.excedenteM3diaria;
 
                             dsSegundaVia.Tables[1].Rows.Add(drSegundaVia);
 

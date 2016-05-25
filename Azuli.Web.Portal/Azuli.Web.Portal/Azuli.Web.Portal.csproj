@@ -945,6 +945,7 @@
     <Compile Include="Util\GridViewSummaryList.cs" />
     <Compile Include="Util\ImportFileIntegrationWeb.cs" />
     <Compile Include="Util\NumeroPorExtenso.cs" />
+    <Compile Include="Util\RelatorioConfigRecibo.cs" />
     <Compile Include="Util\SendMail.cs" />
     <Compile Include="Util\teste.cs" />
     <Compile Include="Util\Util.cs" />
