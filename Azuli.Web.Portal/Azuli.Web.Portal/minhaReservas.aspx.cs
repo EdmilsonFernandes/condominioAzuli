@@ -288,7 +288,7 @@ namespace Azuli.Web.Portal
                 HeaderCell2.Font.Size = 12;
                 HeaderCell2.CssClass = "grid";
                 HeaderCell2.Text = "Salão de Festa - " + drpMeses.Text + "/" + drpAno.Text;
-                HeaderCell2.ColumnSpan = 6;
+                HeaderCell2.ColumnSpan = 7;
                 HeaderCell2.BackColor = Color.Blue;
 
                 HeaderRow.Cells.Add(HeaderCell2);
@@ -322,7 +322,7 @@ namespace Azuli.Web.Portal
                 HeaderCell2.Font.Bold = true;
                 HeaderCell2.Font.Size = 12;
                 HeaderCell2.Text = "Churrasqueira - " + drpMeses.Text + "/" + drpAno.Text;
-                HeaderCell2.ColumnSpan = 6;
+                HeaderCell2.ColumnSpan = 7;
                 HeaderCell2.BackColor = Color.Blue;
 
                 HeaderRow.Cells.Add(HeaderCell2);

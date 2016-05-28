@@ -149,6 +149,7 @@
     <Content Include="DetalheClassificado.aspx" />
     <Content Include="detalheMensagemMorador.aspx" />
     <Content Include="detalheOcorrencia.aspx" />
+    <Content Include="DiasLeituraSabesp.aspx" />
     <Content Include="enviaMensagemMorador.aspx" />
     <Content Include="esqueciSenha.aspx" />
     <Content Include="GerarReciboAzuliAdm.aspx" />
@@ -597,6 +598,13 @@
     </Compile>
     <Compile Include="detalheOcorrencia.aspx.designer.cs">
       <DependentUpon>detalheOcorrencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DiasLeituraSabesp.aspx.cs">
+      <DependentUpon>DiasLeituraSabesp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DiasLeituraSabesp.aspx.designer.cs">
+      <DependentUpon>DiasLeituraSabesp.aspx</DependentUpon>
     </Compile>
     <Compile Include="DSrecibo.cs">
       <DependentUpon>DSrecibo.xsd</DependentUpon>

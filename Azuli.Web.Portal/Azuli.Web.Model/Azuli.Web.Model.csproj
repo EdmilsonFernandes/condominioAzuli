@@ -52,6 +52,7 @@
     <Compile Include="Foto.cs" />
     <Compile Include="GrupoClassificados.cs" />
     <Compile Include="LancamentoOcorrenciaModel.cs" />
+    <Compile Include="LeituraSabesp.cs" />
     <Compile Include="MensagemMoradorModel.cs" />
     <Compile Include="OcorrenciaModel.cs" />
     <Compile Include="PendenciaAdmin.cs" />

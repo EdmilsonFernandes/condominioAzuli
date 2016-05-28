@@ -82,6 +82,8 @@
                             </asp:MenuItem>
                             <asp:MenuItem Text="Dias para Cancelamentos" Value="Consultar Agendamentos">
                             </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/DiasLeituraSabesp.aspx" Text="Leitura Sabesp" 
+                                Value="Leitura Sabesp"></asp:MenuItem>
                         </asp:MenuItem>
                         <asp:MenuItem Text="Gestão de Consumo de Água" Value="Conta de Água Azuli">
                             <asp:MenuItem NavigateUrl="~/GerarReciboAzuliAdm.aspx" Text="Gerar Recibos" 

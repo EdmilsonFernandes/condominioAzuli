@@ -90,17 +90,19 @@
 
 
                     </asp:TemplateField>
-                        <asp:TemplateField HeaderText="Data solicitação da Reserva">
-                           <EditItemTemplate>
-                               <asp:TextBox ID="TextBox5" runat="server" Text='<%# Bind("dataInclusao") %>'></asp:TextBox>
-                           </EditItemTemplate>
-                           <ItemTemplate>
-                               <asp:Label ID="Label5" runat="server" 
-                                   Text='<%# Eval("dataInclusao", "{0:ddd}") + "-" + Eval("dataInclusao","{0:dd/MM/yy}") %>'></asp:Label>
-                           </ItemTemplate>
-                           <ItemStyle Font-Size="Small" ForeColor="Red" />
-                       </asp:TemplateField>
-                       <asp:TemplateField HeaderText="Data da Reserva">
+                      <asp:TemplateField HeaderText="Morador">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="Label2" runat="server" Text='<%# Bind("ap.oProprietario.proprietario1") %>'></asp:Label>
+                        </ItemTemplate>
+                        <ItemStyle BackColor="#3399FF" Font-Bold="True" ForeColor="White" />
+
+
+                    </asp:TemplateField>
+
+                     <asp:TemplateField HeaderText="Data da Reserva">
                            <EditItemTemplate>
                                <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("dataAgendamento") %>'></asp:TextBox>
                            </EditItemTemplate>
@@ -111,6 +113,17 @@
                            <HeaderStyle Width="120px" />
                            <ItemStyle ForeColor="#006600" HorizontalAlign="Left" Font-Bold="True" />
                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Data de solicitação da Reserva">
+                           <EditItemTemplate>
+                               <asp:TextBox ID="TextBox5" runat="server" Text='<%# Bind("dataInclusao") %>'></asp:TextBox>
+                           </EditItemTemplate>
+                           <ItemTemplate>
+                               <asp:Label ID="Label5" runat="server" 
+                                   Text='<%# Eval("dataInclusao", "{0:ddd}") + "-" + Eval("dataInclusao","{0:dd/MM/yy}") %>'></asp:Label>
+                           </ItemTemplate>
+                           <ItemStyle Font-Size="Small" ForeColor="Red" />
+                       </asp:TemplateField>
+                      
                    
                        <asp:TemplateField HeaderText="Data de PG" Visible="False">
                            <EditItemTemplate>
@@ -216,17 +229,18 @@
                         </ItemTemplate>
                         <ItemStyle BackColor="#3399FF" Font-Bold="True" ForeColor="White" />
                     </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Morador">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="Label2" runat="server" Text='<%# Bind("ap.oProprietario.proprietario1") %>'></asp:Label>
+                        </ItemTemplate>
+                        <ItemStyle BackColor="#3399FF" Font-Bold="True" ForeColor="White" />
 
-                     <asp:TemplateField HeaderText="Data solicitação da Reserva">
-                    <EditItemTemplate>
-                        <asp:TextBox ID="TextBox9" runat="server" Text='<%# Bind("dataInclusao") %>'></asp:TextBox>
-                    </EditItemTemplate>
-                    <ItemTemplate>
-                        <asp:Label ID="Label9" runat="server" 
-                            Text='<%# Eval("dataInclusao", "{0:ddd}") + " / " + Eval("dataInclusao","{0:dd/MM/yy}") %>'></asp:Label>
-                    </ItemTemplate>
-                    <ItemStyle ForeColor="#FF3300" />
-                </asp:TemplateField>
+
+                    </asp:TemplateField>
+                  
                 <asp:TemplateField HeaderText="Data da Reserva">
                     <EditItemTemplate>
                         <asp:TextBox ID="TextBox8" runat="server" Text='<%# Bind("dataAgendamento") %>'></asp:TextBox>
@@ -237,6 +251,17 @@
                     </ItemTemplate>
                     <ItemStyle ForeColor="#006600" HorizontalAlign="Center" Width="120px" 
                         Font-Bold="True" />
+                </asp:TemplateField>
+
+                   <asp:TemplateField HeaderText="Data solicitação da Reserva">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="TextBox9" runat="server" Text='<%# Bind("dataInclusao") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="Label9" runat="server" 
+                            Text='<%# Eval("dataInclusao", "{0:ddd}") + " / " + Eval("dataInclusao","{0:dd/MM/yy}") %>'></asp:Label>
+                    </ItemTemplate>
+                    <ItemStyle ForeColor="#FF3300" />
                 </asp:TemplateField>
                
                 <asp:TemplateField HeaderText="Data de PG" Visible="False">

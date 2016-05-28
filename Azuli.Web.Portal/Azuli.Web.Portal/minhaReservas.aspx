@@ -101,6 +101,18 @@
 
 
                     </asp:TemplateField>
+
+                     <asp:TemplateField HeaderText="Morador">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="Label2" runat="server" Text='<%# Bind("ap.oProprietario.proprietario1") %>'></asp:Label>
+                        </ItemTemplate>
+                        <ItemStyle BackColor="#3399FF" Font-Bold="True" ForeColor="White" />
+
+
+                    </asp:TemplateField>
                         <asp:TemplateField HeaderText="Data solicitação da Reserva">
                            <EditItemTemplate>
                                <asp:TextBox ID="TextBox5" runat="server" Text='<%# Bind("dataInclusao") %>'></asp:TextBox>
@@ -227,6 +239,17 @@
                         </ItemTemplate>
                         <ItemStyle BackColor="#3399FF" Font-Bold="True" ForeColor="White" />
                     </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Morador">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="Label2" runat="server" Text='<%# Bind("ap.oProprietario.proprietario1") %>'></asp:Label>
+                        </ItemTemplate>
+                        <ItemStyle BackColor="#3399FF" Font-Bold="True" ForeColor="White" />
+
+
+                    </asp:TemplateField>
 
                      <asp:TemplateField HeaderText="Data solicitação da Reserva">
                     <EditItemTemplate>
@@ -310,5 +333,5 @@
             <br />
             <asp:ImageButton ID="imgBtExcelChurras" runat="server" 
             ImageUrl="~/images/excel.png" onclick="imgBtExcelChurras_Click" Width="21px" />
-    &nbsp;Exportar</center> </fieldset> </div>
+    &nbsp;Exportar</center> </div> </fieldset>
 </asp:Content>

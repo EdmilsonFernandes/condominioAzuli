@@ -68,6 +68,7 @@
     <Compile Include="Interfaces\IReciboAgua.cs" />
     <Compile Include="Interfaces\IVisitante.cs" />
     <Compile Include="LancamentoOcorrencia.cs" />
+    <Compile Include="LeituraSabespBLL.cs" />
     <Compile Include="MensagemMoradorBLL.cs" />
     <Compile Include="PendenciaAdminBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

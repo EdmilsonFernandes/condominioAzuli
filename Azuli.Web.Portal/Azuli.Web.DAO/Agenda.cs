@@ -440,8 +440,9 @@ namespace Azuli.Web.DAO
 
             foreach (DataRow dr in dt.Rows)
             {
-                
+
                 AgendaModel oAgendaModel = new AgendaModel();
+                
 
                 if (dr.Table.Columns.Contains("DATA_AGENDAMENTO")) 
                 oAgendaModel.dataAgendamento = Convert.ToDateTime(dr["DATA_AGENDAMENTO"]);
@@ -525,7 +526,14 @@ namespace Azuli.Web.DAO
                 if (dr.Table.Columns.Contains("ValorDesconto") && !Convert.IsDBNull(dr["ValorDesconto"]))
                     oAgendaModel.ValorDesconto = Convert.ToDouble(dr["ValorDesconto"]);
 
+                oAgendaModel.ap.oProprietario = new ProprietarioModel();
+
+                if (dr.Table.Columns.Contains("NOME_PROPRIETARIO1") && !Convert.IsDBNull(dr["NOME_PROPRIETARIO1"]))
+                    oAgendaModel.ap.oProprietario.proprietario1 = dr["NOME_PROPRIETARIO1"].ToString();
+
                
+               
+
                
 
 

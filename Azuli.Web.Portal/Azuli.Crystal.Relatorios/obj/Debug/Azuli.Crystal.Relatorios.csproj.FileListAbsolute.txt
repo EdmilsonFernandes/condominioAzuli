@@ -5,6 +5,5 @@ C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Crystal.Relatori
 C:\Desenvolvimento\condominioAzuli\Azuli\Azuli.Web.Portal\Azuli.Crystal.Relatorios\obj\Debug\Azuli.Crystal.Relatorios.pdb
 C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Crystal.Relatorios\bin\Debug\Azuli.Crystal.Relatorios.dll
 C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Crystal.Relatorios\bin\Debug\Azuli.Crystal.Relatorios.pdb
-C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Crystal.Relatorios\obj\Debug\Azuli.Crystal.Relatorios.csprojResolveAssemblyReference.cache
 C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Crystal.Relatorios\obj\Debug\Azuli.Crystal.Relatorios.dll
 C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Crystal.Relatorios\obj\Debug\Azuli.Crystal.Relatorios.pdb

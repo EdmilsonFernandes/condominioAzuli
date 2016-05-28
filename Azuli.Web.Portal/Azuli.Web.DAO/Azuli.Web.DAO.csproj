@@ -71,6 +71,7 @@
     <Compile Include="Interfaces\IVisitante.cs" />
     <Compile Include="Interfaces\IVisitas.cs" />
     <Compile Include="LancamentoOcorrencia.cs" />
+    <Compile Include="LeituraSabespDao.cs" />
     <Compile Include="MensagemMoradorDAO.cs" />
     <Compile Include="PendenciaAdminDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
