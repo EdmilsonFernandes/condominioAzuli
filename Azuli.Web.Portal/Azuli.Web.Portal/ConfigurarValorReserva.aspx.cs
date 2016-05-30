@@ -10,15 +10,16 @@ using Azuli.Web.Business;
 
 namespace Azuli.Web.Portal
 {
-    public partial class ConfigurarValorReserva : System.Web.UI.Page
+    public partial class ConfigurarValorReserva : Util.Base
     {
 
         Util.Util oUtil = new Util.Util();
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            oUtil.validateSessionAdmin();
-           
+            if (!IsPostBack)
+            {
+                oUtil.validateSessionAdmin();
+            }
         }
 
         protected void btnAlteraSenha_Click(object sender, EventArgs e)

@@ -187,10 +187,11 @@ namespace Azuli.Web.Portal
 
                 //TODO:FicarConfigurável
                 bool IsConsumoCondominio = false;
-                int diasLeituraSabesp = 31;
+              
                 //**********************/
 
-
+                ListaSabesp oListLeituraSabesp = new ListaSabesp();
+                LeituraSabespBLL oLeituraBussiness = new LeituraSabespBLL();
                 decimal somatudo = 0;
                 ReciboAguaBLL oReciboBLL = new ReciboAguaBLL();
                 ReciboAgua oReciboModel = new ReciboAgua();
@@ -208,11 +209,20 @@ namespace Azuli.Web.Portal
              
 
                 DSrecibo dsSegundaVia = new DSrecibo();
-
+                int diasLeituraSabesp = 0;
 
                 string mes = Session["mes"].ToString();
                 string ano = Session["ano"].ToString();
 
+                int mesReferenciaSabesp = Convert.ToInt32(mes);
+
+                oListLeituraSabesp = oLeituraBussiness.buscaLeitura(mesReferenciaSabesp.ToString(), ano);
+
+
+                foreach (var item in oListLeituraSabesp)
+                {
+                    diasLeituraSabesp = item.dias;
+                }
 
 
                 var oListOrdenadoByRegistro = from listaOrdenada in oReciboBLL.buscaTodosRecibosByYearAndMonth(Convert.ToInt32(ano), Convert.ToInt32(mes))
