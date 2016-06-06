@@ -170,7 +170,7 @@ namespace Azuli.Web.Portal
                             //lblValorChurras.Text = "R$ " +  item.valorReserva.ToString();
 
                             //lblTotal.Text = "R$ " + item.valorReserva.ToString();
-                            //lblDesconto.Text = "R$ 00,00";
+                            //lblDe7conto.Text = "R$ 00,00";
                         }
                     }
                     

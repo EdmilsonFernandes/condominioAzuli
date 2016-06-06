@@ -164,13 +164,7 @@ namespace Azuli.Web.Portal
             //}
         }
 
-
-
-
-
-
-
-        public void Recibo()
+        public void ReciboOld()
         {
 
             if (Convert.ToBoolean(Convert.ToBoolean(Session["chooseReport"]) == true))
@@ -185,44 +179,17 @@ namespace Azuli.Web.Portal
                 pg.PaperSize = size;
                 pg.Landscape = true;
 
-                //TODO:FicarConfigurável
-                bool IsConsumoCondominio = false;
-              
-                //**********************/
-
-                ListaSabesp oListLeituraSabesp = new ListaSabesp();
-                LeituraSabespBLL oLeituraBussiness = new LeituraSabespBLL();
                 decimal somatudo = 0;
                 ReciboAguaBLL oReciboBLL = new ReciboAguaBLL();
                 ReciboAgua oReciboModel = new ReciboAgua();
-                Util.RelatorioConfigRecibo oCarregaVariaveisRecibo = new Util.RelatorioConfigRecibo();
                 double totalExcedenteDinamico = 0;
-                double totalConsumoExcedenteMorador = 0;
-                double consumoMorador = 0;
-                double totalconsumoVariavelDiasAzuli30d = 0;
-                double totalExcedenteConsumoAzuli30d = 0;
-                double valorExcedentePagoCondominio = 0;
-                double totalExdenteAreaComumMorador = 0; // 1014 tt area comum + excedente morador
-                double diasAzuli = 0;
-                double consumoDoCondominio = 0;
-                double valorM3Excedente = 0;
-             
 
                 DSrecibo dsSegundaVia = new DSrecibo();
-                int diasLeituraSabesp = 0;
+
 
                 string mes = Session["mes"].ToString();
                 string ano = Session["ano"].ToString();
 
-                int mesReferenciaSabesp = Convert.ToInt32(mes);
-
-                oListLeituraSabesp = oLeituraBussiness.buscaLeitura(mesReferenciaSabesp.ToString(), ano);
-
-
-                foreach (var item in oListLeituraSabesp)
-                {
-                    diasLeituraSabesp = item.dias;
-                }
 
 
                 var oListOrdenadoByRegistro = from listaOrdenada in oReciboBLL.buscaTodosRecibosByYearAndMonth(Convert.ToInt32(ano), Convert.ToInt32(mes))
@@ -230,9 +197,12 @@ namespace Azuli.Web.Portal
                                               select listaOrdenada;
 
 
+                listaSegundaViaAgua listExcel = oReciboBLL.buscaTodosRecibosByYearAndMonth(Convert.ToInt32(ano), Convert.ToInt32(mes));
+
+
+
                 if (Convert.ToBoolean(Session["Excel"]) == true)
                 {
-                    listaSegundaViaAgua listExcel = oReciboBLL.buscaTodosRecibosByYearAndMonth(Convert.ToInt32(ano), Convert.ToInt32(mes));
                     Export(mes + "/" + ano, listExcel);
                 }
 
@@ -242,41 +212,24 @@ namespace Azuli.Web.Portal
                     {
                         foreach (var item in oListOrdenadoByRegistro)
                         {
-                            if (!IsConsumoCondominio)
-                            {
-                                TimeSpan date = Convert.ToDateTime(item.dataLeituraAtual.Replace("Leitura Atual (", "").Replace("):", "")) - Convert.ToDateTime(item.dataLeituraAnterior.Replace("Leitura anterior (", "").Replace("):", ""));
-                                diasAzuli = date.Days;
 
-                                valorExcedentePagoCondominio = Convert.ToDouble(item.ConsumoValorPagoCondominio - item.minimoValorPagoCondominio);
-                                consumoDoCondominio = item.consumoM3pagoCondominio;
-                                IsConsumoCondominio = true;
-                            }
-
-                            consumoMorador = Math.Round((Convert.ToDouble(item.leituraAtualM3) - Convert.ToDouble(item.leituraAnteriorM3)) / diasAzuli * diasLeituraSabesp,MidpointRounding.AwayFromZero);
-
-                             if (consumoMorador > 10)
+                            if (Math.Round(item.excedenteM3diaria * 30, 0, MidpointRounding.AwayFromZero) > 10)
                             {
 
-                                totalExcedenteDinamico += consumoMorador - 10;
-                               
+                                totalExcedenteDinamico += Math.Round(item.excedenteM3diaria * 30, 0, MidpointRounding.AwayFromZero) - 10;
                             }
-                            totalConsumoExcedenteMorador += consumoMorador;
+
                         }
 
 
-                        /* -------- Calcula Leitura Azuli - Dias de leituras Azuli   */
-
-                        totalconsumoVariavelDiasAzuli30d = Math.Round(((totalConsumoExcedenteMorador / diasLeituraSabesp) * diasAzuli) / diasAzuli * diasLeituraSabesp,MidpointRounding.AwayFromZero);
-                        totalExcedenteConsumoAzuli30d = Math.Round(totalExcedenteDinamico / diasLeituraSabesp * diasAzuli / diasAzuli * diasLeituraSabesp,MidpointRounding.AwayFromZero);
-
-                        totalExdenteAreaComumMorador = Math.Round(totalExcedenteConsumoAzuli30d + (consumoDoCondominio-totalconsumoVariavelDiasAzuli30d), MidpointRounding.AwayFromZero);
-                        valorM3Excedente = Math.Round(valorExcedentePagoCondominio / totalExdenteAreaComumMorador + 0.001,4);
-                        /* ------------------------------------------------------------------------------------- */
 
                         foreach (var item in oListOrdenadoByRegistro)
                         {
+
+
+
                             DataRow drSegundaVia = dsSegundaVia.Tables[1].NewRow();
-                            int consumoIndividualMensal = Convert.ToInt32(Math.Round((Convert.ToDouble(item.leituraAtualM3) - Convert.ToDouble(item.leituraAnteriorM3)) / diasAzuli * diasLeituraSabesp, MidpointRounding.AwayFromZero));
+
                             drSegundaVia["ID-Condomínio"] = item.idCondominio;
                             drSegundaVia["Nome do Condomínio"] = item.nomeCondominio;
                             drSegundaVia["Endereço do Condomínio"] = item.enderecoCondominio;
@@ -288,7 +241,11 @@ namespace Azuli.Web.Portal
                             drSegundaVia["Leitura Anterior M³"] = item.leituraAnteriorM3;
                             drSegundaVia["Data leitura Atual"] = item.dataLeituraAtual;
                             drSegundaVia["Leitura Atual M³"] = item.leituraAtualM3;
-                            drSegundaVia["Consumo do Mês M³"] = consumoIndividualMensal;
+
+                            drSegundaVia["Consumo do Mês M³"] = Math.Round(item.excedenteM3diaria * 30, 0, MidpointRounding.AwayFromZero);//item.consumoMesM3;// item.consumoMesM3;
+
+
+
                             //drSegundaVia["Consumo do Mês M³"] = Math.Round(item.excedenteM3diaria * 30, 0);//item.consumoMesM3;// item.consumoMesM3;
                             drSegundaVia["Data da próxima leitura"] = item.dataProximaLeitura;
                             drSegundaVia["status"] = item.status;
@@ -313,10 +270,13 @@ namespace Azuli.Web.Portal
 
                             //Isto ficará fixo - Será a diferença paga entre o valor pago do consumo minimo, e o consumo e excedente
                             item.excedenteValorPagoCondominio = Math.Abs(item.ConsumoValorPagoCondominio - item.minimoValorPagoCondominio);
+
                             drSegundaVia["Consumo Valor"] = item.ConsumoValorPagoCondominio;
                             drSegundaVia["Consumo M³"] = item.consumoM3pagoCondominio;
+
                             drSegundaVia["Mínimo M³"] = item.minimoM3PagoCondominio;
                             drSegundaVia["Mínimo Valor"] = item.minimoValorPagoCondominio;
+
                             drSegundaVia["Excedente Valor"] = item.excedenteValorPagoCondominio;
                             drSegundaVia["Tarifa Mínima M³"] = item.tarifaMinimaM3ValorDevido;
                             drSegundaVia["Tarifa Mínima Valor"] = item.tarifaMinimaValorValorDevido;
@@ -330,39 +290,17 @@ namespace Azuli.Web.Portal
 
                             if (item.consumoM3pagoCondominio > item.minimoM3PagoCondominio)
                             {
-
-                                /* Calcula consumo estimativa leitura de dias da Sabesp, pegando o valor do m3 por excedente, e também calcula a area comum */
-                                 
                                 item.excedenteM3PagoCondominio = item.consumoM3pagoCondominio - item.minimoM3PagoCondominio;
-                                //totalExcenteAreaComumMorador = (item.consumoM3pagoCondominio - totalConsumoExcedenteMorador) + totalExcedenteDinamico;
-                                //item.excedenteValorRateio = Convert.ToDecimal(Math.Round(Convert.ToDouble(item.excedenteValorPagoCondominio) / totalExcedenteDinamico + 0.0005, 3));
-                                //M³ incluindo area comum..
-                                //item.excedenteValorRateio = Convert.ToDecimal(Math.Round(Convert.ToDouble(item.excedenteValorPagoCondominio) / totalExdenteAreaComumMorador + 0.0005,MidpointRounding.AwayFromZero));
 
-                                item.excedenteValorRateio = Convert.ToDecimal(valorM3Excedente);
-                                if (consumoIndividualMensal > 10)
-                                {
-                                    drSegundaVia["ExcedenteValorDevido"] = consumoIndividualMensal - 10;
-                                    item.valorPagarValorDevido = Math.Round(Convert.ToDecimal(consumoIndividualMensal - 10) * item.excedenteValorRateio - Convert.ToDecimal(0.0005), 3);
-                                    somatudo += item.valorPagarValorDevido;
-                                }
-                                else
-                                {
-                                    drSegundaVia["ExcedenteValorDevido"] = 0L;
-                                    item.valorPagarValorDevido = 0L;
-                                }
 
-                             
+                                item.excedenteValorRateio = Convert.ToDecimal(Math.Round(Convert.ToDouble(item.excedenteValorPagoCondominio) / totalExcedenteDinamico + 0.0005, 3));
+                                item.valorPagarValorDevido = item.excedenteValorDevido * item.excedenteValorRateio;
+
+                                somatudo += item.valorPagarValorDevido;
+
                                 drSegundaVia["ExcedentePagoPeloCondominio"] = item.excedenteM3PagoCondominio;
                                 drSegundaVia["ExcedenteValorRateio "] = item.excedenteValorRateio;
-
-
-
-
-
-                                drSegundaVia["a pagar"] = Math.Truncate(item.valorPagarValorDevido * 100) / 100;  //Math.Round(item.valorPagarValorDevido, 2);
-                            
-                                
+                                drSegundaVia["a pagar"] = item.valorPagarValorDevido;
 
 
 
@@ -382,14 +320,14 @@ namespace Azuli.Web.Portal
 
                             //details.Close();
 
-                            drSegundaVia["ExcedenteM3Rateio"] = totalExdenteAreaComumMorador;
+                            drSegundaVia["ExcedenteM3Rateio"] = totalExcedenteDinamico;
                             drSegundaVia["Geral"] = item.avisoGeralAviso;
                             drSegundaVia["Anormal"] = item.AnormalAviso;
-                            drSegundaVia["Invididual"] = "-> O ajuste no sistema foi realizado, haverá desconto na conta de junho/2016, para aqueles que excederam à 10 M³ na conta de maio/2016."; //item.individualAviso;
+                            drSegundaVia["Invididual"] = item.individualAviso;
                             drSegundaVia["ANORMALIDADE"] = item.anormalidadeAviso;
                             drSegundaVia["Imagem"] = item.imagem;
-
-                            drSegundaVia["excedenteM3Diario"] = Convert.ToDouble(consumoIndividualMensal) / Convert.ToDouble(diasLeituraSabesp);//item.excedenteM3diaria;
+                            drSegundaVia["ExcedenteValorDevido"] = item.excedenteValorDevido;
+                            drSegundaVia["excedenteM3Diario"] = item.excedenteM3diaria;
 
                             dsSegundaVia.Tables[1].Rows.Add(drSegundaVia);
 
@@ -473,6 +411,10 @@ namespace Azuli.Web.Portal
                     }
 
 
+
+
+
+
                     //string caminhoRelatorio = ConfigurationManager.AppSettings["ReportsPath"] + ConfigurationManager.AppSettings["reciboReserva"];
 
                     //rpt.Load(caminhoRelatorio);
@@ -501,6 +443,373 @@ namespace Azuli.Web.Portal
                 }
 
 
+            }
+        }
+
+
+
+
+
+        public void Recibo()
+        {
+
+            string mes = Session["mes"].ToString();
+            string ano = Session["ano"].ToString();
+           
+            if (Convert.ToInt32(ano) <= 2015) 
+            {
+                ReciboOld();
+
+            }
+            else  if (Convert.ToInt32(mes) == 1 &&  Convert.ToInt32(ano) == 2016) 
+            {
+                ReciboOld();
+            }
+
+            else if (Convert.ToInt32(mes) == 2 && Convert.ToInt32(ano) == 2016) 
+            {
+                ReciboOld();
+            }
+          
+            else
+            {
+
+                if (Convert.ToBoolean(Convert.ToBoolean(Session["chooseReport"]) == true))
+                {
+
+
+
+
+
+
+
+
+                    System.Drawing.Printing.PageSettings pg = new System.Drawing.Printing.PageSettings();
+                    pg.Margins.Top = 0;
+                    pg.Margins.Bottom = 0;
+                    pg.Margins.Left = 0;
+                    pg.Margins.Right = 0;
+                    System.Drawing.Printing.PaperSize size = new System.Drawing.Printing.PaperSize();
+                    size.RawKind = (int)PaperKind.Letter;
+                    pg.PaperSize = size;
+                    pg.Landscape = true;
+
+                    //TODO:FicarConfigurável
+                    bool IsConsumoCondominio = false;
+
+                    //**********************/
+
+                    ListaSabesp oListLeituraSabesp = new ListaSabesp();
+                    LeituraSabespBLL oLeituraBussiness = new LeituraSabespBLL();
+                    decimal somatudo = 0;
+                    ReciboAguaBLL oReciboBLL = new ReciboAguaBLL();
+                    ReciboAgua oReciboModel = new ReciboAgua();
+                    Util.RelatorioConfigRecibo oCarregaVariaveisRecibo = new Util.RelatorioConfigRecibo();
+                    double totalExcedenteDinamico = 0;
+                    double totalConsumoExcedenteMorador = 0;
+                    double consumoMorador = 0;
+                    double totalconsumoVariavelDiasAzuli30d = 0;
+                    double totalExcedenteConsumoAzuli30d = 0;
+                    double valorExcedentePagoCondominio = 0;
+                    double totalExdenteAreaComumMorador = 0; // 1014 tt area comum + excedente morador
+                    double diasAzuli = 0;
+                    double consumoDoCondominio = 0;
+                    double valorM3Excedente = 0;
+
+
+                    DSrecibo dsSegundaVia = new DSrecibo();
+                    int diasLeituraSabesp = 0;
+
+
+
+                    int mesReferenciaSabesp = Convert.ToInt32(mes);
+
+                    oListLeituraSabesp = oLeituraBussiness.buscaLeitura(mesReferenciaSabesp.ToString(), ano);
+
+
+                    foreach (var item in oListLeituraSabesp)
+                    {
+                        diasLeituraSabesp = item.dias;
+                    }
+
+
+                    var oListOrdenadoByRegistro = from listaOrdenada in oReciboBLL.buscaTodosRecibosByYearAndMonth(Convert.ToInt32(ano), Convert.ToInt32(mes))
+                                                  orderby listaOrdenada.registro ascending
+                                                  select listaOrdenada;
+
+
+                    if (Convert.ToBoolean(Session["Excel"]) == true)
+                    {
+                        listaSegundaViaAgua listExcel = oReciboBLL.buscaTodosRecibosByYearAndMonth(Convert.ToInt32(ano), Convert.ToInt32(mes));
+                        Export(mes + "/" + ano, listExcel);
+                    }
+
+                    else
+                    {
+                        try
+                        {
+                            foreach (var item in oListOrdenadoByRegistro)
+                            {
+                                if (!IsConsumoCondominio)
+                                {
+                                    TimeSpan date = Convert.ToDateTime(item.dataLeituraAtual.Replace("Leitura Atual (", "").Replace("):", "")) - Convert.ToDateTime(item.dataLeituraAnterior.Replace("Leitura anterior (", "").Replace("):", ""));
+                                    diasAzuli = date.Days;
+
+                                    valorExcedentePagoCondominio = Convert.ToDouble(item.ConsumoValorPagoCondominio - item.minimoValorPagoCondominio);
+                                    consumoDoCondominio = item.consumoM3pagoCondominio;
+                                    IsConsumoCondominio = true;
+                                }
+
+                                consumoMorador = Math.Round((Convert.ToDouble(item.leituraAtualM3) - Convert.ToDouble(item.leituraAnteriorM3)) / diasAzuli * diasLeituraSabesp, MidpointRounding.AwayFromZero);
+
+                                if (consumoMorador > 10)
+                                {
+
+                                    totalExcedenteDinamico += consumoMorador - 10;
+
+                                }
+                                totalConsumoExcedenteMorador += consumoMorador;
+                            }
+
+
+                            /* -------- Calcula Leitura Azuli - Dias de leituras Azuli   */
+
+                            totalconsumoVariavelDiasAzuli30d = Math.Round(((totalConsumoExcedenteMorador / diasLeituraSabesp) * diasAzuli) / diasAzuli * diasLeituraSabesp, MidpointRounding.AwayFromZero);
+                            totalExcedenteConsumoAzuli30d = Math.Round(totalExcedenteDinamico / diasLeituraSabesp * diasAzuli / diasAzuli * diasLeituraSabesp, MidpointRounding.AwayFromZero);
+
+                            totalExdenteAreaComumMorador = Math.Round(totalExcedenteConsumoAzuli30d + (consumoDoCondominio - totalconsumoVariavelDiasAzuli30d), MidpointRounding.AwayFromZero);
+                            valorM3Excedente = Math.Round(valorExcedentePagoCondominio / totalExdenteAreaComumMorador + 0.001, 4);
+                            /* ------------------------------------------------------------------------------------- */
+
+                            foreach (var item in oListOrdenadoByRegistro)
+                            {
+                                DataRow drSegundaVia = dsSegundaVia.Tables[1].NewRow();
+                                int consumoIndividualMensal = Convert.ToInt32(Math.Round((Convert.ToDouble(item.leituraAtualM3) - Convert.ToDouble(item.leituraAnteriorM3)) / diasAzuli * diasLeituraSabesp, MidpointRounding.AwayFromZero));
+                                drSegundaVia["ID-Condomínio"] = item.idCondominio;
+                                drSegundaVia["Nome do Condomínio"] = item.nomeCondominio;
+                                drSegundaVia["Endereço do Condomínio"] = item.enderecoCondominio;
+                                drSegundaVia["Bloco"] = item.bloco;
+                                drSegundaVia["Apartamento"] = item.apartamento;
+                                drSegundaVia["Registro"] = item.registro;
+                                drSegundaVia["Fechamento Atual"] = item.fechamentoAtual;
+                                drSegundaVia["Data leitura Anterior"] = item.dataLeituraAnterior;
+                                drSegundaVia["Leitura Anterior M³"] = item.leituraAnteriorM3;
+                                drSegundaVia["Data leitura Atual"] = item.dataLeituraAtual;
+                                drSegundaVia["Leitura Atual M³"] = item.leituraAtualM3;
+                                drSegundaVia["Consumo do Mês M³"] = consumoIndividualMensal;
+                                //drSegundaVia["Consumo do Mês M³"] = Math.Round(item.excedenteM3diaria * 30, 0);//item.consumoMesM3;// item.consumoMesM3;
+                                drSegundaVia["Data da próxima leitura"] = item.dataProximaLeitura;
+                                drSegundaVia["status"] = item.status;
+                                drSegundaVia["Média"] = item.media;
+                                drSegundaVia["Histórico descricação mês1"] = item.historicoDescricaoMes1;
+                                drSegundaVia["Histórico mês1"] = item.historicoMes1;
+                                drSegundaVia["Histórico descricação mês2"] = item.historicoDescricaoMes2;
+                                drSegundaVia["Histórico mês2"] = item.historicoMes2;
+                                drSegundaVia["Histórico descricação mês3"] = item.historicoDescricaoMes3;
+                                drSegundaVia["Histórico mês3"] = item.historicoMes3;
+                                drSegundaVia["Histórico descricação mês4"] = item.historicoDescricaoMes4;
+                                drSegundaVia["Histórico mês4"] = item.historicoMes4;
+                                drSegundaVia["Histórico descricação mês5"] = item.historicoDescricaoMes5;
+                                drSegundaVia["Histórico mês5"] = item.historicoMes5;
+                                drSegundaVia["Histórico descricação mês6"] = item.historicoDescricaoMes6;
+                                drSegundaVia["Histórico mês6"] = item.historicoMes6;
+
+                                // Virá do banco quando o consumo - se maior que 2400 fara o valor do rateio
+                                //item.consumoM3pagoCondominio = 2600;
+                                // o Valor pago do condominio virá do banco também...
+                                //item.ConsumoValorPagoCondominio = 7900;
+
+                                //Isto ficará fixo - Será a diferença paga entre o valor pago do consumo minimo, e o consumo e excedente
+                                item.excedenteValorPagoCondominio = Math.Abs(item.ConsumoValorPagoCondominio - item.minimoValorPagoCondominio);
+                                drSegundaVia["Consumo Valor"] = item.ConsumoValorPagoCondominio;
+                                drSegundaVia["Consumo M³"] = item.consumoM3pagoCondominio;
+                                drSegundaVia["Mínimo M³"] = item.minimoM3PagoCondominio;
+                                drSegundaVia["Mínimo Valor"] = item.minimoValorPagoCondominio;
+                                drSegundaVia["Excedente Valor"] = item.excedenteValorPagoCondominio;
+                                drSegundaVia["Tarifa Mínima M³"] = item.tarifaMinimaM3ValorDevido;
+                                drSegundaVia["Tarifa Mínima Valor"] = item.tarifaMinimaValorValorDevido;
+
+
+
+                                //var dir = System.Configuration.ConfigurationManager.AppSettings["relatorioGeral"];
+
+                                //StreamWriter details = new StreamWriter("D:\\DZHosts\\LocalUser\\edmls34\\www.azulicondominio.com\\relatorio"+mes+ano+".txt",true,Encoding.ASCII);
+                                //Se o valor do consumo do M3 for maior que o minimo M3 do condominio será feito o rateio...
+
+                                if (item.consumoM3pagoCondominio > item.minimoM3PagoCondominio)
+                                {
+
+                                    /* Calcula consumo estimativa leitura de dias da Sabesp, pegando o valor do m3 por excedente, e também calcula a area comum */
+
+                                    item.excedenteM3PagoCondominio = item.consumoM3pagoCondominio - item.minimoM3PagoCondominio;
+                                    //totalExcenteAreaComumMorador = (item.consumoM3pagoCondominio - totalConsumoExcedenteMorador) + totalExcedenteDinamico;
+                                    //item.excedenteValorRateio = Convert.ToDecimal(Math.Round(Convert.ToDouble(item.excedenteValorPagoCondominio) / totalExcedenteDinamico + 0.0005, 3));
+                                    //M³ incluindo area comum..
+                                    //item.excedenteValorRateio = Convert.ToDecimal(Math.Round(Convert.ToDouble(item.excedenteValorPagoCondominio) / totalExdenteAreaComumMorador + 0.0005,MidpointRounding.AwayFromZero));
+
+                                    item.excedenteValorRateio = Convert.ToDecimal(valorM3Excedente);
+                                    if (consumoIndividualMensal > 10)
+                                    {
+                                        drSegundaVia["ExcedenteValorDevido"] = consumoIndividualMensal - 10;
+                                        item.valorPagarValorDevido = Math.Round(Convert.ToDecimal(consumoIndividualMensal - 10) * item.excedenteValorRateio - Convert.ToDecimal(0.0005), 3);
+                                        somatudo += item.valorPagarValorDevido;
+                                    }
+                                    else
+                                    {
+                                        drSegundaVia["ExcedenteValorDevido"] = 0L;
+                                        item.valorPagarValorDevido = 0L;
+                                    }
+
+
+                                    drSegundaVia["ExcedentePagoPeloCondominio"] = item.excedenteM3PagoCondominio;
+                                    drSegundaVia["ExcedenteValorRateio "] = item.excedenteValorRateio;
+
+
+
+
+
+                                    drSegundaVia["a pagar"] = Math.Truncate(item.valorPagarValorDevido * 100) / 100;  //Math.Round(item.valorPagarValorDevido, 2);
+
+
+
+
+
+
+
+                                    //details.WriteLine(item.bloco + " " + item.apartamento + " " + item.valorPagarValorDevido);
+
+
+                                }
+                                //Se não mantêm o valor sem rateio..
+                                else
+                                {
+                                    drSegundaVia["ExcedentePagoPeloCondominio"] = item.excedenteM3PagoCondominio;
+                                    drSegundaVia["ExcedenteValorRateio "] = item.excedenteValorRateio;
+                                    drSegundaVia["a pagar"] = item.valorPagarValorDevido;
+                                }
+
+                                //details.Close();
+
+                                drSegundaVia["ExcedenteM3Rateio"] = totalExdenteAreaComumMorador;
+                                drSegundaVia["Geral"] = item.avisoGeralAviso;
+                                drSegundaVia["Anormal"] = item.AnormalAviso;
+                                drSegundaVia["Invididual"] = item.individualAviso;//"-> O ajuste no sistema foi realizado, haverá desconto na conta de junho/2016, para aqueles que excederam à 10 M³ na conta de maio/2016."; //item.individualAviso;
+                                drSegundaVia["ANORMALIDADE"] = item.anormalidadeAviso;
+                                drSegundaVia["Imagem"] = item.imagem;
+
+                                drSegundaVia["excedenteM3Diario"] = Convert.ToDouble(consumoIndividualMensal) / Convert.ToDouble(diasLeituraSabesp);//item.excedenteM3diaria;
+
+                                dsSegundaVia.Tables[1].Rows.Add(drSegundaVia);
+
+
+                            }
+
+
+
+                            Crystal.Relatorios.ReciboMoradorByApBloco rbSegundaVia = new Crystal.Relatorios.ReciboMoradorByApBloco();
+
+                            rbSegundaVia.SetDataSource(dsSegundaVia);
+
+                            rbSegundaVia.ExportToHttpResponse(ExportFormatType.PortableDocFormat, Response, false, "Recibo");
+                        }
+
+                        catch (Exception ex)
+                        {
+
+                            throw ex;
+                        }
+                    }
+
+                }
+
+
+                else
+                {
+                    if (Session["reciboConfirmadoNoAto"] != null && (int)Session["reciboConfirmadoNoAto"] == 1)
+                    {
+
+                        oAp.apartamento = Convert.ToInt32(Session["MoradorSemInternetAP"]);
+                        oAp.bloco = Convert.ToInt32(Session["MoradorSemInternetBloco"]);
+                        oAgendaModel.dataAgendamento = Convert.ToDateTime(Session["dataReservaAdministrador"]);
+                        oAgendaModel.ap = oAp;
+
+                    }
+                    else
+                    {
+
+                        oAp.apartamento = Convert.ToInt32(Session["aptoSession"]);
+                        oAp.bloco = Convert.ToInt32(Session["blocoSession"]);
+                        oAgendaModel.dataAgendamento = Convert.ToDateTime(Session["dataReservaOnline"]);
+                        oAgendaModel.ap = oAp;
+                    }
+
+                    try
+                    {
+                        DSrecibo dsRecibo = new DSrecibo();
+                        DataRow drRecibo = dsRecibo.Tables[0].NewRow();
+
+                        foreach (var item in oAgendaBLL.geraReciboPago(oAgendaModel))
+                        {
+                            drRecibo["DIA"] = DateTime.Now.Day;
+                            drRecibo["MES"] = System.Globalization.DateTimeFormatInfo.CurrentInfo.GetMonthName(DateTime.Now.Month);
+                            drRecibo["ANO"] = DateTime.Now.Year;
+                            if (item.salaoChurrasco == true && item.salaoFesta == true)
+                            {
+                                foreach (var Desconto in oConfigValor.oListaValorReserva())
+                                {
+                                    if (Desconto.id_valor == 3)
+                                    {
+                                        drRecibo["VALOR_POR_EXTENSO"] = new Util.NumeroPorExtenso(Convert.ToDecimal(item.valorReserva - Desconto.valor));
+                                        drRecibo["VALOR"] = item.valorReserva - Desconto.valor + ",00";
+
+                                    }
+
+                                }
+
+                            }
+                            else
+                            {
+                                drRecibo["VALOR_POR_EXTENSO"] = new Util.NumeroPorExtenso(Convert.ToDecimal(item.valorReserva));
+                                drRecibo["VALOR"] = item.valorReserva + ",00";
+                            }
+
+                            drRecibo["PROPRIETARIO"] = "0" + item.ap.bloco + " - " + item.ap.apartamento + " - " + item.ap.oProprietario.proprietario1;
+                            drRecibo["Descricao"] = item.observacao;
+
+
+
+                        }
+
+
+                        //string caminhoRelatorio = ConfigurationManager.AppSettings["ReportsPath"] + ConfigurationManager.AppSettings["reciboReserva"];
+
+                        //rpt.Load(caminhoRelatorio);
+
+                        // rpt.SetDataSource(drRecibo);
+
+                        dsRecibo.Tables[0].Rows.Add(drRecibo);
+
+                        Crystal.Relatorios.ReciboReserva rbReserva = new Crystal.Relatorios.ReciboReserva();
+
+                        rbReserva.SetDataSource(dsRecibo);
+
+                        CrystalReportViewer1.ReportSource = rbReserva;
+
+                        rbReserva.ExportToHttpResponse(ExportFormatType.PortableDocFormat, Response, false, "Recibo");
+
+
+
+
+                    }
+
+                    catch (Exception ex)
+                    {
+
+                        throw ex;
+                    }
+
+
+                }
             }
         }
 
