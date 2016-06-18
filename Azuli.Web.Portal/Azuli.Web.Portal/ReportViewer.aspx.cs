@@ -577,7 +577,17 @@ namespace Azuli.Web.Portal
                             totalconsumoVariavelDiasAzuli30d = Math.Round(((totalConsumoExcedenteMorador / diasLeituraSabesp) * diasAzuli) / diasAzuli * diasLeituraSabesp, MidpointRounding.AwayFromZero);
                             totalExcedenteConsumoAzuli30d = Math.Round(totalExcedenteDinamico / diasLeituraSabesp * diasAzuli / diasAzuli * diasLeituraSabesp, MidpointRounding.AwayFromZero);
 
-                            totalExdenteAreaComumMorador = Math.Round(totalExcedenteConsumoAzuli30d + (consumoDoCondominio - totalconsumoVariavelDiasAzuli30d), MidpointRounding.AwayFromZero);
+                            double areaComumConsumo = consumoDoCondominio - totalconsumoVariavelDiasAzuli30d;
+
+                            if (areaComumConsumo < 0)
+                            {
+                                areaComumConsumo = 0;
+                            }
+
+
+                            totalExdenteAreaComumMorador = Math.Round(totalExcedenteConsumoAzuli30d + areaComumConsumo, MidpointRounding.AwayFromZero);
+
+                           
                             valorM3Excedente = Math.Round(valorExcedentePagoCondominio / totalExdenteAreaComumMorador + 0.001, 4);
                             /* ------------------------------------------------------------------------------------- */
 
