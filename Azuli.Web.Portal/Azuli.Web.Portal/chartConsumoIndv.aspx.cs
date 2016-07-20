@@ -58,6 +58,8 @@ namespace Azuli.Web.Portal
             ArrayList meses = new ArrayList();
             foreach (var item in oReciboBLL.graficosConsumoAguaIndividual(yearbase, bloco, apto))
             {
+
+
                 meses.Add(item.fechamentoAtual);
                 arrayApartamento.Add(Convert.ToInt32(item.consumoMesM3));
             }

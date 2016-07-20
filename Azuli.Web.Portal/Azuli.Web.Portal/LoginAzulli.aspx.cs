@@ -72,6 +72,7 @@ namespace Azuli.Web.Portal.Account
         ProprietarioModel oProprietarioModel = new ProprietarioModel();
         ApartamentoModel oAPmodel = new ApartamentoModel();
         Util.Util oUtil = new Util.Util();
+        private log4net.ILog logger;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -84,6 +85,9 @@ namespace Azuli.Web.Portal.Account
 
         protected void LoginButton_Click(object sender, EventArgs e)
         {
+
+            logger = log4net.LogManager.GetLogger("LogInFile");
+
             HttpCookie cookie = new HttpCookie("blocoMorador");
             cookie.Value = drpBloco.SelectedItem.Text;
             cookie.Expires = DateTime.Now.AddDays(365); this.Page.Response.AppendCookie(cookie);
@@ -137,11 +141,13 @@ namespace Azuli.Web.Portal.Account
                     {
                         Util.SendMail oEmail = new SendMail();
                         oEmail.enviaSenha("Acesso feito com sucesso para o apartamento/bloco " + Session["AP"].ToString() + " - " + Session["Bloco"].ToString(), "Acessos", "edmls@ig.com.br", 0);
+                        logger.Info("Acesso feito com sucesso para o apartamento/bloco " + Session["AP"].ToString() + " - " + Session["Bloco"].ToString());
                         Response.Redirect("~/paginaInicialMoradores.aspx");
                     }
                     else
                     {
                         Response.Redirect("~/paginaInicialMoradores.aspx");
+                        logger.Warn("Acesso negado!");
                     }
 
 
@@ -260,10 +266,10 @@ namespace Azuli.Web.Portal.Account
                         }
 
                     }
-                    catch (Exception)
+                    catch (Exception ex)
                     {
-
-                        throw;
+                        logger.Error(ex.StackTrace);
+                        throw ex;
                     }
                 }
                 else

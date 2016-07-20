@@ -74,3 +74,4 @@ C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli
 C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.csprojResolveAssemblyReference.cache
 C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.dll
 C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.pdb
+C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Portal\bin\log4net.dll
