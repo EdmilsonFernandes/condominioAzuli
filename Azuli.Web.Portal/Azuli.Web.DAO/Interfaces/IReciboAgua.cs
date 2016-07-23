@@ -11,14 +11,18 @@ namespace Azuli.Web.DAO.Interfaces
 
         listaSegundaViaAgua buscaTodosRecibos(ReciboAgua oReciboAguaModel);
         listaSegundaViaAgua buscaTodosRecibosByYearAndMonth(int ano, int mes);
+        listaSegundaViaAgua buscaRecibosCalculadosByMesAno(int ano, int mes);
         listaSegundaViaAgua buscaTodosRecibosByBlocoAndApto(ReciboAgua oReciboModel);
         void importIntegracaoWeb(ReciboAgua oReciboModel);
+        void persisteCalculoFinalBanco(ReciboAgua oReciboModel);
+        int validaPersistenciaAgua(int mes, int ano);
         listaSegundaViaAgua validaImportacao(ReciboAgua oReciboModel);
         listaSegundaViaAgua graficosConsumoAgua(int yearBase);
         listaSegundaViaAgua graficoExcedentePorApartamento(int yearBase);
         listaSegundaViaAgua graficoConsumoPorBloco(int yearBase);
         listaSegundaViaAgua graficoQuantidadeApAnormal(int yearBase);
         listaSegundaViaAgua graficosConsumoAguaIndividual(int yearBase, int bloco, int apto);
+        int retornaConsumoHistorico(int mes, int ano, int bloco, int apto);
              
 
         

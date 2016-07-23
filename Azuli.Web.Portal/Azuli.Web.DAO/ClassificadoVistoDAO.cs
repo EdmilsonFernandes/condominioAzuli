@@ -5,7 +5,7 @@ using System.Text;
 using System.Data;
 using Azuli.Web.Model;
 using System.Data.SqlClient;
-using Azuli.Web.Model;
+
 
 namespace Azuli.Web.DAO
 {

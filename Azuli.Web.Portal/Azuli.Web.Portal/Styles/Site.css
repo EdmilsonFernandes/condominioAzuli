@@ -1016,7 +1016,7 @@ gn: left;
 	height: 272px;
 	background-color: white;
 	font-family: Verdana;
-	font-size: 6pt;
+	font-size: small;
 	font-weight: normal;
 	text-align: left;
 	padding: 0px 2px 0px 2px;
@@ -1216,6 +1216,7 @@ background-image: url('../images/superpag-header.gif');
     behavior:url(border-radius.htc);border-radius: 1em;
     height: 15px;
     font-weight: 700;
+    width: 885px;
 }
 
 .dysplayLogin

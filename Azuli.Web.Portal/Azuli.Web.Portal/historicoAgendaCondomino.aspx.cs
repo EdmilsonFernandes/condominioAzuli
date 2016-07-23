@@ -40,7 +40,7 @@ namespace Azuli.Web.Portal
         public void preencheAno()
         {
 
-            for (int ano = data.Year - 4; ano <= 2015; ano++)
+            for (int ano = data.Year - 4; ano <= data.Year; ano++)
             {
                 drpAno.Items.Add(ano.ToString());
 

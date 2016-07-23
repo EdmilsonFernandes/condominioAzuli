@@ -48,7 +48,7 @@
 
                  <td>
                      <asp:Label CssClass="watermarked" ID="lblTotalAreas" runat="server" 
-                         Font-Bold="True" Font-Size="Medium" ForeColor="#006600" />
+                         Font-Bold="True" Font-Size="Small" ForeColor="#006600" />
                 </td>
             </tr>
         </table></div>

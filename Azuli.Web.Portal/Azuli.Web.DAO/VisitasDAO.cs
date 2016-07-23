@@ -43,9 +43,6 @@ namespace Azuli.Web.DAO
         {
 
 
-            string clausulaSQL = "SP_PROCURA_VISITAS_RG";
-
-
             try
             {
                 //SqlCommand comandoSql = new SqlCommand(clausulaSQL);

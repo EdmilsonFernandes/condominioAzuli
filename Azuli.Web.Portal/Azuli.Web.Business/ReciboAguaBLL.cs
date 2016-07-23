@@ -19,6 +19,45 @@ namespace Azuli.Web.Business
             throw new NotImplementedException();
         }
 
+
+
+        public int retornaConsumoHistorico(int mes, int ano, int bloco, int apto)
+        {
+            int consumoHistory = 0;
+            ReciboAguaDAO oRec = new ReciboAguaDAO();
+            try
+            {
+                consumoHistory = oRec.retornaConsumoHistorico(mes, ano, bloco, apto);
+                return consumoHistory;
+
+            }
+            catch (Exception)
+            {
+                return consumoHistory = 0;
+                throw;
+            }
+            
+        }
+
+        public listaSegundaViaAgua buscaRecibosCalculadosByMesAno(int ano, int mes)
+        {
+            listaSegundaViaAgua oListReciboAgua;
+            ReciboAguaDAO oReciboDao = new ReciboAguaDAO();
+
+            try
+            {
+                oListReciboAgua = oReciboDao.buscaRecibosCalculadosByMesAno(ano, mes);
+
+                return oListReciboAgua;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public listaSegundaViaAgua buscaTodosRecibosByYearAndMonth(int ano, int mes)
         {
             listaSegundaViaAgua oListReciboAgua;
@@ -76,8 +115,22 @@ namespace Azuli.Web.Business
                 throw;
             }
         }
-   
 
+        public void persisteCalculoFinalBanco(ReciboAgua oReciboModel)
+        {
+            ReciboAguaDAO oReciboDao = new ReciboAguaDAO();
+
+            try
+            {
+                oReciboDao.persisteCalculoFinalBanco(oReciboModel);
+
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
         public void importIntegracaoWeb(ReciboAgua oReciboModel)
         {
           
@@ -88,10 +141,10 @@ namespace Azuli.Web.Business
                 oReciboDao.importIntegracaoWeb(oReciboModel);
 
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
-                throw;
+                throw e;
             }
         }
 
@@ -267,6 +320,27 @@ namespace Azuli.Web.Business
             }
         }
 
+
+
+
+
+        public int validaPersistenciaAgua(int mes, int ano)
+        {
+            ReciboAguaDAO oReciboDao = new ReciboAguaDAO();
+            int resultado = 0;
+            try
+            {
+                resultado = oReciboDao.validaPersistenciaAgua(mes, ano);
+
+                return resultado;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
         public listaSegundaViaAgua graficoExcedentePorApartamento(int yearBase)
         {
             listaSegundaViaAgua oListReciboAgua;
@@ -288,5 +362,8 @@ namespace Azuli.Web.Business
 
 
         #endregion
+
+
+
     }
 }

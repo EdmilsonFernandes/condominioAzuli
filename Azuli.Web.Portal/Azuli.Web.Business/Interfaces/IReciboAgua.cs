@@ -12,7 +12,9 @@ namespace Azuli.Web.Business.Interfaces
         listaSegundaViaAgua buscaTodosRecibos(ReciboAgua oReciboAguaModel);
         listaSegundaViaAgua buscaTodosRecibosByYearAndMonth(int ano, int mes);
         listaSegundaViaAgua buscaTodosRecibosByBlocoAndApto(ReciboAgua oReciboModel);
+        listaSegundaViaAgua buscaRecibosCalculadosByMesAno(int ano, int mes);
         void importIntegracaoWeb(ReciboAgua oReciboModel);
+        void persisteCalculoFinalBanco(ReciboAgua oReciboModel);
         listaSegundaViaAgua LoadFile(string file);
         listaSegundaViaAgua LoadFile(Stream file);
         listaSegundaViaAgua validaImportacao(ReciboAgua oReciboModel);
@@ -21,6 +23,8 @@ namespace Azuli.Web.Business.Interfaces
         listaSegundaViaAgua graficoConsumoPorBloco(int yearBase);
         listaSegundaViaAgua graficoQuantidadeApAnormal(int yearBase);
         listaSegundaViaAgua graficosConsumoAguaIndividual(int yearBase, int bloco, int apto);
+        int validaPersistenciaAgua(int mes, int ano);
+        int retornaConsumoHistorico(int mes, int ano, int bloco, int apto);
 
     }
 }

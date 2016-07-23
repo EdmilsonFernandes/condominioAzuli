@@ -21,9 +21,7 @@ namespace Azuli.Web.Portal
         AgendaModel oAgendaModel = new AgendaModel();
         AgendaBLL oAgendaBLL = new AgendaBLL();
         Util.Util oUtil = new Util.Util();
-        bool invalid = false;
       
-       
 
         protected void Page_Load(object sender, EventArgs e)
         {

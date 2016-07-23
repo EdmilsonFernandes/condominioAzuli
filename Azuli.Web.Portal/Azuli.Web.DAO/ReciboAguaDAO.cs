@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace Azuli.Web.DAO
 {
-    public class ReciboAguaDAO:AcessoDAO, Interfaces.IReciboAgua
+    public class ReciboAguaDAO : AcessoDAO, Interfaces.IReciboAgua
     {
         #region IReciboAgua Members
 
@@ -17,6 +17,124 @@ namespace Azuli.Web.DAO
             throw new NotImplementedException();
         }
 
+
+        public int validaPersistenciaAgua(int mes, int ano)
+        {
+            string clausulaSQL = "SP_VALIDA_INSERT_CALCULO_AGUA";
+
+            try
+            {
+                SqlCommand comandoSql = new SqlCommand(clausulaSQL);
+                comandoSql.Parameters.AddWithValue("@ANO", mes);
+                comandoSql.Parameters.AddWithValue("@MES", ano);
+
+
+                DataTable dtAgua = new DataTable();
+
+                dtAgua = ExecutaQuery(comandoSql);
+
+                return isPersisteDados(dtAgua);
+
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
+
+        private int isPersisteDados(DataTable dt)
+        {
+            int resultado = 0;
+            foreach (DataRow item in dt.Rows)
+            {
+
+                resultado = Convert.ToInt32(item["isPersist"]);
+            }
+            return resultado;
+        }
+
+
+
+        public int retornaConsumoHistorico(int mes, int ano, int bloco, int apto)
+        {
+            string clausulaSQL = "";
+            if (ano <= 2015)
+            {
+                clausulaSQL = "SP_BUSCA_CONSUMO_HISTORICO_OLD";
+            }
+            else if (mes == 2 && ano == 2016)
+            {
+                clausulaSQL = "SP_BUSCA_CONSUMO_HISTORICO_OLD";
+            }
+            else if (mes == 1 && ano == 2016)
+            {
+                clausulaSQL = "SP_BUSCA_CONSUMO_HISTORICO_OLD";
+            }
+            else
+            {
+                clausulaSQL = "SP_BUSCA_CONSUMO_HISTORICO";
+            }
+            try
+            {
+                SqlCommand comandoSql = new SqlCommand(clausulaSQL);
+                comandoSql.Parameters.AddWithValue("@ANO",ano);
+                comandoSql.Parameters.AddWithValue("@MES",mes);
+                comandoSql.Parameters.AddWithValue("@APTO",apto);
+                comandoSql.Parameters.AddWithValue("@BLOCO",bloco);
+
+
+                DataTable dtAgua = new DataTable();
+
+                dtAgua = ExecutaQuery(comandoSql);
+
+                return buscaConsumohistorico(dtAgua);
+
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
+
+        private int buscaConsumohistorico(DataTable dt)
+        {
+            int resultado = 0;
+            foreach (DataRow item in dt.Rows)
+            {
+
+                resultado = Convert.ToInt32(item["historicoConsumo"]);
+            }
+            return resultado;
+        }
+
+        public listaSegundaViaAgua buscaRecibosCalculadosByMesAno(int ano, int mes)
+        {
+             string clausulaSql = "SP_RECIBO_WEB_ANO_MES_CALCULADO";
+
+             try
+             {
+                 SqlCommand comandoSQL = new SqlCommand(clausulaSql);
+                 comandoSQL.Parameters.AddWithValue("@Mes", ano);
+                 comandoSQL.Parameters.AddWithValue("@Ano", mes);
+
+                 DataTable tbRecibo = new DataTable();
+
+                 tbRecibo = ExecutaQuery(comandoSQL);
+
+                 return populaSegundaViaAgua(tbRecibo);
+
+
+             }
+             catch (Exception)
+             {
+
+                 throw;
+             }
+        }
+
+
         public listaSegundaViaAgua buscaTodosRecibosByYearAndMonth(int ano, int mes)
         {
             string clausulaSql = "SP_RECIBO_WEB_ANO_MES";
@@ -24,8 +142,8 @@ namespace Azuli.Web.DAO
             try
             {
                 SqlCommand comandoSQL = new SqlCommand(clausulaSql);
-                comandoSQL.Parameters.AddWithValue("@Mes",ano);
-                comandoSQL.Parameters.AddWithValue("@Ano",mes);
+                comandoSQL.Parameters.AddWithValue("@Mes", ano);
+                comandoSQL.Parameters.AddWithValue("@Ano", mes);
 
                 DataTable tbRecibo = new DataTable();
 
@@ -44,8 +162,16 @@ namespace Azuli.Web.DAO
 
         public listaSegundaViaAgua buscaTodosRecibosByBlocoAndApto(ReciboAgua oReciboModel)
         {
-            string clausulaSql = "SP_RECIBO_WEB_BLOCO_AP";
-
+    
+            string clausulaSql = "";
+            if (oReciboModel.mes <= 2015)
+            {
+                clausulaSql = "SP_RECIBO_WEB_BLOCO_AP_OLD";
+            }
+            else
+            {
+                clausulaSql = "SP_RECIBO_WEB_BLOCO_AP";
+            }
             try
             {
                 SqlCommand comandoSQL = new SqlCommand(clausulaSql);
@@ -65,15 +191,23 @@ namespace Azuli.Web.DAO
             }
             catch (Exception)
             {
-                
+
                 throw;
             }
         }
 
-        public  listaSegundaViaAgua graficoConsumoPorBloco(int yearBase)
+        public listaSegundaViaAgua graficoConsumoPorBloco(int yearBase)
         {
-            string clausulaSql = "SP_GRAFICO_CONSUMO_PORBLOCO";
-
+          
+            string clausulaSql = "";
+            if (yearBase <= 2015)
+            {
+                clausulaSql = "SP_GRAFICO_CONSUMO_PORBLOCO_OLD";
+            }
+            else
+            {
+                clausulaSql = "SP_GRAFICO_CONSUMO_PORBLOCO";
+            }
             try
             {
                 SqlCommand comandoSQL = new SqlCommand(clausulaSql);
@@ -97,8 +231,16 @@ namespace Azuli.Web.DAO
 
         public listaSegundaViaAgua graficoQuantidadeApAnormal(int yearBase)
         {
-            string clausulaSql = "SP_GRAFICO_QUANTIDADE_ANORMALIDADE";
-
+       
+            string clausulaSql = "";
+            if (yearBase <= 2015)
+            {
+                clausulaSql = "SP_GRAFICO_QUANTIDADE_ANORMALIDADE_OLD";
+            }
+            else
+            {
+                clausulaSql = "SP_GRAFICO_QUANTIDADE_ANORMALIDADE";
+            }
             try
             {
                 SqlCommand comandoSQL = new SqlCommand(clausulaSql);
@@ -122,8 +264,17 @@ namespace Azuli.Web.DAO
 
         public listaSegundaViaAgua graficoExcedentePorApartamento(int yearBase)
         {
-            string clausulaSql = "SP_GRAFICO_EXCEDENTES10_APS";
-
+            
+            string clausulaSql = "";
+            if (yearBase <= 2015)
+            {
+                clausulaSql = "SP_GRAFICO_EXCEDENTES10_APS_OLD";
+            }
+            else
+            {
+                clausulaSql = "SP_GRAFICO_EXCEDENTES10_APS";
+            }
+             
             try
             {
                 SqlCommand comandoSQL = new SqlCommand(clausulaSql);
@@ -147,8 +298,16 @@ namespace Azuli.Web.DAO
 
         public listaSegundaViaAgua graficosConsumoAgua(int yearBase)
         {
-
-            string clausulaSql = "SP_GRAFICO_CONSUMO_GERAL_AZULI";
+            string clausulaSql = "";
+            if (yearBase <= 2015)
+            {
+                clausulaSql = "SP_GRAFICO_CONSUMO_GERAL_AZULI_OLD";
+            }
+            else
+            {
+                clausulaSql = "SP_GRAFICO_CONSUMO_GERAL_AZULI";
+            }
+             
 
             try
             {
@@ -176,6 +335,8 @@ namespace Azuli.Web.DAO
         {
 
             string clausulaSql = "SP_GRAFICO_CONSUMO_INDIVIDUAL";
+
+
 
             try
             {
@@ -236,69 +397,140 @@ namespace Azuli.Web.DAO
 
             try
             {
-                
+
 
                 SqlCommand comandoSQL = new SqlCommand(clausulaSQL);
-                comandoSQL.Parameters.AddWithValue("@ID_CONDOMINIO ",oReciboModel.idCondominio);
-                comandoSQL.Parameters.AddWithValue("@NOME_CONDOMINIO " ,oReciboModel.nomeCondominio);
+                comandoSQL.Parameters.AddWithValue("@ID_CONDOMINIO ", oReciboModel.idCondominio);
+                comandoSQL.Parameters.AddWithValue("@NOME_CONDOMINIO ", oReciboModel.nomeCondominio);
                 comandoSQL.Parameters.AddWithValue("@ENDERECO_CONDOMINIO", oReciboModel.enderecoCondominio);
-                comandoSQL.Parameters.AddWithValue("@BLOCO",oReciboModel.bloco);
-                comandoSQL.Parameters.AddWithValue("@APTO",oReciboModel.apartamento);
-                comandoSQL.Parameters.AddWithValue("@REGISTRO",oReciboModel.registro);
-                comandoSQL.Parameters.AddWithValue("@FECHAMENTO_ATUAL ",oReciboModel.fechamentoAtual);
-                comandoSQL.Parameters.AddWithValue("@Data_leitura_Anterior ",oReciboModel.dataLeituraAnterior);
-                comandoSQL.Parameters.AddWithValue("@leitura_Anterior_M3 ",oReciboModel.leituraAnteriorM3);
-                comandoSQL.Parameters.AddWithValue("@Data_leitura_Atual ",oReciboModel.dataLeituraAtual);
-                comandoSQL.Parameters.AddWithValue("@Leitura_Atual_m3 ",oReciboModel.leituraAtualM3);
-                comandoSQL.Parameters.AddWithValue("@Consumo_mes_M3 ",corrigeConsumo(oReciboModel.excedenteM3diaria));
-                comandoSQL.Parameters.AddWithValue("@dt_proximaLeitura",oReciboModel.dataProximaLeitura);
-                comandoSQL.Parameters.AddWithValue("@Status ",oReciboModel.status);
-                comandoSQL.Parameters.AddWithValue("@Media ",oReciboModel.media);
-                comandoSQL.Parameters.AddWithValue("@HistDescricao_mes1 ",oReciboModel.historicoDescricaoMes1);
-                comandoSQL.Parameters.AddWithValue("@HistoricoMes1 ",oReciboModel.historicoMes1);
-                comandoSQL.Parameters.AddWithValue("@HistDescricao_mes2 ",oReciboModel.historicoDescricaoMes2);
-                comandoSQL.Parameters.AddWithValue("@HistoricoMes2 ",oReciboModel.historicoMes2);
-                comandoSQL.Parameters.AddWithValue("@HistDescricao_mes3 ",oReciboModel.historicoDescricaoMes3);
-                comandoSQL.Parameters.AddWithValue("@HistoricoMes3 ",oReciboModel.historicoMes3);
-                comandoSQL.Parameters.AddWithValue("@HistDescricao_mes4 ",oReciboModel.historicoDescricaoMes4);
-                comandoSQL.Parameters.AddWithValue("@HistoricoMes4",oReciboModel.historicoMes4);
-                comandoSQL.Parameters.AddWithValue("@HistDescricao_mes5 ",oReciboModel.historicoDescricaoMes5);
-                comandoSQL.Parameters.AddWithValue("@HistoricoMes5",oReciboModel.historicoMes5);
-                comandoSQL.Parameters.AddWithValue("@HistDescricao_mes6",oReciboModel.historicoDescricaoMes6);
-                comandoSQL.Parameters.AddWithValue("@HistoricoMes6",oReciboModel.historicoMes6);
-                comandoSQL.Parameters.AddWithValue("@Imagem ",oReciboModel.imagem);
-                comandoSQL.Parameters.AddWithValue("@Pg_condoConsumoM3 ",oReciboModel.consumoM3pagoCondominio);
-                comandoSQL.Parameters.AddWithValue("@Pg_condoConsumoValor ",oReciboModel.ConsumoValorPagoCondominio);
-                comandoSQL.Parameters.AddWithValue("@Pg_condoMinimoM3 ",oReciboModel.minimoM3PagoCondominio);
-                comandoSQL.Parameters.AddWithValue("@Pg_condoMinimoValor ",oReciboModel.minimoValorPagoCondominio);
-                comandoSQL.Parameters.AddWithValue("@Pg_condoMinimoExcedenteM3 ",oReciboModel.excedenteM3PagoCondominio);
-                comandoSQL.Parameters.AddWithValue("@Pg_condoExcedenteValor ",oReciboModel.excedenteValorPagoCondominio);
-                comandoSQL.Parameters.AddWithValue("@ValorRateioExcedenteM3 ",oReciboModel.excedenteM3Rateio);
-                comandoSQL.Parameters.AddWithValue("@ValorRateioExcedenteValor ",oReciboModel.excedenteValorRateio);
-                comandoSQL.Parameters.AddWithValue("@ValorDevidoTarifaMinimaM3 ",oReciboModel.tarifaMinimaM3ValorDevido);
-                comandoSQL.Parameters.AddWithValue("@ValorDevidoTarifaMinimaValor ",oReciboModel.tarifaMinimaValorValorDevido);
-                comandoSQL.Parameters.AddWithValue("@ValorDevidoExcedente ",oReciboModel.excedenteValorDevido);
-                comandoSQL.Parameters.AddWithValue("@ValorDevidoPagar ",oReciboModel.valorPagarValorDevido);
-                comandoSQL.Parameters.AddWithValue("@AvisoGeral ",oReciboModel.avisoGeralAviso);
-                comandoSQL.Parameters.AddWithValue("@AvisoAnormal ",oReciboModel.AnormalAviso);
-                comandoSQL.Parameters.AddWithValue("@AvisoIndividual ",oReciboModel.individualAviso);
-                comandoSQL.Parameters.AddWithValue("@AvisoANORMALIDADE ",oReciboModel.anormalidadeAviso);
-                comandoSQL.Parameters.AddWithValue("@ConsutaMes ",oReciboModel.mes);
+                comandoSQL.Parameters.AddWithValue("@BLOCO", oReciboModel.bloco);
+                comandoSQL.Parameters.AddWithValue("@APTO", oReciboModel.apartamento);
+                comandoSQL.Parameters.AddWithValue("@REGISTRO", oReciboModel.registro);
+                comandoSQL.Parameters.AddWithValue("@FECHAMENTO_ATUAL ", oReciboModel.fechamentoAtual);
+                comandoSQL.Parameters.AddWithValue("@Data_leitura_Anterior ", oReciboModel.dataLeituraAnterior);
+                comandoSQL.Parameters.AddWithValue("@leitura_Anterior_M3 ", oReciboModel.leituraAnteriorM3);
+                comandoSQL.Parameters.AddWithValue("@Data_leitura_Atual ", oReciboModel.dataLeituraAtual);
+                comandoSQL.Parameters.AddWithValue("@Leitura_Atual_m3 ", oReciboModel.leituraAtualM3);
+                comandoSQL.Parameters.AddWithValue("@Consumo_mes_M3 ", corrigeConsumo(oReciboModel.excedenteM3diaria));
+                comandoSQL.Parameters.AddWithValue("@dt_proximaLeitura", oReciboModel.dataProximaLeitura);
+                comandoSQL.Parameters.AddWithValue("@Status ", oReciboModel.status);
+                comandoSQL.Parameters.AddWithValue("@Media ", oReciboModel.media);
+                comandoSQL.Parameters.AddWithValue("@HistDescricao_mes1 ", oReciboModel.historicoDescricaoMes1);
+                comandoSQL.Parameters.AddWithValue("@HistoricoMes1 ", oReciboModel.historicoMes1);
+                comandoSQL.Parameters.AddWithValue("@HistDescricao_mes2 ", oReciboModel.historicoDescricaoMes2);
+                comandoSQL.Parameters.AddWithValue("@HistoricoMes2 ", oReciboModel.historicoMes2);
+                comandoSQL.Parameters.AddWithValue("@HistDescricao_mes3 ", oReciboModel.historicoDescricaoMes3);
+                comandoSQL.Parameters.AddWithValue("@HistoricoMes3 ", oReciboModel.historicoMes3);
+                comandoSQL.Parameters.AddWithValue("@HistDescricao_mes4 ", oReciboModel.historicoDescricaoMes4);
+                comandoSQL.Parameters.AddWithValue("@HistoricoMes4", oReciboModel.historicoMes4);
+                comandoSQL.Parameters.AddWithValue("@HistDescricao_mes5 ", oReciboModel.historicoDescricaoMes5);
+                comandoSQL.Parameters.AddWithValue("@HistoricoMes5", oReciboModel.historicoMes5);
+                comandoSQL.Parameters.AddWithValue("@HistDescricao_mes6", oReciboModel.historicoDescricaoMes6);
+                comandoSQL.Parameters.AddWithValue("@HistoricoMes6", oReciboModel.historicoMes6);
+                comandoSQL.Parameters.AddWithValue("@Imagem ", oReciboModel.imagem);
+                comandoSQL.Parameters.AddWithValue("@Pg_condoConsumoM3 ", oReciboModel.consumoM3pagoCondominio);
+                comandoSQL.Parameters.AddWithValue("@Pg_condoConsumoValor ", oReciboModel.ConsumoValorPagoCondominio);
+                comandoSQL.Parameters.AddWithValue("@Pg_condoMinimoM3 ", oReciboModel.minimoM3PagoCondominio);
+                comandoSQL.Parameters.AddWithValue("@Pg_condoMinimoValor ", oReciboModel.minimoValorPagoCondominio);
+                comandoSQL.Parameters.AddWithValue("@Pg_condoMinimoExcedenteM3 ", oReciboModel.excedenteM3PagoCondominio);
+                comandoSQL.Parameters.AddWithValue("@Pg_condoExcedenteValor ", oReciboModel.excedenteValorPagoCondominio);
+                comandoSQL.Parameters.AddWithValue("@ValorRateioExcedenteM3 ", oReciboModel.excedenteM3Rateio);
+                comandoSQL.Parameters.AddWithValue("@ValorRateioExcedenteValor ", oReciboModel.excedenteValorRateio);
+                comandoSQL.Parameters.AddWithValue("@ValorDevidoTarifaMinimaM3 ", oReciboModel.tarifaMinimaM3ValorDevido);
+                comandoSQL.Parameters.AddWithValue("@ValorDevidoTarifaMinimaValor ", oReciboModel.tarifaMinimaValorValorDevido);
+                comandoSQL.Parameters.AddWithValue("@ValorDevidoExcedente ", oReciboModel.excedenteValorDevido);
+                comandoSQL.Parameters.AddWithValue("@ValorDevidoPagar ", oReciboModel.valorPagarValorDevido);
+                comandoSQL.Parameters.AddWithValue("@AvisoGeral ", oReciboModel.avisoGeralAviso);
+                comandoSQL.Parameters.AddWithValue("@AvisoAnormal ", oReciboModel.AnormalAviso);
+                comandoSQL.Parameters.AddWithValue("@AvisoIndividual ", oReciboModel.individualAviso);
+                comandoSQL.Parameters.AddWithValue("@AvisoANORMALIDADE ", oReciboModel.anormalidadeAviso);
+                comandoSQL.Parameters.AddWithValue("@ConsutaMes ", oReciboModel.mes);
                 comandoSQL.Parameters.AddWithValue("@ConsultaAno ", oReciboModel.ano);
                 comandoSQL.Parameters.AddWithValue("@ExcedenteM3Diario ", oReciboModel.excedenteM3diaria);
+                comandoSQL.Parameters.AddWithValue("@PersisteDados ", "N");
+
 
                 ExecutaComando(comandoSQL);
 
-                
+
 
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                
-                throw;
+
+                throw e;
             }
         }
 
+        public void persisteCalculoFinalBanco(ReciboAgua oReciboModel)
+        {
+            string clausulaSQL = "SP_PERSISTE_CALCULOFINAL_AGUA";
+
+            try
+            {
+
+
+                SqlCommand comandoSQL = new SqlCommand(clausulaSQL);
+                comandoSQL.Parameters.AddWithValue("@ID_CONDOMINIO ", oReciboModel.idCondominio);
+                comandoSQL.Parameters.AddWithValue("@NOME_CONDOMINIO ", oReciboModel.nomeCondominio);
+                comandoSQL.Parameters.AddWithValue("@ENDERECO_CONDOMINIO", oReciboModel.enderecoCondominio);
+                comandoSQL.Parameters.AddWithValue("@BLOCO", oReciboModel.bloco);
+                comandoSQL.Parameters.AddWithValue("@APTO", oReciboModel.apartamento);
+                comandoSQL.Parameters.AddWithValue("@REGISTRO", oReciboModel.registro);
+                comandoSQL.Parameters.AddWithValue("@FECHAMENTO_ATUAL ", oReciboModel.fechamentoAtual);
+                comandoSQL.Parameters.AddWithValue("@Data_leitura_Anterior ", oReciboModel.dataLeituraAnterior);
+                comandoSQL.Parameters.AddWithValue("@leitura_Anterior_M3 ", oReciboModel.leituraAnteriorM3);
+                comandoSQL.Parameters.AddWithValue("@Data_leitura_Atual ", oReciboModel.dataLeituraAtual);
+                comandoSQL.Parameters.AddWithValue("@Leitura_Atual_m3 ", oReciboModel.leituraAtualM3);
+                comandoSQL.Parameters.AddWithValue("@Consumo_mes_M3 ", oReciboModel.consumoMesM3);
+                comandoSQL.Parameters.AddWithValue("@dt_proximaLeitura", oReciboModel.dataProximaLeitura);
+                comandoSQL.Parameters.AddWithValue("@Status ", oReciboModel.status);
+                comandoSQL.Parameters.AddWithValue("@Media ", oReciboModel.media);
+                comandoSQL.Parameters.AddWithValue("@HistDescricao_mes1 ", oReciboModel.historicoDescricaoMes1);
+                comandoSQL.Parameters.AddWithValue("@HistoricoMes1 ", oReciboModel.historicoMes1);
+                comandoSQL.Parameters.AddWithValue("@HistDescricao_mes2 ", oReciboModel.historicoDescricaoMes2);
+                comandoSQL.Parameters.AddWithValue("@HistoricoMes2 ", oReciboModel.historicoMes2);
+                comandoSQL.Parameters.AddWithValue("@HistDescricao_mes3 ", oReciboModel.historicoDescricaoMes3);
+                comandoSQL.Parameters.AddWithValue("@HistoricoMes3 ", oReciboModel.historicoMes3);
+                comandoSQL.Parameters.AddWithValue("@HistDescricao_mes4 ", oReciboModel.historicoDescricaoMes4);
+                comandoSQL.Parameters.AddWithValue("@HistoricoMes4", oReciboModel.historicoMes4);
+                comandoSQL.Parameters.AddWithValue("@HistDescricao_mes5 ", oReciboModel.historicoDescricaoMes5);
+                comandoSQL.Parameters.AddWithValue("@HistoricoMes5", oReciboModel.historicoMes5);
+                comandoSQL.Parameters.AddWithValue("@HistDescricao_mes6", oReciboModel.historicoDescricaoMes6);
+                comandoSQL.Parameters.AddWithValue("@HistoricoMes6", oReciboModel.historicoMes6);
+                comandoSQL.Parameters.AddWithValue("@Imagem ", oReciboModel.imagem);
+                comandoSQL.Parameters.AddWithValue("@Pg_condoConsumoM3 ", oReciboModel.consumoM3pagoCondominio);
+                comandoSQL.Parameters.AddWithValue("@Pg_condoConsumoValor ", oReciboModel.ConsumoValorPagoCondominio);
+                comandoSQL.Parameters.AddWithValue("@Pg_condoMinimoM3 ", oReciboModel.minimoM3PagoCondominio);
+                comandoSQL.Parameters.AddWithValue("@Pg_condoMinimoValor ", oReciboModel.minimoValorPagoCondominio);
+                comandoSQL.Parameters.AddWithValue("@Pg_condoMinimoExcedenteM3 ", oReciboModel.excedenteM3PagoCondominio);
+                comandoSQL.Parameters.AddWithValue("@Pg_condoExcedenteValor ", oReciboModel.excedenteValorPagoCondominio);
+                comandoSQL.Parameters.AddWithValue("@ValorRateioExcedenteM3 ", oReciboModel.excedenteM3Rateio);
+                comandoSQL.Parameters.AddWithValue("@ValorRateioExcedenteValor ", oReciboModel.excedenteValorRateio);
+                comandoSQL.Parameters.AddWithValue("@ValorDevidoTarifaMinimaM3 ", oReciboModel.tarifaMinimaM3ValorDevido);
+                comandoSQL.Parameters.AddWithValue("@ValorDevidoTarifaMinimaValor ", oReciboModel.tarifaMinimaValorValorDevido);
+                comandoSQL.Parameters.AddWithValue("@ValorDevidoExcedente ", oReciboModel.excedenteValorDevido);
+                comandoSQL.Parameters.AddWithValue("@ValorDevidoPagar ", oReciboModel.valorPagarValorDevido);
+                comandoSQL.Parameters.AddWithValue("@AvisoGeral ", oReciboModel.avisoGeralAviso);
+                comandoSQL.Parameters.AddWithValue("@AvisoAnormal ", oReciboModel.AnormalAviso);
+                comandoSQL.Parameters.AddWithValue("@AvisoIndividual ", oReciboModel.individualAviso);
+                comandoSQL.Parameters.AddWithValue("@AvisoANORMALIDADE ", oReciboModel.anormalidadeAviso);
+                comandoSQL.Parameters.AddWithValue("@ConsutaMes ", oReciboModel.ano);
+                comandoSQL.Parameters.AddWithValue("@ConsultaAno ", oReciboModel.mes);
+                comandoSQL.Parameters.AddWithValue("@ExcedenteM3Diario ", oReciboModel.excedenteM3diaria);
+                comandoSQL.Parameters.AddWithValue("@PersisteDados", "S");
+
+
+                ExecutaComando(comandoSQL);
+            }
+            catch (Exception e)
+            {
+                throw e;
+
+
+            }
+
+        }
 
         public float corrigeConsumo(float excedenteM3Diario)
         {
@@ -444,7 +676,7 @@ namespace Azuli.Web.DAO
                     oReciboAgua.valorPagarValorDevido = Convert.ToDecimal(itemOcorrencia["Valor Devido - a pagar"]);
 
                 if (itemOcorrencia.Table.Columns.Contains("Aviso - Geral"))
-                    oReciboAgua.avisoGeralAviso = itemOcorrencia["Aviso - Geral"].ToString() ;
+                    oReciboAgua.avisoGeralAviso = itemOcorrencia["Aviso - Geral"].ToString();
 
                 if (itemOcorrencia.Table.Columns.Contains("Aviso - Anormal"))
                     oReciboAgua.AnormalAviso = itemOcorrencia["Aviso - Anormal"].ToString();
@@ -466,7 +698,7 @@ namespace Azuli.Web.DAO
 
                 if (itemOcorrencia.Table.Columns.Contains("qtdAnormalidade"))
                     oReciboAgua.qtdAnormalidade = Convert.ToInt32(itemOcorrencia["qtdAnormalidade"]);
-                
+
                 if (itemOcorrencia.Table.Columns.Contains("validaContador"))
                     oReciboAgua.mes = Convert.ToInt32(itemOcorrencia["validaContador"]);
 
@@ -475,6 +707,9 @@ namespace Azuli.Web.DAO
 
                 if (itemOcorrencia.Table.Columns.Contains("Excedente M3 Diario"))
                     oReciboAgua.excedenteM3diaria = float.Parse(itemOcorrencia["Excedente M3 Diario"].ToString());
+
+                if (itemOcorrencia.Table.Columns.Contains("PersisteDados"))
+                    oReciboAgua.persisteBanco = itemOcorrencia["PersisteDados"].ToString();
 
 
                 oListReciboAgua.Add(oReciboAgua);
@@ -488,8 +723,9 @@ namespace Azuli.Web.DAO
 
 
 
-
-
-
     }
 }
+
+
+
+
