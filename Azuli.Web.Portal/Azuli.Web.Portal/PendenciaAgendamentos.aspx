@@ -151,7 +151,7 @@
                       class="style35">
                       &nbsp;
                       <asp:Label ID="lblSalaoFesta" runat="server" CssClass="style16" 
-                          Text="São de Festa"></asp:Label>
+                          Text="Salão de Festa"></asp:Label>
                   </td>
                  <%-- <td align="center" 
                       style="border-right-style: groove; border-left-style: groove; border-width: thin">
