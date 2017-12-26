@@ -9,6 +9,7 @@ using Azuli.Web.Model;
 using Azuli.Web.Portal.Util;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Data;
 
 namespace Azuli.Web.Portal
 {
@@ -37,14 +38,9 @@ namespace Azuli.Web.Portal
                     dvGridAll.Visible = true;
                     grdGerenciamentoMoradores.DataSourceID = "SqlDataSourceGerenciamentoUser";
                     grdGerenciamentoMoradores.DataBind();
-
                     dvPesquisa.Visible = false;
                 }
-                else
-                {
-
-
-                }
+                
             }
 
         }
@@ -66,6 +62,10 @@ namespace Azuli.Web.Portal
                 //oProprietarioModel.proprietario2 = txtCond02.Text;
                 oProprietarioModel.email = txtEmail.Text;
                 oProprietarioModel.senha = oUtil.GeraSenha();
+                oProprietarioModel.telefone = txtTelefone.Text;
+
+                
+                oProprietarioModel.proprietarioImovel = lstRadioButton.SelectedItem.Value;
 
                 try
                 {
@@ -91,11 +91,11 @@ namespace Azuli.Web.Portal
                         if (isEmail)
                         {
 
-                            enviaEmail.enviaSenha(msgCredencial, oProprietarioModel.proprietario1, oProprietarioModel.email, status);
+//                            enviaEmail.enviaSenha(msgCredencial, oProprietarioModel.proprietario1, oProprietarioModel.email, status);
                         }
                         else
                         {
-                            enviaEmail.enviaSenha(msgCredencial, oProprietarioModel.proprietario1,"residencialcampoazuli@gmail.com", status);
+                           // enviaEmail.enviaSenha(msgCredencial, oProprietarioModel.proprietario1,"residencialcampoazuli@gmail.com", status);
                         }
 
                         lblMsg.Text = "Cadastro efetuado com sucesso!! <br> <b> ";
@@ -126,6 +126,8 @@ namespace Azuli.Web.Portal
             txtEmail.Text = "";
             lblPesquisa.Text = "";
             dvPesquisa.Visible = false;
+            txtTelefone.Text = "";
+            lstRadioButton.SelectedItem.Enabled = true;
 
 
         }
@@ -187,6 +189,10 @@ namespace Azuli.Web.Portal
                 preencheGridViewByPesquisa(oListProprietario);
 
             }
+
+
+            
+          
 
 
 

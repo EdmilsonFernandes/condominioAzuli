@@ -41,7 +41,7 @@
                                             <asp:ListItem>5</asp:ListItem>
                                             <asp:ListItem>6</asp:ListItem>
                                         </asp:DropDownList>
-                        <%--    <asp:TextBox ID="txtBloco" runat="server" Height="19px" Width="87px"></asp:TextBox>--%>
+                            <%--    <asp:TextBox ID="txtBloco" runat="server" Height="19px" Width="87px"></asp:TextBox>--%>
                             <asp:RequiredFieldValidator ID="rfvName0" runat="server" ControlToValidate="drpBloco"
                                 ValidationGroup="InputValidationGroup">*</asp:RequiredFieldValidator>
                         </td>
@@ -68,10 +68,28 @@
                             &nbsp;
                         </td>
                     </tr>
+                    <tr>
+                        <td>
+                            <asp:Label ID="lblTelefone" runat="server" CssClass="Field" meta:resourcekey="lblActivity"
+                                Style="font-weight: bold; font-size: 9pt">Telefone:</asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtTelefone" runat="server" MaxLength="200" 
+                                AutoPostBack="True" OnTextChanged="txtEmail_TextChanged"
+                                Width="144px">Não tem no momento</asp:TextBox>
+                        </td>
+                        <td>
+                            <asp:RadioButtonList ID="lstRadioButton" runat="server" style="font-size: 9pt" 
+                                Width="169px">
+                                <asp:ListItem Selected="True" Value="Proprietário">Proprietário</asp:ListItem>
+                                <asp:ListItem Value="Locatário">Locatário</asp:ListItem>
+                            </asp:RadioButtonList>
+                        </td>
+                    </tr>
                 </table>
                 <br />
                 <asp:ImageButton ID="ibtAddSave" runat="server" ImageUrl="~/images/add.png" ValidationGroup="InputValidationGroup"
-                    OnClick="ibtAddSave_Click" Width="23px" />
+                    OnClick="ibtAddSave_Click" Width="23px" Height="23px" />
                 &nbsp;&nbsp;&nbsp;
                 <asp:ImageButton ID="ibtCancel" runat="server" ImageUrl="~/Images/cancel.png" OnClick="ibtCancel_Click"
                     Height="20px" Width="18px" />
@@ -95,7 +113,6 @@
                 DataSourceID="SqlDataSourceGerenciamentoUser" Height="86px" Width="852px" PageSize="20">
                 <Columns>
                     <asp:BoundField DataField="NOME_PROPRIETARIO1" HeaderText="Condomino 01" SortExpression="NOME_PROPRIETARIO1" />
-                    <asp:BoundField DataField="NOME_PROPRIETARIO2" HeaderText="Condomino 02" SortExpression="NOME_PROPRIETARIO2" />
                     <asp:BoundField DataField="PROPRIETARIO_BLOCO" HeaderText="Bloco" ReadOnly="True"
                         SortExpression="PROPRIETARIO_BLOCO">
                         <ItemStyle BackColor="#0066FF" Font-Bold="True" Font-Italic="False" ForeColor="White" />
@@ -108,6 +125,8 @@
                     <asp:BoundField HeaderText="Senha" DataField="PASSWORD">
                         <ItemStyle BackColor="#0066FF" Font-Bold="True" ForeColor="White" />
                     </asp:BoundField>
+                    <asp:BoundField DataField="TELEFONE" HeaderText="Telefone" />
+                    <asp:BoundField DataField="PROPRIETARIO_IMOVEL" HeaderText="Sobre o Imóvel" />
                     <asp:CheckBoxField DataField="STATUS" HeaderText="ATIVO" SortExpression="STATUS" />
                     <asp:CommandField ButtonType="Image" CancelImageUrl="~/images/cancel.png" DeleteImageUrl="~/images/delete.png"
                         EditImageUrl="~/images/edit.png" ShowEditButton="True" UpdateImageUrl="~/images/save.png" />
@@ -117,16 +136,15 @@
   
     <asp:SqlDataSource ID="SqlDataSourceGerenciamentoUser" runat="server" ConnectionString="<%$ ConnectionStrings:azulli %>"
         DeleteCommand="DELETE FROM [PROPRIETARIO] WHERE [PROPRIETARIO_BLOCO] = @PROPRIETARIO_BLOCO AND [PROPRIETARIO_AP] = @PROPRIETARIO_AP"
-        InsertCommand="INSERT INTO [PROPRIETARIO] ([NOME_PROPRIETARIO1], [NOME_PROPRIETARIO2], [PROPRIETARIO_BLOCO], [PROPRIETARIO_AP], [email], [STATUS]) VALUES (@NOME_PROPRIETARIO1, @NOME_PROPRIETARIO2, @PROPRIETARIO_BLOCO, @PROPRIETARIO_AP, @email, @STATUS)"
-        SelectCommand="SELECT [NOME_PROPRIETARIO1], [NOME_PROPRIETARIO2], [PROPRIETARIO_BLOCO], [PROPRIETARIO_AP],[PASSWORD] ,[email], [STATUS] FROM [PROPRIETARIO] WHERE [STATUS] = 1  ORDER BY [DataCadastro] DESC"
-        UpdateCommand="UPDATE [PROPRIETARIO] SET [NOME_PROPRIETARIO1] = @NOME_PROPRIETARIO1, [NOME_PROPRIETARIO2] = @NOME_PROPRIETARIO2, [email] = @email, [STATUS] = @STATUS WHERE [PROPRIETARIO_BLOCO] = @PROPRIETARIO_BLOCO AND [PROPRIETARIO_AP] = @PROPRIETARIO_AP">
+        InsertCommand="INSERT INTO [PROPRIETARIO] ([NOME_PROPRIETARIO1], [PROPRIETARIO_BLOCO], [PROPRIETARIO_AP], [email],[STATUS],[TELEFONE],[PROPRIETARIO_IMOVEL]) VALUES (@NOME_PROPRIETARIO1, @PROPRIETARIO_BLOCO, @PROPRIETARIO_AP, @email, @STATUS,[TELEFONE],[PROPRIETARIO_IMOVEL])"
+        SelectCommand="SELECT [NOME_PROPRIETARIO1],[PROPRIETARIO_BLOCO], [PROPRIETARIO_AP],[PASSWORD] ,[email],[STATUS],[TELEFONE],[proprietario_imovel] FROM [PROPRIETARIO] WHERE [STATUS] = 1  ORDER BY [DataCadastro] DESC"
+        UpdateCommand="UPDATE [PROPRIETARIO] SET [NOME_PROPRIETARIO1] = @NOME_PROPRIETARIO1, [email] = @email, [TELEFONE] = @telefone, [PROPRIETARIO_IMOVEL]=@PROPRIETARIO_IMOVEL, [STATUS] = @STATUS WHERE [PROPRIETARIO_BLOCO] = @PROPRIETARIO_BLOCO AND [PROPRIETARIO_AP] = @PROPRIETARIO_AP">
         <DeleteParameters>
             <asp:Parameter Name="PROPRIETARIO_BLOCO" Type="Int32" />
             <asp:Parameter Name="PROPRIETARIO_AP" Type="Int32" />
         </DeleteParameters>
         <InsertParameters>
             <asp:Parameter Name="NOME_PROPRIETARIO1" Type="String" />
-            <asp:Parameter Name="NOME_PROPRIETARIO2" Type="String" />
             <asp:Parameter Name="PROPRIETARIO_BLOCO" Type="Int32" />
             <asp:Parameter Name="PROPRIETARIO_AP" Type="Int32" />
             <asp:Parameter Name="email" Type="String" />
@@ -134,11 +152,12 @@
         </InsertParameters>
         <UpdateParameters>
             <asp:Parameter Name="NOME_PROPRIETARIO1" Type="String" />
-            <asp:Parameter Name="NOME_PROPRIETARIO2" Type="String" />
             <asp:Parameter Name="email" Type="String" />
             <asp:Parameter Name="STATUS" Type="Boolean" />
             <asp:Parameter Name="PROPRIETARIO_BLOCO" Type="Int32" />
             <asp:Parameter Name="PROPRIETARIO_AP" Type="Int32" />
+             <asp:Parameter Name="TELEFONE" Type="String" />
+            <asp:Parameter Name="PROPRIETARIO_IMOVEL" Type="String" />
         </UpdateParameters>
     </asp:SqlDataSource>
     

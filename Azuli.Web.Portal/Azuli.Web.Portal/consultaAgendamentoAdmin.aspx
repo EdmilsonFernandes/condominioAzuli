@@ -102,6 +102,18 @@
 
                     </asp:TemplateField>
 
+                     <asp:TemplateField HeaderText="Telefone">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtBox10" runat="server"></asp:TextBox>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="Label10" runat="server" Text='<%# Bind("ap.oProprietario.telefone") %>'></asp:Label>
+                        </ItemTemplate>
+                        <ItemStyle BackColor="#3399FF" Font-Bold="True" ForeColor="White" />
+
+
+                    </asp:TemplateField>
+
                      <asp:TemplateField HeaderText="Data da Reserva">
                            <EditItemTemplate>
                                <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("dataAgendamento") %>'></asp:TextBox>
@@ -240,6 +252,19 @@
 
 
                     </asp:TemplateField>
+
+                      <asp:TemplateField HeaderText="Telefone">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="txtBox10" runat="server"></asp:TextBox>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="Label10" runat="server" Text='<%# Bind("ap.oProprietario.telefone") %>'></asp:Label>
+                        </ItemTemplate>
+                        <ItemStyle BackColor="#3399FF" Font-Bold="True" ForeColor="White" />
+
+
+                    </asp:TemplateField>
+
                   
                 <asp:TemplateField HeaderText="Data da Reserva">
                     <EditItemTemplate>

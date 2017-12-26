@@ -78,20 +78,20 @@ namespace Azuli.Web.Portal
                    oEnviaEmail.enviaSenha(msgMorador.ToString(), oProprietarioModel.proprietario1, oProprietarioModel.email, 0);
 
                }
-               else
-               {
-                   oEnviaEmail.enviaSenha(msgMorador.ToString(), oProprietarioModel.proprietario1, "residencialcampoazuli@gmail.com", 0);
+               //else
+               //{
+               //    oEnviaEmail.enviaSenha(msgMorador.ToString(), oProprietarioModel.proprietario1, "residencialcampoazuli@gmail.com", 0);
 
-               }
+               //}
                
                lblMsg.Text = "Acesso liberado com sucesso! Bloco: " + oProprietarioModel.ap.bloco + " Apartamento: " + oProprietarioModel.ap.apartamento;
                grdGerenciamentoMoradores.DataBind();
             }
 
-            catch (Exception err)
+            catch 
             {
                 
-                throw err;
+                throw new Exception("Morador sem e-mail, não será enviado a senha para acesso!!");
             }
         }
     }
