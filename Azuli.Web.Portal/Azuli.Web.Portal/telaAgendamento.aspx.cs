@@ -48,15 +48,15 @@
 
 
 
-                if (e.Day.Date < (System.DateTime.Now.AddDays(-1)))
-                {
+                //if (e.Day.Date < (System.DateTime.Now.AddDays(-1)))
+                //{
 
-                    e.Cell.Font.Strikeout = true;
-                    e.Cell.Font.Bold = true;
+                //    e.Cell.Font.Strikeout = true;
+                //    e.Cell.Font.Bold = true;
              
-                    e.Cell.BackColor = System.Drawing.Color.FromName("#BAE4F1");
+                //    e.Cell.BackColor = System.Drawing.Color.FromName("#BAE4F1");
 
-                }
+                //}
 
                 if (e.Day.Date > (System.DateTime.Now.AddDays(diasAgendamento)))
                 {

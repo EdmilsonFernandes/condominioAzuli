@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azuli.Web.Portal", "Azuli.Web.Portal\Azuli.Web.Portal.csproj", "{D3EAAE17-F780-43B2-96D9-F884599E9E98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azuli.Web.Model", "Azuli.Web.Model\Azuli.Web.Model.csproj", "{386FAF34-9F13-405D-99E8-7B1BD91E6F65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azuli.Web.Business", "Azuli.Web.Business\Azuli.Web.Business.csproj", "{6779A8FD-9C97-482E-B4BC-AE41E86F8E97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azuli.Web.DAO", "Azuli.Web.DAO\Azuli.Web.DAO.csproj", "{59EE8FF9-A5F7-471E-9503-D468720BC57A}"
+EndProject
+Project("{C8D11400-126E-41CD-887F-60BD40844F9E}") = "Azuli.Portal.Database", "Database1\Azuli.Portal.Database.dbproj", "{67CBC824-A49E-4E9B-A947-360F3DFE65C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azuli.Crystal.Relatorios", "Azuli.Crystal.Relatorios\Azuli.Crystal.Relatorios.csproj", "{AAA71ED7-75F4-4DE7-8C83-5611DE3D45D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3EAAE17-F780-43B2-96D9-F884599E9E98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3EAAE17-F780-43B2-96D9-F884599E9E98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3EAAE17-F780-43B2-96D9-F884599E9E98}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D3EAAE17-F780-43B2-96D9-F884599E9E98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3EAAE17-F780-43B2-96D9-F884599E9E98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{386FAF34-9F13-405D-99E8-7B1BD91E6F65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{386FAF34-9F13-405D-99E8-7B1BD91E6F65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{386FAF34-9F13-405D-99E8-7B1BD91E6F65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{386FAF34-9F13-405D-99E8-7B1BD91E6F65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6779A8FD-9C97-482E-B4BC-AE41E86F8E97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6779A8FD-9C97-482E-B4BC-AE41E86F8E97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6779A8FD-9C97-482E-B4BC-AE41E86F8E97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6779A8FD-9C97-482E-B4BC-AE41E86F8E97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59EE8FF9-A5F7-471E-9503-D468720BC57A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59EE8FF9-A5F7-471E-9503-D468720BC57A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59EE8FF9-A5F7-471E-9503-D468720BC57A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{59EE8FF9-A5F7-471E-9503-D468720BC57A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59EE8FF9-A5F7-471E-9503-D468720BC57A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AAA71ED7-75F4-4DE7-8C83-5611DE3D45D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAA71ED7-75F4-4DE7-8C83-5611DE3D45D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAA71ED7-75F4-4DE7-8C83-5611DE3D45D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAA71ED7-75F4-4DE7-8C83-5611DE3D45D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

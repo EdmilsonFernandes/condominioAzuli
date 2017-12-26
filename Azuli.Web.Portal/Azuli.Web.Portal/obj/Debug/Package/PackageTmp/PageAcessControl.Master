@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PageAcessControl.master.cs" Inherits="Azuli.Web.Portal.PageAcessControl" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head id="Head1" runat="server">
+    <title>Portal do Condominio</title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/ScriptAzuli.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    </head>
+<body>
+    <form id="Form1" runat="server">
+    <div class="pageAdmin">
+        <div class="headerAdmin">
+            <div class="titleAdmin">
+               
+                    <img alt="" src="images/sgcv3.jpg" style="height: 86px; width: 960px" />
+               
+            </div>
+    </div>
+    <div class="clear hideSkiplinkAdmin">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" 
+                    EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal" >
+                    
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/WelcomeAdmin.aspx" Text="Página Principal" 
+                            Value="Home">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Morador" Value="Ocorrência">
+                            <asp:MenuItem NavigateUrl="~/AreaAdministrativa.aspx" 
+                                Text="Consultar de Moradores" Value="Fazer Reserva"></asp:MenuItem>
+                            <asp:MenuItem Text="Avisar sobre Ecomenda" Value="Cancelar Agendamento"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Controle de Acesso" Value="Mensagens">
+                            <asp:MenuItem Text="Cadastrar Visitante" Value="Visualizar Circular"></asp:MenuItem>
+                            <asp:MenuItem Text="Consultar Visitante" 
+                                Value="Visualizar Balancete"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Alterar Senha" 
+                            Value="Alterar Senha do Administrador" 
+                            NavigateUrl="~/alteraSenhaSindico.aspx"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/LoginAzulli.aspx" Text="Sair" Value="sair">
+                        </asp:MenuItem>
+                    </Items>
+
+                </asp:Menu>
+               <div class="loginDisplayAdmin" 
+                    style="position: absolute; left: -5px; top: -62px; margin-top: 0px;">
+             <asp:Label ID="lblProprietarioMaster" runat="server" Font-Size="Small" 
+                     Text="Seja Bem vindo: "></asp:Label>
+                    <asp:Label ID="lblProprietarioDesc"  runat="server" Font-Size="Small" 
+                     Font-Bold="True"></asp:Label>
+
+
+                     <asp:Label ID="lblBlocoMaster" runat="server" Font-Size="Small" 
+                     Text="  Bloco: "></asp:Label>
+                    <asp:Label ID="lblBlocoMasterDesc"  runat="server" Font-Size="Small" 
+                     Font-Bold="True"></asp:Label>
+
+
+                    
+                     <asp:Label ID="lblApMaster" runat="server" Font-Size="Small" Text=" AP : " 
+                     Font-Bold="False"></asp:Label>
+                    <asp:Label ID="lblApDesc"  runat="server" Font-Size="Small" Font-Bold="True"></asp:Label>
+            </div>
+               <div id="dvHome" 
+            style="position:absolute; top: -9px; left: -27px; height: 28px; width: 30px;"> <p>
+                       &nbsp;</p></div>
+            </div>
+           
+    <div class="footerAdmin">
+
+        </div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+
+    </div>
+    </form>
+</body>
+</html>
+

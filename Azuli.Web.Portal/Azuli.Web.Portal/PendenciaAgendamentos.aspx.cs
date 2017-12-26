@@ -391,10 +391,19 @@ namespace Azuli.Web.Portal
             dvPesquisaMorador.Visible = false;
             int bloco = Convert.ToInt32(Session["blocoSession"]);
             int apto = Convert.ToInt32( Session["aptoSession"]);
+            bool isEmailAll = false;
 
             string recebeEmail = buscaEmail(Convert.ToInt32(Session["blocoSession"]), Convert.ToInt32(Session["aptoSession"]));
 
-            bool isEmailAll = Regex.IsMatch(recebeEmail, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z", RegexOptions.IgnoreCase);
+            if (recebeEmail == null)
+            {
+                isEmailAll = false;
+            }
+            else
+            {
+                isEmailAll = Regex.IsMatch(recebeEmail, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z", RegexOptions.IgnoreCase);
+            }
+
             if (Session["status"] != null)
             {
                 switch ((Int32)Session["status"])
@@ -621,6 +630,11 @@ namespace Azuli.Web.Portal
             {
                 //Atualiza a reserva
                 //oAgenda.cancelaAgendamentoMorador(oAgendaModel.dataAgendamento, oApModel, oAgendaModel.salaoFesta, oAgendaModel.salaoChurrasco);
+                if (oAgendaModel.observacao == string.Empty || oAgendaModel.observacao == null)
+                {
+                    oAgendaModel.observacao = "Sem observações!";
+                }
+
                 oAgenda.cancelaAgendamentoMoradorObservation(oAgendaModel.dataAgendamento, oApModel, oAgendaModel.salaoFesta, oAgendaModel.salaoChurrasco, oAgendaModel.observacao);
               
                 Session.Remove("status");
@@ -781,10 +795,10 @@ namespace Azuli.Web.Portal
             {
                 oEnviaEmail.enviaEmailCancelamento(msgMorador.ToString(),"Cara morador(ª)", email.ToString());
             }
-            catch (Exception e)
+            catch 
             {
-                
-                throw e;
+
+                throw new Exception("Por algum motivo não possivel enviar e-mail sobre o cancelamento -> " + msgMorador.ToString());
             }
          
 

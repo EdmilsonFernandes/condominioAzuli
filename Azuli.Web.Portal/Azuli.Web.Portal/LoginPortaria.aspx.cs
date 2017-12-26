@@ -34,8 +34,8 @@ namespace Azuli.Web.Portal
              oProprietarioModel.senha = txtSenha.Text;
 
 
-
-             int valida = oProprietario.autenticaMorador(oAPmodel, oProprietarioModel);
+             oAPmodel.oProprietario = oProprietarioModel;
+             int valida = oProprietario.autenticaMorador(oAPmodel);
 
 
 

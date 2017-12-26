@@ -1,6 +1,8 @@
-﻿namespace Azuli.Web.Portal {
-    
-    
-    public partial class DSrecibo {
+﻿namespace Azuli.Web.Portal
+{
+
+
+    public partial class DSrecibo
+    {
     }
 }

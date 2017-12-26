@@ -1,0 +1,9 @@
+C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Database1\sql\debug\Azuli.Portal.Database.dacpac
+C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Database1\sql\debug\Azuli.Portal.Database.dll
+C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Database1\sql\debug\Azuli.Portal.Database.pdb
+C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Database1\obj\Debug\Model.xml
+C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Database1\obj\Debug\refactor.xml
+C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Database1\obj\Debug\postdeploy.sql
+C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Database1\obj\Debug\predeploy.sql
+C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Database1\obj\Debug\Azuli.Portal.Database.dll
+C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Database1\obj\Debug\Azuli.Portal.Database.pdb

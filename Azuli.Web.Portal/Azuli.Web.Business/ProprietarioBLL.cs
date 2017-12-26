@@ -12,13 +12,13 @@ namespace Azuli.Web.Business
 
         #region IProprietario Members
         ProprietarioDAO oPropriDAO = new ProprietarioDAO();
-        public int autenticaMorador(Model.ApartamentoModel ap, Model.ProprietarioModel apPro)
+        public int autenticaMorador(Model.ApartamentoModel ap)
         {
             try
             {
                
 
-                return oPropriDAO.autenticaMorador(ap, apPro);
+                return oPropriDAO.autenticaMorador(ap);
 
             }
             catch (Exception)
@@ -28,13 +28,13 @@ namespace Azuli.Web.Business
             }
         }
 
-        public Model.listProprietario populaProprietario(Model.ApartamentoModel ap, Model.ProprietarioModel apPro)
+        public Model.listProprietario populaProprietario(Model.ApartamentoModel ap)
         {
             try
             {
          
                 
-                return oPropriDAO.populaProprietario(ap, apPro);
+                return oPropriDAO.populaProprietario(ap);
 
             }
             catch (Exception e)
@@ -229,7 +229,13 @@ namespace Azuli.Web.Business
 
         #endregion
 
-       
-      
+
+
+
+
+        public listProprietario populaProprietario(ApartamentoModel ap, ProprietarioModel apPro)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

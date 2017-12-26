@@ -1,0 +1,2616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSchemaModel FileFormatVersion="1.2" SchemaVersion="2.4" DspName="Microsoft.Data.Tools.Schema.Sql.Sql100DatabaseSchemaProvider" CollationLcid="1033" CollationCaseSensitive="False" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+	<Header>
+		<CustomData Category="AnsiNulls">
+			<Metadata Name="AnsiNulls" Value="True" />
+		</CustomData>
+		<CustomData Category="QuotedIdentifier">
+			<Metadata Name="QuotedIdentifier" Value="True" />
+		</CustomData>
+		<CustomData Category="CompatibilityMode">
+			<Metadata Name="CompatibilityMode" Value="90" />
+		</CustomData>
+		<CustomData Category="Reference" Type="Assembly">
+			<Metadata Name="LogicalName" Value="Azuli.Portal.Database.dll" />
+			<Metadata Name="FileName" Value="C:\PROJETOEDMILSON\CONDOMINIOAZULI\AZULI.WEB.PORTAL\DATABASE1\OBJ\DEBUG\AZULI.PORTAL.DATABASE.DLL" />
+			<Metadata Name="AssemblyName" Value="Azuli.Portal.Database" />
+			<Metadata Name="PermissionSet" Value="SAFE" />
+			<Metadata Name="Owner" Value="" />
+			<Metadata Name="GenerateSqlClrDdl" Value="True" />
+			<Metadata Name="IsVisible" Value="True" />
+			<Metadata Name="IsModelAware" Value="True" />
+			<Metadata Name="SkipCreationIfEmpty" Value="True" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Database1\obj\Debug\Azuli.Portal.Database.pdb" />
+		</CustomData>
+		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
+	</Header>
+	<Model>
+		<Element Type="SqlDatabaseOptions">
+			<Property Name="Collation" Value="SQL_Latin1_General_CP1_CI_AS" />
+			<Property Name="IsAnsiNullDefaultOn" Value="True" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsAnsiWarningsOn" Value="True" />
+			<Property Name="IsArithAbortOn" Value="True" />
+			<Property Name="IsConcatNullYieldsNullOn" Value="True" />
+			<Property Name="IsTornPageProtectionOn" Value="False" />
+			<Property Name="IsFullTextEnabled" Value="True" />
+			<Property Name="CompatibilityMode" Value="90" />
+			<Property Name="PageVerifyMode" Value="3" />
+			<Relationship Name="DefaultFilegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[AGENDA]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[AGENDA].[DATA_AGENDAMENTO]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[AGENDA].[PROPRIETARIO_BLOCO]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[AGENDA].[PROPRIETARIO_AP]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[AGENDA].[SALAO_FESTA]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[char]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[AGENDA].[SALAO_CHURRASCO]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[char]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[AGENDA_MAE]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[AGENDA_MAE].[Data_AGENDAMENTO]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[AGENDA_MAE].[SALAO_FESTA]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[char]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[AGENDA_MAE].[SALAO_CHURRASCO]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[char]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[AGENDA_MAE].[Data_inclusao]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[ALTERA_SENHA]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+      
+      BEGIN
+      
+      UPDATE Proprietario SET PASSWORD = @NOVA_SENHA 
+        WHERE  PROPRIETARIO_AP = @PROPRIETARIO_AP
+              AND PROPRIETARIO_BLOCO = @PROPRIETARIO_BLOCO
+ 
+     
+ 
+      END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[PROPRIETARIO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[PROPRIETARIO].[PASSWORD]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ALTERA_SENHA].[@NOVA_SENHA]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[PROPRIETARIO].[PROPRIETARIO_AP]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ALTERA_SENHA].[@PROPRIETARIO_AP]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[PROPRIETARIO].[PROPRIETARIO_BLOCO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ALTERA_SENHA].[@PROPRIETARIO_BLOCO]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[ALTERA_SENHA].[@PROPRIETARIO_AP]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[ALTERA_SENHA].[@PROPRIETARIO_BLOCO]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[ALTERA_SENHA].[@NOVA_SENHA]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="336" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[ALTERA_SENHA]&#xD;&#xA;@PROPRIETARIO_AP INT,&#xD;&#xA;@PROPRIETARIO_BLOCO INT,&#xD;&#xA;@NOVA_SENHA VARCHAR(50)&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[APARTAMENTO]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[APARTAMENTO].[BLOCO]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[APARTAMENTO].[APARTAMENTO]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="3" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[AUTENTICA_MORADOR]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	
+	BEGIN
+	
+	SELECT @RETORNO = (SELECT COUNT(PROPRIETARIO_AP) FROM Proprietario 
+	WHERE  PROPRIETARIO_AP = @PROPRIETARIO_AP
+	AND PROPRIETARIO_BLOCO = @PROPRIETARIO_BLOCO
+	AND PASSWORD  =@SENHA)
+
+	END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[AUTENTICA_MORADOR].[@RETORNO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[PROPRIETARIO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[PROPRIETARIO].[PROPRIETARIO_AP]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AUTENTICA_MORADOR].[@PROPRIETARIO_AP]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[PROPRIETARIO].[PROPRIETARIO_BLOCO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AUTENTICA_MORADOR].[@PROPRIETARIO_BLOCO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[PROPRIETARIO].[PASSWORD]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AUTENTICA_MORADOR].[@SENHA]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[AUTENTICA_MORADOR].[@PROPRIETARIO_AP]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[AUTENTICA_MORADOR].[@PROPRIETARIO_BLOCO]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[AUTENTICA_MORADOR].[@SENHA]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[AUTENTICA_MORADOR].[@RETORNO]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="5" />
+				<Property Name="Length" Value="350" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="---&#xD;&#xA;CREATE PROCEDURE [dbo].[AUTENTICA_MORADOR]&#xD;&#xA;@PROPRIETARIO_AP INT,&#xD;&#xA;@PROPRIETARIO_BLOCO INT,&#xD;&#xA;@SENHA VARCHAR(50),&#xD;&#xA;@RETORNO INT OUTPUT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[BUSCA_MORADOR_ADMIN]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	
+	BEGIN
+		
+	SELECT NOME_PROPRIETARIO1,NOME_PROPRIETARIO2,PROPRIETARIO_BLOCO,PROPRIETARIO_AP FROM Proprietario 
+	WHERE  PROPRIETARIO_AP = @PROPRIETARIO_AP
+	AND PROPRIETARIO_BLOCO = @PROPRIETARIO_BLOCO
+	END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[PROPRIETARIO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[PROPRIETARIO].[NOME_PROPRIETARIO1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[PROPRIETARIO].[NOME_PROPRIETARIO2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[PROPRIETARIO].[PROPRIETARIO_BLOCO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[PROPRIETARIO].[PROPRIETARIO_AP]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[BUSCA_MORADOR_ADMIN].[@PROPRIETARIO_AP]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[BUSCA_MORADOR_ADMIN].[@PROPRIETARIO_BLOCO]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[BUSCA_MORADOR_ADMIN].[@PROPRIETARIO_AP]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[BUSCA_MORADOR_ADMIN].[@PROPRIETARIO_BLOCO]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="311" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[BUSCA_MORADOR_ADMIN]&#xD;&#xA;@PROPRIETARIO_AP INT,&#xD;&#xA;@PROPRIETARIO_BLOCO INT&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[CADASTRA_MORADOR_APARTAMENTO]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+Declare @count int 
+
+select @count = count(bloco) from APARTAMENTO where BLOCO =@BLOCO and APARTAMENTO = @AP
+
+	
+	
+	 if(@count = 0)
+		Begin
+			insert into APARTAMENTO values (@BLOCO,@AP)
+			insert into PROPRIETARIO values (@morador1,@morador2,@BLOCO,@AP,@senha)
+			
+			select @retorno = @count
+		End
+	  
+	  Else
+       
+       Begin
+       
+       select @retorno = @count
+       
+       End]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[APARTAMENTO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[APARTAMENTO].[BLOCO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CADASTRA_MORADOR_APARTAMENTO].[@BLOCO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[APARTAMENTO].[APARTAMENTO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CADASTRA_MORADOR_APARTAMENTO].[@AP]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[PROPRIETARIO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CADASTRA_MORADOR_APARTAMENTO].[@morador1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CADASTRA_MORADOR_APARTAMENTO].[@morador2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CADASTRA_MORADOR_APARTAMENTO].[@senha]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CADASTRA_MORADOR_APARTAMENTO].[@retorno]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CADASTRA_MORADOR_APARTAMENTO].[@BLOCO]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CADASTRA_MORADOR_APARTAMENTO].[@AP]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CADASTRA_MORADOR_APARTAMENTO].[@morador1]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="20" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CADASTRA_MORADOR_APARTAMENTO].[@morador2]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="20" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CADASTRA_MORADOR_APARTAMENTO].[@senha]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CADASTRA_MORADOR_APARTAMENTO].[@retorno]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="583" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[CADASTRA_MORADOR_APARTAMENTO]&#xD;&#xA;@BLOCO INT,&#xD;&#xA;@AP INT ,&#xD;&#xA;@morador1 varchar(20),&#xD;&#xA;@morador2 varchar(20),&#xD;&#xA;@senha varchar(50),&#xD;&#xA;@retorno int output&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[CADASTRA_RESERVA]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+begin
+	Begin
+		DECLARE  @DATA_AUXILIAR DATETIME 
+		SELECT @DATA_AUXILIAR = DATA_AGENDAMENTO FROM AGENDA 
+		WHERE DATA_AGENDAMENTO = @DATA_AGENDA
+		
+		
+		
+	End
+	
+	
+	Begin
+	if ISNULL(@DATA_AUXILIAR,0) = 0
+		begin
+		DECLARE @FESTAAX CHAR
+		DECLARE @SALAO CHAR 
+		
+		SELECT @FESTAAX = SALAO_FESTA FROM AGENDA 
+		WHERE DATA_AGENDAMENTO = @DATA_AGENDA
+		
+		SELECT @SALAO = SALAO_CHURRASCO FROM AGENDA 
+		WHERE DATA_AGENDAMENTO = @DATA_AGENDA
+		
+		if(@FESTAAX = 'S' and @SALAO <> 'N')
+		 begin
+			update AGENDA set SALAO_CHURRASCO = @CHURRAS
+			WHERE DATA_AGENDAMENTO = @DATA_AGENDA
+		 end
+		 
+		 if(@FESTAAX = 'N' and @SALAO <> 'S')
+		 begin
+			update AGENDA set SALAO_FESTA = @SALAO
+			WHERE DATA_AGENDAMENTO = @DATA_AGENDA
+		 end
+		
+		
+		end
+	End
+	
+	
+end]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[char]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[char]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA].[DATA_AGENDAMENTO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CADASTRA_RESERVA].[@DATA_AGENDA]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA].[SALAO_FESTA]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA].[SALAO_CHURRASCO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CADASTRA_RESERVA].[@CHURRAS]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CADASTRA_RESERVA].[@DATA_AGENDA]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CADASTRA_RESERVA].[@BLOCO]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CADASTRA_RESERVA].[@AP]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CADASTRA_RESERVA].[@FESTA]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[char]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CADASTRA_RESERVA].[@CHURRAS]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[char]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="924" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[CADASTRA_RESERVA]&#xD;&#xA;@DATA_AGENDA DATETIME,&#xD;&#xA;@BLOCO INT,&#xD;&#xA;@AP INT ,&#xD;&#xA;@FESTA CHAR(10),&#xD;&#xA;@CHURRAS CHAR(10)&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[CADASTRA_RESERVA_MORADOR]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	Declare @AUX DATETIME
+	
+	
+	select @AUX =  data_agendamento  from agenda where data_agendamento = @DATA_AGENDA
+	
+	
+	insert into AGENDA values (@DATA_AGENDA,@BLOCO,@AP,@FESTA,@CHURRAS)
+	
+	if ISNULL(@AUX,0) = 0
+		 
+		begin
+		
+		
+			insert into AGENDA_MAE values (@DATA_AGENDA,@FESTA,@CHURRAS, GETDATE())
+        
+		End
+    Else 		
+		Begin 
+	
+		  IF @FESTA = 'S' 
+		    Begin 
+			update AGENDA_MAE SET SALAO_FESTA = @FESTA
+			where Data_AGENDAMENTO = @DATA_AGENDA
+			End
+		  IF @CHURRAS = 'S' 
+		    Begin 
+				update AGENDA_MAE SET SALAO_CHURRASCO = @CHURRAS
+				where Data_AGENDAMENTO = @DATA_AGENDA
+			 End
+		 
+		 End]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA].[DATA_AGENDAMENTO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CADASTRA_RESERVA_MORADOR].[@DATA_AGENDA]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CADASTRA_RESERVA_MORADOR].[@BLOCO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CADASTRA_RESERVA_MORADOR].[@AP]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CADASTRA_RESERVA_MORADOR].[@FESTA]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CADASTRA_RESERVA_MORADOR].[@CHURRAS]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA_MAE]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA_MAE].[SALAO_FESTA]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA_MAE].[Data_AGENDAMENTO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA_MAE].[SALAO_CHURRASCO]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CADASTRA_RESERVA_MORADOR].[@DATA_AGENDA]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CADASTRA_RESERVA_MORADOR].[@BLOCO]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CADASTRA_RESERVA_MORADOR].[@AP]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CADASTRA_RESERVA_MORADOR].[@FESTA]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[char]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CADASTRA_RESERVA_MORADOR].[@CHURRAS]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[char]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="790" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[CADASTRA_RESERVA_MORADOR]&#xD;&#xA;@DATA_AGENDA DATETIME,&#xD;&#xA;@BLOCO INT,&#xD;&#xA;@AP INT ,&#xD;&#xA;@FESTA CHAR(10),&#xD;&#xA;@CHURRAS CHAR(10)&#xD;&#xA;&#xD;&#xA;&#x9;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[LANCAMENTO_OCORRENCIA]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LANCAMENTO_OCORRENCIA].[OCORRENCIA]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LANCAMENTO_OCORRENCIA].[DATA_OCORRENCIA]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LANCAMENTO_OCORRENCIA].[STATUS]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="1" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[char]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LANCAMENTO_OCORRENCIA].[DESCRICAO]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="250" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LANCAMENTO_OCORRENCIA].[BLOCO]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LANCAMENTO_OCORRENCIA].[AP]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LANCAMENTO_OCORRENCIA].[CODIGO_OCORRENCIA]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LANCAMENTO_OCORRENCIA].[DATA_FINALIZACAO]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[LANCAMENTO_OCORRENCIA].[DATA_CANCELAMENTO]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="4" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[LISTA_CHURRAS_MORADOR]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	
+	SELECT PROPRIETARIO_BLOCO,PROPRIETARIO_AP, SALAO_CHURRASCO FROM AGENDA 
+	WHERE PROPRIETARIO_BLOCO = @BLOCO
+	AND PROPRIETARIO_AP  = @AP
+	AND SALAO_CHURRASCO = 'S'
+	AND YEAR(DATA_AGENDAMENTO) = @ANO
+	AND MONTH(DATA_AGENDAMENTO) = @MES
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[AGENDA]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA].[PROPRIETARIO_BLOCO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA].[PROPRIETARIO_AP]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA].[SALAO_CHURRASCO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LISTA_CHURRAS_MORADOR].[@BLOCO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LISTA_CHURRAS_MORADOR].[@AP]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA].[DATA_AGENDAMENTO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LISTA_CHURRAS_MORADOR].[@ANO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LISTA_CHURRAS_MORADOR].[@MES]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[LISTA_CHURRAS_MORADOR].[@BLOCO]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[LISTA_CHURRAS_MORADOR].[@AP]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[LISTA_CHURRAS_MORADOR].[@ANO]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="12" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[LISTA_CHURRAS_MORADOR].[@MES]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="12" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="365" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[LISTA_CHURRAS_MORADOR]&#xD;&#xA;@BLOCO INT,&#xD;&#xA;@AP INT,&#xD;&#xA;@ANO VARCHAR(12),&#xD;&#xA;@MES VARCHAR(12)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[LISTA_EVENTOS]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	
+	SELECT * FROM AGENDA_MAE
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[AGENDA_MAE]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="84" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[LISTA_EVENTOS]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[LISTA_EVENTOS_BY_DATA]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	
+	SELECT * FROM AGENDA
+	WHERE DATA_AGENDAMENTO = @DATA_AGENDA
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[AGENDA]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA].[DATA_AGENDAMENTO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LISTA_EVENTOS_BY_DATA].[@DATA_AGENDA]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[LISTA_EVENTOS_BY_DATA].[@DATA_AGENDA]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="151" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[LISTA_EVENTOS_BY_DATA]&#xD;&#xA;@DATA_AGENDA DATETIME&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[LISTA_SALAO_FESTA_MORADOR]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	
+	SELECT PROPRIETARIO_BLOCO,PROPRIETARIO_AP, SALAO_CHURRASCO FROM AGENDA 
+	WHERE PROPRIETARIO_BLOCO = @BLOCO
+	AND PROPRIETARIO_AP  = @AP
+	AND salao_festa = 'S'
+	AND YEAR(DATA_AGENDAMENTO) = @ANO
+	AND MONTH(DATA_AGENDAMENTO) = @MES
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[AGENDA]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA].[PROPRIETARIO_BLOCO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA].[PROPRIETARIO_AP]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA].[SALAO_CHURRASCO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LISTA_SALAO_FESTA_MORADOR].[@BLOCO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LISTA_SALAO_FESTA_MORADOR].[@AP]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA].[SALAO_FESTA]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA].[DATA_AGENDAMENTO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LISTA_SALAO_FESTA_MORADOR].[@ANO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[LISTA_SALAO_FESTA_MORADOR].[@MES]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[LISTA_SALAO_FESTA_MORADOR].[@BLOCO]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[LISTA_SALAO_FESTA_MORADOR].[@AP]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[LISTA_SALAO_FESTA_MORADOR].[@ANO]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="12" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[LISTA_SALAO_FESTA_MORADOR].[@MES]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="12" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="365" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[LISTA_SALAO_FESTA_MORADOR]&#xD;&#xA;@BLOCO INT,&#xD;&#xA;@AP INT,&#xD;&#xA;@ANO VARCHAR(12),&#xD;&#xA;@MES VARCHAR(12)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[MENSAGEM_MORADOR]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[MENSAGEM_MORADOR].[ID_MSG]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[MENSAGEM_MORADOR].[BLOCO]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[MENSAGEM_MORADOR].[APARTAMENTO]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[MENSAGEM_MORADOR].[MENSAGEM]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="3000" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[MENSAGEM_MORADOR].[STATUS]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[MENSAGEM_MORADOR].[ATIVO]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="2" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[char]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[MENSAGEM_MORADOR].[DATAINICIOVIGENCIA]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[MENSAGEM_MORADOR].[DATAFIMVIGENCIA]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="5" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[OCORRENCIA]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[OCORRENCIA].[CODIGO]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[OCORRENCIA].[DESCRICAO]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[OCORRENCIA].[STATUS]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[char]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[OCORRENCIA].[DATA_CADASTRO]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="6" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[PARAMETRO_OCORRENCIA]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[PARAMETRO_OCORRENCIA].[SEQUENCIA_LANCAMENTO]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_APARTAMENTO]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[APARTAMENTO].[BLOCO]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[APARTAMENTO].[APARTAMENTO]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[APARTAMENTO]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="3" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_MENSAGEM_MORADOR]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[MENSAGEM_MORADOR].[ID_MSG]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[MENSAGEM_MORADOR].[BLOCO]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[MENSAGEM_MORADOR].[APARTAMENTO]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[MENSAGEM_MORADOR]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="5" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_OCORRENCIA]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[LANCAMENTO_OCORRENCIA].[OCORRENCIA]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[LANCAMENTO_OCORRENCIA].[BLOCO]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[LANCAMENTO_OCORRENCIA].[AP]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[LANCAMENTO_OCORRENCIA].[CODIGO_OCORRENCIA]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[LANCAMENTO_OCORRENCIA]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="4" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_OCORRENCIA_1]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[OCORRENCIA].[CODIGO]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[OCORRENCIA]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="6" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_PROPRIETARIO]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[PROPRIETARIO].[PROPRIETARIO_BLOCO]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[PROPRIETARIO].[PROPRIETARIO_AP]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[PROPRIETARIO]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="7" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[POPULA_MORADOR]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	
+	BEGIN
+		
+	SELECT NOME_PROPRIETARIO1,NOME_PROPRIETARIO2,PROPRIETARIO_BLOCO,PROPRIETARIO_AP FROM Proprietario 
+	WHERE  PROPRIETARIO_AP = @PROPRIETARIO_AP
+	AND PROPRIETARIO_BLOCO = @PROPRIETARIO_BLOCO
+	AND PASSWORD  = @SENHA
+
+	END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[PROPRIETARIO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[PROPRIETARIO].[NOME_PROPRIETARIO1]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[PROPRIETARIO].[NOME_PROPRIETARIO2]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[PROPRIETARIO].[PROPRIETARIO_BLOCO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[PROPRIETARIO].[PROPRIETARIO_AP]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[POPULA_MORADOR].[@PROPRIETARIO_AP]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[POPULA_MORADOR].[@PROPRIETARIO_BLOCO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[PROPRIETARIO].[PASSWORD]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[POPULA_MORADOR].[@SENHA]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[POPULA_MORADOR].[@PROPRIETARIO_AP]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[POPULA_MORADOR].[@PROPRIETARIO_BLOCO]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[POPULA_MORADOR].[@SENHA]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="352" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[POPULA_MORADOR]&#xD;&#xA;@PROPRIETARIO_AP INT,&#xD;&#xA;@PROPRIETARIO_BLOCO INT,&#xD;&#xA;@SENHA VARCHAR(50)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[PROPRIETARIO]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[PROPRIETARIO].[NOME_PROPRIETARIO1]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[PROPRIETARIO].[NOME_PROPRIETARIO2]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[PROPRIETARIO].[PROPRIETARIO_BLOCO]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[PROPRIETARIO].[PROPRIETARIO_AP]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[PROPRIETARIO].[PASSWORD]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="7" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[RESERVA_MORADOR]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+ BEGIN
+	select * from agenda
+	where Proprietario_ap = @AP
+	and proprietario_bloco =@BLOCO
+	and salao_festa = 'S'
+	and salao_churrasco = 'S'
+	and YEAR(data_agendamento) = @ANO
+	and MONTH(data_agendamento) = @MES
+ END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[AGENDA]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA].[PROPRIETARIO_AP]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[RESERVA_MORADOR].[@AP]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA].[PROPRIETARIO_BLOCO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[RESERVA_MORADOR].[@BLOCO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA].[SALAO_FESTA]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA].[SALAO_CHURRASCO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA].[DATA_AGENDAMENTO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[RESERVA_MORADOR].[@ANO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[RESERVA_MORADOR].[@MES]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[RESERVA_MORADOR].[@AP]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[RESERVA_MORADOR].[@BLOCO]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[RESERVA_MORADOR].[@ANO]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="12" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[RESERVA_MORADOR].[@MES]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="12" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="329" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[RESERVA_MORADOR]&#xD;&#xA;@AP INT,&#xD;&#xA;@BLOCO INT,&#xD;&#xA;@ANO VARCHAR(12),&#xD;&#xA;@MES VARCHAR(12)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[RESERVA_MORADOR_CHURRAS]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+ BEGIN
+	select * from agenda
+	where Proprietario_ap = @AP
+	and proprietario_bloco =@BLOCO
+	and salao_churrasco = 'S'
+	and YEAR(data_agendamento) = @ANO
+	and MONTH(data_agendamento) = @MES
+	order by DATA_AGENDAMENTO asc
+ END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[AGENDA]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA].[PROPRIETARIO_AP]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[RESERVA_MORADOR_CHURRAS].[@AP]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA].[PROPRIETARIO_BLOCO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[RESERVA_MORADOR_CHURRAS].[@BLOCO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA].[SALAO_CHURRASCO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA].[DATA_AGENDAMENTO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[RESERVA_MORADOR_CHURRAS].[@ANO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[RESERVA_MORADOR_CHURRAS].[@MES]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[RESERVA_MORADOR_CHURRAS].[@AP]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[RESERVA_MORADOR_CHURRAS].[@BLOCO]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[RESERVA_MORADOR_CHURRAS].[@ANO]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="12" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[RESERVA_MORADOR_CHURRAS].[@MES]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="12" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="345" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[RESERVA_MORADOR_CHURRAS]&#xD;&#xA;@AP INT,&#xD;&#xA;@BLOCO INT,&#xD;&#xA;@ANO VARCHAR(12),&#xD;&#xA;@MES VARCHAR(12)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[RESERVA_MORADOR_FESTA]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+ BEGIN
+	select * from agenda
+	where Proprietario_ap = @AP
+	and proprietario_bloco =@BLOCO
+	and salao_festa = 'S'
+	and YEAR(data_agendamento) = @ANO
+	and MONTH(data_agendamento) = @MES
+	order by DATA_AGENDAMENTO asc
+ END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[AGENDA]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA].[PROPRIETARIO_AP]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[RESERVA_MORADOR_FESTA].[@AP]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA].[PROPRIETARIO_BLOCO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[RESERVA_MORADOR_FESTA].[@BLOCO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA].[SALAO_FESTA]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AGENDA].[DATA_AGENDAMENTO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[RESERVA_MORADOR_FESTA].[@ANO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[RESERVA_MORADOR_FESTA].[@MES]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[RESERVA_MORADOR_FESTA].[@AP]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[RESERVA_MORADOR_FESTA].[@BLOCO]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[RESERVA_MORADOR_FESTA].[@ANO]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="12" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[RESERVA_MORADOR_FESTA].[@MES]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="12" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="339" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[RESERVA_MORADOR_FESTA]&#xD;&#xA;@AP INT,&#xD;&#xA;@BLOCO INT,&#xD;&#xA;@ANO VARCHAR(12),&#xD;&#xA;@MES VARCHAR(12)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[VALIDA_MORADOR_CADASTRO]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	BEGIN
+	
+	SELECT COUNT(PROPRIETARIO_AP) FROM Proprietario
+	WHERE  PROPRIETARIO_AP = @PROPRIETARIO_AP
+	AND PROPRIETARIO_BLOCO = @PROPRIETARIO_BLOCO
+	
+	END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[PROPRIETARIO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[PROPRIETARIO].[PROPRIETARIO_AP]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VALIDA_MORADOR_CADASTRO].[@PROPRIETARIO_AP]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[PROPRIETARIO].[PROPRIETARIO_BLOCO]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[VALIDA_MORADOR_CADASTRO].[@PROPRIETARIO_BLOCO]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[VALIDA_MORADOR_CADASTRO].[@PROPRIETARIO_AP]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[VALIDA_MORADOR_CADASTRO].[@PROPRIETARIO_BLOCO]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="261" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[VALIDA_MORADOR_CADASTRO]&#xD;&#xA;@PROPRIETARIO_AP INT,&#xD;&#xA;@PROPRIETARIO_BLOCO INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+	</Model>
+</DataSchemaModel>

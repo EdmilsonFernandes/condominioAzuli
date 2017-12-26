@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+    <PostConversionRemoveFromScc>
+    </PostConversionRemoveFromScc>
+    <PostConversionAddToScc>
+    </PostConversionAddToScc>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>Azuli.Portal.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql100DatabaseSchemaProvider</DSP>
+    <GenerateDac>False</GenerateDac>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <ShowWizard>False</ShowWizard>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <IncludeSchemaNameInFileName>False</IncludeSchemaNameInFileName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DacApplicationName>$(MSBuildProjectName)</DacApplicationName>
+    <DacVersion>1.0.0.0</DacVersion>
+    <DacDescription>
+    </DacDescription>
+    <RootNamespace>Database1</RootNamespace>
+    <DefaultSchema>dbo</DefaultSchema>
+    <PreviousProjectVersion>4.1</PreviousProjectVersion>
+    <ValidateCasingOnIdentifiers>False</ValidateCasingOnIdentifiers>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4b57fb20-5931-48cb-8e0f-7b405ffeb04b}</ProjectGuid>
+    <GenerateDatabaseFile>False</GenerateDatabaseFile>
+    <GenerateCreateScript>False</GenerateCreateScript>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <CompatibilityMode>90</CompatibilityMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>.\sql\release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetDatabase>
+    </TargetDatabase>
+    <TreatTSqlWarningsAsErrors>False</TreatTSqlWarningsAsErrors>
+    <SuppressTSqlWarnings />
+    <DacDatabaseCollation>SQL_Latin1_General_CP1_CI_AS</DacDatabaseCollation>
+    <ValidatePolicy>True</ValidatePolicy>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\sql\debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetDatabase>
+    </TargetDatabase>
+    <TreatTSqlWarningsAsErrors>False</TreatTSqlWarningsAsErrors>
+    <SuppressTSqlWarnings />
+    <DacDatabaseCollation>SQL_Latin1_General_CP1_CI_AS</DacDatabaseCollation>
+    <ValidatePolicy>True</ValidatePolicy>
+  </PropertyGroup>
+  <Import Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" Condition="'$(SQLDBExtensionsRefPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" Condition="'$(SQLDBExtensionsRefPath)' == ''" />
+  <!--Import the settings-->
+  <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="Schema Objects\" />
+    <Folder Include="Schema Objects\Schemas Azuli" />
+    <Folder Include="Schema Objects\Schemas Azuli\dbo" />
+    <Folder Include="Schema Objects\Schemas Azuli\dbo\Programmability" />
+    <Folder Include="Schema Objects\Schemas Azuli\dbo\Programmability\Stored Procedures" />
+    <Folder Include="Schema Objects\Schemas Azuli\dbo\Tables" />
+    <Folder Include="Schema Objects\Schemas Azuli\dbo\Tables\Constraints" />
+    <Folder Include="Schema Objects\Schemas Azuli\dbo\Tables\Indexes" />
+    <Folder Include="Schema Objects\Schemas Azuli\dbo\Tables\Keys" />
+    <Folder Include="Schema Objects\Schemas Azuli\dbo\Tables\Triggers" />
+    <Folder Include="Schema Objects\Schemas Azuli\dbo\Tables\Statistics" />
+  </ItemGroup>
+  <ItemGroup>
+    <BuildContributorArgument Include="OutDir=$(OutDir)" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Tables\Keys\FK_PROPRIETARIO_APARTAMENTO.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Tables\Keys\FK_MENSAGEM_MORADOR_PROPRIETARIO.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Tables\Keys\FK_OCORRENCIA_APARTAMENTO.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Tables\Keys\FK_LANCAMENTO_OCORRENCIA_OCORRENCIA.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Tables\Keys\FK_AGENDA_APARTAMENTO.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Programmability\Stored Procedures\ALTERA_SENHA.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Programmability\Stored Procedures\AUTENTICA_MORADOR.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Programmability\Stored Procedures\BUSCA_MORADOR_ADMIN.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Programmability\Stored Procedures\CADASTRA_MORADOR_APARTAMENTO.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Programmability\Stored Procedures\CADASTRA_RESERVA.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Programmability\Stored Procedures\CADASTRA_RESERVA_MORADOR.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Programmability\Stored Procedures\POPULA_MORADOR.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Programmability\Stored Procedures\LISTA_EVENTOS_BY_DATA.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Programmability\Stored Procedures\LISTA_SALAO_FESTA_MORADOR.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Programmability\Stored Procedures\RESERVA_MORADOR.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Programmability\Stored Procedures\RESERVA_MORADOR_CHURRAS.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Programmability\Stored Procedures\RESERVA_MORADOR_FESTA.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Programmability\Stored Procedures\VALIDA_MORADOR_CADASTRO.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Programmability\Stored Procedures\LISTA_CHURRAS_MORADOR.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Programmability\Stored Procedures\LISTA_EVENTOS.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Tables\MENSAGEM_MORADOR.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Tables\PROPRIETARIO.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Tables\LANCAMENTO_OCORRENCIA.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Tables\AGENDA.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Tables\AGENDA_MAE.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Tables\APARTAMENTO.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Tables\OCORRENCIA.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas Azuli\dbo\Tables\PARAMETRO_OCORRENCIA.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Schema Objects\Schemas Azuli\dbo\Programmability\Stored Procedures\CADASTRA_OCORRENCIA.sql">
+      <SubType>NotInBuild</SubType>
+    </None>
+    <None Include="Schema Objects\Schemas Azuli\dbo\Tables\Area.sql">
+      <SubType>NotInBuild</SubType>
+    </None>
+    <None Include="Schema Objects\Schemas Azuli\dbo\Tables\FormaAgenda.sql">
+      <SubType>NotInBuild</SubType>
+    </None>
+    <None Include="Schema Objects\Schemas Azuli\dbo\Tables\AgendaArea.sql">
+      <SubType>NotInBuild</SubType>
+    </None>
+    <None Include="Schema Objects\Schemas Azuli\dbo\Programmability\Stored Procedures\CANCELA_RESERVA_MORADOR.sql">
+      <SubType>NotInBuild</SubType>
+    </None>
+    <None Include="Schema Objects\Schemas Azuli\dbo\Tables\HISTORICO_CANCELAMENTO.sql">
+      <SubType>NotInBuild</SubType>
+    </None>
+  </ItemGroup>
+</Project>

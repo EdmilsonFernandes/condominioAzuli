@@ -53,11 +53,11 @@ namespace Azuli.Web.Portal.Util
                       cliente.Send(msgErr);
 
                   }
-                  catch (Exception e)
+                  catch 
                   {
 
                       
-                    throw e;
+                    throw new Exception("Não foi possivel enviar e-mail de acesso para " + emailMorador);
                   }
                 
              }

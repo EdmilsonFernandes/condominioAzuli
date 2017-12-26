@@ -75,3 +75,16 @@ C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli
 C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.dll
 C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.pdb
 C:\Desenvolvimento\CondominioAzuliGit\condominioAzuliBash\Azuli.Web.Portal\Azuli.Web.Portal\bin\log4net.dll
+C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Portal.dll
+C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Portal.pdb
+C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Crystal.Relatorios.dll
+C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Business.dll
+C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Model.dll
+C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.DAO.dll
+C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Crystal.Relatorios.pdb
+C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Business.pdb
+C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Model.pdb
+C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.DAO.pdb
+C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.csprojResolveAssemblyReference.cache
+C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.dll
+C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.pdb

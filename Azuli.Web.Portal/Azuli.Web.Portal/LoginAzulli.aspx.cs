@@ -108,17 +108,19 @@ namespace Azuli.Web.Portal.Account
             Session["Bloco"] = Convert.ToInt32(drpBloco.Text);
 
 
+            oAPmodel.oProprietario = oProprietarioModel; 
 
-            int valida = oProprietario.autenticaMorador(oAPmodel, oProprietarioModel);
 
+            int valida = oProprietario.autenticaMorador(oAPmodel);
 
+            
 
 
             if (valida != 0)
             {
 
 
-                foreach (var item in oProprietario.populaProprietario(oAPmodel, oProprietarioModel))
+                foreach (var item in oProprietario.populaProprietario(oAPmodel))
                 {
                     Session["AP"] = item.ap.apartamento;
                     Session["Bloco"] = item.ap.bloco;
@@ -140,7 +142,7 @@ namespace Azuli.Web.Portal.Account
                     if (Session["AP"].ToString() != "301" && Session["Bloco"].ToString() != "6")
                     {
                         Util.SendMail oEmail = new SendMail();
-                        oEmail.enviaSenha("Acesso feito com sucesso para o apartamento/bloco " + Session["AP"].ToString() + " - " + Session["Bloco"].ToString(), "Acessos", "edmls@ig.com.br", 0);
+                        oEmail.enviaSenha("Acesso feito com sucesso para o apartamento/bloco " + Session["AP"].ToString() + " - " + Session["Bloco"].ToString(), "Acessos", "edmls2008@gmail.com", 0);
                         logger.Info("Acesso feito com sucesso para o apartamento/bloco " + Session["AP"].ToString() + " - " + Session["Bloco"].ToString());
                         Response.Redirect("~/paginaInicialMoradores.aspx");
                     }

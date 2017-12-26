@@ -9,7 +9,7 @@ namespace Azuli.Web.DAO.Interfaces
 {
     public interface IProprietario
     {
-        int autenticaMorador(ApartamentoModel ap, ProprietarioModel apPro);
+        int autenticaMorador(ApartamentoModel ap);
         listApartamento listaAp(DataTable dt);
         listProprietario populaProprietario(ApartamentoModel ap, ProprietarioModel apPro);
         listProprietario BuscaMoradorAdmin(ApartamentoModel ap);

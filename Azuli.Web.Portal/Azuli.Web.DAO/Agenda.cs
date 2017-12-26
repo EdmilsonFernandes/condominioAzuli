@@ -528,6 +528,10 @@ namespace Azuli.Web.DAO
 
                 oAgendaModel.ap.oProprietario = new ProprietarioModel();
 
+                if (dr.Table.Columns.Contains("TELEFONE") && !Convert.IsDBNull(dr["TELEFONE"]))
+                    oAgendaModel.ap.oProprietario.telefone = dr["TELEFONE"].ToString();
+
+
                 if (dr.Table.Columns.Contains("NOME_PROPRIETARIO1") && !Convert.IsDBNull(dr["NOME_PROPRIETARIO1"]))
                     oAgendaModel.ap.oProprietario.proprietario1 = dr["NOME_PROPRIETARIO1"].ToString();
 

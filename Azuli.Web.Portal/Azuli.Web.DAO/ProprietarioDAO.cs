@@ -15,19 +15,19 @@ namespace Azuli.Web.DAO
       
         #region IProprietario Members
 
-        public int autenticaMorador(Model.ApartamentoModel ap, Model.ProprietarioModel apPro)
+        public int autenticaMorador(Model.ApartamentoModel ap)
         {
 
             string clausulaSQL = "AUTENTICA_MORADOR";
 
-            populaProprietario(ap, apPro);
+            populaProprietario(ap);
 
             try
             {
                 SqlCommand comandoSQL = new SqlCommand(clausulaSQL);
                 comandoSQL.Parameters.AddWithValue("@PROPRIETARIO_AP", ap.apartamento);
                 comandoSQL.Parameters.AddWithValue("@PROPRIETARIO_BLOCO", ap.bloco);
-                comandoSQL.Parameters.AddWithValue("@SENHA", apPro.senha);
+                comandoSQL.Parameters.AddWithValue("@SENHA", ap.oProprietario.senha);
                 SqlParameter retornoLogin = new SqlParameter("@RETORNO", SqlDbType.Int);
                 retornoLogin.Direction = ParameterDirection.Output;
                 comandoSQL.Parameters.Add(retornoLogin);
@@ -63,6 +63,8 @@ namespace Azuli.Web.DAO
                 //comandoSQL.Parameters.AddWithValue("@MORADOR2", ap.proprietario2);
                 comandoSQL.Parameters.AddWithValue("@email", ap.email);
                 comandoSQL.Parameters.AddWithValue("@senha", ap.senha);
+                comandoSQL.Parameters.AddWithValue("@telefone", ap.telefone);
+                comandoSQL.Parameters.AddWithValue("@proprietarioImovel", ap.proprietarioImovel);
                 SqlParameter retornoCadastro = new SqlParameter("@RETORNO", SqlDbType.Int);
                 retornoCadastro.Direction = ParameterDirection.Output;
                 comandoSQL.Parameters.Add(retornoCadastro);
@@ -246,7 +248,7 @@ namespace Azuli.Web.DAO
 
 
 
-        public listProprietario populaProprietario(ApartamentoModel ap,ProprietarioModel apPro)
+        public listProprietario populaProprietario(ApartamentoModel ap)
         {
             string clausulaSQL = "POPULA_MORADOR";
 
@@ -256,8 +258,7 @@ namespace Azuli.Web.DAO
                 SqlCommand comandoSQL = new SqlCommand(clausulaSQL);
                 comandoSQL.Parameters.AddWithValue("@PROPRIETARIO_AP", ap.apartamento);
                 comandoSQL.Parameters.AddWithValue("@PROPRIETARIO_BLOCO", ap.bloco);
-                comandoSQL.Parameters.AddWithValue("@SENHA", apPro.senha);
-
+                comandoSQL.Parameters.AddWithValue("@SENHA", ap.oProprietario.senha);
                 DataTable tbProprietario = new DataTable();
 
                 tbProprietario = ExecutaQuery(comandoSQL);
@@ -450,6 +451,61 @@ namespace Azuli.Web.DAO
 #endregion
 
 
-      
+
+
+        int Interfaces.IProprietario.autenticaMorador(ApartamentoModel ap)
+        {
+            throw new NotImplementedException();
+        }
+
+        listProprietario Interfaces.IProprietario.populaProprietario(ApartamentoModel ap, ProprietarioModel apPro)
+        {
+            throw new NotImplementedException();
+        }
+
+        listProprietario Interfaces.IProprietario.BuscaMoradorAdmin(ApartamentoModel ap)
+        {
+            throw new NotImplementedException();
+        }
+
+        int Interfaces.IProprietario.CadastrarApartamentoMorador(ProprietarioModel ap)
+        {
+            throw new NotImplementedException();
+        }
+
+        void Interfaces.IProprietario.alteraSenha(ProprietarioModel oProprietario)
+        {
+            throw new NotImplementedException();
+        }
+
+        void Interfaces.IProprietario.cadastraOcorrencia(LancamentoOcorrenciaModel olacamento)
+        {
+            throw new NotImplementedException();
+        }
+
+        listProprietario Interfaces.IProprietario.recuperaSenhaMorador(ProprietarioModel ap)
+        {
+            throw new NotImplementedException();
+        }
+
+        void Interfaces.IProprietario.liberaAcesso(ApartamentoModel ap)
+        {
+            throw new NotImplementedException();
+        }
+
+        listProprietario Interfaces.IProprietario.enviaCrendencialAcesso(ApartamentoModel oPropri)
+        {
+            throw new NotImplementedException();
+        }
+
+        listProprietario Interfaces.IProprietario.PesquisaMorador(string tipo_busca, string pesquisa_nome, ApartamentoModel ap)
+        {
+            throw new NotImplementedException();
+        }
+
+        string Interfaces.IProprietario.BuscaEmailMorador(ApartamentoModel ap)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
