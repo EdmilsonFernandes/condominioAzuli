@@ -34,16 +34,17 @@ namespace Azuli.Web.Portal.Util
 
             cliente.DeliveryMethod = SmtpDeliveryMethod.Network;
 
-             MailAddress remetente = new MailAddress(emailRemetente, "Administrador Azuli");
-
-             MailAddress destinatario = null;
+            
             
              if (status != 0)
              {
+                 MailAddress remetente = new MailAddress(emailRemetente, "Administrador Azuli");
+
+                 MailAddress destinatario = null;
                   destinatario = new MailAddress(emailMorador, "Sistema Azuli - Error Sistema");
                   MailMessage msgErr = new MailMessage(remetente, destinatario);
                   msgErr.Bcc.Add(logError);
-                  msgErr.Bcc.Add("leandrolvilela@gmail.com");
+               //   msgErr.Bcc.Add("leandrolvilela@gmail.com");
                   msgErr.IsBodyHtml = true;
                   msgErr.Body = mensagem;
                   msgErr.Subject = "Sistema Spazio Campo Azuli";
@@ -63,10 +64,13 @@ namespace Azuli.Web.Portal.Util
              }
              else
              {
-                  destinatario = new MailAddress(emailMorador, nomeMorador);
+                 MailAddress remetente = new MailAddress(emailRemetente, "Administrador Azuli");
+
+                 MailAddress destinatario = new MailAddress(emailMorador, nomeMorador);
+                  
                   MailMessage msg = new MailMessage(remetente, destinatario);
                   //msg.Bcc.Add("leandrolvilela@gmail.com");
-                  msg.Bcc.Add("residencialcampoazuli@gmail.com");
+                 // msg.Bcc.Add("residencialcampoazuli@gmail.com");
                   msg.Bcc.Add("edmls2008@gmail.com");
                   msg.IsBodyHtml = true;
                   msg.Body = mensagem;

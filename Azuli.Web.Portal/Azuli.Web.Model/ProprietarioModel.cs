@@ -15,7 +15,12 @@ namespace Azuli.Web.Model
         public string email { get; set;}
         public string telefone { get; set; }
         public string proprietarioImovel { get; set; }
-     
+        public List<Depedentes> dependentes;
+        public List<Transporte> transporte;
+        public Animais animais;
+        public List<Empregados> empregados;
+        public Imobiliaria imobiliaria;
+        public Emergencia emergencia;
 
      }
 

@@ -80,6 +80,203 @@ namespace Azuli.Web.DAO
                 throw;
             }
         }
+
+        public int cadastraDepedentes(Depedentes dp)
+        {
+
+            string clausulaSQL = "CADASTRA_MORADOR_APARTAMENTO";
+            SqlCommand comandoSQL = new SqlCommand(clausulaSQL);
+
+            //Cadastro de depedentes
+            comandoSQL.Parameters.AddWithValue("@NOME_DEPEDENTE", dp.nomeDepedente);
+            comandoSQL.Parameters.AddWithValue("@PARENTESCO", dp.parentesco);
+            comandoSQL.Parameters.AddWithValue("@DATA_NASC_DEPEDENTE", dp.nascimentoDepedente);
+
+            SqlParameter retornoCadastro = new SqlParameter("@RETORNO", SqlDbType.Int);
+            retornoCadastro.Direction = ParameterDirection.Output;
+            comandoSQL.Parameters.Add(retornoCadastro);
+
+
+            ExecutaComando(comandoSQL);
+
+            return int.Parse(comandoSQL.Parameters["@RETORNO"].Value.ToString());
+        }
+
+        public int cadastraEmpregados(Empregados empregados)
+        {
+
+            string clausulaSQL = "CADASTRA_MORADOR_APARTAMENTO";
+            SqlCommand comandoSQL = new SqlCommand(clausulaSQL);
+
+            //Cadastro de empregados
+            comandoSQL.Parameters.AddWithValue("@NOME_EMPREGADO", empregados.nomeEmpregado);
+            comandoSQL.Parameters.AddWithValue("@RG_EMPREGADO", empregados.rgEmpregado);
+
+            SqlParameter retornoCadastro = new SqlParameter("@RETORNO", SqlDbType.Int);
+            retornoCadastro.Direction = ParameterDirection.Output;
+            comandoSQL.Parameters.Add(retornoCadastro);
+
+
+            ExecutaComando(comandoSQL);
+
+            return int.Parse(comandoSQL.Parameters["@RETORNO"].Value.ToString());
+        }
+
+        public int cadastraCarros(Transporte transporte)
+        {
+
+            string clausulaSQL = "CADASTRA_MORADOR_APARTAMENTO";
+            SqlCommand comandoSQL = new SqlCommand(clausulaSQL);
+
+            //Cadastro de Veiculos
+            comandoSQL.Parameters.AddWithValue("@MARCA_MODELO", transporte.marcaModelo);
+            comandoSQL.Parameters.AddWithValue("@COR", transporte.cor);
+            comandoSQL.Parameters.AddWithValue("@PLACA", transporte.placaCarro);
+
+            SqlParameter retornoCadastro = new SqlParameter("@RETORNO", SqlDbType.Int);
+            retornoCadastro.Direction = ParameterDirection.Output;
+            comandoSQL.Parameters.Add(retornoCadastro);
+
+
+            ExecutaComando(comandoSQL);
+
+            return int.Parse(comandoSQL.Parameters["@RETORNO"].Value.ToString());
+        }
+
+        public int cadastraEmergencia(Emergencia emergencia)
+        {
+
+            string clausulaSQL = "CADASTRA_MORADOR_APARTAMENTO";
+            SqlCommand comandoSQL = new SqlCommand(clausulaSQL);
+
+            //Cadastro de contato de emergencia
+            comandoSQL.Parameters.AddWithValue("@NOME_EMERGENCIA", emergencia.nomeContatoEmergencia);
+            comandoSQL.Parameters.AddWithValue("@PARENTESCO_EMERGENCIA", emergencia.nomeParentescoEmergencia);
+            comandoSQL.Parameters.AddWithValue("@CONTATO", emergencia.contato);
+
+            SqlParameter retornoCadastro = new SqlParameter("@RETORNO", SqlDbType.Int);
+            retornoCadastro.Direction = ParameterDirection.Output;
+            comandoSQL.Parameters.Add(retornoCadastro);
+
+
+            ExecutaComando(comandoSQL);
+
+            return int.Parse(comandoSQL.Parameters["@RETORNO"].Value.ToString());
+        }
+
+        public int cadastraAnimais(Animais animais)
+        {
+
+            string clausulaSQL = "CADASTRA_MORADOR_APARTAMENTO";
+            SqlCommand comandoSQL = new SqlCommand(clausulaSQL);
+
+            //Cadastro de animais
+            comandoSQL.Parameters.AddWithValue("@QTD_ANIMAIS", animais.quantidadeAnimais);
+            comandoSQL.Parameters.AddWithValue("@ESPECIES", animais.especies);
+
+
+            SqlParameter retornoCadastro = new SqlParameter("@RETORNO", SqlDbType.Int);
+            retornoCadastro.Direction = ParameterDirection.Output;
+            comandoSQL.Parameters.Add(retornoCadastro);
+
+
+            ExecutaComando(comandoSQL);
+
+            return int.Parse(comandoSQL.Parameters["@RETORNO"].Value.ToString());
+        }
+
+        public int cadastraImobiliaria(Imobiliaria imobiliaria)
+        {
+
+            string clausulaSQL = "CADASTRA_MORADOR_APARTAMENTO";
+            SqlCommand comandoSQL = new SqlCommand(clausulaSQL);
+
+
+            //Cadastro de imobiliaria
+            comandoSQL.Parameters.AddWithValue("@NOME_IMOBILIARIA", imobiliaria.nomeImobiliaria);
+            comandoSQL.Parameters.AddWithValue("@TELEFONE_IMOBILIARIA", imobiliaria.telefoneImobiliaria);
+            comandoSQL.Parameters.AddWithValue("@CONTATO_IMOBILIARIA", imobiliaria.Contato);
+
+
+            SqlParameter retornoCadastro = new SqlParameter("@RETORNO", SqlDbType.Int);
+            retornoCadastro.Direction = ParameterDirection.Output;
+            comandoSQL.Parameters.Add(retornoCadastro);
+
+
+            ExecutaComando(comandoSQL);
+
+            return int.Parse(comandoSQL.Parameters["@RETORNO"].Value.ToString());
+        }
+
+        public int CadastrarApartamentoMoradorCompleto(Model.ProprietarioModel ap)
+        {
+
+            string clausulaSQL = "CADASTRA_MORADOR_APARTAMENTO";
+
+
+
+            try
+            {
+                SqlCommand comandoSQL = new SqlCommand(clausulaSQL);
+                //Cadastro de Morador
+                comandoSQL.Parameters.AddWithValue("@BLOCO", ap.ap.bloco);
+                comandoSQL.Parameters.AddWithValue("@AP", ap.ap.apartamento);
+                comandoSQL.Parameters.AddWithValue("@MORADOR1", ap.proprietario1);
+                comandoSQL.Parameters.AddWithValue("@email", ap.email);
+                comandoSQL.Parameters.AddWithValue("@senha", ap.senha);
+                comandoSQL.Parameters.AddWithValue("@telefone", ap.telefone);
+                comandoSQL.Parameters.AddWithValue("@proprietarioImovel", ap.proprietarioImovel);
+
+                foreach (Depedentes depedentes in ap.dependentes)
+                {
+                    cadastraDepedentes(depedentes);
+                   
+                }
+
+                foreach (Empregados empregado in ap.empregados)
+                {
+                    cadastraEmpregados(empregado);
+                }
+
+
+                foreach (Transporte transporte in ap.transporte)
+                {
+                    cadastraCarros(transporte);
+                }
+
+                if (ap.emergencia != null)
+                {
+                    cadastraEmergencia(ap.emergencia);
+                }
+
+                if (ap.animais != null)
+                {
+                    cadastraAnimais(ap.animais);
+                }
+
+
+                if (ap.imobiliaria != null)
+                {
+                    cadastraImobiliaria(ap.imobiliaria);
+                }
+               
+
+                SqlParameter retornoCadastro = new SqlParameter("@RETORNO", SqlDbType.Int);
+                retornoCadastro.Direction = ParameterDirection.Output;
+                comandoSQL.Parameters.Add(retornoCadastro);
+
+
+                ExecutaComando(comandoSQL);
+
+                return int.Parse(comandoSQL.Parameters["@RETORNO"].Value.ToString());
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public string BuscaEmailMorador(ApartamentoModel ap)
         {
             string clausulaSQL = "SP_BUSCA_EMAIL";
@@ -106,6 +303,8 @@ namespace Azuli.Web.DAO
             }
         
         }
+
+
 
 
 

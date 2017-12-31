@@ -41,16 +41,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AgendaModel.cs" />
+    <Compile Include="Animais.cs" />
     <Compile Include="ApartamentoModel.cs" />
     <Compile Include="CancelamentoReservaMorador.cs" />
     <Compile Include="Classificados.cs" />
     <Compile Include="ClassificadoVisto.cs" />
     <Compile Include="ConfiguraReserva.cs" />
     <Compile Include="ContaAgua.cs" />
+    <Compile Include="Depedentes.cs" />
+    <Compile Include="Emergencia.cs" />
+    <Compile Include="Empregados.cs" />
     <Compile Include="Enquete.cs" />
     <Compile Include="File.cs" />
     <Compile Include="Foto.cs" />
     <Compile Include="GrupoClassificados.cs" />
+    <Compile Include="Imobiliaria.cs" />
     <Compile Include="LancamentoOcorrenciaModel.cs" />
     <Compile Include="LeituraSabesp.cs" />
     <Compile Include="MensagemMoradorModel.cs" />
@@ -60,6 +65,7 @@
     <Compile Include="ProprietarioModel.cs" />
     <Compile Include="ReciboAgua.cs" />
     <Compile Include="STATUS_EMAIL.cs" />
+    <Compile Include="Transporte.cs" />
     <Compile Include="Visitante.cs" />
     <Compile Include="Visitas.cs" />
   </ItemGroup>

@@ -181,6 +181,8 @@
     <Content Include="images\add.png" />
     <Content Include="images\AmareloPendente.png" />
     <Content Include="images\azulPendente.png" />
+    <Content Include="images\botao cadastro.png" />
+    <Content Include="images\botao-pesquisar-hi.png" />
     <Content Include="images\botao-relatorio.png" />
     <Content Include="images\boton_responder.gif" />
     <Content Include="images\cadastro.jpg" />
@@ -356,6 +358,7 @@
     <Content Include="ListaReclamacaoAbertaAdmin.aspx" />
     <Content Include="LoginAsman.aspx" />
     <Content Include="LoginPortaria.aspx" />
+    <Content Include="login\newLoginAzuli.aspx" />
     <Content Include="meuClassificados.aspx" />
     <Content Include="MostraPdfCircular.aspx" />
     <Content Include="PaginaPrincipalControlWater.aspx" />
@@ -718,6 +721,13 @@
     </Compile>
     <Compile Include="LoginPortaria.aspx.designer.cs">
       <DependentUpon>LoginPortaria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login\newLoginAzuli.aspx.cs">
+      <DependentUpon>newLoginAzuli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login\newLoginAzuli.aspx.designer.cs">
+      <DependentUpon>newLoginAzuli.aspx</DependentUpon>
     </Compile>
     <Compile Include="meuClassificados.aspx.cs">
       <DependentUpon>meuClassificados.aspx</DependentUpon>

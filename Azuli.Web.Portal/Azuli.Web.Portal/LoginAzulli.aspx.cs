@@ -142,7 +142,7 @@ namespace Azuli.Web.Portal.Account
                     if (Session["AP"].ToString() != "301" && Session["Bloco"].ToString() != "6")
                     {
                         Util.SendMail oEmail = new SendMail();
-                        oEmail.enviaSenha("Acesso feito com sucesso para o apartamento/bloco " + Session["AP"].ToString() + " - " + Session["Bloco"].ToString(), "Acessos", "edmls2008@gmail.com", 0);
+                        oEmail.enviaSenha("Acesso feito com sucesso para o apartamento/bloco " + Session["AP"].ToString() + " - " + Session["Bloco"].ToString(), "Acessos", "residencialcampoazuli@gmail.com", 0);
                         logger.Info("Acesso feito com sucesso para o apartamento/bloco " + Session["AP"].ToString() + " - " + Session["Bloco"].ToString());
                         Response.Redirect("~/paginaInicialMoradores.aspx");
                     }
@@ -252,7 +252,7 @@ namespace Azuli.Web.Portal.Account
 
                         else
                         {
-                            //enviaMail();
+                             enviaMail();
                              SendMail enviaEmail = new SendMail();
                              int status = 0;
                              string msgCredencial = "";
