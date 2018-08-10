@@ -652,12 +652,15 @@ input.botao, .btGeral {
 	border-style: outset;
     border-color: inherit;
     border-width: 2px;
-    background-color: White;
+    background-color: #F0F0F0;
 	font-family: Verdana;
 	font-size: 12px;
 	color: Black;
     margin-top: 0px;
     margin-right: 0px;
+    width: auto;
+    border-radius: 1em;
+    height: 67px;
 }
 .GridView td
 {
@@ -1101,11 +1104,11 @@ background-image: url('../images/superpag-header.gif');
 }
 
 .modalHeader {
-	background-color: #990000;
+	background-color: #006FB6;
 	padding: 2px 2px 2px 2px;
-	text-align: left;
-	font-family: Verdana;
-	font-size: 8pt;
+	text-align: center;
+	font-family: Arial Black;
+	font-size: 10pt;
 	font-weight: normal;
 	color: #FFFFFF;
 }
@@ -1190,6 +1193,7 @@ background-image: url('../images/superpag-header.gif');
     padding: 5px ;
     margin-top: 5px;
     cursor: pointer;
+    border-radius: 1em;
 }
 
 #master_content .accordionHeaderSelected a
@@ -1637,8 +1641,8 @@ hr {
   background-color: #ffffff;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  *border-right-width: 2px;
-  *border-bottom-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -1654,10 +1658,10 @@ hr {
   left: auto;
 }
 .dropdown-menu .divider {
-  *width: 100%;
+  width: 100%;
   height: 1px;
   margin: 8px 1px;
-  *margin: -5px 0 5px;
+  margin: -5px 0 5px;
   overflow: hidden;
   background-color: transparent;
   border-bottom: 1px solid #222222;
@@ -1773,4 +1777,57 @@ width:100%; float:left;}
 .myCalendar .myCalendarDay a:hover,   
 .myCalendar .myCalendarSelector a:hover {  
     background-color: #25bae5;  
+}
+
+/* The version of Bourbon used in this Pen was 4.* */
+@import "bourbon";
+
+body {
+	background: #eee !important;	
+}
+
+.wrapper {	
+	margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);  
+
+  .form-signin-heading,
+	.checkbox {
+	  margin-bottom: 30px;
+	}
+
+	.checkbox {
+	  font-weight: normal;
+	}
+
+	.form-control {
+	  position: relative;
+	  font-size: 16px;
+	  height: auto;
+	  padding: 10px;
+		@include box-sizing(border-box);
+
+		&:focus {
+		  z-index: 2;
+		}
+	}
+
+	input[type="text"] {
+	  margin-bottom: -1px;
+	  border-bottom-left-radius: 0;
+	  border-bottom-right-radius: 0;
+	}
+
+	input[type="password"] {
+	  margin-bottom: 20px;
+	  border-top-left-radius: 0;
+	  border-top-right-radius: 0;
+	}
 }

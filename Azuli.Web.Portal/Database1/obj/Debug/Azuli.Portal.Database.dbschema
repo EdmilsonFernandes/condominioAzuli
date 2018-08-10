@@ -214,7 +214,6 @@
 			</Relationship>
 		</Element>
 		<Element Type="ISql100Procedure" Name="[dbo].[ALTERA_SENHA]">
-			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Property Name="BodyScript">
 				<Value><![CDATA[
       
@@ -228,6 +227,7 @@
  
       END]]></Value>
 			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="BodyDependencies">
 				<Entry>
 					<References Name="[dbo].[PROPRIETARIO]" />
@@ -360,7 +360,6 @@
 			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="3" />
 		</Element>
 		<Element Type="ISql100Procedure" Name="[dbo].[AUTENTICA_MORADOR]">
-			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Property Name="BodyScript">
 				<Value><![CDATA[
 	
@@ -373,6 +372,7 @@
 
 	END]]></Value>
 			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="BodyDependencies">
 				<Entry>
 					<References Name="[dbo].[AUTENTICA_MORADOR].[@RETORNO]" />
@@ -477,7 +477,6 @@
 			</Annotation>
 		</Element>
 		<Element Type="ISql100Procedure" Name="[dbo].[BUSCA_MORADOR_ADMIN]">
-			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Property Name="BodyScript">
 				<Value><![CDATA[
 	
@@ -488,6 +487,7 @@
 	AND PROPRIETARIO_BLOCO = @PROPRIETARIO_BLOCO
 	END]]></Value>
 			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="BodyDependencies">
 				<Entry>
 					<References Name="[dbo].[PROPRIETARIO]" />
@@ -556,7 +556,6 @@
 			</Annotation>
 		</Element>
 		<Element Type="ISql100Procedure" Name="[dbo].[CADASTRA_MORADOR_APARTAMENTO]">
-			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Property Name="BodyScript">
 				<Value><![CDATA[
 Declare @count int 
@@ -581,6 +580,7 @@ select @count = count(bloco) from APARTAMENTO where BLOCO =@BLOCO and APARTAMENT
        
        End]]></Value>
 			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="BodyDependencies">
 				<Entry>
 					<References ExternalSource="BuiltIns" Name="[int]" />
@@ -728,7 +728,6 @@ select @count = count(bloco) from APARTAMENTO where BLOCO =@BLOCO and APARTAMENT
 			</Annotation>
 		</Element>
 		<Element Type="ISql100Procedure" Name="[dbo].[CADASTRA_RESERVA]">
-			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Property Name="BodyScript">
 				<Value><![CDATA[
 begin
@@ -773,6 +772,7 @@ begin
 	
 end]]></Value>
 			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="BodyDependencies">
 				<Entry>
 					<References ExternalSource="BuiltIns" Name="[datetime]" />
@@ -894,7 +894,6 @@ end]]></Value>
 			</Annotation>
 		</Element>
 		<Element Type="ISql100Procedure" Name="[dbo].[CADASTRA_RESERVA_MORADOR]">
-			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Property Name="BodyScript">
 				<Value><![CDATA[
 	Declare @AUX DATETIME
@@ -929,6 +928,7 @@ end]]></Value>
 		 
 		 End]]></Value>
 			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="BodyDependencies">
 				<Entry>
 					<References ExternalSource="BuiltIns" Name="[datetime]" />
@@ -1220,7 +1220,6 @@ end]]></Value>
 			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="4" />
 		</Element>
 		<Element Type="ISql100Procedure" Name="[dbo].[LISTA_CHURRAS_MORADOR]">
-			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Property Name="BodyScript">
 				<Value><![CDATA[
 BEGIN
@@ -1233,6 +1232,7 @@ BEGIN
 	AND MONTH(DATA_AGENDAMENTO) = @MES
 END]]></Value>
 			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="BodyDependencies">
 				<Entry>
 					<References Name="[dbo].[AGENDA]" />
@@ -1339,7 +1339,6 @@ END]]></Value>
 			</Annotation>
 		</Element>
 		<Element Type="ISql100Procedure" Name="[dbo].[LISTA_EVENTOS]">
-			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Property Name="BodyScript">
 				<Value><![CDATA[
 BEGIN
@@ -1347,6 +1346,7 @@ BEGIN
 	SELECT * FROM AGENDA_MAE
 END]]></Value>
 			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="BodyDependencies">
 				<Entry>
 					<References Name="[dbo].[AGENDA_MAE]" />
@@ -1365,7 +1365,6 @@ END]]></Value>
 			</Annotation>
 		</Element>
 		<Element Type="ISql100Procedure" Name="[dbo].[LISTA_EVENTOS_BY_DATA]">
-			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Property Name="BodyScript">
 				<Value><![CDATA[
 BEGIN
@@ -1374,6 +1373,7 @@ BEGIN
 	WHERE DATA_AGENDAMENTO = @DATA_AGENDA
 END]]></Value>
 			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="BodyDependencies">
 				<Entry>
 					<References Name="[dbo].[AGENDA]" />
@@ -1415,7 +1415,6 @@ END]]></Value>
 			</Annotation>
 		</Element>
 		<Element Type="ISql100Procedure" Name="[dbo].[LISTA_SALAO_FESTA_MORADOR]">
-			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Property Name="BodyScript">
 				<Value><![CDATA[
 BEGIN
@@ -1428,6 +1427,7 @@ BEGIN
 	AND MONTH(DATA_AGENDAMENTO) = @MES
 END]]></Value>
 			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="BodyDependencies">
 				<Entry>
 					<References Name="[dbo].[AGENDA]" />
@@ -1979,7 +1979,6 @@ END]]></Value>
 			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="7" />
 		</Element>
 		<Element Type="ISql100Procedure" Name="[dbo].[POPULA_MORADOR]">
-			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Property Name="BodyScript">
 				<Value><![CDATA[
 	
@@ -1992,6 +1991,7 @@ END]]></Value>
 
 	END]]></Value>
 			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="BodyDependencies">
 				<Entry>
 					<References Name="[dbo].[PROPRIETARIO]" />
@@ -2180,7 +2180,6 @@ END]]></Value>
 			<AttachedAnnotation Disambiguator="7" />
 		</Element>
 		<Element Type="ISql100Procedure" Name="[dbo].[RESERVA_MORADOR]">
-			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Property Name="BodyScript">
 				<Value><![CDATA[
  BEGIN
@@ -2193,6 +2192,7 @@ END]]></Value>
 	and MONTH(data_agendamento) = @MES
  END]]></Value>
 			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="BodyDependencies">
 				<Entry>
 					<References Name="[dbo].[AGENDA]" />
@@ -2302,7 +2302,6 @@ END]]></Value>
 			</Annotation>
 		</Element>
 		<Element Type="ISql100Procedure" Name="[dbo].[RESERVA_MORADOR_CHURRAS]">
-			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Property Name="BodyScript">
 				<Value><![CDATA[
  BEGIN
@@ -2315,6 +2314,7 @@ END]]></Value>
 	order by DATA_AGENDAMENTO asc
  END]]></Value>
 			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="BodyDependencies">
 				<Entry>
 					<References Name="[dbo].[AGENDA]" />
@@ -2424,7 +2424,6 @@ END]]></Value>
 			</Annotation>
 		</Element>
 		<Element Type="ISql100Procedure" Name="[dbo].[RESERVA_MORADOR_FESTA]">
-			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Property Name="BodyScript">
 				<Value><![CDATA[
  BEGIN
@@ -2437,6 +2436,7 @@ END]]></Value>
 	order by DATA_AGENDAMENTO asc
  END]]></Value>
 			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="BodyDependencies">
 				<Entry>
 					<References Name="[dbo].[AGENDA]" />
@@ -2546,7 +2546,6 @@ END]]></Value>
 			</Annotation>
 		</Element>
 		<Element Type="ISql100Procedure" Name="[dbo].[VALIDA_MORADOR_CADASTRO]">
-			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Property Name="BodyScript">
 				<Value><![CDATA[
 	BEGIN
@@ -2557,6 +2556,7 @@ END]]></Value>
 	
 	END]]></Value>
 			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="BodyDependencies">
 				<Entry>
 					<References Name="[dbo].[PROPRIETARIO]" />

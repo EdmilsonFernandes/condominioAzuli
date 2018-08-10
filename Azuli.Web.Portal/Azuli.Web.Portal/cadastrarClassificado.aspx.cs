@@ -375,7 +375,7 @@ namespace Azuli.Web.Portal
                 oClassificadoModel.statusClassificado = "A";
                 oClassificadoModel.assuntoClassificado = txtTitulo.Text;
 
-                if (oUtil.validaEmail(txtEmail.Text))
+                if (Util.Util.validaEmail(txtEmail.Text))
                 {
                     try
                     {

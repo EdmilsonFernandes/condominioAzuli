@@ -4,14 +4,29 @@ using System.Linq;
 using System.Web;
 using System.Text.RegularExpressions;
 using System.ComponentModel;
+using System.Web.UI;
 
 
 
 namespace Azuli.Web.Portal.Util
 {
-    public class Util
+    public  class Util
     {
 
+        /// ---- ShowAlert --------------------------------
+        ///     
+        /// <summary>
+        /// popup a message box at the client    
+        /// </summary>
+        /// <param name="page">A Page Object</param>
+        /// <param name="message">The Message to show</param>
+
+        public static void ShowAlert(Page page, String message)
+        {
+            String Output;
+            Output = String.Format("alert('{0}');", message);
+            page.ClientScript.RegisterStartupScript(page.GetType(), "Key", Output, true);
+        }
 
         public enum meses
         {
@@ -237,7 +252,7 @@ namespace Azuli.Web.Portal.Util
             return senha;
         }
 
-        public Boolean validaEmail(string email)
+        public static Boolean validaEmail(string email)
         {
             Regex rg = new Regex(@"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
 
@@ -260,7 +275,46 @@ namespace Azuli.Web.Portal.Util
             public string observacao { get; set; }
         }
 
-    }
+       
+	
+	  public static bool IsCpf(string cpf)
+	    {
+		int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+		int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+		string tempCpf;
+		string digito;
+		int soma;
+		int resto;
+		cpf = cpf.Trim();
+		cpf = cpf.Replace(".", "").Replace("-", "");
+		if (cpf.Length != 11)
+		   return false;
+		tempCpf = cpf.Substring(0, 9);
+		soma = 0;
 
-
+		for(int i=0; i<9; i++)
+		    soma += int.Parse(tempCpf[i].ToString()) * multiplicador1[i];
+		resto = soma % 11;
+		if ( resto < 2 )
+		    resto = 0;
+		else
+		   resto = 11 - resto;
+		digito = resto.ToString();
+		tempCpf = tempCpf + digito;
+		soma = 0;
+		for(int i=0; i<10; i++)
+		    soma += int.Parse(tempCpf[i].ToString()) * multiplicador2[i];
+		resto = soma % 11;
+		if (resto < 2)
+		   resto = 0;
+		else
+		   resto = 11 - resto;
+		digito = digito + resto.ToString();
+		return cpf.EndsWith(digito);
+	      }
+	}
 }
+
+    
+
+

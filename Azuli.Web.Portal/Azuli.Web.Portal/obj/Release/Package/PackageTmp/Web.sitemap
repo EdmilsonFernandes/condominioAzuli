@@ -4,50 +4,65 @@
 
 
 
-  <siteMapNode url="" title="Página Principal"  description="Principal" imageurl="images/home.png">
+  <siteMapNode url="" title="Página Principal"  description="" imageurl="images/home.png">
 
-    <siteMapNode url="paginaInicialMoradores.aspx" title="Home" description="Home Page" >
-    </siteMapNode>
-    
-    <siteMapNode url="" title="Reservas" description="Reservas">
-      <siteMapNode url="~/telaAgendamento.aspx" title="Fazer Reservas" description="morador" />
-      <siteMapNode url="~/minhaReservas.aspx" title="Pesquisar minhas Reservas" description="morador" />
-      <siteMapNode url="ReservaDetalhadaMoradores.aspx" title="Reservas do Mês detalhada" description="morador" />
-
+    <siteMapNode url="~/paginaInicialMoradores.aspx" title="Home" description="" >
     </siteMapNode>
 
-    <siteMapNode url="" title="Livro de Ocorrência" description="Ocorrência">
+    <siteMapNode  title="Meu Perfil" description="" >
+      <siteMapNode url="~/PerfilMorador.aspx" title="Alterar Perfil" description="" />
+      <siteMapNode url="resetSenha.aspx" title="Alterar Senha" description=""  />
+    </siteMapNode>
 
-      <siteMapNode url="~/OcorrenciaMorador.aspx" title="Abrir Ocorrência" description="Open Ocorrencia" />
-      <siteMapNode url="~/detalheOcorrencia.aspx" title="Minhas Ocorrências" description="Minhas Ocorrencia" />
+    <siteMapNode  title="Reservas" description="Reservas">
+      <siteMapNode url="~/telaAgendamento.aspx" title="Calendário" description="" />
+      <siteMapNode url="~/minhaReservas.aspx" title="Minhas Reservas" description="" />
+      <siteMapNode url="~/ReservaDetalhadaMoradores.aspx" title="Reservas do Condominio" description="" />
+      <siteMapNode url="~/HistoricoCancelamento.aspx" title="Reservas Canceladas " description="" />
+
 
     </siteMapNode>
 
+    <!-- <siteMapNode url="" title="Reclamações" description="Reclamação">    
+
+      <siteMapNode url="~/OcorrenciaMorador.aspx" title="Fazer Reclamações" description="" />
+      <siteMapNode url="~/detalheOcorrencia.aspx" title="Minhas Reclamações" description="" />
+
+    </siteMapNode> -->
+
+    <!--
     <siteMapNode url="" title="Mensagens" description="Consultas" roles="">
-      <siteMapNode url="~/detalheMensagemMorador.aspx" title="Caixa de Entrada" description="Consultar mensagem" />
+      <siteMapNode url="~/detalheMensagemMorador.aspx" title="Caixa de Entrada" description="" />
+
+    </siteMapNode>  -->
+    <siteMapNode    title="Classificados"  description=""  roles="">
+      <siteMapNode url="~/anunciarClassificado.aspx" title="Anunciar" description="" />
+      <siteMapNode url="~/consultaClassificados.aspx" title="Consultar Classificados" description="" />
+      <siteMapNode url="~/meuClassificados.aspx" title="Gerenciar Classificados" description="" />
+
 
     </siteMapNode>
 
-    <siteMapNode  url=""  title="Circulares" description="Circular" roles="">
-      <siteMapNode url="~/consultaCircular.aspx" title="Consulta Circular" description="Circular" />
-    <!--  <siteMapNode url="~/consultaBalancete.aspx" title="Balancete" description="Balancetes" /> -->
-
-    </siteMapNode>
-
-    <siteMapNode url="resetSenha.aspx" title="Alterar Senha" description="Senha" roles="">
+    <siteMapNode  url=""  title="Circulares" description="" roles="">
+      <siteMapNode url="~/consultaCircular.aspx" title="Consulta Circular"  description="" />
+      <!--  <siteMapNode url="~/consultaBalancete.aspx" title="Balancete" description="Balancetes" /> -->
 
     </siteMapNode>
 
 
-    <siteMapNode url="contato.aspx" title="Contato" description="Contato" />
+    <siteMapNode url="contato.aspx" title="Fale Conosco" description="" roles="" />
+    <!-- <siteMapNode url="~/contato.aspx" title="Contato" description=""  />-->
+    <!-- <siteMapNode url="~/videoajuda.aspx" title="Videos" description=""  /> -->
+  
 
-    <siteMapNode url="~/videoajuda.aspx" title="Ajuda" description="Videos" roles="" />
-      
-    
-    
+  <siteMapNode url="" title="Gestão de Consumo de Água" description="" roles="" >
+    <siteMapNode url="~/SegundaViaContaAguaAzuli.aspx" title="2ª Via Água" description=""  />
+<!--   <siteMapNode url="~/ConsumoIndividual.aspx" title="Consumo M³ individual" description=""  />-->
 
-    <siteMapNode url="LoginAzulli.aspx" title="Sair" description="Login">
+  </siteMapNode>
 
-    </siteMapNode>
+<siteMapNode url="LoginAzulli.aspx" title="Sair" description="">
+
+</siteMapNode>
   </siteMapNode>
 </siteMap>

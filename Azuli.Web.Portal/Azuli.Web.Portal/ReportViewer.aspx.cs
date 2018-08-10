@@ -1375,7 +1375,7 @@ namespace Azuli.Web.Portal
             sbBody.Append("<br /><br />");
             sbBody.Append("<b>Segue em anexo o seu recibo da água do condominio Azuli.</b><br />");
             sbBody.Append("<b>Você pode acessá-lo também de forma on-line caso tenha interesse, acesse o link abaixo</b><br />");
-            sbBody.Append("<b>http://www.condominioazuli.somee.com</b><br />");
+            sbBody.Append("<b>http://http://condominiospazioazuli.somee.com/</b><br />");
             sbBody.Append("<br /></body></html>");
 
             return sbBody;

@@ -299,7 +299,7 @@ a:hover {
 }
 .row-fluid .span5 {
   width: 40.425531911%;
-  *width: 40.3723404216383%;
+  *width: 46%;
 }
 .row-fluid .span4 {
   width: 31.914893614%;
@@ -484,6 +484,7 @@ hr {
 }
 strong {
   font-weight: bold;
+    font-size: 13pt;
 }
 em {
   font-style: italic;

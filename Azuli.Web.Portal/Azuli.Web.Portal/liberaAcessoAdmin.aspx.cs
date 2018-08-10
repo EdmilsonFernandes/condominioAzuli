@@ -69,7 +69,7 @@ namespace Azuli.Web.Portal
                msgMorador.Append(" Bloco: " + oProprietarioModel.ap.bloco);
                msgMorador.Append(" <br> Apartamento: " + oProprietarioModel.ap.apartamento);
                msgMorador.Append("<br> Senha: " + oProprietarioModel.senha);
-               msgMorador.Append("<br> Acesse Agora: http://www.condominioazuli.somee.com/");
+               msgMorador.Append("<br> Acesse Agora: http://condominiospazioazuli.somee.com/");
 
                bool isEmail = Regex.IsMatch(oProprietarioModel.email, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z", RegexOptions.IgnoreCase);
 

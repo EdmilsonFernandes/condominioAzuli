@@ -44,6 +44,22 @@ namespace Azuli.Web.Business
             }
         }
 
+        public Model.listProprietario populaProprietarioSemSenha(Model.ApartamentoModel ap)
+            {
+            try
+                {
+
+
+                return oPropriDAO.populaProprietarioSemSenha(ap);
+
+                }
+            catch (Exception e)
+                {
+
+                throw e;
+                }
+            }
+
        
         public Model.listProprietario BuscaMoradorAdmin(Model.ApartamentoModel ap)
         {
@@ -236,6 +252,23 @@ namespace Azuli.Web.Business
         public listProprietario populaProprietario(ApartamentoModel ap, ProprietarioModel apPro)
         {
             throw new NotImplementedException();
+        }
+
+
+        public int cadastrarApartamentoMoradorCompleto(ProprietarioModel pMoradorAzuli)
+        {
+            try
+            {
+
+
+                return oPropriDAO.cadastrarApartamentoMoradorCompleto(pMoradorAzuli);
+
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
         }
     }
 }

@@ -88,3 +88,16 @@ C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.W
 C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.csprojResolveAssemblyReference.cache
 C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.dll
 C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.pdb
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Portal.dll
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Portal.pdb
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Crystal.Relatorios.dll
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Business.dll
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Model.dll
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.DAO.dll
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Crystal.Relatorios.pdb
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Business.pdb
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.Model.pdb
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\bin\Azuli.Web.DAO.pdb
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.csprojResolveAssemblyReference.cache
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.dll
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Portal\obj\Debug\Azuli.Web.Portal.pdb

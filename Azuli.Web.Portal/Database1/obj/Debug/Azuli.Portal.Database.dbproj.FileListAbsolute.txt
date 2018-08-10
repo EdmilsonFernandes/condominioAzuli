@@ -13,3 +13,8 @@ C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Database1\sql\debug\Azuli.Po
 C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Database1\sql\debug\Azuli.Portal.Database.deploymanifest
 C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Database1\sql\debug\Azuli.Portal.Database.dbschema
 C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Database1\obj\Debug\Azuli.Portal.Database.dbschema
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Database1\sql\debug\Azuli.Portal.Database_Database.sqlsettings
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Database1\sql\debug\Azuli.Portal.Database_Database.sqlcmdvars
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Database1\sql\debug\Azuli.Portal.Database.deploymanifest
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Database1\sql\debug\Azuli.Portal.Database.dbschema
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Database1\obj\Debug\Azuli.Portal.Database.dbschema

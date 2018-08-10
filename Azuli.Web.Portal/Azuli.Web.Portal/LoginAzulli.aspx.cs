@@ -72,7 +72,7 @@ namespace Azuli.Web.Portal.Account
         ProprietarioModel oProprietarioModel = new ProprietarioModel();
         ApartamentoModel oAPmodel = new ApartamentoModel();
         Util.Util oUtil = new Util.Util();
-        private log4net.ILog logger;
+     
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -86,7 +86,7 @@ namespace Azuli.Web.Portal.Account
         protected void LoginButton_Click(object sender, EventArgs e)
         {
 
-            logger = log4net.LogManager.GetLogger("LogInFile");
+          
 
             HttpCookie cookie = new HttpCookie("blocoMorador");
             cookie.Value = drpBloco.SelectedItem.Text;
@@ -143,13 +143,13 @@ namespace Azuli.Web.Portal.Account
                     {
                         Util.SendMail oEmail = new SendMail();
                         oEmail.enviaSenha("Acesso feito com sucesso para o apartamento/bloco " + Session["AP"].ToString() + " - " + Session["Bloco"].ToString(), "Acessos", "residencialcampoazuli@gmail.com", 0);
-                        logger.Info("Acesso feito com sucesso para o apartamento/bloco " + Session["AP"].ToString() + " - " + Session["Bloco"].ToString());
+                        //logger.Info("Acesso feito com sucesso para o apartamento/bloco " + Session["AP"].ToString() + " - " + Session["Bloco"].ToString());
                         Response.Redirect("~/paginaInicialMoradores.aspx");
                     }
                     else
                     {
                         Response.Redirect("~/paginaInicialMoradores.aspx");
-                        logger.Warn("Acesso negado!");
+                      //  logger.Warn("Acesso negado!");
                     }
 
 
@@ -227,7 +227,7 @@ namespace Azuli.Web.Portal.Account
             oAPmodel.bloco = Convert.ToInt32(drpBlocoSolicita.SelectedItem.Text);//Convert.ToInt32(txtSolicitaBloco.Text);
             oProprietarioModel.ap = oAPmodel;
 
-            if (oUtil.validaEmail(txtEmail.Text))
+            if (Util.Util.validaEmail(txtEmail.Text))
             {
 
                 if (oProprietario.BuscaMoradorAdmin(oAPmodel).Count == 0)
@@ -270,7 +270,7 @@ namespace Azuli.Web.Portal.Account
                     }
                     catch (Exception ex)
                     {
-                        logger.Error(ex.StackTrace);
+                        //logger.Error(ex.StackTrace);
                         throw ex;
                     }
                 }

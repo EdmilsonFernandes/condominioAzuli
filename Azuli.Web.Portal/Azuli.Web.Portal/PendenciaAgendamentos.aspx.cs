@@ -788,7 +788,7 @@ namespace Azuli.Web.Portal
                 msgMorador.Append("<br> Motivo: " + txtObs.Text);
             }
             msgMorador.Append("<br> Qualquer dúvida ligar para o ramal 93 ou pelo telefone: 3027-7997");
-            msgMorador.Append("<br> Acesse o site azuli e veja mais detalhes: http://www.condominioazuli.somee.com/");
+            msgMorador.Append("<br> Acesse o site azuli e veja mais detalhes: http://condominiospazioazuli.somee.com/");
 
 
             try

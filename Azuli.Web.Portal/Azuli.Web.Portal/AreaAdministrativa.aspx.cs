@@ -418,7 +418,7 @@ namespace Azuli.Web.Portal
                    lblMsgCadastro.Visible = true;
                    imgCalendar.Visible = true;
                    hplnkWelcomeAdmin.Visible = true;
-                   lblMsgCadastro.Text = "Cadastro efetuado com sucesso para Morador: <br> <b> " + oProprietarioModel.proprietario1 + " <b> <br>" + "Bloco: " + oProprietarioModel.ap.bloco + " / Apartamento:  " + oProprietarioModel.ap.apartamento + "<br> Sua Senha é: " + oProprietarioModel.senha + "<br><b>Acesse: www.condominioazuli.somee.com<b><br><hr>";
+                   lblMsgCadastro.Text = "Cadastro efetuado com sucesso para Morador: <br> <b> " + oProprietarioModel.proprietario1 + " <b> <br>" + "Bloco: " + oProprietarioModel.ap.bloco + " / Apartamento:  " + oProprietarioModel.ap.apartamento + "<br> Sua Senha é: " + oProprietarioModel.senha + "<br><b>Acesse: http://condominiospazioazuli.somee.com/<b><br><hr>";
                 
                    dvCadastro.Visible = false;
                    dvPesquisaMorador.Visible = false;

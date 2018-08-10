@@ -21,6 +21,7 @@ namespace Azuli.Web.Business.Interfaces
         listProprietario enviaCrendencialAcesso(ApartamentoModel oPropri);
         listProprietario PesquisaMorador(string tipo_busca, string pesquisa_nome, ApartamentoModel ap);
         string BuscaEmailMorador(ApartamentoModel ap);
+        int cadastrarApartamentoMoradorCompleto(Model.ProprietarioModel pMoradorAzuli);
 
 
     }

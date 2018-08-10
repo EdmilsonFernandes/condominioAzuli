@@ -46,6 +46,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
@@ -76,10 +77,6 @@
     <Reference Include="itextsharp">
       <HintPath>..\..\..\..\..\Users\Edmilson\Desktop\itextsharp.dll</HintPath>
     </Reference>
-    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Users\Edmilson\Desktop\log4net.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.JScript" />
     <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
@@ -101,6 +98,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -124,6 +123,7 @@
     <Content Include="Azuli.Acess.ControlTestPage.html" />
     <Content Include="cadastrarClassificado.aspx" />
     <Content Include="CadastrarVisitante.aspx" />
+    <Content Include="CadastroCompletoMorador.aspx" />
     <Content Include="camutils\webcam.js" />
     <Content Include="camutils\webcam.swf" />
     <Content Include="chartConsumoIndividual.aspx" />
@@ -143,7 +143,11 @@
     <Content Include="css\bootstrap-classic.css" />
     <Content Include="css\bootstrap-classic.min.css" />
     <Content Include="css\bootstrap-cyborg.css" />
+    <Content Include="css\bootstrap-grid.css" />
+    <Content Include="css\bootstrap-grid.min.css" />
     <Content Include="css\bootstrap-journal.css" />
+    <Content Include="css\bootstrap-reboot.css" />
+    <Content Include="css\bootstrap-reboot.min.css" />
     <Content Include="css\bootstrap-redy.css" />
     <Content Include="css\bootstrap-responsive.css" />
     <Content Include="css\bootstrap-responsive.min.css" />
@@ -151,6 +155,8 @@
     <Content Include="css\bootstrap-slate.css" />
     <Content Include="css\bootstrap-spacelab.css" />
     <Content Include="css\bootstrap-united.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
     <Content Include="css\charisma-app.css" />
     <Content Include="css\chosen.css" />
     <Content Include="css\colorbox.css" />
@@ -164,6 +170,7 @@
     <Content Include="css\jquery.noty.css" />
     <Content Include="css\noty_theme_default.css" />
     <Content Include="css\opa-icons.css" />
+    <Content Include="css\style.css" />
     <Content Include="css\uniform.default.css" />
     <Content Include="css\uploadify.css" />
     <Content Include="DetalheClassificado.aspx" />
@@ -182,9 +189,11 @@
     <Content Include="images\AmareloPendente.png" />
     <Content Include="images\azulPendente.png" />
     <Content Include="images\botao cadastro.png" />
+    <Content Include="images\botao-cancelar-hi.png" />
     <Content Include="images\botao-pesquisar-hi.png" />
     <Content Include="images\botao-relatorio.png" />
     <Content Include="images\boton_responder.gif" />
+    <Content Include="images\cadastrar.png" />
     <Content Include="images\cadastro.jpg" />
     <Content Include="images\calendario.png" />
     <Content Include="images\cancelar.jpg" />
@@ -331,6 +340,10 @@
     <Content Include="js\bootstrap-tour.js" />
     <Content Include="js\bootstrap-transition.js" />
     <Content Include="js\bootstrap-typeahead.js" />
+    <Content Include="js\bootstrap.bundle.js" />
+    <Content Include="js\bootstrap.bundle.min.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
     <Content Include="js\charisma.js" />
     <Content Include="js\excanvas.js" />
     <Content Include="js\fullcalendar.min.js" />
@@ -361,6 +374,7 @@
     <Content Include="login\newLoginAzuli.aspx" />
     <Content Include="meuClassificados.aspx" />
     <Content Include="MostraPdfCircular.aspx" />
+    <Content Include="newLoginAzuli.aspx" />
     <Content Include="PaginaPrincipalControlWater.aspx" />
     <Content Include="PendenciaAgendamentos.aspx" />
     <Content Include="PendenciaReservaMorador.aspx" />
@@ -398,6 +412,7 @@
     <Content Include="Scripts\highcharts-more.src.js" />
     <Content Include="Scripts\highcharts.js" />
     <Content Include="Scripts\highcharts.src.js" />
+    <Content Include="Scripts\jquery.maskedinput.min.js" />
     <Content Include="Scripts\ScriptAzuli.js" />
     <Content Include="Scripts\Silverlight.js" />
     <Content Include="SegundaViaContaAguaAzuli.aspx" />
@@ -516,6 +531,13 @@
     </Compile>
     <Compile Include="CadastrarVisitante.aspx.designer.cs">
       <DependentUpon>CadastrarVisitante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroCompletoMorador.aspx.cs">
+      <DependentUpon>CadastroCompletoMorador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastroCompletoMorador.aspx.designer.cs">
+      <DependentUpon>CadastroCompletoMorador.aspx</DependentUpon>
     </Compile>
     <Compile Include="chartConsumoIndividual.aspx.cs">
       <DependentUpon>chartConsumoIndividual.aspx</DependentUpon>
@@ -746,6 +768,13 @@
     <Compile Include="MostraPdfCircular.aspx.designer.cs">
       <DependentUpon>MostraPdfCircular.aspx</DependentUpon>
     </Compile>
+    <Compile Include="newLoginAzuli.aspx.cs">
+      <DependentUpon>newLoginAzuli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="newLoginAzuli.aspx.designer.cs">
+      <DependentUpon>newLoginAzuli.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PageAcessControl.Master.cs">
       <DependentUpon>PageAcessControl.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -944,6 +973,13 @@
     <Compile Include="SiteAdmin.Master.designer.cs">
       <DependentUpon>SiteAdmin.Master</DependentUpon>
     </Compile>
+    <Compile Include="SiteCompleto.Master.cs">
+      <DependentUpon>SiteCompleto.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteCompleto.Master.designer.cs">
+      <DependentUpon>SiteCompleto.Master</DependentUpon>
+    </Compile>
     <Compile Include="telaAgendamento.aspx.cs">
       <DependentUpon>telaAgendamento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -994,6 +1030,11 @@
     <Compile Include="videoajuda.aspx.designer.cs">
       <DependentUpon>videoajuda.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Web References\br.com.correios.apps\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="WebServiceAzuli.asmx.cs">
       <DependentUpon>WebServiceAzuli.asmx</DependentUpon>
       <SubType>Component</SubType>
@@ -1043,6 +1084,12 @@
     <Content Include="PageAcessControl.Master" />
     <Content Include="MostraFoto.ashx" />
     <Content Include="controlWater.sitemap" />
+    <None Include="css\bootstrap-grid.css.map" />
+    <None Include="css\bootstrap-grid.min.css.map" />
+    <None Include="css\bootstrap-reboot.css.map" />
+    <None Include="css\bootstrap-reboot.min.css.map" />
+    <None Include="css\bootstrap.css.map" />
+    <None Include="css\bootstrap.min.css.map" />
     <None Include="DSrecibo.xsc">
       <DependentUpon>DSrecibo.xsd</DependentUpon>
     </None>
@@ -1055,12 +1102,72 @@
       <DependentUpon>DSrecibo.xsd</DependentUpon>
     </None>
     <Content Include="PageControlWater.Master" />
+    <None Include="js\bootstrap.bundle.js.map" />
+    <None Include="js\bootstrap.bundle.min.js.map" />
+    <None Include="js\bootstrap.js.map" />
+    <None Include="js\bootstrap.min.js.map" />
+    <None Include="js\relatorioGeral\bootstrap.min.js.map" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="ServerFile\ArquivosCondominio\RegimentoInternoAzuli.pdf" />
     <None Include="ServerFile\ArquivosCondominio\sgcFernandesVilela.pps" />
+    <Content Include="SiteCompleto.Master" />
+    <None Include="Web References\br.com.correios.apps\AtendeClienteService.wsdl" />
+    <None Include="Web References\br.com.correios.apps\clienteERP.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\br.com.correios.apps\contratoERP.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\br.com.correios.apps\embalagemLRSMaster.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\br.com.correios.apps\enderecoERP.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\br.com.correios.apps\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\br.com.correios.apps\retornoCancelamento.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\br.com.correios.apps\servicoAdicionalXML.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\br.com.correios.apps\servicoERP.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\br.com.correios.apps\statusCartao.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\br.com.correios.apps\statusPlp.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\br.com.correios.apps\valePostal.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://apps.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\br.com.correios.apps\</RelPath>
+      <UpdateFromURL>https://apps.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Azuli_Web_Portal_br_com_correios_apps_AtendeClienteService</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -1075,7 +1182,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>4179</DevelopmentServerPort>
+          <DevelopmentServerPort>1393</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

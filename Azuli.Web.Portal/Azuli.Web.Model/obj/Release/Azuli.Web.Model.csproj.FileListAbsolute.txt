@@ -23,3 +23,7 @@ C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Model\bin\Release\Azuli.Web.Model.pdb
 C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Model\obj\Release\ResolveAssemblyReference.cache
 C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Model\obj\Release\Azuli.Web.Model.dll
 C:\Meu Desenvolvimento\AzuliProd\Azuli.Web.Model\obj\Release\Azuli.Web.Model.pdb
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Model\bin\Release\Azuli.Web.Model.dll
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Model\bin\Release\Azuli.Web.Model.pdb
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Model\obj\Release\Azuli.Web.Model.dll
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Model\obj\Release\Azuli.Web.Model.pdb

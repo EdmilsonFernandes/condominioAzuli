@@ -34,3 +34,7 @@ C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Model\bin\Debug\Az
 C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Model\bin\Debug\Azuli.Web.Model.pdb
 C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Model\obj\Debug\Azuli.Web.Model.dll
 C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Model\obj\Debug\Azuli.Web.Model.pdb
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Model\bin\Debug\Azuli.Web.Model.dll
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Model\bin\Debug\Azuli.Web.Model.pdb
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Model\obj\Debug\Azuli.Web.Model.dll
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Model\obj\Debug\Azuli.Web.Model.pdb

@@ -81,9 +81,9 @@ namespace Azuli.Web.Portal
                     else
                     {
 
-                        int status = 0;
+                        
                         string msgCredencial = "";
-                        msgCredencial = "Cadastro efetuado com sucesso para Morador: <br> <b> " + oProprietarioModel.proprietario1 + " <b> <br>" + " Bloco:  " + oProprietarioModel.ap.bloco + " / Apartamento:  " + oProprietarioModel.ap.apartamento + "<br> Sua Senha é: " + oProprietarioModel.senha + "<br><hr> acesse: http://www.condominioazuli.somee.com/";
+                        msgCredencial = "Cadastro efetuado com sucesso para Morador: <br> <b> " + oProprietarioModel.proprietario1 + " <b> <br>" + " Bloco:  " + oProprietarioModel.ap.bloco + " / Apartamento:  " + oProprietarioModel.ap.apartamento + "<br> Sua Senha é: " + oProprietarioModel.senha + "<br><hr> acesse: http://condominiospazioazuli.somee.com/";
 
                         SendMail enviaEmail = new SendMail();
 
@@ -308,9 +308,8 @@ namespace Azuli.Web.Portal
                     else
                     {
 
-                        int status = 0;
                         string msgCredencial = "";
-                        msgCredencial = "Cadastro efetuado com sucesso para Morador: <br> <b> " + oProprietarioModel.proprietario1 + " <b> <br>" + " Bloco:  " + oProprietarioModel.ap.bloco + " / Apartamento:  " + oProprietarioModel.ap.apartamento + "<br> Sua Senha é: " + oProprietarioModel.senha + "<br><hr> acesse: http://www.condominioazuli.somee.com/";
+                        msgCredencial = "Cadastro efetuado com sucesso para Morador: <br> <b> " + oProprietarioModel.proprietario1 + " <b> <br>" + " Bloco:  " + oProprietarioModel.ap.bloco + " / Apartamento:  " + oProprietarioModel.ap.apartamento + "<br> Sua Senha é: " + oProprietarioModel.senha + "<br><hr> acesse: http://condominiospazioazuli.somee.com/";
 
                         SendMail enviaEmail = new SendMail();
 
@@ -355,6 +354,7 @@ namespace Azuli.Web.Portal
             dvPesquisa.Visible = false;
             txtTelefone.Text = "";
             lstRadioButton.SelectedItem.Enabled = true;
+            dvDesenv.Visible = false;
 
 
         }

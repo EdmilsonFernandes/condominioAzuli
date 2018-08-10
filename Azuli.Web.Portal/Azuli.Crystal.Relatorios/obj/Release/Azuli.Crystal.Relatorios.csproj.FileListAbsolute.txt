@@ -1,0 +1,5 @@
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Crystal.Relatorios\bin\Release\Azuli.Crystal.Relatorios.dll
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Crystal.Relatorios\bin\Release\Azuli.Crystal.Relatorios.pdb
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Crystal.Relatorios\obj\Release\Azuli.Crystal.Relatorios.csprojResolveAssemblyReference.cache
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Crystal.Relatorios\obj\Release\Azuli.Crystal.Relatorios.dll
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Crystal.Relatorios\obj\Release\Azuli.Crystal.Relatorios.pdb

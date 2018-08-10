@@ -1,0 +1,1095 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D3EAAE17-F780-43B2-96D9-F884599E9E98}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Azuli.Web.Portal</RootNamespace>
+    <AssemblyName>Azuli.Web.Portal</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightApplicationList>
+    </SilverlightApplicationList>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <PackageAsSingleFile>true</PackageAsSingleFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.5.50927.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.DLL</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Cells">
+      <HintPath>..\..\..\..\..\Users\Edmilson\Desktop\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Pdf">
+      <HintPath>..\..\..\..\..\Users\Edmilson\Desktop\Aspose.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DotNet.Highcharts">
+      <HintPath>..\..\..\Users\edmilson.santos\Desktop\DotNet.Highcharts.dll</HintPath>
+    </Reference>
+    <Reference Include="Highchart">
+      <HintPath>..\..\..\Users\edmilson.santos\Desktop\Release\Highchart.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\..\Users\edmilson.santos\Desktop\temp\Tools\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\..\Users\Edmilson\Desktop\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="NPOI, Version=1.2.3.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Users\Edmilson\Desktop\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\stdole.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="agendamentosPendentesAdm.aspx" />
+    <Content Include="alteraSenhaSindico.aspx" />
+    <Content Include="anunciarClassificado.aspx" />
+    <Content Include="AreaAdministrativa.aspx" />
+    <Content Include="AuxliaryChart1.aspx" />
+    <Content Include="avisarEcomendaPortaria.aspx" />
+    <Content Include="Azuli.Acess.ControlTestPage.aspx" />
+    <Content Include="Azuli.Acess.ControlTestPage.html" />
+    <Content Include="cadastrarClassificado.aspx" />
+    <Content Include="CadastrarVisitante.aspx" />
+    <Content Include="camutils\webcam.js" />
+    <Content Include="camutils\webcam.swf" />
+    <Content Include="chartConsumoIndividual.aspx" />
+    <Content Include="chartConsumoIndv.aspx" />
+    <Content Include="ChartConsumoWater.aspx" />
+    <Content Include="ClientBin\Azuli.Acess.Control.xap" />
+    <Content Include="ConfigurarValorReserva.aspx" />
+    <Content Include="consultaAgendamentoAdmin.aspx" />
+    <Content Include="consultaBalancete.aspx" />
+    <Content Include="consultaCircular.aspx" />
+    <Content Include="consultaCircularAdministrador.aspx" />
+    <Content Include="consultaClassificados.aspx" />
+    <Content Include="ConsumoIndividual.aspx" />
+    <Content Include="contato.aspx" />
+    <Content Include="controlePortaria.aspx" />
+    <Content Include="css\bootstrap-cerulean.css" />
+    <Content Include="css\bootstrap-classic.css" />
+    <Content Include="css\bootstrap-classic.min.css" />
+    <Content Include="css\bootstrap-cyborg.css" />
+    <Content Include="css\bootstrap-journal.css" />
+    <Content Include="css\bootstrap-redy.css" />
+    <Content Include="css\bootstrap-responsive.css" />
+    <Content Include="css\bootstrap-responsive.min.css" />
+    <Content Include="css\bootstrap-simplex.css" />
+    <Content Include="css\bootstrap-slate.css" />
+    <Content Include="css\bootstrap-spacelab.css" />
+    <Content Include="css\bootstrap-united.css" />
+    <Content Include="css\charisma-app.css" />
+    <Content Include="css\chosen.css" />
+    <Content Include="css\colorbox.css" />
+    <Content Include="css\elfinder.min.css" />
+    <Content Include="css\elfinder.theme.css" />
+    <Content Include="css\fullcalendar.css" />
+    <Content Include="css\fullcalendar.print.css" />
+    <Content Include="css\jquery-ui-1.8.21.custom.css" />
+    <Content Include="css\jquery.cleditor.css" />
+    <Content Include="css\jquery.iphone.toggle.css" />
+    <Content Include="css\jquery.noty.css" />
+    <Content Include="css\noty_theme_default.css" />
+    <Content Include="css\opa-icons.css" />
+    <Content Include="css\uniform.default.css" />
+    <Content Include="css\uploadify.css" />
+    <Content Include="DetalheClassificado.aspx" />
+    <Content Include="detalheMensagemMorador.aspx" />
+    <Content Include="detalheOcorrencia.aspx" />
+    <Content Include="DiasLeituraSabesp.aspx" />
+    <Content Include="enviaMensagemMorador.aspx" />
+    <Content Include="esqueciSenha.aspx" />
+    <Content Include="GerarReciboAzuliAdm.aspx" />
+    <Content Include="gerenciamentoMoradorAdm.aspx" />
+    <Content Include="GerenciarClassificadoMorador.aspx" />
+    <Content Include="historicoAgendaCondomino.aspx" />
+    <Content Include="HistoricoCancelamento.aspx" />
+    <Content Include="images\0ae1500.jpg" />
+    <Content Include="images\add.png" />
+    <Content Include="images\AmareloPendente.png" />
+    <Content Include="images\azulPendente.png" />
+    <Content Include="images\botao cadastro.png" />
+    <Content Include="images\botao-pesquisar-hi.png" />
+    <Content Include="images\botao-relatorio.png" />
+    <Content Include="images\boton_responder.gif" />
+    <Content Include="images\cadastro.jpg" />
+    <Content Include="images\calendario.png" />
+    <Content Include="images\cancelar.jpg" />
+    <Content Include="images\chart.jpg" />
+    <Content Include="images\chrome_logo_2x.png" />
+    <Content Include="images\class.jpg" />
+    <Content Include="images\classificados.jpg" />
+    <Content Include="images\clientes.jpg" />
+    <Content Include="images\cliqueAqui.jpg" />
+    <Content Include="images\confirma.jpg" />
+    <Content Include="images\conosco.jpg" />
+    <Content Include="images\contato.jpg" />
+    <Content Include="images\email.jpg" />
+    <Content Include="images\enquete.jpg" />
+    <Content Include="images\enquete1.jpg" />
+    <Content Include="images\enviado-sucesso.png" />
+    <Content Include="images\esqueci.jpg" />
+    <Content Include="images\excel2.png" />
+    <Content Include="images\fechar.jpg" />
+    <Content Include="images\home.png" />
+    <Content Include="images\home2.jpg" />
+    <Content Include="images\home3.jpg" />
+    <Content Include="images\flConosco.jpg" />
+    <Content Include="images\indisponivel.gif" />
+    <Content Include="images\loader.gif" />
+    <Content Include="images\logo8.jpg" />
+    <Content Include="images\logoteste.png" />
+    <Content Include="images\mensagem.jpg" />
+    <Content Include="images\modeloEdit2.png" />
+    <Content Include="images\modelo_1.png" />
+    <Content Include="images\modelo_2.png" />
+    <Content Include="images\novo_morador_visitante.png" />
+    <Content Include="images\ocoor.jpg" />
+    <Content Include="images\online.gif" />
+    <Content Include="images\perfil.jpg" />
+    <Content Include="images\real.jpg" />
+    <Content Include="images\reserva.jpg" />
+    <Content Include="images\salaoFesta.jpg" />
+    <Content Include="images\seguranca.jpg" />
+    <Content Include="images\Senha-icone.jpeg" />
+    <Content Include="images\senha2.jpg" />
+    <Content Include="images\sgc.jpg" />
+    <Content Include="images\banner.jpg" />
+    <Content Include="images\cancel.png" />
+    <Content Include="images\download.jpg" />
+    <Content Include="images\edit.png" />
+    <Content Include="images\excel.png" />
+    <Content Include="images\ico_search.gif" />
+    <Content Include="images\pdf.jpg" />
+    <Content Include="images\save.png" />
+    <Content Include="images\search.png" />
+    <Content Include="images\select.png" />
+    <Content Include="images\sgc1.jpg" />
+    <Content Include="images\sgc2.jpg" />
+    <Content Include="images\sgcv2.jpg" />
+    <Content Include="images\sgcv3.jpg" />
+    <Content Include="images\sgcv4.jpg" />
+    <Content Include="images\sgcv5.jpg" />
+    <Content Include="images\tel.jpg" />
+    <Content Include="images\tela-manutencao1.jpg" />
+    <Content Include="images\vermelhoPendente.png" />
+    <Content Include="images\votar.jpg" />
+    <Content Include="images\word.gif" />
+    <Content Include="img\arrows-active.png" />
+    <Content Include="img\arrows-normal.png" />
+    <Content Include="img\bg-input-focus.png" />
+    <Content Include="img\bg-input.png" />
+    <Content Include="img\border.png" />
+    <Content Include="img\buttons.gif" />
+    <Content Include="img\cancel-off.png" />
+    <Content Include="img\cancel-on.png" />
+    <Content Include="img\chosen-sprite.png" />
+    <Content Include="img\controls.png" />
+    <Content Include="img\crop.gif" />
+    <Content Include="img\dialogs.png" />
+    <Content Include="img\error_bg.png" />
+    <Content Include="img\favicon.ico" />
+    <Content Include="img\glyphicons-halflings-white.png" />
+    <Content Include="img\glyphicons-halflings.png" />
+    <Content Include="img\icons-big.png" />
+    <Content Include="img\icons-small.png" />
+    <Content Include="img\loading.gif" />
+    <Content Include="img\loading_background.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\logo20.png" />
+    <Content Include="img\opa-icons-black16.png" />
+    <Content Include="img\opa-icons-black32.png" />
+    <Content Include="img\opa-icons-blue16.png" />
+    <Content Include="img\opa-icons-blue32.png" />
+    <Content Include="img\opa-icons-color16.png" />
+    <Content Include="img\opa-icons-color32.png" />
+    <Content Include="img\opa-icons-darkgray16.png" />
+    <Content Include="img\opa-icons-darkgray32.png" />
+    <Content Include="img\opa-icons-gray16.png" />
+    <Content Include="img\opa-icons-gray32.png" />
+    <Content Include="img\opa-icons-green16.png" />
+    <Content Include="img\opa-icons-green32.png" />
+    <Content Include="img\opa-icons-orange16.png" />
+    <Content Include="img\opa-icons-orange32.png" />
+    <Content Include="img\opa-icons-red16.png" />
+    <Content Include="img\opa-icons-red32.png" />
+    <Content Include="img\opa-icons-white16.png" />
+    <Content Include="img\opa-icons-white32.png" />
+    <Content Include="img\progress.gif" />
+    <Content Include="img\qrcode.png" />
+    <Content Include="img\qrcode136.png" />
+    <Content Include="img\quicklook-bg.png" />
+    <Content Include="img\quicklook-icons.png" />
+    <Content Include="img\resize.png" />
+    <Content Include="img\spinner-mini.gif" />
+    <Content Include="img\sprite.png" />
+    <Content Include="img\star-half.png" />
+    <Content Include="img\star-off.png" />
+    <Content Include="img\star-on.png" />
+    <Content Include="img\thumb.png" />
+    <Content Include="img\toolbar.gif" />
+    <Content Include="img\toolbar.png" />
+    <Content Include="img\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="img\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="img\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="img\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="img\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="img\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="img\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="img\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="img\ui-icons_222222_256x240.png" />
+    <Content Include="img\ui-icons_2e83ff_256x240.png" />
+    <Content Include="img\ui-icons_454545_256x240.png" />
+    <Content Include="img\ui-icons_888888_256x240.png" />
+    <Content Include="img\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="img\uploadify-cancel.png" />
+    <Content Include="integracaoWeb.aspx" />
+    <Content Include="js\bootstrap-alert.js" />
+    <Content Include="js\bootstrap-button.js" />
+    <Content Include="js\bootstrap-carousel.js" />
+    <Content Include="js\bootstrap-collapse.js" />
+    <Content Include="js\bootstrap-dropdown.js" />
+    <Content Include="js\bootstrap-modal.js" />
+    <Content Include="js\bootstrap-popover.js" />
+    <Content Include="js\bootstrap-scrollspy.js" />
+    <Content Include="js\bootstrap-tab.js" />
+    <Content Include="js\bootstrap-toggle.js" />
+    <Content Include="js\bootstrap-tooltip.js" />
+    <Content Include="js\bootstrap-tour.js" />
+    <Content Include="js\bootstrap-transition.js" />
+    <Content Include="js\bootstrap-typeahead.js" />
+    <Content Include="js\charisma.js" />
+    <Content Include="js\excanvas.js" />
+    <Content Include="js\fullcalendar.min.js" />
+    <Content Include="js\jquery-1.7.2.min.js" />
+    <Content Include="js\jquery-ui-1.8.21.custom.min.js" />
+    <Content Include="js\jquery.autogrow-textarea.js" />
+    <Content Include="js\jquery.chosen.min.js" />
+    <Content Include="js\jquery.cleditor.min.js" />
+    <Content Include="js\jquery.colorbox.min.js" />
+    <Content Include="js\jquery.cookie.js" />
+    <Content Include="js\jquery.dataTables.min.js" />
+    <Content Include="js\jquery.elfinder.min.js" />
+    <Content Include="js\jquery.flot.min.js" />
+    <Content Include="js\jquery.flot.pie.min.js" />
+    <Content Include="js\jquery.flot.resize.min.js" />
+    <Content Include="js\jquery.flot.stack.js" />
+    <Content Include="js\jquery.history.js" />
+    <Content Include="js\jquery.iphone.toggle.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.noty.js" />
+    <Content Include="js\jquery.raty.min.js" />
+    <Content Include="js\jquery.uniform.min.js" />
+    <Content Include="js\jquery.uploadify-3.1.min.js" />
+    <Content Include="liberaAcessoAdmin.aspx" />
+    <Content Include="ListaReclamacaoAbertaAdmin.aspx" />
+    <Content Include="LoginAsman.aspx" />
+    <Content Include="LoginPortaria.aspx" />
+    <Content Include="login\newLoginAzuli.aspx" />
+    <Content Include="meuClassificados.aspx" />
+    <Content Include="MostraPdfCircular.aspx" />
+    <Content Include="PaginaPrincipalControlWater.aspx" />
+    <Content Include="PendenciaAgendamentos.aspx" />
+    <Content Include="PendenciaReservaMorador.aspx" />
+    <Content Include="PerfilControlWater.aspx" />
+    <Content Include="PerfilMorador.aspx" />
+    <Content Include="publicarCircular.aspx" />
+    <Content Include="consultaAgendasAdmin.aspx" />
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="images\correio.jpg" />
+    <Content Include="images\delete.png" />
+    <Content Include="listaMensagemMorador.aspx" />
+    <Content Include="listaOcorrenciaMorador.aspx" />
+    <Content Include="LoginAzulli.aspx" />
+    <Content Include="images\amarelo.jpg" />
+    <Content Include="images\azul.jpg" />
+    <Content Include="images\azuli.jpg" />
+    <Content Include="images\churrasco.jpg" />
+    <Content Include="images\festa.jpg" />
+    <Content Include="images\ok.jpg" />
+    <Content Include="images\print.jpg" />
+    <Content Include="images\vermelho.jpg" />
+    <Content Include="minhaReservas.aspx" />
+    <Content Include="OcorrenciaMorador.aspx" />
+    <Content Include="paginaInicialMoradores.aspx" />
+    <Content Include="RelatorioEmailRecibo.aspx" />
+    <Content Include="js\relatorioGeral\relatorioGeral.aspx" />
+    <Content Include="reportRelatorioGeral.aspx" />
+    <Content Include="ReportViewer.aspx" />
+    <Content Include="ReservaDetalhadaMoradores.aspx" />
+    <Content Include="resetSenha.aspx" />
+    <Content Include="Scripts\exporting.js" />
+    <Content Include="Scripts\exporting.src.js" />
+    <Content Include="Scripts\highcharts-all.js" />
+    <Content Include="Scripts\highcharts-more.js" />
+    <Content Include="Scripts\highcharts-more.src.js" />
+    <Content Include="Scripts\highcharts.js" />
+    <Content Include="Scripts\highcharts.src.js" />
+    <Content Include="Scripts\ScriptAzuli.js" />
+    <Content Include="Scripts\Silverlight.js" />
+    <Content Include="SegundaViaContaAguaAzuli.aspx" />
+    <Content Include="ServerFile\Classificados\630110_s.jpg" />
+    <Content Include="ServerFile\Classificados\63011_s.jpg" />
+    <Content Include="ServerFile\Classificados\63012_m.jpg" />
+    <Content Include="ServerFile\Classificados\63013_s.jpg" />
+    <Content Include="ServerFile\Classificados\63015_m.jpg" />
+    <Content Include="ServerFile\Classificados\63015_s.jpg" />
+    <Content Include="ServerFile\Classificados\63017_m.jpg" />
+    <Content Include="ServerFile\Classificados\63019.jpg" />
+    <Content Include="ServerFile\Classificados\63019_s.jpg" />
+    <Content Include="ServerFile\Classificados\6301azuli.JPG" />
+    <Content Include="ServerFile\Classificados\6301fachadazoom.jpg" />
+    <Content Include="ServerFile\Classificados\6301go.gif" />
+    <Content Include="ServerFile\Classificados\6301ico_facebook.png" />
+    <Content Include="ServerFile\Classificados\6301ico_facebooks.png" />
+    <Content Include="ServerFile\Classificados\6301logo_pet.gif" />
+    <Content Include="ServerFile\Classificados\6301logo_veiculos.gif" />
+    <Content Include="ServerFile\Classificados\6301moto.jpg" />
+    <Content Include="ServerFile\Classificados\6301novo.gif" />
+    <Content Include="ServerFile\Classificados\animais.jpg" />
+    <Content Include="ServerFile\Classificados\bebeCrianca.jpg" />
+    <Content Include="ServerFile\Classificados\diversos.jpg" />
+    <Content Include="ServerFile\Classificados\doacao.gif" />
+    <Content Include="ServerFile\Classificados\eletronico.jpg" />
+    <Content Include="ServerFile\Classificados\imoveis.jpg" />
+    <Content Include="ServerFile\Classificados\modabeleza2.jpg" />
+    <Content Include="ServerFile\Classificados\musicaHobie.jpg" />
+    <Content Include="ServerFile\Classificados\negocio.jpg" />
+    <Content Include="ServerFile\Classificados\neogico2.jpg" />
+    <Content Include="ServerFile\Classificados\parasuacasa.jpg" />
+    <Content Include="ServerFile\Classificados\semimg.jpg" />
+    <Content Include="ServerFile\Classificados\sport.jpg" />
+    <Content Include="ServerFile\Classificados\veiculo.jpg" />
+    <Content Include="sgcNotificacao.aspx" />
+    <Content Include="shutter.mp3" />
+    <Content Include="Silverlight.js" />
+    <Content Include="Styles\border-radius.htc" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="telaAgendamento.aspx" />
+    <Content Include="TelaAgendamentoAdmin.aspx" />
+    <Content Include="TelaConfirmacaoAgendamento.aspx" />
+    <Content Include="TelaControlePortaria.aspx" />
+    <Content Include="videoajuda.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WebServiceAzuli.asmx" />
+    <Content Include="WelcomeAdmin.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="agendamentosPendentesAdm.aspx.cs">
+      <DependentUpon>agendamentosPendentesAdm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="agendamentosPendentesAdm.aspx.designer.cs">
+      <DependentUpon>agendamentosPendentesAdm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="alteraSenhaSindico.aspx.cs">
+      <DependentUpon>alteraSenhaSindico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="alteraSenhaSindico.aspx.designer.cs">
+      <DependentUpon>alteraSenhaSindico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="anunciarClassificado.aspx.cs">
+      <DependentUpon>anunciarClassificado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="anunciarClassificado.aspx.designer.cs">
+      <DependentUpon>anunciarClassificado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AreaAdministrativa.aspx.cs">
+      <DependentUpon>AreaAdministrativa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AreaAdministrativa.aspx.designer.cs">
+      <DependentUpon>AreaAdministrativa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AuxliaryChart1.aspx.cs">
+      <DependentUpon>AuxliaryChart1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AuxliaryChart1.aspx.designer.cs">
+      <DependentUpon>AuxliaryChart1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="avisarEcomendaPortaria.aspx.cs">
+      <DependentUpon>avisarEcomendaPortaria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="avisarEcomendaPortaria.aspx.designer.cs">
+      <DependentUpon>avisarEcomendaPortaria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cadastrarClassificado.aspx.cs">
+      <DependentUpon>cadastrarClassificado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cadastrarClassificado.aspx.designer.cs">
+      <DependentUpon>cadastrarClassificado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadastrarVisitante.aspx.cs">
+      <DependentUpon>CadastrarVisitante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastrarVisitante.aspx.designer.cs">
+      <DependentUpon>CadastrarVisitante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="chartConsumoIndividual.aspx.cs">
+      <DependentUpon>chartConsumoIndividual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="chartConsumoIndividual.aspx.designer.cs">
+      <DependentUpon>chartConsumoIndividual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="chartConsumoIndv.aspx.cs">
+      <DependentUpon>chartConsumoIndv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="chartConsumoIndv.aspx.designer.cs">
+      <DependentUpon>chartConsumoIndv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChartConsumoWater.aspx.cs">
+      <DependentUpon>ChartConsumoWater.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChartConsumoWater.aspx.designer.cs">
+      <DependentUpon>ChartConsumoWater.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurarValorReserva.aspx.cs">
+      <DependentUpon>ConfigurarValorReserva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConfigurarValorReserva.aspx.designer.cs">
+      <DependentUpon>ConfigurarValorReserva.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="consultaAgendamentoAdmin.aspx.cs">
+      <DependentUpon>consultaAgendamentoAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="consultaAgendamentoAdmin.aspx.designer.cs">
+      <DependentUpon>consultaAgendamentoAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="consultaBalancete.aspx.cs">
+      <DependentUpon>consultaBalancete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="consultaBalancete.aspx.designer.cs">
+      <DependentUpon>consultaBalancete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="consultaCircular.aspx.cs">
+      <DependentUpon>consultaCircular.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="consultaCircular.aspx.designer.cs">
+      <DependentUpon>consultaCircular.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="consultaCircularAdministrador.aspx.cs">
+      <DependentUpon>consultaCircularAdministrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="consultaCircularAdministrador.aspx.designer.cs">
+      <DependentUpon>consultaCircularAdministrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="consultaClassificados.aspx.cs">
+      <DependentUpon>consultaClassificados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="consultaClassificados.aspx.designer.cs">
+      <DependentUpon>consultaClassificados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumoIndividual.aspx.cs">
+      <DependentUpon>ConsumoIndividual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsumoIndividual.aspx.designer.cs">
+      <DependentUpon>ConsumoIndividual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contato.aspx.cs">
+      <DependentUpon>contato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contato.aspx.designer.cs">
+      <DependentUpon>contato.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="controlePortaria.aspx.cs">
+      <DependentUpon>controlePortaria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controlePortaria.aspx.designer.cs">
+      <DependentUpon>controlePortaria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetalheClassificado.aspx.cs">
+      <DependentUpon>DetalheClassificado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetalheClassificado.aspx.designer.cs">
+      <DependentUpon>DetalheClassificado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="detalheMensagemMorador.aspx.cs">
+      <DependentUpon>detalheMensagemMorador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="detalheMensagemMorador.aspx.designer.cs">
+      <DependentUpon>detalheMensagemMorador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="detalheOcorrencia.aspx.cs">
+      <DependentUpon>detalheOcorrencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="detalheOcorrencia.aspx.designer.cs">
+      <DependentUpon>detalheOcorrencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DiasLeituraSabesp.aspx.cs">
+      <DependentUpon>DiasLeituraSabesp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DiasLeituraSabesp.aspx.designer.cs">
+      <DependentUpon>DiasLeituraSabesp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DSrecibo.cs">
+      <DependentUpon>DSrecibo.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DSrecibo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSrecibo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="enviaMensagemMorador.aspx.cs">
+      <DependentUpon>enviaMensagemMorador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="enviaMensagemMorador.aspx.designer.cs">
+      <DependentUpon>enviaMensagemMorador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="esqueciSenha.aspx.cs">
+      <DependentUpon>esqueciSenha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="esqueciSenha.aspx.designer.cs">
+      <DependentUpon>esqueciSenha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GerarReciboAzuliAdm.aspx.cs">
+      <DependentUpon>GerarReciboAzuliAdm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GerarReciboAzuliAdm.aspx.designer.cs">
+      <DependentUpon>GerarReciboAzuliAdm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gerenciamentoMoradorAdm.aspx.cs">
+      <DependentUpon>gerenciamentoMoradorAdm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gerenciamentoMoradorAdm.aspx.designer.cs">
+      <DependentUpon>gerenciamentoMoradorAdm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GerenciarClassificadoMorador.aspx.cs">
+      <DependentUpon>GerenciarClassificadoMorador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GerenciarClassificadoMorador.aspx.designer.cs">
+      <DependentUpon>GerenciarClassificadoMorador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="historicoAgendaCondomino.aspx.cs">
+      <DependentUpon>historicoAgendaCondomino.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="historicoAgendaCondomino.aspx.designer.cs">
+      <DependentUpon>historicoAgendaCondomino.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HistoricoCancelamento.aspx.cs">
+      <DependentUpon>HistoricoCancelamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HistoricoCancelamento.aspx.designer.cs">
+      <DependentUpon>HistoricoCancelamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="integracaoWeb.aspx.cs">
+      <DependentUpon>integracaoWeb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="integracaoWeb.aspx.designer.cs">
+      <DependentUpon>integracaoWeb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="liberaAcessoAdmin.aspx.cs">
+      <DependentUpon>liberaAcessoAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="liberaAcessoAdmin.aspx.designer.cs">
+      <DependentUpon>liberaAcessoAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListaReclamacaoAbertaAdmin.aspx.cs">
+      <DependentUpon>ListaReclamacaoAbertaAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListaReclamacaoAbertaAdmin.aspx.designer.cs">
+      <DependentUpon>ListaReclamacaoAbertaAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginAsman.aspx.cs">
+      <DependentUpon>LoginAsman.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginAsman.aspx.designer.cs">
+      <DependentUpon>LoginAsman.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPortaria.aspx.cs">
+      <DependentUpon>LoginPortaria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPortaria.aspx.designer.cs">
+      <DependentUpon>LoginPortaria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login\newLoginAzuli.aspx.cs">
+      <DependentUpon>newLoginAzuli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login\newLoginAzuli.aspx.designer.cs">
+      <DependentUpon>newLoginAzuli.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="meuClassificados.aspx.cs">
+      <DependentUpon>meuClassificados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="meuClassificados.aspx.designer.cs">
+      <DependentUpon>meuClassificados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MostraFoto.ashx.cs">
+      <DependentUpon>MostraFoto.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MostraPdfCircular.aspx.cs">
+      <DependentUpon>MostraPdfCircular.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MostraPdfCircular.aspx.designer.cs">
+      <DependentUpon>MostraPdfCircular.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageAcessControl.Master.cs">
+      <DependentUpon>PageAcessControl.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageAcessControl.Master.designer.cs">
+      <DependentUpon>PageAcessControl.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PageControlWater.Master.cs">
+      <DependentUpon>PageControlWater.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageControlWater.Master.designer.cs">
+      <DependentUpon>PageControlWater.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaPrincipalControlWater.aspx.cs">
+      <DependentUpon>PaginaPrincipalControlWater.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginaPrincipalControlWater.aspx.designer.cs">
+      <DependentUpon>PaginaPrincipalControlWater.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PendenciaAgendamentos.aspx.cs">
+      <DependentUpon>PendenciaAgendamentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PendenciaAgendamentos.aspx.designer.cs">
+      <DependentUpon>PendenciaAgendamentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PendenciaReservaMorador.aspx.cs">
+      <DependentUpon>PendenciaReservaMorador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PendenciaReservaMorador.aspx.designer.cs">
+      <DependentUpon>PendenciaReservaMorador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerfilControlWater.aspx.cs">
+      <DependentUpon>PerfilControlWater.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerfilControlWater.aspx.designer.cs">
+      <DependentUpon>PerfilControlWater.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerfilMorador.aspx.cs">
+      <DependentUpon>PerfilMorador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerfilMorador.aspx.designer.cs">
+      <DependentUpon>PerfilMorador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="publicarCircular.aspx.cs">
+      <DependentUpon>publicarCircular.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publicarCircular.aspx.designer.cs">
+      <DependentUpon>publicarCircular.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="consultaAgendasAdmin.aspx.cs">
+      <DependentUpon>consultaAgendasAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="consultaAgendasAdmin.aspx.designer.cs">
+      <DependentUpon>consultaAgendasAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="listaMensagemMorador.aspx.cs">
+      <DependentUpon>listaMensagemMorador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="listaMensagemMorador.aspx.designer.cs">
+      <DependentUpon>listaMensagemMorador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="listaOcorrenciaMorador.aspx.cs">
+      <DependentUpon>listaOcorrenciaMorador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="listaOcorrenciaMorador.aspx.designer.cs">
+      <DependentUpon>listaOcorrenciaMorador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginAzulli.aspx.cs">
+      <DependentUpon>LoginAzulli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginAzulli.aspx.designer.cs">
+      <DependentUpon>LoginAzulli.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="minhaReservas.aspx.cs">
+      <DependentUpon>minhaReservas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="minhaReservas.aspx.designer.cs">
+      <DependentUpon>minhaReservas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OcorrenciaMorador.aspx.cs">
+      <DependentUpon>OcorrenciaMorador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OcorrenciaMorador.aspx.designer.cs">
+      <DependentUpon>OcorrenciaMorador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paginaInicialMoradores.aspx.cs">
+      <DependentUpon>paginaInicialMoradores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paginaInicialMoradores.aspx.designer.cs">
+      <DependentUpon>paginaInicialMoradores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RelatorioEmailRecibo.aspx.cs">
+      <DependentUpon>RelatorioEmailRecibo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RelatorioEmailRecibo.aspx.designer.cs">
+      <DependentUpon>RelatorioEmailRecibo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="js\relatorioGeral\relatorioGeral.aspx.cs">
+      <DependentUpon>relatorioGeral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="js\relatorioGeral\relatorioGeral.aspx.designer.cs">
+      <DependentUpon>relatorioGeral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reportRelatorioGeral.aspx.cs">
+      <DependentUpon>reportRelatorioGeral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reportRelatorioGeral.aspx.designer.cs">
+      <DependentUpon>reportRelatorioGeral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportViewer.aspx.cs">
+      <DependentUpon>ReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportViewer.aspx.designer.cs">
+      <DependentUpon>ReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReservaDetalhadaMoradores.aspx.cs">
+      <DependentUpon>ReservaDetalhadaMoradores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReservaDetalhadaMoradores.aspx.designer.cs">
+      <DependentUpon>ReservaDetalhadaMoradores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="resetSenha.aspx.cs">
+      <DependentUpon>resetSenha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="resetSenha.aspx.designer.cs">
+      <DependentUpon>resetSenha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SegundaViaContaAguaAzuli.aspx.cs">
+      <DependentUpon>SegundaViaContaAguaAzuli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SegundaViaContaAguaAzuli.aspx.designer.cs">
+      <DependentUpon>SegundaViaContaAguaAzuli.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sgcNotificacao.aspx.cs">
+      <DependentUpon>sgcNotificacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sgcNotificacao.aspx.designer.cs">
+      <DependentUpon>sgcNotificacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SiteAdmin.Master.cs">
+      <DependentUpon>SiteAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteAdmin.Master.designer.cs">
+      <DependentUpon>SiteAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="telaAgendamento.aspx.cs">
+      <DependentUpon>telaAgendamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="telaAgendamento.aspx.designer.cs">
+      <DependentUpon>telaAgendamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TelaAgendamentoAdmin.aspx.cs">
+      <DependentUpon>TelaAgendamentoAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TelaAgendamentoAdmin.aspx.designer.cs">
+      <DependentUpon>TelaAgendamentoAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TelaConfirmacaoAgendamento.aspx.cs">
+      <DependentUpon>TelaConfirmacaoAgendamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TelaConfirmacaoAgendamento.aspx.designer.cs">
+      <DependentUpon>TelaConfirmacaoAgendamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TelaControlePortaria.aspx.cs">
+      <DependentUpon>TelaControlePortaria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TelaControlePortaria.aspx.designer.cs">
+      <DependentUpon>TelaControlePortaria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Util\Base.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Util\ConfiguracaoExcentesMinimo.cs" />
+    <Compile Include="Util\GridViewGroupList.cs" />
+    <Compile Include="Util\GridViewHelper.cs" />
+    <Compile Include="Util\GridViewSummary.cs" />
+    <Compile Include="Util\GridViewGroup.cs" />
+    <Compile Include="Util\GridViewSummaryList.cs" />
+    <Compile Include="Util\ImportFileIntegrationWeb.cs" />
+    <Compile Include="Util\NumeroPorExtenso.cs" />
+    <Compile Include="Util\RelatorioConfigRecibo.cs" />
+    <Compile Include="Util\SendMail.cs" />
+    <Compile Include="Util\teste.cs" />
+    <Compile Include="Util\Util.cs" />
+    <Compile Include="videoajuda.aspx.cs">
+      <DependentUpon>videoajuda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="videoajuda.aspx.designer.cs">
+      <DependentUpon>videoajuda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebServiceAzuli.asmx.cs">
+      <DependentUpon>WebServiceAzuli.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WelcomeAdmin.aspx.cs">
+      <DependentUpon>WelcomeAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WelcomeAdmin.aspx.designer.cs">
+      <DependentUpon>WelcomeAdmin.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="ServerFile\Balancete\" />
+    <Folder Include="ServerFile\EvidenciaMoradorOC\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Azuli.Crystal.Relatorios\Azuli.Crystal.Relatorios.csproj">
+      <Project>{AAA71ED7-75F4-4DE7-8C83-5611DE3D45D4}</Project>
+      <Name>Azuli.Crystal.Relatorios</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Azuli.Web.Business\Azuli.Web.Business.csproj">
+      <Project>{6779A8FD-9C97-482E-B4BC-AE41E86F8E97}</Project>
+      <Name>Azuli.Web.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Azuli.Web.Model\Azuli.Web.Model.csproj">
+      <Project>{386FAF34-9F13-405D-99E8-7B1BD91E6F65}</Project>
+      <Name>Azuli.Web.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.sitemap">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SiteAdmin.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\DataWebControls\DataList.skin" />
+    <Content Include="App_Themes\DataWebControls\DetailsView.skin" />
+    <Content Include="App_Themes\DataWebControls\GridView.skin" />
+    <Content Include="PageAcessControl.Master" />
+    <Content Include="MostraFoto.ashx" />
+    <Content Include="controlWater.sitemap" />
+    <None Include="DSrecibo.xsc">
+      <DependentUpon>DSrecibo.xsd</DependentUpon>
+    </None>
+    <None Include="DSrecibo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSrecibo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSrecibo.xss">
+      <DependentUpon>DSrecibo.xsd</DependentUpon>
+    </None>
+    <Content Include="PageControlWater.Master" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ServerFile\ArquivosCondominio\RegimentoInternoAzuli.pdf" />
+    <None Include="ServerFile\ArquivosCondominio\sgcFernandesVilela.pps" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4179</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

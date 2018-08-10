@@ -13,3 +13,7 @@ C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Crystal.Relatorios\bin
 C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Crystal.Relatorios\obj\Debug\Azuli.Crystal.Relatorios.csprojResolveAssemblyReference.cache
 C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Crystal.Relatorios\obj\Debug\Azuli.Crystal.Relatorios.dll
 C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Crystal.Relatorios\obj\Debug\Azuli.Crystal.Relatorios.pdb
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Crystal.Relatorios\bin\Debug\Azuli.Crystal.Relatorios.dll
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Crystal.Relatorios\bin\Debug\Azuli.Crystal.Relatorios.pdb
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Crystal.Relatorios\obj\Debug\Azuli.Crystal.Relatorios.dll
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Crystal.Relatorios\obj\Debug\Azuli.Crystal.Relatorios.pdb

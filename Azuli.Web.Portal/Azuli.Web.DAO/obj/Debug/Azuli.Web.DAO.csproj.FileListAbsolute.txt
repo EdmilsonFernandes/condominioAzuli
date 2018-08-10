@@ -54,3 +54,10 @@ C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.DAO\bin\Debug\Azul
 C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.DAO\obj\Debug\Azuli.Web.DAO.csprojResolveAssemblyReference.cache
 C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.DAO\obj\Debug\Azuli.Web.DAO.dll
 C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.DAO\obj\Debug\Azuli.Web.DAO.pdb
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.DAO\bin\Debug\Azuli.Web.DAO.dll
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.DAO\bin\Debug\Azuli.Web.DAO.pdb
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.DAO\bin\Debug\Azuli.Web.Model.dll
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.DAO\bin\Debug\Azuli.Web.Model.pdb
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.DAO\obj\Debug\Azuli.Web.DAO.csprojResolveAssemblyReference.cache
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.DAO\obj\Debug\Azuli.Web.DAO.dll
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.DAO\obj\Debug\Azuli.Web.DAO.pdb

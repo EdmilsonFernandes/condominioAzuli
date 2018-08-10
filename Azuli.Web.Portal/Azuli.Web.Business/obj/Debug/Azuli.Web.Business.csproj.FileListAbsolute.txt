@@ -70,3 +70,12 @@ C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug
 C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Business\obj\Debug\Azuli.Web.Business.csprojResolveAssemblyReference.cache
 C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Business\obj\Debug\Azuli.Web.Business.dll
 C:\ProjetoEdmilson\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Business\obj\Debug\Azuli.Web.Business.pdb
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.Business.dll
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.Business.pdb
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.DAO.dll
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.Model.dll
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.DAO.pdb
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Business\bin\Debug\Azuli.Web.Model.pdb
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Business\obj\Debug\Azuli.Web.Business.csprojResolveAssemblyReference.cache
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Business\obj\Debug\Azuli.Web.Business.dll
+C:\ProjetoEdmilson\condominioAzuliFree\condominioAzuli\Azuli.Web.Portal\Azuli.Web.Business\obj\Debug\Azuli.Web.Business.pdb

@@ -15,7 +15,7 @@ namespace Azuli.Web.Portal
         void Application_Start(object sender, EventArgs e)
         {
 
-            log4net.Config.XmlConfigurator.Configure();
+            //log4net.Config.XmlConfigurator.Configure();
             Application["ContadorAcessos"] = 0;
 
         }
@@ -98,7 +98,7 @@ namespace Azuli.Web.Portal
                     corpoEmail.Append("<b>DatabaseName: PORTALAZULI</b> - Login: edmls34_SQLLogin_1 - Password - 25pdqsl4ih<br> ");
                     corpoEmail.Append("<b>Connection String: workstation id=AzuliPortal.mssql.somee.com;packet size=4096;user id=edmls34_SQLLogin_1;pwd=25pdqsl4ih;data source=AzuliPortal.mssql.somee.com;persist security info=False;initial catalog=AzuliPortal</b><br> ");
                     corpoEmail.Append("<b>Application Name: azulicondominio.somee.com</b><br> ");
-                    corpoEmail.Append("<a href='http://www.condominioazuli.somee.com/'>http://www.condominioazuli.somee.com/ </a> ");
+                    corpoEmail.Append("<a href='http://condominiospazioazuli.somee.com/'>http://condominiospazioazuli.somee.com/ </a> ");
                 }
 				
 				corpoEmail.Append("</body>");

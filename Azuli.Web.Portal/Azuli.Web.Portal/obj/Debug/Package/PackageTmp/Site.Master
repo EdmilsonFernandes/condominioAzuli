@@ -3,11 +3,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head id="Head1" runat="server">
-   <title>Portal do Condominio</title>
+    <title>Portal do Condominio</title>
     <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
     <script src="Scripts/ScriptAzuli.js" type="text/javascript"></script>
-
-    <script>
+    <script type="text/javascript">
         (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
@@ -15,102 +14,73 @@
             js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
             fjs.parentNode.insertBefore(js, fjs);
         } (document, 'script', 'facebook-jssdk'));
-</script>
-
+    </script>
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
     <style type="text/css">
         .style1
         {
-            font-family: "Times New Roman", Times, serif;
+            font-family: "Times New Roman" , Times, serif;
             font-weight: normal;
-            color:#4884CD;
+            color: #4884CD;
         }
-   
+        
         .style2
         {
             font-weight: bold;
             color: #006ABA;
             font-size: medium;
         }
-   
-        </style>
+    </style>
 </head>
 <body>
-
-<div id="fb-root"></div>
-
-
+    <div id="fb-root">
+    </div>
     <form id="Form1" runat="server">
-   
     <div class="page">
         <div class="header">
             <div class="title">
-                
-                <img alt=""src="images/sgcv3.jpg" style="height:96px; width: 1070px;border-radius: 1em" />
-              
+                <img alt="" src="images/sgcv3.jpg" style="height: 96px; width: 1070px; border-radius: 1em" />
             </div>
             <div class="clear hideSkiplink">
-                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" 
-                    EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal" StaticDisplayLevels="1"  
-                    DataSourceID="SiteMapDataSourceMenu" StaticPopOutImageUrl="~/images/home.png" DynamicPopOutImageUrl="~/images/home.png">
-                   
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false"
+                    IncludeStyleBlock="false" Orientation="Horizontal" StaticDisplayLevels="1" DataSourceID="SiteMapDataSourceMenu"
+                    StaticPopOutImageUrl="~/images/home.png" DynamicPopOutImageUrl="~/images/home.png">
                 </asp:Menu>
             </div>
-          
-             <div class="dysplayLogin" 
-                style="position: absolute; left: 28px; top: 15px;">
-             <asp:Label ID="lblProprietarioMaster" runat="server" Font-Size="Small" 
-                     Text="Seja Bem vindo: "></asp:Label>
-                    <asp:Label ID="lblProprietarioDesc"  runat="server" Font-Size="Small" 
-                     Font-Bold="True"></asp:Label>
-
-
-                     <asp:Label ID="lblBlocoMaster" runat="server" Font-Size="Small" 
-                     Text="  Bloco: "></asp:Label>
-                    <asp:Label ID="lblBlocoMasterDesc"  runat="server" Font-Size="Small" 
-                     Font-Bold="True"></asp:Label>
-
-
-                    
-                     <asp:Label ID="lblApMaster" runat="server" Font-Size="Small" Text=" AP : " 
-                     Font-Bold="False"></asp:Label>
-                    <asp:Label ID="lblApDesc"  runat="server" Font-Size="Small" Font-Bold="True"></asp:Label>
+            <div class="dysplayLogin" style="position: absolute; left: 28px; top: 15px;">
+                <asp:Label ID="lblProprietarioMaster" runat="server" Font-Size="Small" Text="Seja Bem vindo: "></asp:Label>
+                <asp:Label ID="lblProprietarioDesc" runat="server" Font-Size="Small" Font-Bold="True"></asp:Label>
+                <asp:Label ID="lblBlocoMaster" runat="server" Font-Size="Small" Text="  Bloco: "></asp:Label>
+                <asp:Label ID="lblBlocoMasterDesc" runat="server" Font-Size="Small" Font-Bold="True"></asp:Label>
+                <asp:Label ID="lblApMaster" runat="server" Font-Size="Small" Text=" AP : " Font-Bold="False"></asp:Label>
+                <asp:Label ID="lblApDesc" runat="server" Font-Size="Small" Font-Bold="True"></asp:Label>
             </div>
-
-            <div class="siteMap" style="position:absolute; left: 636px;">
-             <asp:SiteMapPath id="smpWeb" runat="server" CssClass="DataWebControlStyle" 
-                    RenderCurrentNodeAsLink="True" Font-Size="X-Small">
+            <div class="siteMap" style="position: absolute; left: 636px;">
+                <asp:SiteMapPath ID="smpWeb" runat="server" CssClass="DataWebControlStyle" RenderCurrentNodeAsLink="True"
+                    Font-Size="X-Small">
                 </asp:SiteMapPath>
             </div>
         </div>
-       
         <div class="main">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
-               
             </asp:ContentPlaceHolder>
         </div>
         <div class="clear">
-            <asp:SiteMapDataSource ID="SiteMapDataSourceMenu" runat="server" 
-                ShowStartingNode="False" />
-            <asp:XmlDataSource ID="XmlDataSource1" runat="server" datafile="Web.sitemap">
-            </asp:XmlDataSource>
+            <asp:SiteMapDataSource ID="SiteMapDataSourceMenu" runat="server" ShowStartingNode="False" />
+            <asp:XmlDataSource ID="XmlDataSource1" runat="server" DataFile="Web.sitemap"></asp:XmlDataSource>
         </div>
-         <center><div class="footer">
-       <div  class="fb-like" data-href="https://www.facebook.com/Sgcondominio"  data-send="true" data-width="450" data-show-faces="false" data-font="arial">
-           
-             </div>
-                  <br />
-  
-             <span class="style1">&nbsp;<asp:Label ID="lblCopyright" runat="server"></asp:Label> &nbsp;- <asp:Label ID="lblVersion" runat="server"></asp:Label></span>&nbsp;</div>
-             </center>
-  
-             
+        <center>
+            <div class="footer">
+                <div class="fb-like" data-href="https://www.facebook.com/Sgcondominio" data-send="true"
+                    data-width="450" data-show-faces="false" data-font="arial">
+                </div>
+                <br />
+                <span class="style1">&nbsp;<asp:Label ID="lblCopyright" runat="server"></asp:Label>
+                    &nbsp;-
+                    <asp:Label ID="lblVersion" runat="server"></asp:Label></span>&nbsp;</div>
+        </center>
     </div>
-
-   
- 
     </form>
-    
 </body>
 </html>
